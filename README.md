@@ -1,1 +1,3 @@
-# leetcode
+# leetcode 题库解答
+
+从 2021 年 2 月 9 日开始刷题
