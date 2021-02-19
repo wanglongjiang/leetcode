@@ -20,12 +20,18 @@ from typing import List
 class Solution:
     def combinationSum(self, candidates: List[int],
                        target: int) -> List[List[int]]:
+        candidates.sort()
         result = []
         combination = []
+        unionSet = set()
 
         def findCombination(target, index):
             if target == 0:
-                result.append(combination.copy())
+                # 利用set排重
+                unionId = ','.join(map(str, combination))
+                if unionId not in unionSet:
+                    result.append(combination.copy())
+                    unionSet.add(unionId)
                 return
             if index == len(candidates):
                 return
