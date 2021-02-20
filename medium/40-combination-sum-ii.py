@@ -18,9 +18,11 @@ from typing import List
 
 
 class Solution:
-    def combinationSum(self, candidates: List[int],
-                       target: int) -> List[List[int]]:
+    def combinationSum2(self, candidates: List[int],
+                        target: int) -> List[List[int]]:
         candidates.sort()
+        if sum(candidates) < target:
+            return []
         result = []
         combination = []
         unionSet = set()
@@ -35,16 +37,22 @@ class Solution:
                 return
             if index == len(candidates):
                 return
-            findCombination(target, index + 1)
             if target - candidates[index] >= 0:
                 combination.append(candidates[index])
                 findCombination(target - candidates[index], index + 1)
                 combination.pop()
+            findCombination(target, index + 1)
 
         findCombination(target, 0)
         return result
 
 
 s = Solution()
-print(s.combinationSum([10, 1, 2, 7, 6, 1, 5], 8))
-print(s.combinationSum([2, 5, 2, 1, 2], 5))
+print(s.combinationSum2([2, 5, 2, 1, 2], 5))
+print(s.combinationSum2([1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 9))
+print(
+    s.combinationSum2([
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1
+    ], 27))
+print(s.combinationSum2([10, 1, 2, 7, 6, 1, 5], 8))
