@@ -6,12 +6,14 @@
 from typing import List
 '''
 思路：数组排序后，相邻的区间肯定靠在一起。类似于冒泡，从左向右合并区间，合并后的区间更新掉原值，当与右边无法合并时，加入结果list
+时间复杂度：O(nlogn)，有排序nLogn，一次遍历
+空间复杂度：O(n)，辅助数组存放返回值，最坏情况下N
 '''
 
 
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-        intervals.sort()
+        intervals.sort(key=lambda x: x[0])
         result = []
         n = len(intervals)
         for i in range(1, n):
