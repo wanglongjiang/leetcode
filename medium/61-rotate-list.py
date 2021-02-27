@@ -13,12 +13,14 @@ class ListNode:
 
 
 '''
-解决思路：首尾相连后，求得链表长度n，前进n-(k%n)步，此时指向的节点为head
+解决思路：首尾相连后，求得链表长度n，再前进n-(k%n)步，此时指向的节点为head
 '''
 
 
 class Solution:
     def rotateRight(self, head: ListNode, k: int) -> ListNode:
+        if head is None:
+            return head
         tail = head
         n = 1
         while tail.next is not None:
@@ -57,5 +59,6 @@ def toList(listNode: ListNode):
 
 
 s = Solution()
+print(toList(s.rotateRight(fromList([]), 0)))
 print(toList(s.rotateRight(fromList([1, 2, 3, 4, 5]), 2)))
 print(toList(s.rotateRight(fromList([0, 1, 2]), 4)))

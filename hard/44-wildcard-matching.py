@@ -1,13 +1,14 @@
 '''
-正则表达式匹配
-给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。
+通配符匹配
+给定一个字符串 (s) 和一个字符模式 (p) ，实现一个支持 '?' 和 '*' 的通配符匹配。
 
-'.' 匹配任意单个字符
-'*' 匹配零个或多个前面的那一个元素
-所谓匹配，是要涵盖 整个 字符串 s的，而不是部分字符串。
+'?' 可以匹配任何单个字符。
+'*' 可以匹配任意字符串（包括空字符串）。
+两个字符串完全匹配才算匹配成功。
+
 '''
 '''
-思路：使用NFA
+思路：问题与第10题正则表达式几乎一样，使用NFA
 '''
 
 
@@ -27,9 +28,6 @@ class NFA:
 
     def compile(self):
         for i in range(self.statusNum):
-            if i < self.statusNum - 1 and self.re[i + 1] == '*':
-                self.graph.addEdge(i, i + 1)
-                self.graph.addEdge(i + 1, i)
             if self.re[i] == '*':
                 self.graph.addEdge(i, i + 1)
 
@@ -43,8 +41,10 @@ class NFA:
             match = set()
             for v in pc:
                 if v < self.statusNum:
-                    if self.re[v] == txt[i] or self.re[v] == '.':
+                    if self.re[v] == txt[i] or self.re[v] == '?':
                         match.add(v + 1)
+                    elif self.re[v] == '*':
+                        match.add(v)
             pc = set()
             dfs = DirectedDFS(self.graph, match)
             for v in range(self.graph.V):
@@ -81,9 +81,10 @@ class DirectedDFS:
 
 
 s = Solution()
+print(s.isMatch("aa", "*"))
 print(s.isMatch("aa", "a"))
 print(s.isMatch("aa", "aa"))
-print(s.isMatch("aa", "a*"))
-print(s.isMatch("aa", ".*"))
-print(s.isMatch("aab", "c*a*b"))
-print(s.isMatch("mississippi", "mis*is*p*."))
+print(s.isMatch("cb", "?b"))
+print(s.isMatch("cb", "?a"))
+print(s.isMatch("adceb", "*a*b"))
+print(s.isMatch("acdcb", "a*c?b"))
