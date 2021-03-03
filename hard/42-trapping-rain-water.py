@@ -21,17 +21,17 @@ class Solution:
         total, vol = 0, 0
         left, right = 0, len(height) - 1
         while right >= left:
-            while height[left] <= h and left <= right:
+            while left <= right and height[left] <= h:
                 vol -= height[left]
                 left += 1
-            while height[right] <= h and left <= right:
+            while left <= right and height[right] <= h:
                 vol -= height[right]
                 right -= 1
             if left <= right:
                 innerVol = (right - left + 1) * h
                 vol -= innerVol
+                h = min(height[left], height[right])
             total += vol
-            h = min(height[left], height[right])
             vol = (right - left - 1) * h
             right -= 1
             left += 1
@@ -39,6 +39,8 @@ class Solution:
 
 
 s = Solution()
+print(s.trap([6, 4, 2, 0, 3, 2, 0, 3, 1, 4, 5, 3, 2, 7, 5, 3, 0, 1, 2, 1, 3, 4, 6, 8, 1, 3]))
+print(s.trap([0]))
 print(s.trap([1, 0, 5, 0, 5, 0, 1]))
 print(s.trap([1, 0, 5, 2, 5, 2, 5, 0, 1]))
 print(s.trap([4, 2, 0, 3, 2, 5]))
