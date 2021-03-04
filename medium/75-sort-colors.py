@@ -7,7 +7,7 @@
 from typing import List
 '''
 思路：计数排序
-使用计数排序对仅有3个数字的数组进行排序
+基于比较的排序最快就是n*log(n)，因此处需要排序的数较小，使用计数排序
 '''
 
 
@@ -18,13 +18,16 @@ class Solution:
             count[num] += 1
         j = 0
         for i in range(len(nums)):
-            if count[j] == 0:
+            while count[j] == 0:
                 j += 1
             nums[i] = j
             count[j] -= 1
 
 
 s = Solution()
+a = [2]
+s.sortColors(a)
+print(a)
 a = [2, 0, 2, 1, 1, 0]
 s.sortColors(a)
 print(a)

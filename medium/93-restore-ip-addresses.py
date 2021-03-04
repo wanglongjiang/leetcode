@@ -18,7 +18,7 @@ class Solution:
     def restoreIpAddresses(self, s: str) -> List[str]:
         n = len(s)
         if n < 4 or n > 12:
-            return False
+            return []
 
         def isValidIp(*params):
             for p in params:

@@ -19,7 +19,7 @@ class Solution:
         i = 1
         p = head
         pre, subHead, subTail = None, None, None
-        while p is not None:
+        while p is not None and i <= right:
             if i == left:
                 subTail = p
                 subHead = p
@@ -32,7 +32,6 @@ class Solution:
                 next = p.next
                 subHead.next = t
                 subTail.next = next
-                break
             elif i < left:
                 pre = p
                 p = p.next
@@ -73,6 +72,7 @@ def toList(listNode: ListNode):
 
 
 s = Solution()
+print(toList(s.reverseBetween(fromList([3, 5]), 1, 1)))
 print(toList(s.reverseBetween(fromList([1, 2, 3, 4, 5]), 2, 4)))
 print(toList(s.reverseBetween(fromList([1, 2, 3, 4, 5]), 1, 5)))
 print(toList(s.reverseBetween(fromList([1, 2, 3, 4, 5]), 1, 3)))
