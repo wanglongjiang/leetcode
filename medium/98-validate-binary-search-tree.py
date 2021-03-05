@@ -8,6 +8,7 @@
 节点的右子树只包含大于当前节点的数。
 所有左子树和右子树自身必须也是二叉搜索树。
 '''
+from typing import List
 
 
 # Definition for a binary tree node.
@@ -21,29 +22,82 @@ class TreeNode:
 '''
 思路：按照树的前序算法遍历验证
 1、验证节点与左右节点的大小关系是否正确
-2、验证节点与左右所有子节点大小关系是否正确（该验证会增加复杂度，待一次提交一次后确认是否需要添加）
+2、验证节点与左右所有子节点大小关系是否正确，向递归过程传递当前子树最大值和最小值
 '''
 
 
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
-        def recursion(node: TreeNode):
-            if node.left:
-                if node.val <= node.left.val:
-                    return False
-                if not recursion(node.left):
-                    return False
-            if node.right:
-                if node.val >= node.right.val:
-                    return False
-                if not recursion(node.right):
-                    return False
+        def recursion(node: TreeNode, lower=float('-inf'), upper=float('inf')):
+            if node is None:
+                return True
+            if node.val <= lower or node.val >= upper:
+                return False
+            if not recursion(node.right, node.val, upper):
+                return False
+            if not recursion(node.left, lower, node.val):
+                return False
             return True
 
-        if not root:
-            return False
         return recursion(root)
 
 
+# list数据按照bfs遍历得到
+def fromList(li: List[int]):
+    if len(li) == 0:
+        return None
+    root = TreeNode(val=li[0])
+    queue = [root]
+    i = 1
+    while i < len(li):
+        node = queue[0]
+        del queue[0]
+        if li[i]:
+            node.left = TreeNode(val=li[i])
+            queue.append(node.left)
+        i += 1
+        if i < len(li):
+            if li[i]:
+                node.right = TreeNode(val=li[i])
+                queue.append(node.right)
+            i += 1
+    return root
+
+
+def toList(node: TreeNode):
+    li = []
+    if node is None:
+        return li
+    queue = [node]
+    li.append(node.val)
+    while len(queue) > 0:
+        node = queue[0]
+        del queue[0]
+        if node.left:
+            queue.append(node.left)
+            li.append(node.left.val)
+        else:
+            li.append(None)
+        if node.right:
+            queue.append(node.right)
+            li.append(node.right.val)
+        else:
+            li.append(None)
+
+    # 删掉末尾的null
+    i = len(li) - 1
+    while i > 0:
+        if li[i] is None:
+            del li[i]
+        else:
+            break
+        i -= 1
+    return li
+
+
 s = Solution()
-print(s.isValidBST())
+null = None
+print(s.isValidBST(fromList([3, 1, 5, 0, 2, 4, 6])))
+print(s.isValidBST(fromList([2, 1, 3])))
+print(s.isValidBST(fromList([5, 4, 6, null, null, 3, 7])))
+print(s.isValidBST(fromList([5, 1, 4, null, null, 3, 6])))
