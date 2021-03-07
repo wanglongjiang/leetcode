@@ -14,7 +14,7 @@
 返回简化后得到的 规范路径 。
 '''
 '''
-思路:堆栈+贪心
+思路:堆栈辅助
 
 '''
 
@@ -34,23 +34,16 @@ class Solution:
                 dotStart = i
                 while i < n and path[i] == '.':
                     i += 1
-                if i < n and path[i] == '/':  # 前后都有斜线，且长度为1或2为相对目录，否则为文件名一部分
-                    if i - dotStart == 2:
-                        if len(pathStack) > 0:  # 连续2个.为上级目录
-                            pathStack.pop()
-                    elif i - dotStart == 1:
-                        pass
-                    else:
-                        while i < n and path[i] != '/':
-                            i += 1
-                        pathStack.append(path[dotStart:i])
+                if i - dotStart == 2 and (i >= n or (i < n and path[i] == '/')):
+                    if len(pathStack) > 0:  # 连续2个.为上级目录
+                        pathStack.pop()
+                elif i - dotStart == 1 and (i >= n or (i < n and path[i] == '/')):
+                    pass
                 else:
-                    while i < n and path[i] != '/':  # .后面没有斜线，为文件名的一部分
-                        i += 1
-                    pathStack.append(path[dotStart:i])
+                    i = dotStart
                 if i == n:
                     break
-            if path[i] != '/':
+            if i < n and path[i] != '/':
                 folderStart = i
                 while i < n and path[i] != '/':
                     i += 1
@@ -59,6 +52,13 @@ class Solution:
 
 
 s = Solution()
+print(s.simplifyPath("/.hidden../"))
+print(s.simplifyPath("/hidden."))
+print(s.simplifyPath("/hidden./"))
+print(s.simplifyPath("/hidden../"))
+print(s.simplifyPath("/.hidden"))
+print(s.simplifyPath("/..hidden"))
+print(s.simplifyPath("/a//b////c/d//././/.."))
 print(s.simplifyPath("/home/"))
 print(s.simplifyPath("/../"))
 print(s.simplifyPath("/home//foo/"))
