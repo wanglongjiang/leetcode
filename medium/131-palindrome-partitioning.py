@@ -9,6 +9,7 @@ from typing import List
 思路：回溯+记忆表
 1、判断字符串中下标i开始的任意长度的字串是否为回文串，并保存到记忆表里面
 2、回溯所有的子串组合，判断是否为回文串
+时间复杂度：O(n^3)，第1个过程复杂度为O(n*(n^2+(n-1)^2+(n-2)^2+...+1)/2)=n*(n+1)*(2*n+1)/12，第2个过程也是O(n^3)
 '''
 
 
@@ -46,5 +47,6 @@ class Solution:
 
 
 s = Solution()
+print(s.partition("eegiicgaeadbcfacfhifdbiehbgejcaeggcgbahfcajfhjjdgj"))
 print(s.partition("aab"))
 print(s.partition("aabb"))
