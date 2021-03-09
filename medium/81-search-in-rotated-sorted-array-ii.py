@@ -9,12 +9,18 @@
 '''
 from typing import List
 '''
-思路：二分查找
+思路：暴力搜索， 官方的二分搜索在最坏情况下是O(n)
 '''
 
 
 class Solution:
     def search(self, nums: List[int], target: int) -> bool:
+        for n in nums:
+            if n == target:
+                return True
+        return False
+
+    def search1(self, nums: List[int], target: int) -> bool:
         start = 0
         end = len(nums) - 1
         while start <= end:
