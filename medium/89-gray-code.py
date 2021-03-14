@@ -9,23 +9,33 @@
 
 from typing import List
 '''
-思路：
-0001
-0011
-0010
-0110
-0100
-1100
-1000
-1001
-1011
-1111
-1101
-1100
+思路：组合。将格雷编码看从000开始，向0中逐步填充1的过程
 
 '''
 
 
 class Solution:
     def grayCode(self, n: int) -> List[int]:
-        pass
+        if n == 1:
+            return [0]
+        ans = []
+        needFill = set([0])
+        maxBit = 1 << n
+        while needFill:
+            ans.extend(needFill)
+            newNeed = set()
+            for num in needFill:
+                bit = 1
+                while bit < maxBit:
+                    newNum = bit | num
+                    if newNum != num:
+                        newNeed.add(newNum)
+                    bit <<= 1
+            needFill = newNeed
+        return ans
+
+
+s = Solution()
+print(s.grayCode(1))
+print(s.grayCode(2))
+print(s.grayCode(3))
