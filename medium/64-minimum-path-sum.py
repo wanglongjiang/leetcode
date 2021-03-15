@@ -38,12 +38,16 @@ class Solution:
         queue = []
         queue.append(0)  # 从第0个开始搜索
         target = m * n - 1
+        marked = [False] * m * n
+        marked[0] = True
         while queue:
             i = queue[0]
             del queue[0]
             for nodeid, w in g[i]:  # 遍历i节点的所有边
                 d[nodeid] = min(d[nodeid], d[i] + w)
-                queue.append(nodeid)
+                if not marked[nodeid]:
+                    queue.append(nodeid)
+                marked[nodeid] = True
         return d[target]
 
     # 思路1，Dijkstra算法
@@ -61,6 +65,8 @@ class Solution:
         # 原点到各节点路径长度用数组表示，初始都是无穷大
         d = [float('inf')] * m * n
         d[0] = grid[0][0]  # 原点的路径长度为grid[0][0]的值
+        if m == 1 and n == 1:
+            return d[0]
 
         # 建立最小堆
         minHeap = MinHeap(m * n, d)
@@ -96,7 +102,7 @@ class MinHeap():
     def extractMin(self):
         i = self.heap[0]
         self.size = self.size - 1
-        self.heap[0] = self.heap[-1]
+        self.heap[0] = self.heap[self.size - 1]
         self.minHeapify(0)
         return i
 
@@ -129,5 +135,16 @@ class MinHeap():
 
 
 s = Solution()
+print(
+    s.minPathSum1([[7, 1, 3, 5, 8, 9, 9, 2, 1, 9, 0, 8, 3, 1, 6, 6, 9, 5], [9, 5, 9, 4, 0, 4, 8, 8, 9, 5, 7, 3, 6, 6, 6, 9, 1, 6],
+                   [8, 2, 9, 1, 3, 1, 9, 7, 2, 5, 3, 1, 2, 4, 8, 2, 8, 8], [6, 7, 9, 8, 4, 8, 3, 0, 4, 0, 9, 6, 6, 0, 0, 5, 1, 4],
+                   [7, 1, 3, 1, 8, 8, 3, 1, 2, 1, 5, 0, 2, 1, 9, 1, 1, 4], [9, 5, 4, 3, 5, 6, 1, 3, 6, 4, 9, 7, 0, 8, 0, 3, 9, 9],
+                   [1, 4, 2, 5, 8, 7, 7, 0, 0, 7, 1, 2, 1, 2, 7, 7, 7, 4], [3, 9, 7, 9, 5, 8, 9, 5, 6, 9, 8, 8, 0, 1, 4, 2, 8, 2],
+                   [1, 5, 2, 2, 2, 5, 6, 3, 9, 3, 1, 7, 9, 6, 8, 6, 8, 3], [5, 7, 8, 3, 8, 8, 3, 9, 9, 8, 1, 9, 2, 5, 4, 7, 7, 7],
+                   [2, 3, 2, 4, 8, 5, 1, 7, 2, 9, 5, 2, 4, 2, 9, 2, 8, 7], [0, 1, 6, 1, 1, 0, 0, 6, 5, 4, 3, 4, 3, 7, 9, 6, 1, 9]]))
+print(
+    s.minPathSum1([[6, 2, 4, 4, 6, 2, 2, 9], [6, 4, 5, 1, 0, 8, 3, 5], [9, 3, 0, 5, 9, 8, 1, 7], [7, 9, 9, 3, 1, 9, 1, 9], [3, 7, 5, 0, 0, 8, 9, 8],
+                   [4, 6, 9, 4, 4, 3, 0, 4], [6, 2, 9, 7, 2, 3, 5, 9], [2, 4, 3, 5, 5, 6, 5, 9], [3, 0, 1, 5, 0, 0, 4, 5], [9, 3, 9, 3, 8, 1, 7, 6]]))
+print(s.minPathSum1([[0]]))
 print(s.minPathSum([[1, 3, 1], [1, 5, 1], [4, 2, 1]]))
 print(s.minPathSum([[1, 2, 3], [4, 5, 6]]))

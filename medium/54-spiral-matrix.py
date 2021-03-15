@@ -5,9 +5,9 @@
 from typing import List
 '''
 解题思路：
-模拟螺旋的路径，跟进方向指令表，分层转圈
+模拟螺旋的路径，根据方向指令表，分层转圈
 设置一个方向指令表，当前进时，按照前进的方向从指令表中取出指令对当前坐标进行修改。
-初始前进方向为left，
+初始前进方向为右，
 每当前进一步会有三种结果：
     1、回到原点，这种情况下是转完了一圈，此时需要进入内环（每深入一环，左上角、右下角坐标需要向内移动）
     2、超出范围，这种情况下需要转向下一个方向，下一个方向为指令表中的下一条记录
@@ -43,9 +43,7 @@ class Solution:
                 endPoint = (endPoint[0] - 1, endPoint[1] - 1)
                 direction = 0
                 nextPoint = (i, j + 1)
-            elif nextPoint[0] < beginPoint[0] or nextPoint[1] < beginPoint[
-                    1] or nextPoint[0] > endPoint[0] or nextPoint[
-                        1] > endPoint[1]:  # 超出范围,转向
+            elif nextPoint[0] < beginPoint[0] or nextPoint[1] < beginPoint[1] or nextPoint[0] > endPoint[0] or nextPoint[1] > endPoint[1]:  # 超出范围,转向
                 # 转向，由于self中方向按照右、下、左、上排列，下一个方向为mod4
                 direction = (direction + 1) % 4
                 step = self.step[direction]

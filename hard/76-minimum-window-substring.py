@@ -41,7 +41,7 @@ class Solution:
         minLen = float('inf')
         while right < n:
             while not contains() and right < n:  # 移动右指针，直至覆盖dt
-                while s[right] not in dt:  # 进入窗口的字符不在dt内，跳过
+                while right < n and s[right] not in dt:  # 进入窗口的字符不在dt内，跳过
                     right += 1
                 if right < n:
                     wdt[s[right]] += 1
@@ -55,10 +55,12 @@ class Solution:
                 left += 1
             if minLen > (right - left):  # 子串长度小于以往的子串长度，更新最短字符串
                 minLen = right - left
-                substr = s[left - 1:right + 1]
+                substr = s[left - 1:right]
         return substr
 
 
 s = Solution()
+print(s.minWindow(s="ab", t="a"))
+print(s.minWindow(s="a", t="b"))
 print(s.minWindow(s="ADOBECODEBANC", t="ABC"))
 print(s.minWindow(s="a", t="a"))
