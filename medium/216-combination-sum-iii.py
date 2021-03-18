@@ -10,8 +10,8 @@
 from typing import List
 '''
 思路：回溯查找所有组合
-时间复杂度：O(n!)
-
+时间复杂度：O(n!/(m!(n-m!)))，组合
+空间复杂度：O(k)，最多递归k层和另外的大小为k的辅助空间
 '''
 
 
@@ -22,7 +22,7 @@ class Solution:
 
         def backtrack(index, target):
             remainderNums = k - len(comb) - 1
-            if remainderNums == 0:
+            if remainderNums == 0 and target < 10:
                 copy = comb.copy()
                 copy.append(target)
                 ans.append(copy)
@@ -45,3 +45,4 @@ print(s.combinationSum3(k=3, n=9))
 print(s.combinationSum3(k=3, n=10))
 print(s.combinationSum3(k=2, n=10))
 print(s.combinationSum3(k=1, n=6))
+print(s.combinationSum3(k=2, n=18))
