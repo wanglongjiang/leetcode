@@ -17,6 +17,7 @@ class Solution:
         ans = []
         comb = []
         n = len(nums)
+        nums.sort()
 
         def backtrack(index: int, k: int):
             if len(comb) == k:
