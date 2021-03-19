@@ -22,9 +22,10 @@ class TreeNode:
 
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
-        ans = [[]]
+        ans = []
         if not root:
             return ans
+        ans.append([])
         queue = [root, None]  # 每层结束，后面插入一个null作为分隔符
         while len(queue) > 0:
             node = queue[0]

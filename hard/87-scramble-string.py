@@ -72,10 +72,15 @@ class Node:
 
 class Solution:
     def isScramble(self, s1: str, s2: str) -> bool:
+        if len(s1) != len(s2):
+            return False
+        if len(s1) == 1:
+            return s1 == s2
+
         # 构造集合树
         def makeMapTree(s: str):
             tree = Node(s)
-            if tree.size > 2:
+            if tree.size >= 2:
                 leftSize = tree.size // 2
                 tree.left = Node(s[0:leftSize])
                 tree.right = Node(s[leftSize:])
@@ -87,23 +92,23 @@ class Solution:
         def backtrack(tree: Node, s: str):
             if not tree.isMatch(s):
                 return False
-            if len(s) > 2:
-                leftSize = tree.size // 2
-                rightSize = tree.size - leftSize
-                if tree.left and tree.left.isMatch(s[0:leftSize]) and tree.right and tree.right.isMatch(s[leftSize:]):
+            leftSize = tree.size // 2
+            rightSize = tree.size - leftSize
+            if tree.left and tree.left.isMatch(s[0:leftSize]) and tree.right and tree.right.isMatch(s[leftSize:]):
+                return True
+            elif tree.right and tree.right.isMatch(s[0:leftSize]) and tree.left and tree.left.isMatch(s[leftSize:]):
+                return True
+            if leftSize != rightSize:
+                if tree.left and tree.left.isMatch(s[0:rightSize]) and tree.right and tree.right.isMatch(s[rightSize:]):
                     return True
-                elif tree.right and tree.right.isMatch(s[0:leftSize]) and tree.left and tree.left.isMatch(s[leftSize:]):
+                elif tree.right and tree.right.isMatch(s[0:rightSize]) and tree.left and tree.left.isMatch(s[rightSize:]):
                     return True
-                if leftSize != rightSize:
-                    if tree.left and tree.left.isMatch(s[0:rightSize]) and tree.right and tree.right.isMatch(s[rightSize:]):
-                        return True
-                    elif tree.right and tree.right.isMatch(s[0:rightSize]) and tree.left and tree.left.isMatch(s[rightSize:]):
-                        return True
-                return False
+            return False
 
         return backtrack(tree, s2)
 
 
 s = Solution()
+print(s.isScramble(s1="aa", s2="aa"))
 print(s.isScramble(s1="great", s2="rgeat"))
 print(s.isScramble(s1="abcde", s2="caebd"))

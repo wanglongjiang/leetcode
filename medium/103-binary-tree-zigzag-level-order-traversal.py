@@ -23,9 +23,10 @@ class TreeNode:
 
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
-        ans = [[]]
+        ans = []
         if not root:
             return ans
+        ans.append([])
         queue = [[root], []]
         while len(queue) > 1 or len(queue[0]) > 0:
             if len(ans) % 2 == 1:  # 单数排，从左到右出队列
