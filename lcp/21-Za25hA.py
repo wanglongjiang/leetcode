@@ -133,7 +133,7 @@ class Solution:
 
         if canRunAway():
             return -1
-        # 如果没有环，或者有环但逃不掉，需要查找从startA出发，经过startB的最远路径
+        # 如果没有环，或者有环但逃不掉，需要查找从startA出发，经过startB的最远路径。如果有不经过b的路径说明有环路，这是不可能的。
         ans = 0
         for i in range(1, n + 1):
             if d[i] > d2[i] and d[i] == d2[i] + d[startB]:
