@@ -15,7 +15,7 @@ from typing import List
 
 class Solution:
     # 思路1
-    def totalHammingDistance(self, nums: List[int]) -> int:
+    def totalHammingDistance1(self, nums: List[int]) -> int:
         n = len(nums)
         count = 0
         for i in range(n - 1):
@@ -27,7 +27,7 @@ class Solution:
         return count
 
     # 思路2
-    def totalHammingDistance2(self, nums: List[int]) -> int:
+    def totalHammingDistance(self, nums: List[int]) -> int:
         n = len(nums)
         count = 0
 
