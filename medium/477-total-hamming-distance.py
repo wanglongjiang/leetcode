@@ -10,10 +10,29 @@ from typing import List
 时间复杂度：O(n^2)
 思路2，回溯遍历数组中所有元素的组合，求其异或的1的个数(jdk类库算法)
 时间复杂度：O(n^2)
+思路3，1次遍历所有位上的1的个数。只有0和1的异或才是1，所以对于每1位来说，只有与0其相反的位的组合才是有意义的。可以统计每位上1的个数count
+然后这个位上产生的异或的1个个数是count*(n-count)。再合计32位上所有异或的数量。
+时间复杂度：O(n)
+空间复杂度：O(1)
 '''
 
 
 class Solution:
+    def totalHammingDistance(self, nums: List[int]) -> int:
+        n = len(nums)
+        count = [0] * 32
+        for num in nums:
+            for j in range(32):
+                if num & 1:
+                    count[j] += 1
+                num >>= 1
+                if num == 0:
+                    break
+        ans = 0
+        for i in range(32):
+            ans += count[i] * (n - count[i])
+        return ans
+
     # 思路1
     def totalHammingDistance1(self, nums: List[int]) -> int:
         n = len(nums)
@@ -27,7 +46,7 @@ class Solution:
         return count
 
     # 思路2
-    def totalHammingDistance(self, nums: List[int]) -> int:
+    def totalHammingDistance2(self, nums: List[int]) -> int:
         n = len(nums)
         count = 0
 

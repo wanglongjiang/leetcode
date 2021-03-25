@@ -23,4 +23,64 @@ from typing import List
 
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
-        pass
+        self.trieCount, trieSize, charsetSize = 0, 1024, 26
+        trie = [[0] * charsetSize for _ in range(trieSize)]
+        finishIds = set()
+
+        # 将wordDict构造字典树
+        def insert(word):
+            nodeId = 0
+            for i in range(len(word)):
+                c = ord(word[i]) - ord('a')
+                if trie[nodeId][c]:
+                    nodeId = trie[nodeId][c]
+                else:
+                    if self.trieCount > trieSize:
+                        trie.extend([[0] * charsetSize for _ in range(trieSize)])
+                        trieSize << 1
+                    self.trieCount += 1
+                    trie[nodeId][c] = self.trieCount
+                    nodeId = self.trieCount
+            finishIds.add(nodeId)
+
+        for word in wordDict:
+            insert(word)
+        # 贪婪模式匹配所有的终结点
+        end = len(s)
+
+        def searchAll(start):
+            nodeId = 0
+            matchIndexs = []
+            while start < end:
+                c = ord(s[start]) - ord('a')
+                if trie[nodeId][c]:
+                    nodeId = trie[nodeId][c]
+                    if nodeId in finishIds:
+                        matchIndexs.append(start + 1)
+                    start += 1
+                else:
+                    break
+            return matchIndexs
+
+        # 回溯所有匹配点，能匹配s的所有字符
+        ans = []
+        comb = []
+
+        def backtrack(index):
+            indexs = searchAll(index)
+            for i in range(len(indexs) - 1, -1, -1):
+                comb.append(s[index:indexs[i]])
+                if indexs[i] == end:  # 能匹配至终点
+                    ans.append(' '.join(comb))
+                backtrack(indexs[i])
+                comb.pop()
+            return False
+
+        backtrack(0)
+        return ans
+
+
+s = Solution()
+print(s.wordBreak(s="catsanddog", wordDict=["cat", "cats", "and", "sand", "dog"]))
+print(s.wordBreak(s="pineapplepenapple", wordDict=["apple", "pen", "applepen", "pine", "pineapple"]))
+print(s.wordBreak(s="catsandog", wordDict=["cats", "dog", "sand", "and", "cat"]))

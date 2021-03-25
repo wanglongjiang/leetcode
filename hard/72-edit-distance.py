@@ -10,9 +10,11 @@
 
 '''
 '''
-思路：求2个字符串的最长公共子序列（lcs），word1中2个子序列之间如果间隔小于word12个子序列的间隔，需要插入，其他word1的字符需要替换或者删除
-时间复杂度：O(m*n)
-空间复杂度：O(m*n)
+思路：双重动态规划。
+第1个动态规划求2个字符串的最长公共子序列（lcs）
+第2个动态规划求公共子序列的某个字符匹配与否的最小编辑距离。
+时间复杂度：O(m*n)，第1个动态规划需要O(mn)，第2个动态规划O(len(lcs))<O(min(m,n))
+空间复杂度：O(m*n)，第1个动态规划需要O(mn)，第2个动态规划O(len(lcs))
 '''
 
 
@@ -20,6 +22,7 @@ class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
         n1, n2 = len(word1), len(word2)
 
+        # 第1次动态规划求lcs
         def getCount(cm, x, y):
             if x < 0 or y < 0:
                 return 0
@@ -60,18 +63,31 @@ class Solution:
             return max(n1, n2)
         lcsPosition1.reverse()
         lcsPosition2.reverse()
-        # 遍历lcs坐标，将word1比word2的lcs字串间缺少的字符数统计出来
+        # 第2次动态规划，设置2个数组match,nomatch与lcs长度相同，里面存储当前坐标匹配、不匹配的长度。动态规划方程如下：
+        # 第i个坐标进行匹配，其编辑长度为 min(match[i-1],nomatch[i-1])+ max(lcsPosition1[i+1]-lcsPosition1[i],lcsPosition2[i+1]-lcsPosition2[i])-1
+        # 第i个坐标不匹配，其编辑长度为 min( min(match[i-1],nomatch[i-1])+ max(lcsPosition1[i+1]-lcsPosition1[i],lcsPosition2[i+1]-lcsPosition2[i]),
+        #   max(lcsPosition1[i+1], lcsPosition2[i+1]))
+        # 第0个坐标匹配，其编辑长度为 max(lcsPosition1[0],lcsPosition1[0])+max(lcsPosition1[i+1]-lcsPosition1[0],lcsPosition2[i+1]-lcsPosition2[i])-1
+        # 第0个坐标不匹配，其编辑长度为 max(lcsPosition1[i+1],lcsPosition2[i+1])
         lcsLen = len(lcsPosition1)
-        for i in range(lcsLen):
-            print(word1[lcsPosition1[i]], end='')
-        lack = 0 if (lcsPosition1[0] >= lcsPosition2[0]) else (lcsPosition2[0] - lcsPosition1[0])
-        lack += 0 if (n2 - lcsPosition2[lcsLen - 1] <= n1 - lcsPosition1[lcsLen - 1]) else (n2 - lcsPosition2[lcsLen - 1] - (n1 - lcsPosition1[lcsLen - 1]))
+        match, nomatch = [0] * lcsLen, [0] * lcsLen
+        rightIndex1, rightIndex2 = 0, 0
+        if lcsLen == 1:
+            rightIndex1 = n1
+            rightIndex2 = n2
+        else:
+            rightIndex1 = lcsPosition1[1]
+            rightIndex2 = lcsPosition2[1]
+        match[0] = max(lcsPosition1[0], lcsPosition2[0]) + max(rightIndex1 - lcsPosition1[0], rightIndex2 - lcsPosition2[0]) - 1
+        nomatch[0] = max(rightIndex1, rightIndex2)
         for i in range(1, lcsLen):
-            interval1 = lcsPosition1[i] - lcsPosition1[i - 1]
-            interval2 = lcsPosition2[i] - lcsPosition2[i - 1]
-            if interval2 > interval1:
-                lack += interval2 - interval1
-        return lack + n1 - lcsLen
+            if i + 1 == lcsLen:
+                rightIndex1, rightIndex2 = n1, n2
+            else:
+                rightIndex1, rightIndex2 = lcsPosition1[i + 1], lcsPosition2[i + 1]
+            match[i] = min(match[i - 1], nomatch[i - 1]) + max(rightIndex1 - lcsPosition1[i], rightIndex2 - lcsPosition2[i]) - 1
+            nomatch[i] = min(match[i] + 1, max(rightIndex1, rightIndex2))
+        return min(match[-1], nomatch[-1])
 
 
 s = Solution()

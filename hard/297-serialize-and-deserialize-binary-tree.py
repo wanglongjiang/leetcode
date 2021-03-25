@@ -10,7 +10,11 @@
 你并非必须采取这种方式，你也可以采用其他的方法解决这个问题。
 '''
 '''
-思路，leetcode是层序遍历，按照层序遍历的顺序遍历
+思路，1次迭代。leetcode是层序遍历，按照层序遍历的顺序遍历。
+序列化很简单，每层输出后将左右子节点放入队列中，输出直至队列为空。
+反序列化需要维护父节点指针，子节点指针每前进2步，父节点指针前进一步，如果父节点为空，需要跳过空的父节点。
+时间复杂度：O(n)
+空间复杂度：O(n)，最下面一层字节点全部进入队列，最坏情况下是O(n)
 '''
 
 
@@ -41,15 +45,20 @@ class Codec:
 
     def deserialize(self, data):
         queue = []
+        j = -1
         for i in range(len(data)):
             val = data[i]
+            if i & 1:  # 子节点指针前进2步，父节点指针前进一步
+                j += 1
+            while queue and not queue[j]:  # 需要跳过为空的父节点
+                j += 1
             if val is not None:
                 node = TreeNode(val)
                 if queue:
-                    if i & 1:  # 奇数为左节点，偶数为右节点
-                        queue[(i - 1) >> 1].left = node
+                    if i & 1:
+                        queue[j].left = node
                     else:
-                        queue[(i - 1) >> 1].right = node
+                        queue[j].right = node
                 queue.append(node)
             else:
                 queue.append(None)
@@ -58,6 +67,7 @@ class Codec:
 
 codec = Codec()
 print(codec.serialize(codec.deserialize([1, 2, 3, None, None, 4, 5])))
+print(codec.serialize(codec.deserialize([1, 2, 3, None, None, 4, 5, 6, 7])))
 print(codec.serialize(codec.deserialize([])))
 print(codec.serialize(codec.deserialize([1])))
 print(codec.serialize(codec.deserialize([1, 2])))

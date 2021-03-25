@@ -15,7 +15,7 @@ class TreeNode:
 
 '''
 思路：按照BFS遍历树
-需要设置1个二维队列辅助，奇数层遍历时按照队列方式FIFO，偶数层遍历按照栈方式LIFO
+按照BFS遍历树，然后结果中奇数层数组需要逆序。
 时间复杂度：O(n)
 空间复杂度：O(n)
 '''
@@ -27,23 +27,26 @@ class Solution:
         if not root:
             return ans
         ans.append([])
-        queue = [[root], []]
-        while len(queue) > 1 or len(queue[0]) > 0:
-            if len(ans) % 2 == 1:  # 单数排，从左到右出队列
-                node = queue[0][0]
-                del queue[0][0]
-            else:  # 偶数排，先入先出栈
-                node = queue[0].pop()
+        queue = [root, None]
+        i = 0
+        # 遍历树，层序输出到结果中
+        while i < len(queue):
+            node = queue[i]
+            i += 1
+            if not node:
+                queue.append(None)
+                if queue[len(queue) - 2] is None:  # 最后2个都是None，说明队列中没有需要处理的节点，退出循环
+                    break
+                ans.append([])
+                continue
             ans[len(ans) - 1].append(node.val)
             if node.left:
-                queue[len(queue) - 1].append(node.left)
+                queue.append(node.left)
             if node.right:
-                queue[len(queue) - 1].append(node.right)
-            if len(queue[0]) == 0:
-                del queue[0]
-                if len(queue[0]) > 0:
-                    queue.append([])
-                    ans.append([])
+                queue.append(node.right)
+        # 颠倒奇数层的结果
+        for i in range(1, len(ans), 2):
+            ans[i].reverse()
         return ans
 
 
@@ -71,4 +74,5 @@ def fromList(li: List[int]):
 
 s = Solution()
 null = None
+print(s.zigzagLevelOrder(fromList([1, 2, 3, 4, null, null, 5])))
 print(s.zigzagLevelOrder(fromList([3, 9, 20, null, null, 15, 7])))
