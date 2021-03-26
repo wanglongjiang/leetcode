@@ -41,7 +41,7 @@ class Solution:
             rootVal = preorder[pStart]
             root = TreeNode(rootVal)
             i = inorder.index(rootVal, iStart, iEnd)
-            if i > iStart:  # 中序左边有左子树的输出，说明有右子树
+            if i > iStart:  # 中序左边有左子树的输出，说明有左子树
                 root.left = makeTree(pStart + 1, pStart + 1 + i - iStart, iStart, i)
             if i + 1 < iEnd:  # 中序右边有右子树的输出，说明有右子树
                 root.right = makeTree(pStart + 1 + i - iStart, pEnd, i + 1, iEnd)
