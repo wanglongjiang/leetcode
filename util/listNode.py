@@ -29,3 +29,17 @@ def toList(listNode: ListNode):
             li.append(listNode.val)
             listNode = listNode.next
         return li
+
+
+def rev(headB):
+    newHead = None
+    lenB = 0
+    next = headB
+    while next:
+        lenB += 1
+        nextnext = next.next
+        next.next = newHead
+        newHead = next
+        next = nextnext
+    print(lenB)
+    return newHead
