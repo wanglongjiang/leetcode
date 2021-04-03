@@ -30,6 +30,10 @@ from typing import List
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
         n = len(arr)
+        if n == 1:
+            return 0
+        if n > 1 and arr[0] == arr[-1]:
+            return 1
         sameItem = {}
         # 1、统计相同元素坐标
         for i in range(n):
@@ -53,16 +57,19 @@ class Solution:
             if i == n - 1:
                 return step
             marked[i] = True
-            left = i - 1  # 添加向左的路径
-            if left >= 0 and not marked[left]:
-                queue.append(left)
+            if arr[i] in sameItem:  # 添加相同值的路径
+                sameIndexs = sameItem[arr[i]]
+                del sameItem[arr[i]]  # 相同的值只遍历一次，避免重复遍历
+                for j in range(len(sameIndexs) - 1, -1, -1):
+                    sameIndex = sameIndexs[j]
+                    if not marked[sameIndex]:
+                        queue.append(sameIndex)
             right = i + 1  # 添加向右的路径
             if right < n and not marked[right]:
                 queue.append(right)
-            if arr[i] in sameItem:  # 添加相同值的路径
-                for sameIndex in sameItem[arr[i]]:
-                    if not marked[sameIndex]:
-                        queue.append(sameIndex)
+            left = i - 1  # 添加向左的路径
+            if left >= 0 and not marked[left]:
+                queue.append(left)
 
 
 s = Solution()

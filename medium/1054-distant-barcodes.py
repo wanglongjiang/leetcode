@@ -9,7 +9,7 @@
 '''
 from typing import List
 '''
-思路1，计数。
+思路1，哈希。
 从提示中知道1 <= barcodes[i] <= 10000，可以用1个哈希表或大小为10000的数组对数字进行计数，
 然后首先输出出现次数最多的数字c，然后再输出其他数字。
 输出分成2步，第1步只输出到barcodes的偶数下标，第2次只输出到barcodes的奇数下标
@@ -21,6 +21,8 @@ from typing import List
 class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         n = len(barcodes)
+        if n == 1:
+            return barcodes
         counter = {}
         maxCount, maxNum = 0, 0
         # 统计各个数字的个数
@@ -33,6 +35,8 @@ class Solution:
             else:
                 counter[v] = 1
         i = 0
+        if maxCount == 0:
+            return barcodes
         # 输出最多的数字（如果n为奇数，最多的数字可能出现n/2+1次，必须第1个输出）
         while i < n:
             barcodes[i] = maxNum
@@ -56,5 +60,6 @@ class Solution:
 
 
 s = Solution()
+print(s.rearrangeBarcodes([1]))
 print(s.rearrangeBarcodes([1, 1, 1, 2, 2, 2]))
 print(s.rearrangeBarcodes([1, 1, 1, 1, 2, 2, 3, 3]))
