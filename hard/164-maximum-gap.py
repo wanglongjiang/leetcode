@@ -17,6 +17,7 @@ from typing import List
 不会出现在桶内，因为桶内最大差<buketSize = (max-min)/(n+1)。而因为桶有n+1个，必然有空桶存在，也就是最大差必然大于buketSize
 时间复杂度：O(n)
 空间复杂度：O(n)
+TODO
 '''
 
 
