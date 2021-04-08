@@ -16,7 +16,7 @@ from typing import List
 思路：二分查找。
 1、小于7的数组，直接遍历。
 2、大于7的数组，对比mid与left，right。
-    如果mid大于left说明最小值在后半区，继续折半查找后半区。
+    如果mid大于left 且 mid 大于 right 说明最小值在后半区，继续折半查找后半区。
     如果mid小于left，说明最小值在前半区，继续折半查找前半区。
 时间复杂度：O(logn)
 空间复杂度：O(1)
@@ -33,13 +33,14 @@ class Solution:
                     ans = min(ans, nums[i])
                 return ans
             mid = (left + right) // 2  # 折半查找
-            if nums[mid] > nums[left]:
+            if nums[mid] > nums[left] and nums[mid] > nums[right - 1]:
                 left = mid + 1
             else:
                 right = mid + 1
 
 
 s = Solution()
+print(s.findMin([1, 2, 3, 4, 5, 6, 7, 8]))
 print(s.findMin([3, 4, 5, 1, 2]))
 print(s.findMin([4, 5, 6, 7, 0, 1, 2]))
 print(s.findMin([1]))
