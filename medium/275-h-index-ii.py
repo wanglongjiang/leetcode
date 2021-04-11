@@ -24,16 +24,25 @@ from typing import List
 class Solution:
     def hIndex(self, citations: List[int]) -> int:
         left, right, n = 0, len(citations), len(citations)
-        while left <= right:
+        h = 0
+        while left < right:
             mid = (left + right) // 2
             if n - mid == citations[mid]:
                 return citations[mid]
             elif n - mid > citations[mid]:
+                h = max(h, citations[mid])  # h指数>=当前引用树
                 left = mid + 1
             else:
+                h = n - mid  # h指数至少>= n-mid，需要记录下来
                 right = mid
-        return 0
+        return min(h, n)
 
 
 s = Solution()
+print(s.hIndex([0, 0, 4, 4]))
+print(s.hIndex([1, 1, 3]))
+print(s.hIndex([0]))
+print(s.hIndex([1, 2]))
+print(s.hIndex([2]))
+print(s.hIndex([100]))
 print(s.hIndex([0, 1, 3, 5, 6]))

@@ -6,8 +6,8 @@
 '''
 from typing import List
 '''
-思路：折半查找。取mid=n//2 ，查找其中==mid的数字有多少eqNum，>mid的数字有多少gtNum，<mid的数字有多少ltNum。
-    如果eqNum >1 则mid为重复书
+思路：二分查找。取mid=n//2 ，查找其中==mid的数字个数为eqNum，>mid的数字个数为gtNum，<mid的数字个数为ltNum。
+    如果eqNum >1 则mid为重复数
     如果gtNum>n-mid，则重复数在>mid的区间中，需要在这个区间折半查找。
     如果ltNum>mid-1，则重复数在<mid的区间中，需要在这个区间折半查找。
     由于每次查找都折半，最多经过logN次查找会找到这个数
@@ -17,7 +17,7 @@ from typing import List
 
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
-        low, hight = 1, len(nums)
+        low, hight = 0, len(nums) - 1
         while True:
             mid = (low + hight) >> 1
             eq, gt, lt = 0, 0, 0
@@ -37,6 +37,7 @@ class Solution:
 
 
 s = Solution()
+print(s.findDuplicate([4, 3, 1, 4, 2]))
 print(s.findDuplicate([1, 3, 4, 2, 2]))
 print(s.findDuplicate([3, 1, 3, 4, 2]))
 print(s.findDuplicate([1, 1]))

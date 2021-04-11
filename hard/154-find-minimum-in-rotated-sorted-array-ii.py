@@ -15,8 +15,8 @@
 '''
 from typing import List
 '''
-思路：折半查找。重复元素会影响算法复杂度。
-如果mid>left，最小元素肯定在后半区(不含mid)
+思路：二分查找。重复元素会影响算法复杂度。
+如果mid>left，且如果mid<= right,最小元素就是第1个，否则最小元素肯定在后半区(不含mid)
 如果mid<left，最小元素肯定在前半区（含mid)
 如果mid=left，还需要比较mid与right
     如果mid>right，最小元素肯定在后半区
@@ -35,11 +35,13 @@ class Solution:
                     ans = min(ans, nums[i])
                 return ans
             mid = (right + left) // 2
-            if nums[mid] > nums[left]:  # 如果mid>left，最小元素肯定在后半区(不含mid)
-                return binSearch(mid + 1, right)
+            if nums[mid] > nums[left]:  # 如果mid>left
+                if nums[mid] <= nums[right - 1]:  # 如果mid<= right,最小元素就是第1个
+                    return nums[left]  # binSearch(left, mid)
+                return binSearch(mid + 1, right)  # 如果mid> right,最小元素肯定在后半区(不含mid)
             if nums[mid] < nums[left]:  # 如果mid<left，最小元素肯定在前半区（含mid)
                 return binSearch(left, mid + 1)
-            if nums[mid] > nums[right]:  # 如果mid=left，且mid>right，最小元素肯定在后半区
+            if nums[mid] > nums[right - 1]:  # 如果mid=left，且mid>right，最小元素肯定在后半区
                 return binSearch(mid + 1, right)
             ans = binSearch(left, mid)  # 如果mid =left，且mid=right，先查找前半区。备注：mid=left 且 mid<right，这种情况不存在。
             if ans < nums[mid]:  # 如果前半期<mid，肯定就是这个值了
@@ -50,5 +52,12 @@ class Solution:
 
 
 s = Solution()
+print(
+    s.findMin([
+        -4, -4, -3, -3, -3, -3, -3, -3, -3, -2, -2, -2, -2, -1, -1, -1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3,
+        3, 3, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 9, 9, 10, 10, 10, 10, -10, -10, -10, -9, -9, -9, -9, -8, -8, -8, -7, -7,
+        -7, -6, -6, -6, -6, -5, -5, -5, -4, -4, -4, -4
+    ]))
+print(s.findMin([3, 3, 3, 3, 3, 3, 3, 3, 1, 3]))
 print(s.findMin([1, 3, 5]))
 print(s.findMin([2, 2, 2, 0, 1]))
