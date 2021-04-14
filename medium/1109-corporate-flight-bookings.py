@@ -33,7 +33,7 @@ class Node:
 
 class Solution:
     def corpFlightBookings(self, bookings: List[List[int]], n: int) -> List[int]:
-        tree = [None] * 2 * n
+        tree = [None] * 4 * n
 
         # 建树
         def build(i, left, right):
@@ -77,5 +77,6 @@ class Solution:
 
 
 s = Solution()
+print(s.corpFlightBookings([[5, 6, 45], [5, 6, 5], [1, 6, 10], [5, 6, 5], [1, 2, 15], [1, 2, 5]], 6))
 print(s.corpFlightBookings(bookings=[[1, 2, 10], [2, 3, 20], [2, 5, 25]], n=5))
 print(s.corpFlightBookings(bookings=[[1, 2, 10], [2, 2, 15]], n=2))
