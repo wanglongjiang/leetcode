@@ -29,6 +29,7 @@ from typing import List
 1、因为最多有16个技能，可以将项目的每个技能用1bit来表示，整个项目的技能需求可以用1个整数表示。
 2、计算每个人掌握的技能集合，压缩成1个整数
 3、回溯从每个人出发，查找技能组合与目标相同的人的组合
+TODO 第1个测试案例未通过
 '''
 
 
@@ -120,6 +121,18 @@ class Solution:
 
 
 s = Solution()
+print(
+    s.smallestSufficientTeam(
+        ["cpp", "c", "csharp", "java", "nodejs", "reactjs", "typescript", "ruby", "matlab", "swift", "rust", "basic", "golang", "kotlin", "php", "pascal"],
+        [["matlab", "pascal"], ["cpp", "pascal"], ["reactjs", "php"], ["csharp", "rust"], ["reactjs", "rust"], ["nodejs", "rust"], ["ruby", "rust"],
+         ["ruby", "kotlin"], ["swift", "golang"], ["typescript", "basic"], ["swift", "rust"], ["golang", "kotlin"], ["c", "php"], ["reactjs", "kotlin"],
+         ["nodejs", "pascal"], ["nodejs", "golang"], ["ruby", "php"], ["c", "pascal"], ["nodejs", "kotlin"], ["csharp", "basic"], ["csharp", "golang"],
+         ["rust", "pascal"], ["rust", "kotlin"], ["typescript", "php"], ["csharp", "php"], ["ruby", "golang"], ["rust", "php"], ["matlab", "golang"],
+         ["kotlin", "php"], ["java", "kotlin"], ["cpp", "rust"], ["c", "kotlin"], ["c", "golang"], ["swift", "pascal"], ["reactjs", "pascal"],
+         ["matlab", "basic"], ["rust", "golang"], ["java", "pascal"], ["golang", "php"], ["basic", "kotlin"], ["typescript", "kotlin"], ["reactjs", "golang"],
+         ["basic", "golang"], ["cpp", "golang"], ["swift", "kotlin"], ["ruby", "basic"], ["kotlin", "pascal"], ["c", "basic"], ["swift", "basic"],
+         ["matlab", "rust"], ["java", "rust"], ["typescript", "golang"], ["matlab", "php"], ["cpp", "php"], ["reactjs", "basic"], ["typescript", "rust"],
+         ["java", "basic"], ["cpp", "basic"], ["java", "php"], ["cpp", "kotlin"]]))
 print(
     s.smallestSufficientTeam([
         "hfkbcrslcdjq", "jmhobexvmmlyyzk", "fjubadocdwaygs", "peaqbonzgl", "brgjopmm", "x", "mf", "pcfpppaxsxtpixd", "ccwfthnjt", "xtadkauiqwravo", "zezdb",
