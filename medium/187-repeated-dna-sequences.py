@@ -7,13 +7,45 @@
 '''
 from typing import List
 '''
-思路1，暴力搜索
-针对每个位置开始的10个字符，都搜索s整个字符串。
-时间复杂度：O(n^2)，因为s最大大小达到10^5，会超出时间限制
-TODO
+思路1，滑动窗口+位运算
+将'A'，'C'，'G' , 'T' 映射为 0,1,2,3
+长度为10的字符串可以压缩为位长为20的整数，滑动窗口遍历所有输入，每个位置的10位字符串都映射为整数，然后将其加入map中计数
+
+时间复杂度：O(n)，遍历字符串一次
+空间复杂度：O(n)，需要set保留所有的整数
 '''
 
 
 class Solution:
     def findRepeatedDnaSequences(self, s: str) -> List[str]:
-        pass
+        if len(s) <= 10:  # 字符串<=10的情况下，不会有重复的序列
+            return []
+        mask = 0xfffff  # 20位的掩码
+        intmap = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
+        strmap = ['A', 'C', 'G', 'T']
+        nums = {}
+        num = 0
+        for i in range(10):  # 计算第1个整数
+            num = (num << 2) | intmap[s[i]]
+        nums[num] = 1
+        for i in range(10, len(s)):  # 滑动窗口计算所有位置的整数
+            num = ((num << 2) | intmap[s[i]]) & mask
+            if num in nums:
+                nums[num] += 1
+            else:
+                nums[num] = 1
+        ans = []
+        li = [0] * 10
+        for num, count in nums.items():
+            if count > 1:
+                for i in range(9, -1, -1):  # 使整数的高位先输出
+                    li[i] = strmap[num & 3]
+                    num >>= 2
+                ans.append(''.join(li))
+        return ans
+
+
+s = Solution()
+print(s.findRepeatedDnaSequences("GAGAGAGAGAGA"))
+print(s.findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"))
+print(s.findRepeatedDnaSequences('AAAAAAAAAAAAA'))

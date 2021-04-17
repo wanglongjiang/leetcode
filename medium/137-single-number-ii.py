@@ -13,11 +13,25 @@ from typing import List
     说明目标元素出现在那个分区。需要继续对分区进行再分区。重复分区过程，直至有分区大小==1，则返回该分区的数。
 时间复杂度：O(n)，快排的时间复杂度为O(nlogn)，这里因为每次只对一半的分区进行再分区，所以时间复杂度为O(n)
 空间复杂度：O(1)
+
+思路2：位运算
+利用状态机和位运算，
+one = (one^x)&~two 只保留出现一次的数
+two = (two^x)&~one 只保留出现2次的数
+时间复杂度：O(n)
+空间复杂度：O(1)
 '''
 
 
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
+        one, two = 0, 0
+        for x in nums:
+            one = (one ^ x) & ~two
+            two = (two ^ x) & ~one
+        return one
+
+    def singleNumber1(self, nums: List[int]) -> int:
         import random
 
         def partition(start, end):

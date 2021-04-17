@@ -23,7 +23,7 @@ class Solution:
         if n == 0:
             return 0
         if n == 1:
-            return f[0]
+            return nums[0]
         if n == 2:
             return max(nums[0], nums[1])
         # 第1次计算包含nums[0],不包含nums[-1]

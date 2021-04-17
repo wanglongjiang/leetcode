@@ -36,79 +36,46 @@ r   g  ta  e
 我们将 "rgtae” 称作 "great" 的一个扰乱字符串。
 
 给出两个长度相等的字符串 s1 和 s2，判断 s2 是否是 s1 的扰乱字符串。
+
+s1.length == s2.length
+1 <= s1.length <= 30
+s1 和 s2 由小写英文字母组成
 '''
 '''
-思路：
-思路1，暴力遍历树的所有可能交换，对于长度为n的字符串，有2^n个
-思路2，对于每层树，检查集合是否相同。2n*log(n)
+思路，递归+记忆化
+按照题目定义，按照任意位置分隔成2个子串，递归判断子串是否互为扰乱字符串
 '''
-
-
-class Node:
-    def __init__(self, s: str):
-        super().__init__()
-        self.size = len(s)
-        self.charMap = {}
-        self.left = None
-        self.right = None
-        self.otherLeft = None
-        self.otherRight = None
-        for ch in s:
-            if ch in self.charMap:
-                self.charMap[ch] += 1
-            else:
-                self.charMap[ch] = 1
-
-    def isMatch(self, s):
-        if len(s) != self.size:
-            return False
-        for ch in s:
-            if ch in self.charMap and self.charMap[ch] > 0:
-                self.charMap[ch] -= 1
-            else:
-                return False
-        return True
 
 
 class Solution:
+    # 递归+记忆化
     def isScramble(self, s1: str, s2: str) -> bool:
-        if len(s1) != len(s2):
-            return False
-        if len(s1) == 1:
-            return s1 == s2
+        cache = {}
+        from collections import Counter
 
-        # 构造集合树
-        def makeMapTree(s: str):
-            tree = Node(s)
-            if tree.size >= 2:
-                leftSize = tree.size // 2
-                tree.left = Node(s[0:leftSize])
-                tree.right = Node(s[leftSize:])
-            return tree
-
-        tree = makeMapTree(s1)
-
-        # 回溯判断是否匹配
-        def backtrack(tree: Node, s: str):
-            if not tree.isMatch(s):
+        def issc(s1, s2):
+            if s1 == s2:
+                return True
+            key = s1 + s2
+            n = len(s1)
+            if key in cache:
+                return cache[key]
+            if Counter(s1) != Counter(s2):  # 判断内部字符个数是否相同
+                cache[key] = False
                 return False
-            leftSize = tree.size // 2
-            rightSize = tree.size - leftSize
-            if tree.left and tree.left.isMatch(s[0:leftSize]) and tree.right and tree.right.isMatch(s[leftSize:]):
-                return True
-            elif tree.right and tree.right.isMatch(s[0:leftSize]) and tree.left and tree.left.isMatch(s[leftSize:]):
-                return True
-            if leftSize != rightSize:
-                if tree.left and tree.left.isMatch(s[0:rightSize]) and tree.right and tree.right.isMatch(s[rightSize:]):
+            for i in range(1, n):
+                if issc(s1[:i], s2[:i]) and issc(s1[i:n], s2[i:n]):
                     return True
-                elif tree.right and tree.right.isMatch(s[0:rightSize]) and tree.left and tree.left.isMatch(s[rightSize:]):
+                if issc(s1[:i], s2[n - i:n]) and issc(s1[i:n], s2[:n - i]):
                     return True
+            cache[key] = False
             return False
 
-        return backtrack(tree, s2)
+        return issc(s1, s2)
 
 
 s = Solution()
+print(s.isScramble("abc", "bca"))
 print(s.isScramble(s1="aa", s2="aa"))
 print(s.isScramble(s1="great", s2="rgeat"))
 print(s.isScramble(s1="abcde", s2="caebd"))
