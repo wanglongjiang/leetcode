@@ -18,7 +18,7 @@ def fromList(li: List[int]):
     while i < len(li):
         node = queue[0]
         del queue[0]
-        if li[i]:
+        if li[i] is not None:
             node.left = TreeNode(val=li[i])
             queue.append(node.left)
         i += 1
