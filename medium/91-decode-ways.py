@@ -16,52 +16,71 @@
 
 '''
 '''
-解题思路：回溯
-如果只有1个数字，如果能解析，解码总数为0
-如果多于1个，可以尝试一次解析1个和2个字符，解码有3种情况：
-    1、2个字符都不能解析（即第1个字符为0）
-    2、2个字符都能解析。这种情况下的解码有2个分支。
-    3、第2个字符不能解析。这种情况下，解码只有1个分支。
+解题思路：动态规划
+设置一个动态规划数组dp[n]，每个元素dp[i]的代表的意思是字符串截止到s[i]的解码数量
+有动态转移方程如下：
+dp[0]：如果s[0]==1~9，为1；如果s[0]==0，为0。
+dp[1]：如果s[0..1]<=26，为2；否则为1。
+dp[i]，i>1：
+    如果s[i]==0且s[i-1]==1or2，dp[i]==dp[i-1];如果s[i-1]!=1 or 2，没有合法的解，返回0
+    如果s[i]==1且s[i+1]==0，s[i]必须与s[i+1]结合到一起，解码数没有变化，dp[i]=dp[i-1]
+        如果s[i+1]!=0 or i+1>=n，且s[i-1]<=2 ，s[i]可以独立或者与前面结合，dp[i]=dp[i-1]+dp[i-2]
+        如果s[i+1]!=0 or i+1>=n，且s[i-1]>2，s[i]必须独立，dp[i]=dp[i-1]
+    如果s[i]==2且s[i+1]==0，s[i]必须与s[i+1]结合到一起，解码数没有变化，dp[i]=dp[i-1]
+        如果s[i+1]!=0 or i+1>=n，且s[i-1]<=2 ，s[i]可以独立或者与前面结合，dp[i]=dp[i-1]+1
+        如果s[i+1]!=0 or i+1>=n，且s[i-1]>2，s[i]必须独立，dp[i]=dp[i-1]
+    如果s[i]==3~9且s[i-1]==1，或者 s[i]==3~6 且s[i-1]==2 则：dp[i]=dp[i-1]+1
+    不满足上面的条件，dp[i]=dp[i-1]
+时间复杂度：O(n)
+空间复杂度：O(n)
 '''
 
 
 class Solution:
-    def __init__(self):
-        super().__init__()
-        self.decode = set()
-        for i in range(1, 27):
-            self.decode.add(str(i))
-
     def numDecodings(self, s: str) -> int:
-        def decode(code):
-            if code in self.decode:
-                return 1
-            return 0
-
         n = len(s)
-        if n == 0:
+        dp = [-1] * n
+        if s[0] == '0':
             return 0
+        dp[0] = 1
+        if n == 1:
+            return dp[0]
+        two = int(s[0:2])
+        if two > 26 and s[1] == '0':
+            return 0
+        elif two == 10 or two == 20 or two > 26:
+            dp[1] = 1
+        else:
+            dp[1] = 2
 
-        def backtrack(index: int):
-            if index == n:
-                return 1
-            elif index == n - 1:
-                return decode(s[index])
-            else:
-                one = decode(s[index])
-                two = decode(s[index:index + 1])
-                if one == 0 and two == 0:
-                    return 0
-                elif one == 1 and two == 1:
-                    return backtrack(index + 1) + backtrack(index + 2)
+        for i in range(2, n):
+            if s[i] == '0':
+                if s[i - 1] == '1' or s[i - 1] == '2':
+                    dp[i] = dp[i - 2]
                 else:
-                    return backtrack(index + 1)
-                return backtrack(index + 1)
+                    return 0
+            elif s[i] == '1' or s[i] == '2':
+                if i + 1 < n and s[i + 1] == '0':
+                    dp[i] = dp[i - 1]
+                else:
+                    if s[i - 1] == '1' or s[i - 1] == '2':
+                        dp[i] = dp[i - 1] + dp[i - 2]
+                    else:
+                        dp[i] = dp[i - 1]
+            elif s[i] >= '3' and s[i] <= '9' and s[i - 1] == '1':
+                dp[i] = dp[i - 1] + +dp[i - 2]
+            elif s[i] >= '3' and s[i] <= '6' and s[i - 1] == '2':
+                dp[i] = dp[i - 1] + +dp[i - 2]
+            else:
+                dp[i] = dp[i - 1]
 
-        return backtrack(0)
+        return dp[n - 1]
 
 
 s = Solution()
+print(s.numDecodings("10"))
+print(s.numDecodings("27"))
+print(s.numDecodings("1123"))
 print(s.numDecodings("12"))
 print(s.numDecodings("226"))
 print(s.numDecodings("0"))
