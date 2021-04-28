@@ -16,22 +16,33 @@ A中盘子的数目不大于14个。
 from typing import List
 '''
 思路：递归
-TODO
+经典的递归教学题
+从a移动到c，
+如果a上面只有1个盘子，可以将a内的元素直接给c
+否则需要使用b作为中介：
+    首先递归将a的1..n-1个盘子通过c移动到b
+    然后将a的第0个盘子移动到c
+    最后递归将b的1..n-1个盘子通过a移动到c
+时间复杂度：O(2^n-1)
 '''
 
 
 class Solution:
     def hanota(self, A: List[int], B: List[int], C: List[int]) -> None:
-        """
-        Do not return anything, modify C in-place instead.
-        """
-        if len(A) == 1 and len(B) == 0 and C[-1] > A[0]:
-            C.append(A.pop())
-        elif len(A) == 2 and len(B) == 0:
-            B.append(A.pop())
-            C.append(A.pop())
-            C.append(B.pop())
-        else:
-            self.hanota(A[1:], C, B)
-            C.append(A.pop())
-            self.hanota(B, A, C)
+        def move(n, src, buffer, dst):
+            if n == 1:
+                dst.append(src.pop())
+            else:
+                move(n - 1, src, dst, buffer)
+                dst.append(src.pop())
+                move(n - 1, buffer, src, dst)
+
+        move(len(A), A, B, C)
+
+
+s = Solution()
+A = [2, 1, 0]
+B = []
+C = []
+s.hanota(A, B, C)
+print(A, B, C)
