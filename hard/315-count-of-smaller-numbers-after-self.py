@@ -29,15 +29,16 @@ class Solution:
         mp = {}
         # 离散化数组
         for i, v in enumerate(sorted(nums)):
-            mp[v] = i + 1
-        c = [0] * (n + 1)
+            mp[v - 1] = 2 * i + 1
+            mp[v] = 2 * i + 2
+        c = [0] * (n + 1) * 2
 
         # 树状数组的函数
         def lowbit(x):
             return x & -x
 
         def add(x):
-            while x <= n:
+            while x <= 2 * n:
                 c[x] += 1
                 x += lowbit(x)
 
@@ -50,11 +51,13 @@ class Solution:
 
         # 统计树状数组中<num[i]的元素个数
         for i in range(n - 1, -1, -1):
-            counts[i] = getcount(mp[nums[i]])
+            counts[i] = getcount(mp[nums[i] - 1])
             add(mp[nums[i]])
 
         return counts
 
 
 s = Solution()
+print(s.countSmaller([-1, -2]))
+print(s.countSmaller([-1, -1]))
 print(s.countSmaller([5, 2, 6, 1]))
