@@ -1,14 +1,9 @@
 '''
-只出现一次的数字 II
-给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现了三次。找出那个只出现了一次的元素。
-
-说明：
-
-你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+剑指 Offer 56 - II. 数组中数字出现的次数 II
 '''
 from typing import List
 '''
-思路：快排算法里面的分区。
+思路1：快排算法里面的分区。
 随机从nums中选取pivot,利用快速排序算法里面的分区函数，分成2个区，<pivot的 和 >=pivot的。如果其中一个分区大小不是3的整数倍，
     说明目标元素出现在那个分区。需要继续对分区进行再分区。重复分区过程，直至有分区大小==1，则返回该分区的数。
 时间复杂度：O(n)，快排的时间复杂度为O(nlogn)，这里因为每次只对一半的分区进行再分区，所以时间复杂度为O(n)
@@ -25,7 +20,7 @@ two = (two^x)&~one 只保留出现2次的数
 
 class Solution:
     # 思路2 位运算
-    def singleNumber(self, nums: List[int]) -> int:
+    def singleNumber2(self, nums: List[int]) -> int:
         one, two = 0, 0
         for x in nums:
             one = (one ^ x) & ~two
@@ -33,7 +28,7 @@ class Solution:
         return one
 
     # 思路1 快排算法里面的分区
-    def singleNumber1(self, nums: List[int]) -> int:
+    def singleNumber(self, nums: List[int]) -> int:
         import random
 
         def partition(start, end):
@@ -59,8 +54,3 @@ class Solution:
                 return partition(i, end)
 
         return partition(0, len(nums))
-
-
-s = Solution()
-print(s.singleNumber([0, 1, 0, 1, 0, 1, 99]))
-print(s.singleNumber([2, 2, 3, 2]))

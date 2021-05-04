@@ -13,8 +13,11 @@
 '''
 from typing import List
 '''
-思路：TreeMap
+思路1：TreeMap
 参照java的题解
+
+思路2：单调队列
+TODO
 '''
 
 
