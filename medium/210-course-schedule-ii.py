@@ -34,10 +34,39 @@ from typing import List
 思路：拓扑排序
 使用队列、入度数组进行拓扑排序
 时间复杂度：O(n)，创建入度数组，遍历所有节点
-空间复杂度：O(n)，需要入度数组，队列，最坏情况下大小都是n
+空间复杂度：O(n)，需要入度数组，队列，后续课程哈希表，最坏情况下大小都是n
 '''
 
 
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
-        pass
+        import collections
+        indegree = [0] * numCourses  # 入度
+        edge = [[] for _ in range(numCourses)]  # 后续课程邻接表
+        # 遍历依赖关系，生成入度，邻接表
+        for prereq in prerequisites:
+            indegree[prereq[0]] += 1
+            edge[prereq[1]].append(prereq[0])
+        queue = collections.deque()
+        # 将入度为0的课程加入队列
+        for c in range(numCourses):
+            if indegree[c] == 0:
+                queue.append(c)
+        # BFS遍历课程，将队列中的课程加入结果，将课程的后续课程入度-1，如果后续课程的入度变成0，加入队列进行遍历
+        ans = []
+        while queue:
+            c = queue.popleft()
+            ans.append(c)
+            for next in edge[c]:  # 遍历该课程的后续
+                indegree[next] -= 1  # 后续课程的入度-1
+                if indegree[next] == 0:  # 如果后续课程的入度变成0，加入队列
+                    queue.append(next)
+        if len(ans) == numCourses:
+            return ans
+        else:
+            return []
+
+
+s = Solution()
+print(s.findOrder(2, [[1, 0]]))
+print(s.findOrder(4, [[1, 0], [2, 0], [3, 1], [3, 2]]))
