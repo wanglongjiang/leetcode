@@ -27,8 +27,9 @@ from typing import List
 '''
 思路：DFS搜索
 有向图的搜索，从queries[i][1]开始，向上搜索其先修课程，如果能找到，则结果为True,否则为false
-时间复杂度：O(mn)，m=queries.length,n=课程总数
-空间复杂度：O(n)
+直接查询超时了，为加快速度，可以事先将1个课程的所有先修课程计算出来
+时间复杂度：O(m+n*n)，m=queries.length,n=课程总数
+空间复杂度：O(n*(n+1)/2)，所有先修课程都进行展开
 '''
 
 
@@ -38,19 +39,25 @@ class Solution:
         for prereq in prerequisites:  # 初始化先修课程邻接表
             before[prereq[1]].add(prereq[0])
         ans = []
+        visited = [False] * n
 
-        # dfs遍历图，查询是否是先修课程
-        def dfs(c1, c2):
-            if c1 in before[c2]:
-                return True
-            for pre in before[c2]:
-                if dfs(c1, pre):
-                    return True
-            return False
+        # dfs遍历图，查询课程的所有先修课程
+        def dfs(c):
+            if visited[c]:
+                return before[c]
+            newpre = set()
+            for pre in before[c]:
+                newpre.update(dfs(pre))
+            before[c].update(newpre)  # 将所有的祖先先修课程全都直接添加到该课程的先修里面
+            visited[c] = True
+            return before[c]
+
+        for i in range(n):
+            dfs(i)
 
         # 遍历querie，判断是否为先修课程对
         for q in queries:
-            ans.append(dfs(q[0], q[1]))
+            ans.append(q[0] in before[q[1]])
         return ans
 
 
