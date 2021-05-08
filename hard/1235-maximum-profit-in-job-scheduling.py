@@ -47,7 +47,7 @@ from typing import List
 3、动态规划转移方程为：
     dp[0]设置为第0个元素的利润
     dp[i]为endTime[j]<startTime[i]的最大利润maxprofits[j]+profit[i]
-时间复杂度：O(n)
+时间复杂度：O(nlogn)，排序需要O(nlogn)，动态规划计算过程中需要二分查找，也是O(nlogn)
 空间复杂度：O(n)
 '''
 
