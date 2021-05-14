@@ -32,6 +32,7 @@
 ## 图
 
 - 212.[单词搜索 II](hard/212-word-search-ii.py)
+- 743.[网络延迟时间](medium/743-network-delay-time.py)
 
 ## 二分查找
 
@@ -40,18 +41,22 @@
 ## 排序
 
 - 767.[重构字符串](medium/767-reorganize-string.py)
+- 881.[救生艇](medium/881-boats-to-save-people.py)
 
 ## 贪心算法
 
 - 55.[跳跃游戏](medium/55-jump-game.py)
+- 12.[整数转罗马数字](medium/12-integer-to-roman.py)
 
 ## 位运算
 
 - 137.[只出现一次的数字 II](medium/137-single-number-ii.py)
+- 318.[最大单词长度乘积](medium/318-maximum-product-of-word-lengths.py)
 
 ## 深度优先搜索
 
 - 207.[课程表](medium/207-course-schedule.py)
+- 743.[网络延迟时间](medium/743-network-delay-time.py)
 
 ## 广度优先搜索
 
@@ -60,10 +65,19 @@
 ## 双指针
 
 - 11.[盛最多水的容器](medium/11-container-with-most-water2.py)
+- 845.[数组中的最长山脉](medium/845-longest-mountain-in-array.py)
+- 838.[推多米诺](medium/838-push-dominoes.py)
+- 881.[救生艇](medium/881-boats-to-save-people.py)
 
 ## 滑动窗口
 
 - 76.[最小覆盖子串](hard/76-minimum-window-substring.py)
+- 424.[替换后的最长重复字符](medium/424-longest-repeating-character-replacement.py)
+- 904.[水果成篮](medium/904-fruit-into-baskets.py)
+- 978.[最长湍流子数组](medium/978-longest-turbulent-subarray.py)
+- 1423.[可获得的最大点数](medium/1423-maximum-points-you-can-obtain-from-cards.py)
+- 1658.[将 x 减到 0 的最小操作数](medium/1658-minimum-operations-to-reduce-x-to-zero.py)
+- 1456.[定长子串中元音的最大数目](medium/1456-maximum-number-of-vowels-in-a-substring-of-given-length.py)
 
 ## 动态规划
 
