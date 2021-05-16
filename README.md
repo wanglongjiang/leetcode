@@ -16,6 +16,7 @@
 ## 数组
 
 - 1310.[子数组异或查询](medium/1310-xor-queries-of-a-subarray.py)
+- 442.[数组中重复的数据](medium/442-find-all-duplicates-in-an-array.py)
 
 ## 哈希
 
@@ -47,11 +48,13 @@
 
 - 55.[跳跃游戏](medium/55-jump-game.py)
 - 12.[整数转罗马数字](medium/12-integer-to-roman.py)
+- 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
 
 ## 位运算
 
 - 137.[只出现一次的数字 II](medium/137-single-number-ii.py)
 - 318.[最大单词长度乘积](medium/318-maximum-product-of-word-lengths.py)
+- 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
 
 ## 深度优先搜索
 
@@ -68,6 +71,7 @@
 - 845.[数组中的最长山脉](medium/845-longest-mountain-in-array.py)
 - 838.[推多米诺](medium/838-push-dominoes.py)
 - 881.[救生艇](medium/881-boats-to-save-people.py)
+- 1750.[删除字符串两端相同字符后的最短长度](medium/1750-minimum-length-of-string-after-deleting-similar-ends.py)
 
 ## 滑动窗口
 
@@ -99,6 +103,10 @@
 ## 分治
 
 - 241.[为运算表达式设计优先级](medium/241-different-ways-to-add-parentheses.py)
+
+## 状态机
+
+- 1839.[所有元音按顺序排布的最长子字符串](medium/1839-longest-substring-of-all-vowels-in-order.py)
 
 ## 设计
 
