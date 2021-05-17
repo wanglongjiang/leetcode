@@ -13,6 +13,13 @@
 
 - 502.[IPO](hard/502-ipo.py)
 
+## 队列
+
+- 621.[设计循环队列](medium/621.design-circular-queue.py)
+- 641.[设计循环双端队列](medium/641-design-circular-deque.py)
+- 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
+- 1673.[找出最具竞争力的子序列](medium/1673-find-the-most-competitive-subsequence.py)
+
 ## 数组
 
 - 1310.[子数组异或查询](medium/1310-xor-queries-of-a-subarray.py)
@@ -29,6 +36,7 @@
 ## 树
 
 - 100.[相同的树](easy/100-same-tree.py)
+- 993.[二叉树的堂兄弟节点](easy/993-cousins-in-binary-tree.py)
 
 ## 图
 
@@ -38,6 +46,7 @@
 ## 二分查找
 
 - 33.[搜索旋转排序数组](medium/33-search-in-rotated-sorted-array.py)
+- 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
 
 ## 排序
 
@@ -60,6 +69,7 @@
 
 - 207.[课程表](medium/207-course-schedule.py)
 - 743.[网络延迟时间](medium/743-network-delay-time.py)
+- 993.[二叉树的堂兄弟节点](easy/993-cousins-in-binary-tree.py)
 
 ## 广度优先搜索
 
@@ -71,6 +81,7 @@
 - 845.[数组中的最长山脉](medium/845-longest-mountain-in-array.py)
 - 838.[推多米诺](medium/838-push-dominoes.py)
 - 881.[救生艇](medium/881-boats-to-save-people.py)
+- 992.[K 个不同整数的子数组](hard/992-subarrays-with-k-different-integers.py)
 - 1750.[删除字符串两端相同字符后的最短长度](medium/1750-minimum-length-of-string-after-deleting-similar-ends.py)
 
 ## 滑动窗口
@@ -111,6 +122,9 @@
 ## 设计
 
 - 155.[最小栈](easy/155-min-stack.py)
+- 621.[设计循环队列](medium/621.design-circular-queue.py)
+- 641.[设计循环双端队列](medium/641-design-circular-deque.py)
+- 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
 
 ## 数学
 
