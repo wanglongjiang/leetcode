@@ -11,7 +11,9 @@
 
 ## 堆
 
+- 347.[前 K 个高频元素](medium/347-top-k-frequent-elements.py)
 - 502.[IPO](hard/502-ipo.py)
+- 692.[前 K 个高频单词](medium/692-top-k-frequent-words.py)
 
 ## 队列
 
@@ -46,7 +48,10 @@
 ## 二分查找
 
 - 33.[搜索旋转排序数组](medium/33-search-in-rotated-sorted-array.py)
+- 74.[搜索二维矩阵](medium/74-search-a-2d-matrix.py)
+- 240.[搜索二维矩阵 II](medium/240-search-a-2d-matrix-ii.py)
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
+- 面试题 10.09. [排序矩阵查找](interview/10.19.sorted-matrix-search-lcci.py)
 
 ## 排序
 
@@ -64,6 +69,7 @@
 - 137.[只出现一次的数字 II](medium/137-single-number-ii.py)
 - 318.[最大单词长度乘积](medium/318-maximum-product-of-word-lengths.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
+- 1442.[形成两个异或相等数组的三元组数目](medium/1442-count-triplets-that-can-form-two-arrays-of-equal-xor.py)
 
 ## 深度优先搜索
 
@@ -83,6 +89,8 @@
 - 881.[救生艇](medium/881-boats-to-save-people.py)
 - 992.[K 个不同整数的子数组](hard/992-subarrays-with-k-different-integers.py)
 - 1750.[删除字符串两端相同字符后的最短长度](medium/1750-minimum-length-of-string-after-deleting-similar-ends.py)
+- 1855.[下标对中的最大距离](medium/1855-maximum-distance-between-a-pair-of-values.py)
+- 1861.[旋转盒子](medium/1861-rotating-the-box.py)
 
 ## 滑动窗口
 
@@ -113,7 +121,11 @@
 
 ## 分治
 
+- 215.[数组中的第 K 个最大元素](medium/215-kth-largest-element-in-an-array.py)
 - 241.[为运算表达式设计优先级](medium/241-different-ways-to-add-parentheses.py)
+- 973.[最接近原点的 K 个点](medium/973-k-closest-points-to-origin.py)
+- 面试题 17.14. [最小 K 个数](interview/17.14.smallest-k-lcci.py)
+- 剑指 Offer 36. [二叉搜索树与双向链表](offer/36.er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof.py)
 
 ## 状态机
 
