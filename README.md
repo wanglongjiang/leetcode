@@ -14,6 +14,7 @@
 - 347.[前 K 个高频元素](medium/347-top-k-frequent-elements.py)
 - 502.[IPO](hard/502-ipo.py)
 - 692.[前 K 个高频单词](medium/692-top-k-frequent-words.py)
+- 1738.[找出第 K 大的异或坐标值](medium/1738-find-kth-largest-xor-coordinate-value.py)
 
 ## 队列
 
@@ -38,12 +39,15 @@
 ## 树
 
 - 100.[相同的树](easy/100-same-tree.py)
+- 297.[二叉树的序列化与反序列化](hard/297-serialize-and-deserialize-binary-tree.py)
+- 449.[序列化和反序列化二叉搜索树](medium/449-serialize-and-deserialize-bst.py)
 - 993.[二叉树的堂兄弟节点](easy/993-cousins-in-binary-tree.py)
 
 ## 图
 
 - 212.[单词搜索 II](hard/212-word-search-ii.py)
 - 743.[网络延迟时间](medium/743-network-delay-time.py)
+- 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 
 ## 二分查找
 
@@ -69,7 +73,9 @@
 - 137.[只出现一次的数字 II](medium/137-single-number-ii.py)
 - 318.[最大单词长度乘积](medium/318-maximum-product-of-word-lengths.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
+- 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 - 1442.[形成两个异或相等数组的三元组数目](medium/1442-count-triplets-that-can-form-two-arrays-of-equal-xor.py)
+- 1738.[找出第 K 大的异或坐标值](medium/1738-find-kth-largest-xor-coordinate-value.py)
 
 ## 深度优先搜索
 
@@ -79,6 +85,7 @@
 
 ## 广度优先搜索
 
+- 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 - 1091.[二进制矩阵中的最短路径](medium/1091-shortest-path-in-binary-matrix.py)
 
 ## 双指针
