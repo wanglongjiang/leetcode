@@ -25,12 +25,14 @@
 
 ## 数组
 
-- 1310.[子数组异或查询](medium/1310-xor-queries-of-a-subarray.py)
 - 442.[数组中重复的数据](medium/442-find-all-duplicates-in-an-array.py)
+- 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
+- 1310.[子数组异或查询](medium/1310-xor-queries-of-a-subarray.py)
 
 ## 哈希
 
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
+- 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 
 ## 链表
 
@@ -48,6 +50,12 @@
 - 212.[单词搜索 II](hard/212-word-search-ii.py)
 - 743.[网络延迟时间](medium/743-network-delay-time.py)
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
+- 785.[判断二分图](medium/785-is-graph-bipartite.py)
+- 841.[钥匙和房间](medium/841-keys-and-rooms.py)
+- 886.[可能的二分法](medium/886-possible-bipartition.py)
+- 1557.[可以到达所有点的最少点数目](medium/1557.minimum-number-of-vertices-to-reach-all-nodes.py)
+- 1615.[最大网络秩](medium/1615-maximal-network-rank.py)
+- 1791.[找出星型图的中心节点](medium/1791.find-center-of-star-graph.py)
 
 ## 二分查找
 
@@ -116,6 +124,7 @@
 - 309.[最佳买卖股票时机含冷冻期](medium/309-best-time-to-buy-and-sell-stock-with-cooldown.py)
 - 337.[打家劫舍 III](medium/337-house-robber-iii.py)
 - 376.[摆动序列](medium/376-wiggle-subsequence.py)
+- 1035.[不相交的线](medium/1035-uncrossed-lines.py)
 - 1269.[停在原地的方案数](hard/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps.py)
 
 ## 回溯
@@ -159,8 +168,16 @@
 
 ## 并查集
 
+- 547.[省份数量](medium/547-number-of-provinces.py)
 - 839.[相似字符串组](hard/839-similar-string-groups.py)
 - 924.[尽量减少恶意软件的传播](hard/924-minimize-malware-spread.py)
+- 947.[移除最多的同行或同列石头](medium/947-most-stones-removed-with-same-row-or-column.py)
+- 1202.[交换字符串中的元素](medium/1202-smallest-string-with-swaps.py)
+- 1319.[连通网络的操作次数](medium/1319-number-of-operations-to-make-network-connected.py)
+- 1579.[保证图可完全遍历](hard/1579-remove-max-number-of-edges-to-keep-graph-fully-traversable.py)
+- 1627.[带阈值的图连通性](hard/1627-graph-connectivity-with-threshold.py)
+- 1722.[执行交换操作后的最小汉明距离](medium/1722-minimize-hamming-distance-after-swap-operations.py)
+- 面试题 17.07.[婴儿名字](interview/17.07.baby-names-lcci.py)
 
 ## 树状数组
 
