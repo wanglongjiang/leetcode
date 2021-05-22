@@ -32,6 +32,7 @@
 ## 哈希
 
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
+- 763.[划分字母区间](medium/763-partition-labels.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 
 ## 链表
@@ -75,6 +76,9 @@
 - 55.[跳跃游戏](medium/55-jump-game.py)
 - 12.[整数转罗马数字](medium/12-integer-to-roman.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
+- 763.[划分字母区间](medium/763-partition-labels.py)
+- 870.[优势洗牌](medium/870-advantage-shuffle.py)
+- 1029.[两地调度](medium/1029-two-city-scheduling.py)
 
 ## 位运算
 
@@ -82,6 +86,7 @@
 - 318.[最大单词长度乘积](medium/318-maximum-product-of-word-lengths.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
+- 810.[黑板异或游戏](hard/810-chalkboard-xor-game.py)
 - 1442.[形成两个异或相等数组的三元组数目](medium/1442-count-triplets-that-can-form-two-arrays-of-equal-xor.py)
 - 1738.[找出第 K 大的异或坐标值](medium/1738-find-kth-largest-xor-coordinate-value.py)
 
@@ -122,6 +127,7 @@
 - 198.[打家劫舍](medium/198-house-robber.py)
 - 213.[打家劫舍 II](medium/213-house-robber-ii.py)
 - 309.[最佳买卖股票时机含冷冻期](medium/309-best-time-to-buy-and-sell-stock-with-cooldown.py)
+- 312.[戳气球](hard/312-burst-balloons.py)
 - 337.[打家劫舍 III](medium/337-house-robber-iii.py)
 - 376.[摆动序列](medium/376-wiggle-subsequence.py)
 - 1035.[不相交的线](medium/1035-uncrossed-lines.py)
@@ -157,6 +163,7 @@
 ## 数学
 
 - 400.[第 N 位数字](medium/400-nth-digit.py)
+- 932.[漂亮数组](medium/932-beautiful-array.py)
 
 ## 字典树
 
