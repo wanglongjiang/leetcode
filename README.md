@@ -18,6 +18,7 @@
 
 ## 队列
 
+- 429.[N 叉树的层序遍历](medium/429-n-ary-tree-level-order-traversal.py)
 - 621.[设计循环队列](medium/621.design-circular-queue.py)
 - 641.[设计循环双端队列](medium/641-design-circular-deque.py)
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
@@ -26,6 +27,7 @@
 ## 数组
 
 - 442.[数组中重复的数据](medium/442-find-all-duplicates-in-an-array.py)
+- 495.[提莫攻击](medium/495-teemo-attacking.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1310.[子数组异或查询](medium/1310-xor-queries-of-a-subarray.py)
 
@@ -42,8 +44,12 @@
 ## 树
 
 - 100.[相同的树](easy/100-same-tree.py)
+- 230.[二叉搜索树中第 K 小的元素](medium/230-kth-smallest-element-in-a-bst.py)
+- 236.[二叉树的最近公共祖先](medium/236-lowest-common-ancestor-of-a-binary-tree.py)
 - 297.[二叉树的序列化与反序列化](hard/297-serialize-and-deserialize-binary-tree.py)
+- 429.[N 叉树的层序遍历](medium/429-n-ary-tree-level-order-traversal.py)
 - 449.[序列化和反序列化二叉搜索树](medium/449-serialize-and-deserialize-bst.py)
+- 513.[找树左下角的值](medium/513-find-bottom-left-tree-value.py)
 - 993.[二叉树的堂兄弟节点](easy/993-cousins-in-binary-tree.py)
 
 ## 图
@@ -88,6 +94,7 @@
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 - 810.[黑板异或游戏](hard/810-chalkboard-xor-game.py)
 - 1442.[形成两个异或相等数组的三元组数目](medium/1442-count-triplets-that-can-form-two-arrays-of-equal-xor.py)
+- 1707.[与数组中元素的最大异或值](hard/1707-maximum-xor-with-an-element-from-array.py)
 - 1738.[找出第 K 大的异或坐标值](medium/1738-find-kth-largest-xor-coordinate-value.py)
 
 ## 深度优先搜索
@@ -136,6 +143,7 @@
 ## 回溯
 
 - 306.[累加数](medium/306-additive-number.py)
+- 491.[递增子序列](medium/491-increasing-subsequences.py)
 
 ## 递归
 
@@ -163,11 +171,18 @@
 ## 数学
 
 - 400.[第 N 位数字](medium/400-nth-digit.py)
+- 537.[复数乘法](medium/537-complex-number-multiplication.py)
 - 932.[漂亮数组](medium/932-beautiful-array.py)
 
 ## 字典树
 
+- 139.[单词拆分](medium/139-word-break.py)
 - 140.[单词拆分 II](hard/140-word-break-ii.py)
+- 211.[添加与搜索单词](medium/211-design-add-and-search-words-data-structure.py)
+- 1233.[删除子文件夹](medium/1233-remove-sub-folders-from-the-filesystem.py)
+- 1410.[HTML 实体解析器](medium/1410-html-entity-parser.py)
+- 1487.[保证文件名唯一](medium/1487-making-file-names-unique.py)
+- 1707.[与数组中元素的最大异或值](hard/1707-maximum-xor-with-an-element-from-array.py)
 
 ## 拓扑排序
 
