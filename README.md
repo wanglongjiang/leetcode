@@ -148,6 +148,7 @@
 - 312.[戳气球](hard/312-burst-balloons.py)
 - 337.[打家劫舍 III](medium/337-house-robber-iii.py)
 - 376.[摆动序列](medium/376-wiggle-subsequence.py)
+- 664.[奇怪的打印机](hard/664-strange-printer.py)
 - 1035.[不相交的线](medium/1035-uncrossed-lines.py)
 - 1269.[停在原地的方案数](hard/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps.py)
 

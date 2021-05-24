@@ -59,9 +59,7 @@ class Solution:
                         while k < j and s[j] != s[k]:  # 找到与s[j]相同的字符
                             k += 1
                         if k < j:
-                            t = 1
-                            if k > i:
-                                t = dp[i][k]  # s[k]的子串的打印次数
+                            t = dp[i][k]  # s[k]的子串的打印次数
                             while k < j and s[j] == s[k]:  # 跳过所有的与s[j]相同的字符
                                 k += 1
                             if k < j:
