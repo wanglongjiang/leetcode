@@ -28,6 +28,7 @@
 
 - 442.[数组中重复的数据](medium/442-find-all-duplicates-in-an-array.py)
 - 495.[提莫攻击](medium/495-teemo-attacking.py)
+- 517.[超级洗衣机](hard/517-super-washing-machines.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1310.[子数组异或查询](medium/1310-xor-queries-of-a-subarray.py)
 
@@ -40,6 +41,16 @@
 ## 链表
 
 - 21.[合并两个有序链表](easy/21-merge-two-sorted-lists.py)
+- 138.[复制带随机指针的链表](medium/138-copy-list-with-random-pointer.py)
+- 141.[环形链表](easy/141-linked-list-cycle.py)
+- 725.[分隔链表](medium/725-split-linked-list-in-parts.py)
+- 817.[链表组件](medium/817-linked-list-components.py)
+- 1171.[从链表中删去总和值为零的连续节点](medium/1171-remove-zero-sum-consecutive-nodes-from-linked-list.py)
+- 1367.[二叉树中的列表](medium/1367-linked-list-in-binary-tree.py)
+- 面试题 02.04.[分割链表](interview/02.04.partition-list-lcci.py)
+- 面试题 02.05.[链表求和](interview/02.05.sum-lists-lcci.py)
+- 面试题 02.08.[环路检测](interview/02.08.linked-list-cycle-lcci.py)
+- 剑指 Offer 35.[复杂链表的复制](offer/35-fu-za-lian-biao-de-fu-zhi-lcof.py)
 
 ## 树
 
