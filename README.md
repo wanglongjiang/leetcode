@@ -35,6 +35,7 @@
 ## 哈希
 
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
+- 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 
@@ -80,7 +81,13 @@
 - 33.[搜索旋转排序数组](medium/33-search-in-rotated-sorted-array.py)
 - 74.[搜索二维矩阵](medium/74-search-a-2d-matrix.py)
 - 240.[搜索二维矩阵 II](medium/240-search-a-2d-matrix-ii.py)
+- 436.[寻找右区间](medium/436-find-right-interval.py)
+- 454.[四数相加 II](medium/454-4sum-ii.py)
+- 475.[供暖器](medium/475-heaters.py)
+- 528.[按权重随机选择](medium/528-random-pick-with-weight.py)
+- 911.[在线选举](medium/911-online-election.py)
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
+- 981.[基于时间的键值存储](medium/981-time-based-key-value-store.py)
 - 面试题 10.09. [排序矩阵查找](interview/10.19.sorted-matrix-search-lcci.py)
 
 ## 排序
@@ -151,6 +158,7 @@
 - 664.[奇怪的打印机](hard/664-strange-printer.py)
 - 1035.[不相交的线](medium/1035-uncrossed-lines.py)
 - 1269.[停在原地的方案数](hard/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps.py)
+- 1787.[使所有区间的异或结果为零](hard/1787-make-the-xor-of-all-segments-equal-to-zero.py)
 
 ## 回溯
 
@@ -178,13 +186,20 @@
 - 155.[最小栈](easy/155-min-stack.py)
 - 621.[设计循环队列](medium/621.design-circular-queue.py)
 - 641.[设计循环双端队列](medium/641-design-circular-deque.py)
+- 911.[在线选举](medium/911-online-election.py)
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
+- 981.[基于时间的键值存储](medium/981-time-based-key-value-store.py)
 
 ## 数学
 
 - 400.[第 N 位数字](medium/400-nth-digit.py)
 - 537.[复数乘法](medium/537-complex-number-multiplication.py)
 - 932.[漂亮数组](medium/932-beautiful-array.py)
+
+## 随机
+
+- 528.[按权重随机选择](medium/528-random-pick-with-weight.py)
+- 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
 
 ## 字典树
 
