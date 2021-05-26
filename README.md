@@ -75,6 +75,7 @@
 - 1557.[可以到达所有点的最少点数目](medium/1557.minimum-number-of-vertices-to-reach-all-nodes.py)
 - 1615.[最大网络秩](medium/1615-maximal-network-rank.py)
 - 1791.[找出星型图的中心节点](medium/1791.find-center-of-star-graph.py)
+- 面试题 04.01.[节点间通路](interview/04.01.route-between-nodes-lcci.py)
 
 ## 二分查找
 
@@ -136,6 +137,7 @@
 - 1750.[删除字符串两端相同字符后的最短长度](medium/1750-minimum-length-of-string-after-deleting-similar-ends.py)
 - 1855.[下标对中的最大距离](medium/1855-maximum-distance-between-a-pair-of-values.py)
 - 1861.[旋转盒子](medium/1861-rotating-the-box.py)
+- 面试题 16.16.[部分排序](interview/16.16.sub-sort-lcci.py)
 
 ## 滑动窗口
 
@@ -167,6 +169,8 @@
 
 ## 递归
 
+- 1190.[反转每对括号间的子串](medium/1190-reverse-substrings-between-each-pair-of-parentheses.py)
+- 1387.[将整数按权重排序](medium/1387-sort-integers-by-the-power-value.py)
 - 面试题 08.06[汉诺塔问题](interview/08.06.hanota-lcci.py)
 
 ## 分治
@@ -174,6 +178,7 @@
 - 215.[数组中的第 K 个最大元素](medium/215-kth-largest-element-in-an-array.py)
 - 241.[为运算表达式设计优先级](medium/241-different-ways-to-add-parentheses.py)
 - 973.[最接近原点的 K 个点](medium/973-k-closest-points-to-origin.py)
+- 1387.[将整数按权重排序](medium/1387-sort-integers-by-the-power-value.py)
 - 面试题 17.14. [最小 K 个数](interview/17.14.smallest-k-lcci.py)
 - 剑指 Offer 36. [二叉搜索树与双向链表](offer/36.er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof.py)
 
