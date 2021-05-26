@@ -31,6 +31,7 @@
 - 517.[超级洗衣机](hard/517-super-washing-machines.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1310.[子数组异或查询](medium/1310-xor-queries-of-a-subarray.py)
+- 面试题 16.20.[T9 键盘](interview/16.20.t9-lcci.py)
 
 ## 哈希
 
@@ -90,6 +91,7 @@
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
 - 981.[基于时间的键值存储](medium/981-time-based-key-value-store.py)
 - 面试题 10.09. [排序矩阵查找](interview/10.19.sorted-matrix-search-lcci.py)
+- 面试题 16.16.[部分排序](interview/16.16.sub-sort-lcci.py)
 
 ## 排序
 
@@ -178,7 +180,6 @@
 - 215.[数组中的第 K 个最大元素](medium/215-kth-largest-element-in-an-array.py)
 - 241.[为运算表达式设计优先级](medium/241-different-ways-to-add-parentheses.py)
 - 973.[最接近原点的 K 个点](medium/973-k-closest-points-to-origin.py)
-- 1387.[将整数按权重排序](medium/1387-sort-integers-by-the-power-value.py)
 - 面试题 17.14. [最小 K 个数](interview/17.14.smallest-k-lcci.py)
 - 剑指 Offer 36. [二叉搜索树与双向链表](offer/36.er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof.py)
 
@@ -211,6 +212,7 @@
 - 139.[单词拆分](medium/139-word-break.py)
 - 140.[单词拆分 II](hard/140-word-break-ii.py)
 - 211.[添加与搜索单词](medium/211-design-add-and-search-words-data-structure.py)
+- 648.[单词替换](medium/648-replace-words.py)
 - 1233.[删除子文件夹](medium/1233-remove-sub-folders-from-the-filesystem.py)
 - 1410.[HTML 实体解析器](medium/1410-html-entity-parser.py)
 - 1487.[保证文件名唯一](medium/1487-making-file-names-unique.py)
