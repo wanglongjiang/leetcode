@@ -80,7 +80,7 @@ class Solution:
         # 从index开始查询sentence是否存在于字典树
         def search(index):
             nodeId = 0
-            while index < end:
+            while index < end and sentence[index] != ' ':
                 c = ord(sentence[index]) - ord('a')
                 if trie[nodeId][c]:
                     nodeId = trie[nodeId][c]

@@ -113,6 +113,7 @@
 - 318.[最大单词长度乘积](medium/318-maximum-product-of-word-lengths.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
+- 461.[汉明距离](easy/461-hamming-distance.py)
 - 810.[黑板异或游戏](hard/810-chalkboard-xor-game.py)
 - 1442.[形成两个异或相等数组的三元组数目](medium/1442-count-triplets-that-can-form-two-arrays-of-equal-xor.py)
 - 1707.[与数组中元素的最大异或值](hard/1707-maximum-xor-with-an-element-from-array.py)
@@ -213,10 +214,12 @@
 - 140.[单词拆分 II](hard/140-word-break-ii.py)
 - 211.[添加与搜索单词](medium/211-design-add-and-search-words-data-structure.py)
 - 648.[单词替换](medium/648-replace-words.py)
+- 677.[键值映射](medium/677-map-sum-pairs.py)
 - 1233.[删除子文件夹](medium/1233-remove-sub-folders-from-the-filesystem.py)
 - 1410.[HTML 实体解析器](medium/1410-html-entity-parser.py)
 - 1487.[保证文件名唯一](medium/1487-making-file-names-unique.py)
 - 1707.[与数组中元素的最大异或值](hard/1707-maximum-xor-with-an-element-from-array.py)
+- 面试题 17.17.[多次搜索](interview/17.17.multi-search-lcci.py)
 
 ## 拓扑排序
 
