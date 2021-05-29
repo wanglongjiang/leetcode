@@ -38,6 +38,7 @@
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
+- 1074.[元素和为目标值的子矩阵数量](hard/1074-number-of-submatrices-that-sum-to-target.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 
 ## 链表
@@ -122,6 +123,7 @@
 ## 深度优先搜索
 
 - 207.[课程表](medium/207-course-schedule.py)
+- 472.[连接词](hard/472-concatenated-words.py)
 - 743.[网络延迟时间](medium/743-network-delay-time.py)
 - 993.[二叉树的堂兄弟节点](easy/993-cousins-in-binary-tree.py)
 
@@ -208,13 +210,22 @@
 - 528.[按权重随机选择](medium/528-random-pick-with-weight.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
 
+## 字符串
+
+- 336.[回文对](hard/336-palindrome-pairs.py)
+- 1123.[驼峰式匹配](medium/1023-camelcase-matching.py)
+- 1638.[统计只差一个字符的子串数目](medium/1638-count-substrings-that-differ-by-one-character.py)
+
 ## 字典树
 
 - 139.[单词拆分](medium/139-word-break.py)
 - 140.[单词拆分 II](hard/140-word-break-ii.py)
 - 211.[添加与搜索单词](medium/211-design-add-and-search-words-data-structure.py)
+- 336.[回文对](hard/336-palindrome-pairs.py)
+- 472.[连接词](hard/472-concatenated-words.py)
 - 648.[单词替换](medium/648-replace-words.py)
 - 677.[键值映射](medium/677-map-sum-pairs.py)
+- 745.[前缀和后缀搜索](hard/745-prefix-and-suffix-search.py)
 - 1233.[删除子文件夹](medium/1233-remove-sub-folders-from-the-filesystem.py)
 - 1410.[HTML 实体解析器](medium/1410-html-entity-parser.py)
 - 1487.[保证文件名唯一](medium/1487-making-file-names-unique.py)
