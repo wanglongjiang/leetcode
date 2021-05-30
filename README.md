@@ -37,6 +37,7 @@
 
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
+- 560.[和为 K 的子数组](medium/560-subarray-sum-equals-k.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
 - 1074.[元素和为目标值的子矩阵数量](hard/1074-number-of-submatrices-that-sum-to-target.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
@@ -111,6 +112,7 @@
 ## 位运算
 
 - 137.[只出现一次的数字 II](medium/137-single-number-ii.py)
+- 231.[2 的幂](easy/231-power-of-two.py)
 - 318.[最大单词长度乘积](medium/318-maximum-product-of-word-lengths.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)

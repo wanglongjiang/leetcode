@@ -8,38 +8,33 @@
 数组中元素的范围是 [-1000, 1000] ，且整数 k 的范围是 [-1e7, 1e7]。
 '''
 from typing import List
+from collections import defaultdict
 '''
-思路：滑动窗口
-left，right构成滑动窗口，
-    如果窗口内的和<k，向右移动right指针
-    如果窗口内的和>k，向右移动left指针
-    如果窗口内的和==k，计数+1，向右移动right指针,left指针
-时间复杂度：O(n)
-空间复杂度：O(1)
+思路：前缀和+哈希
+依次从左到右计算前缀和，如果前缀和presum = k，则满足要求的子数组数量ans+1
+如果以往的子数组前缀和等于presum-k，因为以往的子数组是从0..x,而当前前缀和是从0..i，i>x，必然有当前子数组前缀和减去满足该条件的子数组前缀和为k
+以往的子数组前缀和用一个哈希表presums记录，key为前缀和，value为具有该前缀和的子数组个数
+
+ 1074.[元素和为目标值的子矩阵数量](hard/1074-number-of-submatrices-that-sum-to-target.py)是这道题的升级版
+
+ 时间复杂度：O(n)
+ 空间复杂度：O(n)
 '''
 
 
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
-        n = len(nums)
-        left, right = 0, 1
-        total = nums[0]
-        count = 0
-        while left < n:
-            if total > k:
-                total -= nums[left]
-                left += 1
-                continue
-            if total == k:
-                total -= nums[left]
-                left += 1
-                count += 1
-            if right < n:
-                total += nums[right]
-                right += 1
-            if right == n and total < k:
-                break
-        return count
+        ans = 0
+        presum = 0  # 前缀和
+        presums = defaultdict(int)  # 用于记录前缀和个数
+        for num in nums:
+            presum += num
+            if presum == k:  # 数组的前缀和为k，满足要求
+                ans += 1
+            if (presum - k) in presums:  # 当前数组减去以往所有前缀和为presum-k的子数组，都会满足要求
+                ans += presums[presum - k]
+            presums[presum] += 1
+        return ans
 
 
 s = Solution()
