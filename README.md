@@ -67,6 +67,14 @@
 - 513.[找树左下角的值](medium/513-find-bottom-left-tree-value.py)
 - 993.[二叉树的堂兄弟节点](easy/993-cousins-in-binary-tree.py)
 
+## Ordered Map
+
+- 846.[一手顺子](medium/846-hand-of-straights.py)
+- 855.[考场就座](medium/855-exam-room.py)
+- 1296.[划分数组为连续数字的集合](medium/1296-divide-array-in-sets-of-k-consecutive-numbers.py)
+- 1604.[警告一小时内使用相同员工卡大于等于三次的人](medium/1604-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period.py)
+- 1865.[找出和为指定值的下标对](medium/1865-finding-pairs-with-a-certain-sum.py)
+
 ## 图
 
 - 212.[单词搜索 II](hard/212-word-search-ii.py)
@@ -102,10 +110,13 @@
 
 ## 贪心算法
 
-- 55.[跳跃游戏](medium/55-jump-game.py)
 - 12.[整数转罗马数字](medium/12-integer-to-roman.py)
+- 55.[跳跃游戏](medium/55-jump-game.py)
+- 231.[2 的幂](easy/231-power-of-two.py)
+- 342.[4 的幂](easy/342-power-of-four.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
+- 849.[到最近的人的最大距离](medium/849-maximize-distance-to-closest-person.py)
 - 870.[优势洗牌](medium/870-advantage-shuffle.py)
 - 1029.[两地调度](medium/1029-two-city-scheduling.py)
 
@@ -203,6 +214,7 @@
 
 ## 数学
 
+- 326.[3 的幂](easy/326-power-of-three.py)
 - 400.[第 N 位数字](medium/400-nth-digit.py)
 - 537.[复数乘法](medium/537-complex-number-multiplication.py)
 - 932.[漂亮数组](medium/932-beautiful-array.py)
@@ -258,3 +270,10 @@
 ## 线段树
 
 - 493.[翻转对](hard/493-reverse-pairs.py)
+
+## 多线程
+
+- 1114.[按序打印](easy/1114-print-in-order.py)
+- 1115.[交替打印 FooBar](medium/1115-print-foobar-alternately.py)
+- 1195.[交替打印字符串](medium/1195-fizz-buzz-multithreaded.py)
+- 1226.[哲学家进餐](medium/1226-the-dining-philosophers.py)
