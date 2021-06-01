@@ -31,6 +31,7 @@
 - 517.[超级洗衣机](hard/517-super-washing-machines.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1310.[子数组异或查询](medium/1310-xor-queries-of-a-subarray.py)
+- 1744.[你能在你最喜欢的那天吃到你最喜欢的糖果吗？](medium/1744-can-you-eat-your-favorite-candy-on-your-favorite-day.py)
 - 面试题 16.20.[T9 键盘](interview/16.20.t9-lcci.py)
 
 ## 哈希
@@ -138,7 +139,9 @@
 - 207.[课程表](medium/207-course-schedule.py)
 - 472.[连接词](hard/472-concatenated-words.py)
 - 743.[网络延迟时间](medium/743-network-delay-time.py)
+- 865.[具有所有最深节点的最小子树](medium/865-smallest-subtree-with-all-the-deepest-nodes.py)
 - 993.[二叉树的堂兄弟节点](easy/993-cousins-in-binary-tree.py)
+- 1123.[最深叶节点的最近公共祖先](medium/1123-lowest-common-ancestor-of-deepest-leaves.py)
 
 ## 广度优先搜索
 
@@ -184,10 +187,14 @@
 
 - 306.[累加数](medium/306-additive-number.py)
 - 491.[递增子序列](medium/491-increasing-subsequences.py)
+- 967.[连续差相同的数字](medium/967-numbers-with-same-consecutive-differences.py)
 
 ## 递归
 
+- 538.[把二叉搜索树转换为累加树](medium/538-convert-bst-to-greater-tree.py)
+- 1038.[把二叉搜索树转换为累加树](medium/1038-binary-search-tree-to-greater-sum-tree.py)
 - 1190.[反转每对括号间的子串](medium/1190-reverse-substrings-between-each-pair-of-parentheses.py)
+- 1379.[找出克隆二叉树中的相同节点](medium/1379-find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree.py)
 - 1387.[将整数按权重排序](medium/1387-sort-integers-by-the-power-value.py)
 - 面试题 08.06[汉诺塔问题](interview/08.06.hanota-lcci.py)
 
