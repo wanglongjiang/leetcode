@@ -37,6 +37,7 @@
 ## 哈希
 
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
+- 523.[连续的子数组和](medium/523-continuous-subarray-sum.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
 - 560.[和为 K 的子数组](medium/560-subarray-sum-equals-k.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
@@ -67,6 +68,7 @@
 - 449.[序列化和反序列化二叉搜索树](medium/449-serialize-and-deserialize-bst.py)
 - 513.[找树左下角的值](medium/513-find-bottom-left-tree-value.py)
 - 993.[二叉树的堂兄弟节点](easy/993-cousins-in-binary-tree.py)
+- 1305.[两棵二叉搜索树中的所有元素](medium/1305-all-elements-in-two-binary-search-trees.py)
 
 ## Ordered Map
 
@@ -106,8 +108,13 @@
 
 ## 排序
 
+- 452.[用最少数量的箭引爆气球](medium/452-minimum-number-of-arrows-to-burst-balloons.py)
+- 524.[通过删除字母匹配到字典里最长单词](medium/524-longest-word-in-dictionary-through-deleting.py)
 - 767.[重构字符串](medium/767-reorganize-string.py)
 - 881.[救生艇](medium/881-boats-to-save-people.py)
+- 1288.[删除被覆盖区间](medium/1288-remove-covered-intervals.py)
+- 1329.[将矩阵按对角线排序](medium/1329-sort-the-matrix-diagonally.py)
+- 1333.[餐厅过滤器](medium/1333-filter-restaurants-by-vegan-friendly-price-and-distance.py)
 
 ## 贪心算法
 
@@ -234,6 +241,7 @@
 ## 字符串
 
 - 336.[回文对](hard/336-palindrome-pairs.py)
+- 524.[通过删除字母匹配到字典里最长单词](medium/524-longest-word-in-dictionary-through-deleting.py)
 - 1123.[驼峰式匹配](medium/1023-camelcase-matching.py)
 - 1638.[统计只差一个字符的子串数目](medium/1638-count-substrings-that-differ-by-one-character.py)
 
