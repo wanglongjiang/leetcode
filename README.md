@@ -29,6 +29,7 @@
 - 442.[数组中重复的数据](medium/442-find-all-duplicates-in-an-array.py)
 - 495.[提莫攻击](medium/495-teemo-attacking.py)
 - 517.[超级洗衣机](hard/517-super-washing-machines.py)
+- 525.[连续数组](medium/525-contiguous-array.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1310.[子数组异或查询](medium/1310-xor-queries-of-a-subarray.py)
 - 1744.[你能在你最喜欢的那天吃到你最喜欢的糖果吗？](medium/1744-can-you-eat-your-favorite-candy-on-your-favorite-day.py)
@@ -38,6 +39,7 @@
 
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
 - 523.[连续的子数组和](medium/523-continuous-subarray-sum.py)
+- 525.[连续数组](medium/525-contiguous-array.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
 - 560.[和为 K 的子数组](medium/560-subarray-sum-equals-k.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
@@ -268,9 +270,13 @@
 ## 并查集
 
 - 547.[省份数量](medium/547-number-of-provinces.py)
+- 684.[冗余连接](medium/684-redundant-connection.py)
+- 685.[冗余连接 II](hard/685-redundant-connection-ii.py)
+- 765.[情侣牵手](hard/765-couples-holding-hands.py)
 - 839.[相似字符串组](hard/839-similar-string-groups.py)
 - 924.[尽量减少恶意软件的传播](hard/924-minimize-malware-spread.py)
 - 947.[移除最多的同行或同列石头](medium/947-most-stones-removed-with-same-row-or-column.py)
+- 952.[按公因数计算最大组件大小](hard/952-largest-component-size-by-common-factor.py)
 - 1202.[交换字符串中的元素](medium/1202-smallest-string-with-swaps.py)
 - 1319.[连通网络的操作次数](medium/1319-number-of-operations-to-make-network-connected.py)
 - 1579.[保证图可完全遍历](hard/1579-remove-max-number-of-edges-to-keep-graph-fully-traversable.py)
