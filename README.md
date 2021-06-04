@@ -51,6 +51,7 @@
 - 21.[合并两个有序链表](easy/21-merge-two-sorted-lists.py)
 - 138.[复制带随机指针的链表](medium/138-copy-list-with-random-pointer.py)
 - 141.[环形链表](easy/141-linked-list-cycle.py)
+- 160.[相交链表](easy/160-intersection-of-two-linked-lists.py)
 - 725.[分隔链表](medium/725-split-linked-list-in-parts.py)
 - 817.[链表组件](medium/817-linked-list-components.py)
 - 1171.[从链表中删去总和值为零的连续节点](medium/1171-remove-zero-sum-consecutive-nodes-from-linked-list.py)
@@ -117,6 +118,7 @@
 - 1288.[删除被覆盖区间](medium/1288-remove-covered-intervals.py)
 - 1329.[将矩阵按对角线排序](medium/1329-sort-the-matrix-diagonally.py)
 - 1333.[餐厅过滤器](medium/1333-filter-restaurants-by-vegan-friendly-price-and-distance.py)
+- 1561.[你可以获得的最大硬币数目](medium/1561-maximum-number-of-coins-you-can-get.py)
 
 ## 贪心算法
 
@@ -151,6 +153,7 @@
 - 865.[具有所有最深节点的最小子树](medium/865-smallest-subtree-with-all-the-deepest-nodes.py)
 - 993.[二叉树的堂兄弟节点](easy/993-cousins-in-binary-tree.py)
 - 1123.[最深叶节点的最近公共祖先](medium/1123-lowest-common-ancestor-of-deepest-leaves.py)
+- 1857.[有向图中最大颜色值](hard/1857-largest-color-value-in-a-directed-graph.py)
 
 ## 广度优先搜索
 
@@ -281,6 +284,7 @@
 - 1319.[连通网络的操作次数](medium/1319-number-of-operations-to-make-network-connected.py)
 - 1579.[保证图可完全遍历](hard/1579-remove-max-number-of-edges-to-keep-graph-fully-traversable.py)
 - 1627.[带阈值的图连通性](hard/1627-graph-connectivity-with-threshold.py)
+- 1697.[检查边长度限制的路径是否存在](hard/1697-checking-existence-of-edge-length-limited-paths.py)
 - 1722.[执行交换操作后的最小汉明距离](medium/1722-minimize-hamming-distance-after-swap-operations.py)
 - 面试题 17.07.[婴儿名字](interview/17.07.baby-names-lcci.py)
 
