@@ -10,8 +10,8 @@ timei 是给第 i 位顾客做菜需要的时间。
 
 提示：
 
-1 <= customers.length <= 105
-1 <= arrivali, timei <= 104
+1 <= customers.length <= 10^5
+1 <= arrivali, timei <= 10^4
 arrivali <= arrivali+1
 '''
 from typing import List

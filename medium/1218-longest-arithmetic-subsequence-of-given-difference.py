@@ -25,7 +25,7 @@
 
 提示：
 
-1 <= arr.length <= 105
+1 <= arr.length <= 10^5
 -10^4 <= arr[i], difference <= 10^4
 '''
 from typing import List

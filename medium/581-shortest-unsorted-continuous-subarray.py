@@ -5,8 +5,8 @@
 请你找出符合题意的 最短 子数组，并输出它的长度。
 提示：
 
-1 <= nums.length <= 104
--105 <= nums[i] <= 105
+1 <= nums.length <= 10^4
+-105 <= nums[i] <= 10^5
 '''
 from typing import List
 '''

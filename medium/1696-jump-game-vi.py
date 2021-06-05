@@ -11,8 +11,8 @@
 
 提示：
 
- 1 <= nums.length, k <= 105
--104 <= nums[i] <= 104
+ 1 <= nums.length, k <= 10^5
+-104 <= nums[i] <= 10^4
 '''
 
 from typing import List

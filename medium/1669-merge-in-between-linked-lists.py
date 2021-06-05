@@ -8,9 +8,9 @@
 
 提示：
 
-3 <= list1.length <= 104
+3 <= list1.length <= 10^4
 1 <= a <= b < list1.length - 1
-1 <= list2.length <= 104
+1 <= list2.length <= 10^4
 '''
 from typing import List
 

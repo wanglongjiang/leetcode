@@ -7,8 +7,8 @@
 
 提示：
 
-1 <= arr.length <= 104
-1 <= arr[i] <= 104
+1 <= arr.length <= 10^4
+1 <= arr[i] <= 10^4
 '''
 from typing import List
 '''

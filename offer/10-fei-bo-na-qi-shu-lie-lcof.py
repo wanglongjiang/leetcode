@@ -15,7 +15,9 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 思路：递归
 按照定义写出递归函数
 时间复杂度：O(fib(n))
-TODO 超时
+
+思路：迭代
+时间复杂度：O(n)
 '''
 
 
@@ -25,9 +27,14 @@ class Solution:
             return 0
         if n == 1:
             return 1
-        return (self.fib(n - 1) + self.fib(n - 2)) % 1000000007
+        fib, fib1, fib2 = 0, 0, 1
+        for i in range(2, n + 1):
+            fib = fib1 + fib2
+            fib1, fib2 = fib2, fib
+        return fib % 1000000007
 
 
 s = Solution()
 print(s.fib(2))
 print(s.fib(5))
+print(s.fib(37))

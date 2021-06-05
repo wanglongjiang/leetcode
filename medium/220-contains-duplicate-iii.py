@@ -6,7 +6,7 @@
 
 0 <= nums.length <= 2 * 104
 -231 <= nums[i] <= 231 - 1
-0 <= k <= 104
+0 <= k <= 10^4
 0 <= t <= 231 - 1
 '''
 from typing import List

@@ -13,7 +13,7 @@
 1 <= bookings.length <= 2 * 10^4
 bookings[i].length == 3
 1 <= firsti <= lasti <= n
-1 <= seatsi <= 104
+1 <= seatsi <= 10^4
 '''
 from typing import List
 '''

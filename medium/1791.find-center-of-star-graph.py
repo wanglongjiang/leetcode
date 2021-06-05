@@ -22,7 +22,7 @@
 
 提示：
 
-3 <= n <= 105
+3 <= n <= 10^5
 edges.length == n - 1
 edges[i].length == 2
 1 <= ui, vi <= n

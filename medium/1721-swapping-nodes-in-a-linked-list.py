@@ -6,7 +6,7 @@
 提示：
 
 链表中节点的数目是 n
-1 <= k <= n <= 105
+1 <= k <= n <= 10^5
 0 <= Node.val <= 100
 '''
 from typing import List

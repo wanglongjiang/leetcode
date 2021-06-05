@@ -32,7 +32,7 @@
 
 提示：
 
-2 <= asteroids.length <= 104
+2 <= asteroids.length <= 10^4
 -1000 <= asteroids[i] <= 1000
 asteroids[i] != 0
 '''

@@ -9,7 +9,7 @@
 
 提示：
 
-1 <= task.length <= 104
+1 <= task.length <= 10^4
 tasks[i] 是大写英文字母
 n 的取值范围为 [0, 100]
 '''

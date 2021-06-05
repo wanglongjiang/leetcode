@@ -21,7 +21,7 @@
 
 提示：
 
-1 <= nums.length <= 105
+1 <= nums.length <= 10^5
 0 <= nums[i] <= 109
 1 <= k <= nums.length
 '''
