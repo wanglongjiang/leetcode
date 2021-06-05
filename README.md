@@ -14,6 +14,7 @@
 - 347.[前 K 个高频元素](medium/347-top-k-frequent-elements.py)
 - 502.[IPO](hard/502-ipo.py)
 - 692.[前 K 个高频单词](medium/692-top-k-frequent-words.py)
+- 1353.[最多可以参加的会议数目](medium/1353-maximum-number-of-events-that-can-be-attended.py)
 - 1738.[找出第 K 大的异或坐标值](medium/1738-find-kth-largest-xor-coordinate-value.py)
 
 ## 队列
@@ -45,6 +46,7 @@
 - 763.[划分字母区间](medium/763-partition-labels.py)
 - 1074.[元素和为目标值的子矩阵数量](hard/1074-number-of-submatrices-that-sum-to-target.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
+- 1630.[等差子数组](medium/1630-arithmetic-subarrays.py)
 
 ## 链表
 
@@ -52,6 +54,7 @@
 - 138.[复制带随机指针的链表](medium/138-copy-list-with-random-pointer.py)
 - 141.[环形链表](easy/141-linked-list-cycle.py)
 - 160.[相交链表](easy/160-intersection-of-two-linked-lists.py)
+- 203.[移除链表元素](easy/203-remove-linked-list-elements.py)
 - 725.[分隔链表](medium/725-split-linked-list-in-parts.py)
 - 817.[链表组件](medium/817-linked-list-components.py)
 - 1171.[从链表中删去总和值为零的连续节点](medium/1171-remove-zero-sum-consecutive-nodes-from-linked-list.py)
@@ -103,6 +106,7 @@
 - 454.[四数相加 II](medium/454-4sum-ii.py)
 - 475.[供暖器](medium/475-heaters.py)
 - 528.[按权重随机选择](medium/528-random-pick-with-weight.py)
+- 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
 - 911.[在线选举](medium/911-online-election.py)
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
 - 981.[基于时间的键值存储](medium/981-time-based-key-value-store.py)
@@ -113,11 +117,15 @@
 
 - 452.[用最少数量的箭引爆气球](medium/452-minimum-number-of-arrows-to-burst-balloons.py)
 - 524.[通过删除字母匹配到字典里最长单词](medium/524-longest-word-in-dictionary-through-deleting.py)
+- 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
 - 767.[重构字符串](medium/767-reorganize-string.py)
 - 881.[救生艇](medium/881-boats-to-save-people.py)
 - 1288.[删除被覆盖区间](medium/1288-remove-covered-intervals.py)
 - 1329.[将矩阵按对角线排序](medium/1329-sort-the-matrix-diagonally.py)
 - 1333.[餐厅过滤器](medium/1333-filter-restaurants-by-vegan-friendly-price-and-distance.py)
+- 1353.[最多可以参加的会议数目](medium/1353-maximum-number-of-events-that-can-be-attended.py)
+- 1366.[通过投票对团队排名](medium/1366-rank-teams-by-votes.py)
+- 1451.[重新排列句子中的单词](medium/1451-rearrange-words-in-a-sentence.py)
 - 1561.[你可以获得的最大硬币数目](medium/1561-maximum-number-of-coins-you-can-get.py)
 
 ## 贪心算法
@@ -131,6 +139,7 @@
 - 849.[到最近的人的最大距离](medium/849-maximize-distance-to-closest-person.py)
 - 870.[优势洗牌](medium/870-advantage-shuffle.py)
 - 1029.[两地调度](medium/1029-two-city-scheduling.py)
+- 1353.[最多可以参加的会议数目](medium/1353-maximum-number-of-events-that-can-be-attended.py)
 
 ## 位运算
 
@@ -242,6 +251,7 @@
 
 - 528.[按权重随机选择](medium/528-random-pick-with-weight.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
+- 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
 
 ## 字符串
 
