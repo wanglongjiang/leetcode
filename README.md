@@ -12,6 +12,7 @@
 ## 堆
 
 - 347.[前 K 个高频元素](medium/347-top-k-frequent-elements.py)
+- 355.[设计推特](medium/355-design-twitter.py)
 - 502.[IPO](hard/502-ipo.py)
 - 692.[前 K 个高频单词](medium/692-top-k-frequent-words.py)
 - 1353.[最多可以参加的会议数目](medium/1353-maximum-number-of-events-that-can-be-attended.py)
@@ -39,11 +40,13 @@
 ## 哈希
 
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
+- 355.[设计推特](medium/355-design-twitter.py)
 - 523.[连续的子数组和](medium/523-continuous-subarray-sum.py)
 - 525.[连续数组](medium/525-contiguous-array.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
 - 560.[和为 K 的子数组](medium/560-subarray-sum-equals-k.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
+- 966.[元音拼写检查器](medium/966-vowel-spellchecker.py)
 - 1074.[元素和为目标值的子矩阵数量](hard/1074-number-of-submatrices-that-sum-to-target.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1630.[等差子数组](medium/1630-arithmetic-subarrays.py)
@@ -201,6 +204,7 @@
 - 312.[戳气球](hard/312-burst-balloons.py)
 - 337.[打家劫舍 III](medium/337-house-robber-iii.py)
 - 376.[摆动序列](medium/376-wiggle-subsequence.py)
+- 474.[一和零](medium/474-ones-and-zeroes.py)
 - 664.[奇怪的打印机](hard/664-strange-printer.py)
 - 1035.[不相交的线](medium/1035-uncrossed-lines.py)
 - 1269.[停在原地的方案数](hard/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps.py)
