@@ -45,8 +45,12 @@
 - 525.[连续数组](medium/525-contiguous-array.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
 - 560.[和为 K 的子数组](medium/560-subarray-sum-equals-k.py)
+- 609.[在系统中查找重复文件](medium/609-find-duplicate-file-in-system.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
+- 939.[哈希](medium/939-minimum-area-rectangle.py)
+- 954.[二倍数对数组](medium/954-array-of-doubled-pairs.py)
 - 966.[元音拼写检查器](medium/966-vowel-spellchecker.py)
+- 1001.[网格照明](hard/1001-grid-illumination.py)
 - 1074.[元素和为目标值的子矩阵数量](hard/1074-number-of-submatrices-that-sum-to-target.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1630.[等差子数组](medium/1630-arithmetic-subarrays.py)
@@ -123,6 +127,7 @@
 - 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
 - 767.[重构字符串](medium/767-reorganize-string.py)
 - 881.[救生艇](medium/881-boats-to-save-people.py)
+- 954.[二倍数对数组](medium/954-array-of-doubled-pairs.py)
 - 1288.[删除被覆盖区间](medium/1288-remove-covered-intervals.py)
 - 1329.[将矩阵按对角线排序](medium/1329-sort-the-matrix-diagonally.py)
 - 1333.[餐厅过滤器](medium/1333-filter-restaurants-by-vegan-friendly-price-and-distance.py)
@@ -163,8 +168,10 @@
 
 - 207.[课程表](medium/207-course-schedule.py)
 - 472.[连接词](hard/472-concatenated-words.py)
+- 508.[出现次数最多的子树元素和](medium/508-most-frequent-subtree-sum.py)
 - 743.[网络延迟时间](medium/743-network-delay-time.py)
 - 865.[具有所有最深节点的最小子树](medium/865-smallest-subtree-with-all-the-deepest-nodes.py)
+- 987.[二叉树的垂序遍历](hard/987-vertical-order-traversal-of-a-binary-tree.py)
 - 993.[二叉树的堂兄弟节点](easy/993-cousins-in-binary-tree.py)
 - 1123.[最深叶节点的最近公共祖先](medium/1123-lowest-common-ancestor-of-deepest-leaves.py)
 - 1857.[有向图中最大颜色值](hard/1857-largest-color-value-in-a-directed-graph.py)
@@ -206,6 +213,7 @@
 - 376.[摆动序列](medium/376-wiggle-subsequence.py)
 - 474.[一和零](medium/474-ones-and-zeroes.py)
 - 664.[奇怪的打印机](hard/664-strange-printer.py)
+- 718.[最长重复子数组](medium/718-maximum-length-of-repeated-subarray.py)
 - 1035.[不相交的线](medium/1035-uncrossed-lines.py)
 - 1269.[停在原地的方案数](hard/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps.py)
 - 1787.[使所有区间的异或结果为零](hard/1787-make-the-xor-of-all-segments-equal-to-zero.py)
@@ -214,6 +222,7 @@
 
 - 306.[累加数](medium/306-additive-number.py)
 - 491.[递增子序列](medium/491-increasing-subsequences.py)
+- 494.[目标和](medium/494-target-sum.py)
 - 967.[连续差相同的数字](medium/967-numbers-with-same-consecutive-differences.py)
 
 ## 递归
@@ -252,6 +261,8 @@
 - 400.[第 N 位数字](medium/400-nth-digit.py)
 - 537.[复数乘法](medium/537-complex-number-multiplication.py)
 - 932.[漂亮数组](medium/932-beautiful-array.py)
+- 970.[强整数](medium/970-powerful-integers.py)
+- 974.[和可被 K 整除的子数组](medium/974-subarray-sums-divisible-by-k.py)
 
 ## 随机
 
