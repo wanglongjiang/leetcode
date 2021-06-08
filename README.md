@@ -54,6 +54,8 @@
 - 1074.[元素和为目标值的子矩阵数量](hard/1074-number-of-submatrices-that-sum-to-target.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1630.[等差子数组](medium/1630-arithmetic-subarrays.py)
+- 1807.[替换字符串中的括号内容](medium/1807-evaluate-the-bracket-pairs-of-a-string.py)
+- 面试题 16.24.[数对和](interview/16.24.pairs-with-sum-lcci.py)
 
 ## 链表
 
@@ -99,6 +101,7 @@
 - 785.[判断二分图](medium/785-is-graph-bipartite.py)
 - 841.[钥匙和房间](medium/841-keys-and-rooms.py)
 - 886.[可能的二分法](medium/886-possible-bipartition.py)
+- 1048.[最长字符串链](medium/1048-longest-string-chain.py)
 - 1557.[可以到达所有点的最少点数目](medium/1557.minimum-number-of-vertices-to-reach-all-nodes.py)
 - 1615.[最大网络秩](medium/1615-maximal-network-rank.py)
 - 1791.[找出星型图的中心节点](medium/1791.find-center-of-star-graph.py)
