@@ -55,6 +55,7 @@
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1630.[等差子数组](medium/1630-arithmetic-subarrays.py)
 - 1807.[替换字符串中的括号内容](medium/1807-evaluate-the-bracket-pairs-of-a-string.py)
+- 面试题 16.14.[最佳直线](interview/16.14.best-line-lcci.py)
 - 面试题 16.24.[数对和](interview/16.24.pairs-with-sum-lcci.py)
 
 ## 链表
@@ -90,6 +91,7 @@
 - 846.[一手顺子](medium/846-hand-of-straights.py)
 - 855.[考场就座](medium/855-exam-room.py)
 - 1296.[划分数组为连续数字的集合](medium/1296-divide-array-in-sets-of-k-consecutive-numbers.py)
+- 1488.[避免洪水泛滥](medium/1488-avoid-flood-in-the-city.py)
 - 1604.[警告一小时内使用相同员工卡大于等于三次的人](medium/1604-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period.py)
 - 1865.[找出和为指定值的下标对](medium/1865-finding-pairs-with-a-certain-sum.py)
 
@@ -183,6 +185,7 @@
 
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 - 1091.[二进制矩阵中的最短路径](medium/1091-shortest-path-in-binary-matrix.py)
+- 1311.[获取你好友已观看的视频](medium/1311-get-watched-videos-by-your-friends.py)
 
 ## 双指针
 
@@ -205,6 +208,7 @@
 - 1423.[可获得的最大点数](medium/1423-maximum-points-you-can-obtain-from-cards.py)
 - 1658.[将 x 减到 0 的最小操作数](medium/1658-minimum-operations-to-reduce-x-to-zero.py)
 - 1456.[定长子串中元音的最大数目](medium/1456-maximum-number-of-vowels-in-a-substring-of-given-length.py)
+- 剑指 Offer 48.[最长不含重复字符的子字符串](offer/48-zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof.py)
 
 ## 动态规划
 
@@ -220,6 +224,11 @@
 - 1035.[不相交的线](medium/1035-uncrossed-lines.py)
 - 1269.[停在原地的方案数](hard/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps.py)
 - 1787.[使所有区间的异或结果为零](hard/1787-make-the-xor-of-all-segments-equal-to-zero.py)
+
+## 背包问题
+
+- 879.[盈利计划](hard/879-profitable-schemes.py)
+- 1049.[最后一块石头的重量 II](medium/1049-last-stone-weight-ii.py)
 
 ## 回溯
 

@@ -21,20 +21,41 @@ ans.length == rains.length
 0 <= rains[i] <= 10^9
 '''
 from typing import List
+from sortedcontainers import SortedList
 '''
-思路：哈希表暴力搜索。
-用哈希表full记录已经下满雨的湖泊，和第几天下雨（下标）；用列表empty记录不下雨的日期
+思路：哈希表+OrderedMap。
+用哈希表fullLakes记录已经下满雨的湖泊，和第几天下雨（下标）；用红黑树sunnyDays记录不下雨的日期
 从左到右遍历rains数组，对于第i个元素，rains[i]
-    如果==0，将i加入empty。
-    如果>0，将(key:rains[i],val:i)加入full中，如果full中存在与rains[i]相同的值rains[j]，在empty中搜索比j大的值，将其从empty中删除
-时间复杂度：O(n*n)，搜索及删除empty中的元素，有O(n*n)的复杂度
+> 如果==0，将i加入sunnyDays。
+> 如果>0，如果fulllakes中存在与rains[i]相同的值rains[j]，在sunnyDays中搜索比j大的值，将其从sunnyDays中删除
+> 如果>0，且fullLakes中不存在rains[i]，将rains[i]加入fullLakes
+
+时间复杂度：O(nlogn)，搜索及删除sunnyDays中的元素，有O(nlogn)的复杂度
 空间复杂度：O(n)
 '''
 
 
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
-        pass
+        fullLakes = {}
+        sunnyDays = SortedList()
+        ans = [1] * len(rains)
+        for i in range(len(rains)):
+            if rains[i] == 0:
+                sunnyDays.add(i)
+            else:
+                ans[i] = -1
+                if rains[i] in fullLakes:
+                    day = fullLakes[rains[i]]
+                    fullLakes[rains[i]] = i
+                    sunnyDayIdx = sunnyDays.bisect_left(day)  # 在晴天的日子里搜索比当时下雨天后面的日期
+                    if sunnyDayIdx == len(sunnyDays):  # 未找到晴天，没有办法组织洪水
+                        return []
+                    ans[sunnyDays[sunnyDayIdx]] = rains[i]  # 利用找到的晴天排水
+                    del sunnyDays[sunnyDayIdx]  # 该晴天已被使用，删除
+                else:  # 该湖泊为空，放入已下满的湖泊哈希表中
+                    fullLakes[rains[i]] = i
+        return ans
 
 
 s = Solution()
