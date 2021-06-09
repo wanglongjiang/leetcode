@@ -22,7 +22,7 @@
 提示：
 
 1 <= nums.length <= 10^5
-0 <= nums[i] <= 109
+0 <= nums[i] <= 10^9
 1 <= k <= nums.length
 '''
 from typing import List

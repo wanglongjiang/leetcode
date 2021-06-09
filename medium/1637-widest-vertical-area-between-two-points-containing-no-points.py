@@ -25,7 +25,7 @@
 n == points.length
 2 <= n <= 10^5
 points[i].length == 2
-0 <= xi, yi <= 109
+0 <= xi, yi <= 10^9
 '''
 from typing import List
 '''

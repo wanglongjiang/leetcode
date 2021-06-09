@@ -9,10 +9,10 @@
 m == matrix.length
 n == matrix[i].length
 1 <= n, m <= 300
--109 <= matix[i][j] <= 109
+-109 <= matix[i][j] <= 10^9
 每行的所有元素从左到右升序排列
 每列的所有元素从上到下升序排列
--109 <= target <= 109
+-109 <= target <= 10^9
 
 '''
 from typing import List

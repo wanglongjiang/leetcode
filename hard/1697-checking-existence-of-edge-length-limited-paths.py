@@ -34,7 +34,7 @@ queries[j].length == 3
 0 <= ui, vi, pj, qj <= n - 1
 ui != vi
 pj != qj
-1 <= disi, limitj <= 109
+1 <= disi, limitj <= 10^9
 两个点之间可能有 多条 边。
 
 '''

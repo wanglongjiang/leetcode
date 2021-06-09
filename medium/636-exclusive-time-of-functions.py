@@ -61,7 +61,7 @@
 1 <= n <= 100
 1 <= logs.length <= 500
 0 <= function_id < n
-0 <= timestamp <= 109
+0 <= timestamp <= 10^9
 两个开始事件不会在同一时间戳发生
 两个结束事件不会在同一时间戳发生
 每道函数都有一个对应 "start" 日志的 "end" 日志
