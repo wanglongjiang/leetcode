@@ -153,6 +153,7 @@
 - 763.[划分字母区间](medium/763-partition-labels.py)
 - 849.[到最近的人的最大距离](medium/849-maximize-distance-to-closest-person.py)
 - 870.[优势洗牌](medium/870-advantage-shuffle.py)
+- 984.[贪心算法](medium/984-string-without-aaa-or-bbb.py)
 - 1029.[两地调度](medium/1029-two-city-scheduling.py)
 - 1353.[最多可以参加的会议数目](medium/1353-maximum-number-of-events-that-can-be-attended.py)
 
@@ -180,6 +181,7 @@
 - 993.[二叉树的堂兄弟节点](easy/993-cousins-in-binary-tree.py)
 - 1123.[最深叶节点的最近公共祖先](medium/1123-lowest-common-ancestor-of-deepest-leaves.py)
 - 1857.[有向图中最大颜色值](hard/1857-largest-color-value-in-a-directed-graph.py)
+- 面试题 04.08.[首个共同祖先](interview/04.08-first-common-ancestor-lcci.py)
 
 ## 广度优先搜索
 
@@ -219,6 +221,7 @@
 - 337.[打家劫舍 III](medium/337-house-robber-iii.py)
 - 376.[摆动序列](medium/376-wiggle-subsequence.py)
 - 474.[一和零](medium/474-ones-and-zeroes.py)
+- 518.[零钱兑换 II](medium/518-coin-change-2.py)
 - 664.[奇怪的打印机](hard/664-strange-printer.py)
 - 718.[最长重复子数组](medium/718-maximum-length-of-repeated-subarray.py)
 - 1035.[不相交的线](medium/1035-uncrossed-lines.py)
@@ -245,6 +248,7 @@
 - 1379.[找出克隆二叉树中的相同节点](medium/1379-find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree.py)
 - 1387.[将整数按权重排序](medium/1387-sort-integers-by-the-power-value.py)
 - 面试题 08.06[汉诺塔问题](interview/08.06.hanota-lcci.py)
+- 面试题 04.06.[后继者](interview/04.06.successor-lcci.py)
 
 ## 分治
 
