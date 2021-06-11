@@ -10,6 +10,7 @@
 二叉树不超过1000个节点，且节点数值范围是 [-1000000,1000000] 的整数。
 
 '''
+from collections import defaultdict
 
 
 # Definition for a binary tree node.
@@ -21,30 +22,38 @@ class TreeNode:
 
 
 '''
-思路：递归
-遍历树，记录从根节点到当前节点的路径，然后从根节点开始，依次去掉其祖父，计算是否和为targetSum
-时间复杂度：O(n^2)，树的遍历为O(n)，针对每个节点，依次去掉其祖父，直至只剩当前节点，最坏情况下每个节点的时间复杂度也是O(n)
-空间复杂度：O(n)
+思路：递归 哈希
+遍历树，用一个哈希表记录从根节点到当前节点的所有前缀和，
+> 如果当前节点前缀和prefixSum为sum，则从根节点到当前节点的路径满足要求
+> 如果prefixSum-sum在哈希表中存在，说明有某个子路径也满足要求
+
+该题与 面试题 04.12. [求和路径](interview/04.12.paths-with-sum-lcci.py)相同
+
+时间复杂度：O(n)
+空间复杂度：O(h),h为树的高度
 '''
 
 
 class Solution:
     def pathSum(self, root: TreeNode, targetSum: int) -> int:
-        path = []
+        if not root:
+            return 0
+        counter = defaultdict(int)
+        ans = 0
 
-        def calc(node, total):
-            path.append(node.val)
-            total += node.val
-            count = 0
+        def dfs(node, prefixSum):
+            nonlocal ans
+            prefixSum += node.val
+            if prefixSum == targetSum:
+                ans += 1
+            if counter[prefixSum - targetSum] > 0:
+                ans += counter[prefixSum - targetSum]
+            counter[prefixSum] += 1
             if node.left:
-                count += calc(node.left, total)  # 累加左子树的路径
+                dfs(node.left, prefixSum)
             if node.right:
-                count += calc(node.right, total)  # 累加右子树的路径
-            for val in path:  # 从根节点到当前节点的路径，从上到下减掉上级节点，判断路径和是否与目标值相同
-                if total == targetSum:
-                    count += 1
-                total -= val
-            path.pop()
-            return count
+                dfs(node.right, prefixSum)
+            counter[prefixSum] -= 1
 
-        return calc(root, 0)
+        dfs(root, 0)
+        return ans
