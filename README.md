@@ -86,7 +86,9 @@
 - 449.[序列化和反序列化二叉搜索树](medium/449-serialize-and-deserialize-bst.py)
 - 513.[找树左下角的值](medium/513-find-bottom-left-tree-value.py)
 - 993.[二叉树的堂兄弟节点](easy/993-cousins-in-binary-tree.py)
+- 1261.[在受污染的二叉树中查找元素](medium/1261-find-elements-in-a-contaminated-binary-tree.py)
 - 1305.[两棵二叉搜索树中的所有元素](medium/1305-all-elements-in-two-binary-search-trees.py)
+- 1443.[收集树上所有苹果的最少时间](medium/1443-minimum-time-to-collect-all-apples-in-a-tree.py)
 
 ## Ordered Map
 
@@ -229,6 +231,7 @@
 - 718.[最长重复子数组](medium/718-maximum-length-of-repeated-subarray.py)
 - 1035.[不相交的线](medium/1035-uncrossed-lines.py)
 - 1269.[停在原地的方案数](hard/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps.py)
+- 1449.[数位成本和为目标值的最大数字](hard/1449-form-largest-integer-with-digits-that-add-up-to-target.py)
 - 1787.[使所有区间的异或结果为零](hard/1787-make-the-xor-of-all-segments-equal-to-zero.py)
 
 ## 背包问题
@@ -245,10 +248,11 @@
 
 ## 递归
 
-- 437.[路径总和 III](medium/437-path-sum-iii.py)相同
+- 437.[路径总和 III](medium/437-path-sum-iii.py)
 - 538.[把二叉搜索树转换为累加树](medium/538-convert-bst-to-greater-tree.py)
 - 1038.[把二叉搜索树转换为累加树](medium/1038-binary-search-tree-to-greater-sum-tree.py)
 - 1190.[反转每对括号间的子串](medium/1190-reverse-substrings-between-each-pair-of-parentheses.py)
+- 1302.[层数最深叶子节点的和](medium/1302-deepest-leaves-sum.py)
 - 1379.[找出克隆二叉树中的相同节点](medium/1379-find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree.py)
 - 1387.[将整数按权重排序](medium/1387-sort-integers-by-the-power-value.py)
 - 面试题 08.06[汉诺塔问题](interview/08.06.hanota-lcci.py)
