@@ -65,7 +65,7 @@ dp[j]为一个字符串，是成本为j时的数位成本形成的最大字符�
 
 class Solution:
     def largestNumber(self, cost: List[int], target: int) -> str:
-        dp = [[]] * (target + 1)
+        dp = [""] * (target + 1)
         for i in range(9):
             for j in range(cost[i], target + 1):
                 # 下面对比2个数位的大小，用数组表示数位成本
@@ -73,18 +73,11 @@ class Solution:
                 if j != cost[i] and len(pre) == 0:  # 如果前一个没有找到数位成本，当前也无法形成合法的
                     continue
                 if len(dp[j]) <= len(pre):  # 如果长度相同，pre还会再加1位，肯定是pre+i大
-                    dp[j] = pre.copy()
-                    dp[j].append(i + 1)
-                    dp[j].sort(reverse=True)
-                elif len(dp[j]) == len(pre) + 1:  # 如果长度相差1，需要逐位对比
-                    newList = pre.copy()
-                    newList.append(i + 1)
-                    newList.sort(reverse=True)
-                    for k in range(len(dp[j])):
-                        if newList[k] > dp[j][k]:
-                            dp[j] = newList
-                            break
-        return ''.join(map(str, dp[target])) if dp[target] else '0'
+                    dp[j] = str(i + 1) + pre
+                elif len(dp[j]) == len(pre) + 1:  # 如果长度相差1，需要比较字符串大小
+                    newstr = str(i + 1) + pre
+                    dp[j] = max(dp[j], newstr)
+        return dp[target] if dp[target] else '0'
 
 
 s = Solution()
