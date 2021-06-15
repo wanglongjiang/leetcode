@@ -123,6 +123,7 @@
 - 475.[供暖器](medium/475-heaters.py)
 - 528.[按权重随机选择](medium/528-random-pick-with-weight.py)
 - 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
+- 852.[山脉数组的峰顶索引](easy/852-peak-index-in-a-mountain-array.py)
 - 911.[在线选举](medium/911-online-election.py)
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
 - 981.[基于时间的键值存储](medium/981-time-based-key-value-store.py)
@@ -191,8 +192,13 @@
 
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 - 1091.[二进制矩阵中的最短路径](medium/1091-shortest-path-in-binary-matrix.py)
+- 1129.[颜色交替的最短路径](medium/1129-shortest-path-with-alternating-colors.py)
+- 1161.[最大层内元素和](medium/1161-maximum-level-sum-of-a-binary-tree.py)
 - 1311.[获取你好友已观看的视频](medium/1311-get-watched-videos-by-your-friends.py)
 - 1609.[奇偶树](medium/1609-even-odd-tree.py)
+- 1654.[到家的最少跳跃次数](medium/1654-minimum-jumps-to-reach-home.py)
+- 1824.[最少侧跳次数](medium/1824-minimum-sideway-jumps.py)
+- 1871.[跳跃游戏 VII](medium/1871-jump-game-vii.py)
 
 ## 双指针
 
@@ -238,6 +244,7 @@
 
 - 879.[盈利计划](hard/879-profitable-schemes.py)
 - 1049.[最后一块石头的重量 II](medium/1049-last-stone-weight-ii.py)
+- 1449.[数位成本和为目标值的最大数字](hard/1449-form-largest-integer-with-digits-that-add-up-to-target.py)
 
 ## 回溯
 
