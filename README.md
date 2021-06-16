@@ -292,6 +292,7 @@
 - 326.[3 的幂](easy/326-power-of-three.py)
 - 400.[第 N 位数字](medium/400-nth-digit.py)
 - 537.[复数乘法](medium/537-complex-number-multiplication.py)
+- 877.[石子游戏](medium/877-stone-game.py)
 - 932.[漂亮数组](medium/932-beautiful-array.py)
 - 970.[强整数](medium/970-powerful-integers.py)
 - 974.[和可被 K 整除的子数组](medium/974-subarray-sums-divisible-by-k.py)
