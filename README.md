@@ -191,6 +191,7 @@
 ## 广度优先搜索
 
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
+- 958.[二叉树的完全性检验](medium/958-check-completeness-of-a-binary-tree.py)
 - 1091.[二进制矩阵中的最短路径](medium/1091-shortest-path-in-binary-matrix.py)
 - 1129.[颜色交替的最短路径](medium/1129-shortest-path-with-alternating-colors.py)
 - 1161.[最大层内元素和](medium/1161-maximum-level-sum-of-a-binary-tree.py)
@@ -257,6 +258,7 @@
 
 - 437.[路径总和 III](medium/437-path-sum-iii.py)
 - 538.[把二叉搜索树转换为累加树](medium/538-convert-bst-to-greater-tree.py)
+- 951.[翻转等价二叉树](medium/951-flip-equivalent-binary-trees.py)
 - 1038.[把二叉搜索树转换为累加树](medium/1038-binary-search-tree-to-greater-sum-tree.py)
 - 1190.[反转每对括号间的子串](medium/1190-reverse-substrings-between-each-pair-of-parentheses.py)
 - 1302.[层数最深叶子节点的和](medium/1302-deepest-leaves-sum.py)
