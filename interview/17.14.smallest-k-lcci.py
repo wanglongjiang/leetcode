@@ -17,6 +17,7 @@ from typing import List
 1. 使用快排里面的分区，随机选择一个pivot，将数组分成>=pivot和<pivot2部分
 2. 如果<pivot的分区大小lsize<k，则该部分可以加入结果，继续对>=pivot的部分继续分区，尝试提取最小的k-lsize；如果<pivot的部分>k，继续分区<pivot部分
 重复上面1.2
+与 - 剑指 Offer 40.[最小的 k 个数](offer/40-zui-xiao-de-kge-shu-lcof.py) 相同
 
 时间复杂度：O(n)，
 空间复杂度：O(1)
