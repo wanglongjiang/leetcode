@@ -9,6 +9,7 @@ from typing import List
 >    如果K落在小的分区，继续查找第K大的数
 >    如果K落在大的分区，需要将K减去小的分区的大小
 >    如果K==1，分区大小也为1，则返回该数
+
 时间复杂度：O(n)，快排的时间复杂度为O(nlogn)，这里因为每次只对一半的分区进行再分区，所以时间复杂度为O(n)
 空间复杂度：O(1)
 '''
@@ -38,7 +39,7 @@ class Solution:
             else:  # k落在大的分区，在大数的分区第k大的数变成k-lowSize-1大的数
                 return partition(k - lowSize - 1, i + 1, end)
 
-        return partition(k, 0, len(nums))
+        return partition(len(nums) - k + 1, 0, len(nums))
 
 
 s = Solution()
