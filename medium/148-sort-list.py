@@ -29,7 +29,7 @@ class ListNode:
 第2次遍历，每4个元素为1组，它的左右2部分已经排序完成，2个部分依次比较、交换
 第3次遍历，每8个元素为1组，它的左右2部分已经排序完成，。。。
 经过logn次遍历，链表变为有序。
-算法比较复杂。。。不想写
+
 时间复杂度：O(nlogn)，需要经过logn次遍历
 空间复杂度：O(1)
 
@@ -41,8 +41,56 @@ class ListNode:
 
 
 class Solution:
-    # 快速排序
+    # 自底向上的归并排序
     def sortList(self, head: ListNode) -> ListNode:
+        if not head:
+            return head
+        head = ListNode(0, head)
+        # 计算链表长度
+        p = head.next
+        n = 0
+        while p:
+            p = p.next
+            n += 1
+        sublen = 1
+
+        def merge(pre1, pre2, length):  # 合并2个链表，返回第2个链表的末尾
+            i1, i2 = 0, 0
+            while pre1.next and pre2.next and (i1 < length and i2 < length):
+                if pre1.next.val > pre2.next.val:  # 第1个链表节点大于第2个链表节点，将第2个链表节点移动到第1个链表中
+                    p1next = pre1.next
+                    pre1.next = pre2.next
+                    pre2.next = pre2.next.next
+                    pre1.next.next = p1next
+                    pre1 = pre1.next
+                    i2 += 1
+                else:
+                    i1 += 1
+                    pre1 = pre1.next
+            while pre2.next and i2 < length:
+                i2 += 1
+                pre2 = pre2.next
+            return pre2
+
+        while sublen < n:  # 一直归并到子数组长度达到n
+            pre1, pre2 = head, None  # 子链表的前一个节点
+            p = pre1
+            while p:  # 一次完整的归并需要遍历整个链表
+                i = 0
+                # 遍历第1个子数组
+                while p and i < sublen:
+                    p = p.next
+                    i += 1
+                if not p or p.next is None:  # 后面没有节点，不需要归并
+                    break
+                pre2 = p
+                pre1 = merge(pre1, pre2, sublen)  # 归并2个子数组
+                p = pre1
+            sublen *= 2  # 子数组长度*2
+        return head.next
+
+    # 快速排序
+    def sortList2(self, head: ListNode) -> ListNode:
         head = ListNode(0, head)  # 头部设置1个哨兵
 
         def parttiion(headPrev, head, tail):
@@ -98,6 +146,13 @@ def toList(listNode: ListNode):
 
 
 s = Solution()
+print(
+    toList(
+        s.sortList(
+            fromList([
+                1, 3, 3, 1, 3, 1, 3, 3, 2, 3, 2, 2, 1, 1, 1, 3, 2, 2, 1, 1, 2, 2, 2, 3, 3, 1, 1, 2, 2, 2, 1, 2, 1, 1, 2, 3, 3, 2, 2, 3, 2, 3, 2, 2, 2, 1, 1, 3,
+                2, 3, 3, 1, 1, 1, 2, 2, 1, 2, 2, 2, 2, 3, 1, 3, 1, 1, 1, 2, 1, 2, 2, 2, 1, 3, 2, 2, 2, 3, 3, 2, 3, 3, 1, 1, 2, 2, 1, 2, 1, 3, 2, 1
+            ]))))
 print(toList(s.sortList(fromList([]))))
 print(toList(s.sortList(fromList([1]))))
 print(toList(s.sortList(fromList([2, 1]))))
