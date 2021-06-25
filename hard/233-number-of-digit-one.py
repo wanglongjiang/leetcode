@@ -13,13 +13,16 @@
 '''
 '''
 思路：数字规律。
-n<=9：1
-n<=99:  个位数d1>=1 1
-        十位数d2=1 d1+1 + 1
-        十位数d2>1 d2//10 个1 + if d2>20: 10 else: d2-10 + 2 +1 
+
 '''
 
 
 class Solution:
     def countDigitOne(self, n: int) -> int:
-        pass
+        ans, i = 0, 1
+        while i <= n:
+            ans += n // (i * 10) * i
+            x = (n // i) % 10
+            ans += i if x > 1 else (n % i + 1) * x
+            i *= 10
+        return ans

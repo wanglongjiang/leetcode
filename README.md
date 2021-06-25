@@ -29,6 +29,7 @@
 - 641.[设计循环双端队列](medium/641-design-circular-deque.py)
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
 - 1673.[找出最具竞争力的子序列](medium/1673-find-the-most-competitive-subsequence.py)
+- 剑指 Offer 59 - II.[队列的最大值](offer/59-dui-lie-de-zui-da-zhi-lcof.py)
 
 ## 数组
 
@@ -40,6 +41,7 @@
 - 1310.[子数组异或查询](medium/1310-xor-queries-of-a-subarray.py)
 - 1744.[你能在你最喜欢的那天吃到你最喜欢的糖果吗？](medium/1744-can-you-eat-your-favorite-candy-on-your-favorite-day.py)
 - 面试题 16.20.[T9 键盘](interview/16.20.t9-lcci.py)
+- 剑指 Offer 66.[构建乘积数组](offer/66-gou-jian-cheng-ji-shu-zu-lcof.py)
 
 ## 哈希
 
@@ -85,7 +87,9 @@
 ## 树
 
 - 100.[相同的树](easy/100-same-tree.py)
+- 110.[平衡二叉树](easy/110-balanced-binary-tree.py)
 - 230.[二叉搜索树中第 K 小的元素](medium/230-kth-smallest-element-in-a-bst.py)
+- 235.[二叉搜索树的最近公共祖先](easy/235-lowest-common-ancestor-of-a-binary-search-tree.py)
 - 236.[二叉树的最近公共祖先](medium/236-lowest-common-ancestor-of-a-binary-tree.py)
 - 297.[二叉树的序列化与反序列化](hard/297-serialize-and-deserialize-binary-tree.py)
 - 429.[N 叉树的层序遍历](medium/429-n-ary-tree-level-order-traversal.py)
@@ -100,6 +104,10 @@
 - 1305.[两棵二叉搜索树中的所有元素](medium/1305-all-elements-in-two-binary-search-trees.py)
 - 1443.[收集树上所有苹果的最少时间](medium/1443-minimum-time-to-collect-all-apples-in-a-tree.py)
 - 1600.[皇位继承顺序](medium/1600-throne-inheritance.py)
+- 剑指 Offer 54.[二叉搜索树的第 k 大节点](offer/54-er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof.py)
+- 剑指 Offer 55 - II.[平衡二叉树](offer/55-ping-heng-er-cha-shu-lcof.py)
+- 剑指 Offer 68 - I.[二叉搜索树的最近公共祖先](offer/68-er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof.py)
+- 剑指 Offer 68 - II.[二叉树的最近公共祖先](offer/68-er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof.py)
 
 ## Ordered Map
 
@@ -111,9 +119,11 @@
 - 1530.[好叶子节点对的数量](medium/1530-number-of-good-leaf-nodes-pairs.py)
 - 1604.[警告一小时内使用相同员工卡大于等于三次的人](medium/1604-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period.py)
 - 1865.[找出和为指定值的下标对](medium/1865-finding-pairs-with-a-certain-sum.py)
+- 剑指 Offer 51.[数组中的逆序对](offer/51-shu-zu-zhong-de-ni-xu-dui-lcof.py)
 
 ## 图
 
+- 34.[在排序数组中查找元素的第一个和最后一个位置](medium/34-find-first-and-last-position-of-element-in-sorted-array.py)
 - 79.[单词搜索](medium/79-word-search.py)
 - 212.[单词搜索 II](hard/212-word-search-ii.py)
 - 743.[网络延迟时间](medium/743-network-delay-time.py)
@@ -127,6 +137,7 @@
 - 1791.[找出星型图的中心节点](medium/1791.find-center-of-star-graph.py)
 - 剑指 Offer 12.[矩阵中的路径](offer/12-ju-zhen-zhong-de-lu-jing-lcof.py)
 - 面试题 04.01.[节点间通路](interview/04.01.route-between-nodes-lcci.py)
+- 剑指 Offer 53 - I.[在排序数组中查找数字 I](offer/53-que-shi-de-shu-zi-lcof.py)
 
 ## 二分查找
 
@@ -150,6 +161,7 @@
 
 ## 排序
 
+- 179.[最大数](medium/179-largest-number.py)
 - 452.[用最少数量的箭引爆气球](medium/452-minimum-number-of-arrows-to-burst-balloons.py)
 - 524.[通过删除字母匹配到字典里最长单词](medium/524-longest-word-in-dictionary-through-deleting.py)
 - 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
@@ -165,11 +177,14 @@
 - 1561.[你可以获得的最大硬币数目](medium/1561-maximum-number-of-coins-you-can-get.py)
 - 1637.[两点之间不包含任何点的最宽垂直面积](medium/1637-widest-vertical-area-between-two-points-containing-no-points.py)
 - 1877.[数组中最大数对和的最小值](medium/1877-minimize-maximum-pair-sum-in-array.py)
+- 剑指 Offer 45.[把数组排成最小的数](offer/45-ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof.py)
 
 ## 贪心算法
 
 - 12.[整数转罗马数字](medium/12-integer-to-roman.py)
+- 53.[最大子序和](easy/53-maximum-subarray2.py)
 - 55.[跳跃游戏](medium/55-jump-game.py)
+- 121.[买卖股票的最佳时机](easy/121-best-time-to-buy-and-sell-stock.py)
 - 231.[2 的幂](easy/231-power-of-two.py)
 - 342.[4 的幂](easy/342-power-of-four.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
@@ -180,6 +195,8 @@
 - 984.[贪心算法](medium/984-string-without-aaa-or-bbb.py)
 - 1029.[两地调度](medium/1029-two-city-scheduling.py)
 - 1353.[最多可以参加的会议数目](medium/1353-maximum-number-of-events-that-can-be-attended.py)
+- 剑指 Offer 42.[连续子数组的最大和](offer/42-lian-xu-zi-shu-zu-de-zui-da-he-lcof.py)
+- 剑指 Offer 63.[股票的最大利润](offer/63-gu-piao-de-zui-da-li-run-lcof.py)
 
 ## 位运算
 
@@ -196,9 +213,12 @@
 - 1707.[与数组中元素的最大异或值](hard/1707-maximum-xor-with-an-element-from-array.py)
 - 1738.[找出第 K 大的异或坐标值](medium/1738-find-kth-largest-xor-coordinate-value.py)
 - 剑指 Offer 15.[二进制中 1 的个数](offer/15-er-jin-zhi-zhong-1de-ge-shu-lcof.py)
+- 剑指 Offer 65.[不用加减乘除做加法](offer/65-bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof.py)
 
 ## 深度优先搜索
 
+- 104.[二叉树的最大深度](easy/104-maximum-depth-of-binary-tree.py)
+- 113.[路径总和 II](medium/113-path-sum-ii.py)
 - 207.[课程表](medium/207-course-schedule.py)
 - 472.[连接词](hard/472-concatenated-words.py)
 - 508.[出现次数最多的子树元素和](medium/508-most-frequent-subtree-sum.py)
@@ -217,12 +237,15 @@
 - 1339.[分裂二叉树的最大乘积](medium/1339-maximum-product-of-splitted-binary-tree.py)
 - 1857.[有向图中最大颜色值](hard/1857-largest-color-value-in-a-directed-graph.py)
 - 面试题 04.08.[首个共同祖先](interview/04.08-first-common-ancestor-lcci.py)
+- 剑指 Offer 34.[二叉树中和为某一值的路径](offer/34-er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof.py)
+- 剑指 Offer 55 - I.[二叉树的深度](offer/55-er-cha-shu-de-shen-du-lcof.py)
 
 ## 广度优先搜索
 
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 - 515.[在每个树行中找最大值](medium/515-find-largest-value-in-each-tree-row.py)
 - 623.[在二叉树中增加一行](medium/623-add-one-row-to-tree.py)
+- 752.[打开转盘锁](medium/752-open-the-lock.py)
 - 919.[完全二叉树插入器](medium/919-complete-binary-tree-inserter.py)
 - 958.[二叉树的完全性检验](medium/958-check-completeness-of-a-binary-tree.py)
 - 1091.[二进制矩阵中的最短路径](medium/1091-shortest-path-in-binary-matrix.py)
@@ -248,6 +271,8 @@
 - 面试题 16.16.[部分排序](interview/16.16.sub-sort-lcci.py)
 - 剑指 Offer 21.[调整数组顺序使奇数位于偶数前面](offer/21-diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof.py)
 - 剑指 Offer 22.[链表中倒数第 k 个节点](offer/22-lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof.py)
+- 剑指 Offer 52.[两个链表的第一个公共节点](offer/52-liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof.py)
+- 剑指 Offer 57.[和为 s 的两个数字](offer/57-he-wei-sde-liang-ge-shu-zi-lcof.py)
 
 ## 滑动窗口
 
@@ -259,11 +284,14 @@
 - 1658.[将 x 减到 0 的最小操作数](medium/1658-minimum-operations-to-reduce-x-to-zero.py)
 - 1456.[定长子串中元音的最大数目](medium/1456-maximum-number-of-vowels-in-a-substring-of-given-length.py)
 - 剑指 Offer 48.[最长不含重复字符的子字符串](offer/48-zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof.py)
+- 剑指 Offer 57 - II.[和为 s 的连续正数序列](offer/57-he-wei-sde-liang-ge-shu-zi-lcof.py)
 
 ## 动态规划
 
+- 91.[解码方法](medium/91-decode-ways.py)
 - 198.[打家劫舍](medium/198-house-robber.py)
 - 213.[打家劫舍 II](medium/213-house-robber-ii.py)
+- 264.[丑数 II](medium/264-ugly-number-ii.py)
 - 309.[最佳买卖股票时机含冷冻期](medium/309-best-time-to-buy-and-sell-stock-with-cooldown.py)
 - 312.[戳气球](hard/312-burst-balloons.py)
 - 337.[打家劫舍 III](medium/337-house-robber-iii.py)
@@ -279,6 +307,10 @@
 - 1787.[使所有区间的异或结果为零](hard/1787-make-the-xor-of-all-segments-equal-to-zero.py)
 - 剑指 Offer 14- I.[剪绳子](offer/14-jian-sheng-zi-lcof.py)
 - 剑指 Offer 14- II.[剪绳子 II](offer/14-jian-sheng-zi-ii-lcof.py)
+- 剑指 Offer 46.[把数字翻译成字符串](offer/46-ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof.py)
+- 剑指 Offer 47.[礼物的最大价值](offer/47-li-wu-de-zui-da-jie-zhi-lcof.py)
+- 剑指 Offer 49.[丑数](offer/49-chou-shu-lcof.py)
+- 剑指 Offer 60.[n 个骰子的点数](offer/60-nge-tou-zi-de-dian-shu-lcof.py)
 
 ## 背包问题
 
@@ -314,6 +346,8 @@
 - 面试题 04.10.[检查子树](interview/04.10.check-subtree-lcci.py)
 - 剑指 Offer 27.[二叉树的镜像](offer/27-er-cha-shu-de-jing-xiang-lcof.py)
 - 剑指 Offer 28.[对称的二叉树](offer/28-dui-cheng-de-er-cha-shu-lcof.py)
+- 剑指 Offer 33.[二叉搜索树的后序遍历序列](offer/33-er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof.py)
+- 剑指 Offer 64.[求 1+2+…+n](offer/64-qiu-12n-lcof.py)
 
 ## 分治
 
@@ -326,7 +360,9 @@
 
 ## 状态机
 
+- 10.[正则表达式匹配](hard/10-regular-expression-matching.py)
 - 1839.[所有元音按顺序排布的最长子字符串](medium/1839-longest-substring-of-all-vowels-in-order.py)
+- 剑指 Offer 19.[正则表达式匹配](offer/19-zheng-ze-biao-da-shi-pi-pei-lcof.py)
 - 剑指 Offer 20.[表示数值的字符串](offer/20-biao-shi-shu-zhi-de-zi-fu-chuan-lcof.py)
 
 ## 设计
@@ -340,6 +376,7 @@
 
 ## 数学
 
+- 233.[数字 1 的个数](hard/233-number-of-digit-one.py)
 - 326.[3 的幂](easy/326-power-of-three.py)
 - 400.[第 N 位数字](medium/400-nth-digit.py)
 - 483.[最小好进制](hard/483-smallest-good-base.py)
@@ -348,6 +385,9 @@
 - 932.[漂亮数组](medium/932-beautiful-array.py)
 - 970.[强整数](medium/970-powerful-integers.py)
 - 974.[和可被 K 整除的子数组](medium/974-subarray-sums-divisible-by-k.py)
+- 剑指 Offer 44.[数字序列中某一位的数字](offer/44-shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof.py)
+- 剑指 Offer 43.[1 ～ n 整数中 1 出现的次数](offer/43-1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof.py)
+- 剑指 Offer 53 - II.[0 ～ n-1 中缺失的数字](offer/53-que-shi-de-shu-zi-lcof.py)
 
 ## 随机
 
@@ -362,6 +402,7 @@
 - 1123.[驼峰式匹配](medium/1023-camelcase-matching.py)
 - 1638.[统计只差一个字符的子串数目](medium/1638-count-substrings-that-differ-by-one-character.py)
 - 剑指 Offer 05.[替换空格](offer/05-ti-huan-kong-ge-lcof.py)
+- 剑指 Offer 58 - II.[左旋转字符串](offer/58-zuo-xuan-zhuan-zi-fu-chuan-lcof.py)
 
 ## 字典树
 
