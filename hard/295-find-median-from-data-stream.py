@@ -2,13 +2,20 @@
 数据流的中位数
 '''
 '''
-TODO
-思路，数据流中的整数没有限制。需要使用链表保存所有的数据
-思路，如果数据流中 99% 的整数都在 0 到 100 范围内，维护几个关键变量：
-    count   存放所有元素数量
-    nums    存放0-100元素的指针，100之后的元素因为较少，直接搜索链表进行插入
-    head    存放双向链表的表头，表尾
-    mid     存放中位数指针，如果count是偶数，mid存放left元素指针
+思路，链表
+主要的想法就是0-100的元素直接存入1个大小为101的数组中，其他数字以链表的形式保存。
+每个数字一个节点，每个节点里维护着这个数字出现次数，如果mid指针指向这个节点，节点内需要维护一个索引，指向mid指向的数字偏移量。
+如果数据流中 99% 的整数都在 0 到 100 范围内，维护几个关键变量：
+>    count   存放所有元素数量
+>    nums    存放0-100元素的指针，100之后的元素因为较少，直接搜索链表进行插入
+>    head    存放双向链表的表头，表尾
+>    mid     存放中位数指针，如果count是偶数，mid存放left元素指针
+
+当插入一条数据时，如果是0-100范围内，直接保存，如果是范围外的，需要顺序查找、创建/修改链表节点。
+同时根据插入数据的大小，左右移动mid指针。
+
+addNum()时间复杂度：如果是0-100的数据，时间复杂度为O(1)，如果是其他数据，时间复杂度为O(n)
+findMedian()时间复杂度：O(1)
 '''
 
 
@@ -68,6 +75,7 @@ class MedianFinder:
                 old.count += 1
             else:  # 节点不存在，需要创建，并插入合适的位置
                 node = Node(num)
+                node.prev = old
                 node.next = old.next
                 old.next = node
                 node.next.prev = node
@@ -80,12 +88,14 @@ class MedianFinder:
                         self.mid.index -= 1
                     else:
                         self.mid = self.mid.prev
+                        self.mid.index = self.mid.count - 1
             else:  # count原先是偶数，mid指向中间偏左元素上。如果num>=mid，需要向右调整指针；如果num<mid，不需要调整指针
                 if num >= self.mid.val:
                     if self.mid.index + 1 < self.mid.count:
                         self.mid.index += 1
                     else:
                         self.mid = self.mid.next
+                        self.mid.index = 0
         self.count += 1
 
     def findMedian(self) -> float:

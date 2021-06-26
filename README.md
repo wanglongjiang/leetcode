@@ -9,6 +9,9 @@
 - 394.[字符串解码](medium/394-decode-string.py)
 - 636.[函数的独占时间](medium/636-exclusive-time-of-functions.py)
 - 735.[行星碰撞](medium/735-asteroid-collision.py)
+- 面试题 03.01.[三合一](interview/03.01.three-in-one-lcci.py)
+- 面试题 03.02.[栈的最小值](interview/03.02.min-stack-lcci.py)
+- 面试题 03.04.[化栈为队](interview/03.04.implement-queue-using-stacks-lcci.py)
 - 剑指 Offer 09.[用两个栈实现队列](offer/09-yong-liang-ge-zhan-shi-xian-dui-lie-lcof.py)
 - 剑指 Offer 30.[包含 min 函数的栈](offer/30-bao-han-minhan-shu-de-zhan-lcof.py)
 
@@ -20,6 +23,7 @@
 - 692.[前 K 个高频单词](medium/692-top-k-frequent-words.py)
 - 1353.[最多可以参加的会议数目](medium/1353-maximum-number-of-events-that-can-be-attended.py)
 - 1738.[找出第 K 大的异或坐标值](medium/1738-find-kth-largest-xor-coordinate-value.py)
+- 面试题 03.05.[栈排序](interview/03.05.sort-of-stacks-lcci.py)
 
 ## 队列
 
@@ -212,6 +216,9 @@
 - 1457.[二叉树中的伪回文路径](medium/1457-pseudo-palindromic-paths-in-a-binary-tree.py)
 - 1707.[与数组中元素的最大异或值](hard/1707-maximum-xor-with-an-element-from-array.py)
 - 1738.[找出第 K 大的异或坐标值](medium/1738-find-kth-largest-xor-coordinate-value.py)
+- 面试题 05.01.[插入](interview/05.01.insert-into-bits-lcci.py)
+- 面试题 05.06.[整数转换](interview/05.06.convert-integer-lcci.py)
+- 面试题 05.07.[配对交换](interview/05.07.exchange-lcci.py)
 - 剑指 Offer 15.[二进制中 1 的个数](offer/15-er-jin-zhi-zhong-1de-ge-shu-lcof.py)
 - 剑指 Offer 65.[不用加减乘除做加法](offer/65-bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof.py)
 
@@ -268,6 +275,7 @@
 - 1750.[删除字符串两端相同字符后的最短长度](medium/1750-minimum-length-of-string-after-deleting-similar-ends.py)
 - 1855.[下标对中的最大距离](medium/1855-maximum-distance-between-a-pair-of-values.py)
 - 1861.[旋转盒子](medium/1861-rotating-the-box.py)
+- 面试题 02.07.[链表相交](interview/02.07.intersection-of-two-linked-lists-lcci.py)
 - 面试题 16.16.[部分排序](interview/16.16.sub-sort-lcci.py)
 - 剑指 Offer 21.[调整数组顺序使奇数位于偶数前面](offer/21-diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof.py)
 - 剑指 Offer 22.[链表中倒数第 k 个节点](offer/22-lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof.py)
@@ -354,6 +362,7 @@
 - 215.[数组中的第 K 个最大元素](medium/215-kth-largest-element-in-an-array.py)
 - 241.[为运算表达式设计优先级](medium/241-different-ways-to-add-parentheses.py)
 - 973.[最接近原点的 K 个点](medium/973-k-closest-points-to-origin.py)
+- 面试题 04.02.[最小高度树](interview/04.02.minimum-height-tree-lcci.py)
 - 面试题 17.14. [最小 K 个数](interview/17.14.smallest-k-lcci.py)
 - 剑指 Offer 36. [二叉搜索树与双向链表](offer/36.er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof.py)
 - 剑指 Offer 40.[最小的 k 个数](offer/40-zui-xiao-de-kge-shu-lcof.py)
