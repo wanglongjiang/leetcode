@@ -11,6 +11,7 @@
 - 735.[行星碰撞](medium/735-asteroid-collision.py)
 - 面试题 03.01.[三合一](interview/03.01.three-in-one-lcci.py)
 - 面试题 03.02.[栈的最小值](interview/03.02.min-stack-lcci.py)
+- 面试题 03.03.[堆盘子](interview/03.03.stack-of-plates-lcci.py)
 - 面试题 03.04.[化栈为队](interview/03.04.implement-queue-using-stacks-lcci.py)
 - 剑指 Offer 09.[用两个栈实现队列](offer/09-yong-liang-ge-zhan-shi-xian-dui-lie-lcof.py)
 - 剑指 Offer 30.[包含 min 函数的栈](offer/30-bao-han-minhan-shu-de-zhan-lcof.py)
@@ -44,6 +45,7 @@
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1310.[子数组异或查询](medium/1310-xor-queries-of-a-subarray.py)
 - 1744.[你能在你最喜欢的那天吃到你最喜欢的糖果吗？](medium/1744-can-you-eat-your-favorite-candy-on-your-favorite-day.py)
+- 面试题 05.08.[绘制直线](interview/05.08.draw-line-lcci.py)
 - 面试题 16.20.[T9 键盘](interview/16.20.t9-lcci.py)
 - 剑指 Offer 66.[构建乘积数组](offer/66-gou-jian-cheng-ji-shu-zu-lcof.py)
 
@@ -211,6 +213,7 @@
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 - 461.[汉明距离](easy/461-hamming-distance.py)
+- 773.[滑动谜题](hard/773-sliding-puzzle.py)
 - 810.[黑板异或游戏](hard/810-chalkboard-xor-game.py)
 - 1442.[形成两个异或相等数组的三元组数目](medium/1442-count-triplets-that-can-form-two-arrays-of-equal-xor.py)
 - 1457.[二叉树中的伪回文路径](medium/1457-pseudo-palindromic-paths-in-a-binary-tree.py)
@@ -219,6 +222,7 @@
 - 面试题 05.01.[插入](interview/05.01.insert-into-bits-lcci.py)
 - 面试题 05.06.[整数转换](interview/05.06.convert-integer-lcci.py)
 - 面试题 05.07.[配对交换](interview/05.07.exchange-lcci.py)
+- 面试题 05.08.[绘制直线](interview/05.08.draw-line-lcci.py)
 - 剑指 Offer 15.[二进制中 1 的个数](offer/15-er-jin-zhi-zhong-1de-ge-shu-lcof.py)
 - 剑指 Offer 65.[不用加减乘除做加法](offer/65-bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof.py)
 
@@ -231,6 +235,7 @@
 - 508.[出现次数最多的子树元素和](medium/508-most-frequent-subtree-sum.py)
 - 662.[二叉树最大宽度](medium/662-maximum-width-of-binary-tree.py)
 - 743.[网络延迟时间](medium/743-network-delay-time.py)
+- 773.[滑动谜题](hard/773-sliding-puzzle.py)
 - 865.[具有所有最深节点的最小子树](medium/865-smallest-subtree-with-all-the-deepest-nodes.py)
 - 968.[监控二叉树](hard/968-binary-tree-cameras.py)
 - 971.[翻转二叉树以匹配先序遍历](medium/971-flip-binary-tree-to-match-preorder-traversal.py)
@@ -253,6 +258,8 @@
 - 515.[在每个树行中找最大值](medium/515-find-largest-value-in-each-tree-row.py)
 - 623.[在二叉树中增加一行](medium/623-add-one-row-to-tree.py)
 - 752.[打开转盘锁](medium/752-open-the-lock.py)
+- 773.[滑动谜题](hard/773-sliding-puzzle.py)
+- 909.[蛇梯棋](medium/909-snakes-and-ladders.py)
 - 919.[完全二叉树插入器](medium/919-complete-binary-tree-inserter.py)
 - 958.[二叉树的完全性检验](medium/958-check-completeness-of-a-binary-tree.py)
 - 1091.[二进制矩阵中的最短路径](medium/1091-shortest-path-in-binary-matrix.py)
@@ -263,6 +270,7 @@
 - 1654.[到家的最少跳跃次数](medium/1654-minimum-jumps-to-reach-home.py)
 - 1824.[最少侧跳次数](medium/1824-minimum-sideway-jumps.py)
 - 1871.[跳跃游戏 VII](medium/1871-jump-game-vii.py)
+- 面试题 08.10.[颜色填充](interview/08.10.color-fill-lcci.py)
 - 剑指 Offer 13.[机器人的运动范围](offer/13-ji-qi-ren-de-yun-dong-fan-wei-lcof.py)
 
 ## 双指针
@@ -313,6 +321,8 @@
 - 1269.[停在原地的方案数](hard/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps.py)
 - 1449.[数位成本和为目标值的最大数字](hard/1449-form-largest-integer-with-digits-that-add-up-to-target.py)
 - 1787.[使所有区间的异或结果为零](hard/1787-make-the-xor-of-all-segments-equal-to-zero.py)
+- 面试题 08.01.[三步问题](interview/08.01.three-steps-problem-lcci.py)
+- 面试题 08.13.[堆箱子](interview/08.13.pile-box-lcci.py)
 - 剑指 Offer 14- I.[剪绳子](offer/14-jian-sheng-zi-lcof.py)
 - 剑指 Offer 14- II.[剪绳子 II](offer/14-jian-sheng-zi-ii-lcof.py)
 - 剑指 Offer 46.[把数字翻译成字符串](offer/46-ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof.py)
@@ -332,6 +342,8 @@
 - 491.[递增子序列](medium/491-increasing-subsequences.py)
 - 494.[目标和](medium/494-target-sum.py)
 - 967.[连续差相同的数字](medium/967-numbers-with-same-consecutive-differences.py)
+- 面试题 08.04.[幂集](interview/08.04.power-set-lcci.py)
+- 面试题 08.09.[括号](interview/08.09.bracket-lcci.py)
 
 ## 递归
 
@@ -394,6 +406,7 @@
 - 932.[漂亮数组](medium/932-beautiful-array.py)
 - 970.[强整数](medium/970-powerful-integers.py)
 - 974.[和可被 K 整除的子数组](medium/974-subarray-sums-divisible-by-k.py)
+- 面试题 05.02.[二进制数转字符串](interview/05.02.bianry-number-to-string-lcci.py)
 - 剑指 Offer 44.[数字序列中某一位的数字](offer/44-shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof.py)
 - 剑指 Offer 43.[1 ～ n 整数中 1 出现的次数](offer/43-1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof.py)
 - 剑指 Offer 53 - II.[0 ～ n-1 中缺失的数字](offer/53-que-shi-de-shu-zi-lcof.py)
