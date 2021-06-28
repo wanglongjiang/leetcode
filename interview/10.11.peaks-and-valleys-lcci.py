@@ -9,25 +9,29 @@ nums.length <= 10000
 from typing import List
 '''
 思路：排序后交替插入
-1、数组排序
-2、设置2个指针，left,right分别指向排序后数组的左边、中间，然后交替复制回原数组
-时间复杂度：O(nlogn)
+1、数组从大到小排序
+2、将后半部分复制到辅助数组
+3、将前半部分复制到偶数下标
+4、将辅助数组中的元素复制到奇数下标
+
+时间复杂度：O(n)
 空间复杂度：O(n)
-TODO
 '''
 
 
 class Solution:
     def wiggleSort(self, nums: List[int]) -> None:
-        num2 = sorted(nums)
+        nums.sort(reverse=True)
         n = len(nums)
-        mid = n // 2 + n & 1
-        left, right = 0, mid + 1
-        i = 0
-        while left <= mid:
-            nums[i] = num2[left]
-            if right < n:
-                nums[i + 1] = num2[right]
-            left += 1
-            right += 1
-            i += 2
+        temp = nums[n // 2 + n % 2:]
+        for i in range(n - len(temp) - 1, 0, -1):
+            nums[2 * i] = nums[i]
+        for i in range(len(temp)):
+            nums[2 * i + 1] = temp[i]
+        return nums
+
+
+s = Solution()
+print(s.wiggleSort([5, 3, 1, 2, 3]))
+print(s.wiggleSort([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+print(s.wiggleSort([1, 2, 3, 4, 5, 6, 7, 8, 9]))
