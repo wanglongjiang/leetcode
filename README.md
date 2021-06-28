@@ -59,6 +59,7 @@
 - 560.[和为 K 的子数组](medium/560-subarray-sum-equals-k.py)
 - 609.[在系统中查找重复文件](medium/609-find-duplicate-file-in-system.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
+- 815.[公交路线](hard/815-bus-routes.py)
 - 939.[哈希](medium/939-minimum-area-rectangle.py)
 - 954.[二倍数对数组](medium/954-array-of-doubled-pairs.py)
 - 966.[元音拼写检查器](medium/966-vowel-spellchecker.py)
@@ -163,6 +164,7 @@
 - 剑指 Offer 04.[二维数组中的查找](offer/04-er-wei-shu-zu-zhong-de-cha-zhao-lcof.py)
 - 剑指 Offer 11.[旋转数组的最小数字](offer/11-xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof.py)
 - 面试题 10.09. [排序矩阵查找](interview/10.19.sorted-matrix-search-lcci.py)
+- 面试题 16.06.[最小差](interview/16.06.smallest-difference-lcci.py)
 - 面试题 16.16.[部分排序](interview/16.16.sub-sort-lcci.py)
 
 ## 排序
@@ -183,6 +185,7 @@
 - 1561.[你可以获得的最大硬币数目](medium/1561-maximum-number-of-coins-you-can-get.py)
 - 1637.[两点之间不包含任何点的最宽垂直面积](medium/1637-widest-vertical-area-between-two-points-containing-no-points.py)
 - 1877.[数组中最大数对和的最小值](medium/1877-minimize-maximum-pair-sum-in-array.py)
+- 面试题 16.06.[最小差](interview/16.06.smallest-difference-lcci.py)
 - 剑指 Offer 45.[把数组排成最小的数](offer/45-ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof.py)
 
 ## 贪心算法
@@ -201,6 +204,7 @@
 - 984.[贪心算法](medium/984-string-without-aaa-or-bbb.py)
 - 1029.[两地调度](medium/1029-two-city-scheduling.py)
 - 1353.[最多可以参加的会议数目](medium/1353-maximum-number-of-events-that-can-be-attended.py)
+- 面试题 05.03.[翻转数位](interview/05.03.reverse-bits-lcci.py)
 - 剑指 Offer 42.[连续子数组的最大和](offer/42-lian-xu-zi-shu-zu-de-zui-da-he-lcof.py)
 - 剑指 Offer 63.[股票的最大利润](offer/63-gu-piao-de-zui-da-li-run-lcof.py)
 
@@ -220,13 +224,14 @@
 - 1707.[与数组中元素的最大异或值](hard/1707-maximum-xor-with-an-element-from-array.py)
 - 1738.[找出第 K 大的异或坐标值](medium/1738-find-kth-largest-xor-coordinate-value.py)
 - 面试题 05.01.[插入](interview/05.01.insert-into-bits-lcci.py)
+- 面试题 05.03.[翻转数位](interview/05.03.reverse-bits-lcci.py)
 - 面试题 05.06.[整数转换](interview/05.06.convert-integer-lcci.py)
 - 面试题 05.07.[配对交换](interview/05.07.exchange-lcci.py)
 - 面试题 05.08.[绘制直线](interview/05.08.draw-line-lcci.py)
 - 剑指 Offer 15.[二进制中 1 的个数](offer/15-er-jin-zhi-zhong-1de-ge-shu-lcof.py)
 - 剑指 Offer 65.[不用加减乘除做加法](offer/65-bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof.py)
 
-## 深度优先搜索
+## 深度优先搜索 DFS
 
 - 104.[二叉树的最大深度](easy/104-maximum-depth-of-binary-tree.py)
 - 113.[路径总和 II](medium/113-path-sum-ii.py)
@@ -252,13 +257,14 @@
 - 剑指 Offer 34.[二叉树中和为某一值的路径](offer/34-er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof.py)
 - 剑指 Offer 55 - I.[二叉树的深度](offer/55-er-cha-shu-de-shen-du-lcof.py)
 
-## 广度优先搜索
+## 广度优先搜索 BFS
 
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 - 515.[在每个树行中找最大值](medium/515-find-largest-value-in-each-tree-row.py)
 - 623.[在二叉树中增加一行](medium/623-add-one-row-to-tree.py)
 - 752.[打开转盘锁](medium/752-open-the-lock.py)
 - 773.[滑动谜题](hard/773-sliding-puzzle.py)
+- 815.[公交路线](hard/815-bus-routes.py)
 - 909.[蛇梯棋](medium/909-snakes-and-ladders.py)
 - 919.[完全二叉树插入器](medium/919-complete-binary-tree-inserter.py)
 - 958.[二叉树的完全性检验](medium/958-check-completeness-of-a-binary-tree.py)
@@ -302,7 +308,7 @@
 - 剑指 Offer 48.[最长不含重复字符的子字符串](offer/48-zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof.py)
 - 剑指 Offer 57 - II.[和为 s 的连续正数序列](offer/57-he-wei-sde-liang-ge-shu-zi-lcof.py)
 
-## 动态规划
+## 动态规划 DP
 
 - 91.[解码方法](medium/91-decode-ways.py)
 - 198.[打家劫舍](medium/198-house-robber.py)
@@ -332,18 +338,24 @@
 
 ## 背包问题
 
+- 518.[零钱兑换 II](medium/518-coin-change-2.py)
 - 879.[盈利计划](hard/879-profitable-schemes.py)
 - 1049.[最后一块石头的重量 II](medium/1049-last-stone-weight-ii.py)
 - 1449.[数位成本和为目标值的最大数字](hard/1449-form-largest-integer-with-digits-that-add-up-to-target.py)
+- 面试题 08.11.[硬币](interview/08.11.coin-lcci.py)
 
 ## 回溯
 
+- 51.[N 皇后](hard/51-n-queens.py)
+- 52.[N 皇后 II](hard/52-n-queens-ii.py)
 - 306.[累加数](medium/306-additive-number.py)
 - 491.[递增子序列](medium/491-increasing-subsequences.py)
 - 494.[目标和](medium/494-target-sum.py)
 - 967.[连续差相同的数字](medium/967-numbers-with-same-consecutive-differences.py)
 - 面试题 08.04.[幂集](interview/08.04.power-set-lcci.py)
+- 面试题 08.07.[无重复字符串的排列组合](interview/08.07.permutation-i-lcci.py)
 - 面试题 08.09.[括号](interview/08.09.bracket-lcci.py)
+- 面试题 08.12.[八皇后](interview/08.12.eight-queens-lcci.py)
 
 ## 递归
 
@@ -407,6 +419,7 @@
 - 970.[强整数](medium/970-powerful-integers.py)
 - 974.[和可被 K 整除的子数组](medium/974-subarray-sums-divisible-by-k.py)
 - 面试题 05.02.[二进制数转字符串](interview/05.02.bianry-number-to-string-lcci.py)
+- 面试题 16.11.[跳水板](interview/16.11.diving-board-lcci.py)
 - 剑指 Offer 44.[数字序列中某一位的数字](offer/44-shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof.py)
 - 剑指 Offer 43.[1 ～ n 整数中 1 出现的次数](offer/43-1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof.py)
 - 剑指 Offer 53 - II.[0 ～ n-1 中缺失的数字](offer/53-que-shi-de-shu-zi-lcof.py)
