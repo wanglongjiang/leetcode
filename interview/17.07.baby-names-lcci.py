@@ -69,14 +69,23 @@ class Solution:
             realNames.append(names[i][:names[i].find('(')])
             counts.append(int(names[i][len(realNames[-1]) + 1:len(names[i]) - 1]))
             idxMap[realNames[-1]] = i
+        # 将synonyms中的名字也加入并查集
+        for synonym in synonyms:
+            pair = synonym.split(',')
+            name1, name2 = pair[0][1:], pair[1][:-1]
+            if name1 not in idxMap:
+                idxMap[name1] = len(realNames)
+                realNames.append(name1)
+            if name2 not in idxMap:
+                idxMap[name2] = len(realNames)
+                realNames.append(name2)
         # 2. 创建并查集
-        unionFind = UnionFind(n, realNames)
+        unionFind = UnionFind(len(realNames), realNames)
         # 3. 遍历synonyms，将其加入并查集
         for synonym in synonyms:
             pair = synonym.split(',')
             name1, name2 = pair[0][1:], pair[1][:-1]
-            if name1 in idxMap and name2 in idxMap:  # 别名列表中有可能有未出现在names中，需要跳过
-                unionFind.unite(idxMap[name1], idxMap[name2])
+            unionFind.unite(idxMap[name1], idxMap[name2])
         # 4. 累计真实名称个数
         counter = defaultdict(int)
         for i in range(n):
@@ -89,6 +98,7 @@ class Solution:
 
 
 s = Solution()
+print(s.trulyMostPopular(["a(10)", "c(13)"], ["(a,b)", "(c,d)", "(b,c)"]) == ["a(23)"])
 print(
     s.trulyMostPopular(names=["John(15)", "Jon(12)", "Chris(13)", "Kris(4)", "Christopher(19)"],
                        synonyms=["(Jon,John)", "(John,Johnny)", "(Chris,Kris)", "(Chris,Christopher)"]))

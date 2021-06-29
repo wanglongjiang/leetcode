@@ -9,20 +9,19 @@ Excel表列名称
 
 class Solution:
     def convertToTitle(self, columnNumber: int) -> str:
-        columnNumber, remainder = divmod(columnNumber, 26)
-        title = chr(ord('A') + remainder - 1)
-        if columnNumber:
+        title = ''
+        while True:
             columnNumber -= 1
-            while True:
-                columnNumber, remainder = divmod(columnNumber, 26)
-                title = chr(ord('A') + remainder) + title
-                if not columnNumber:
-                    break
+            columnNumber, remainder = divmod(columnNumber, 26)
+            title = chr(ord('A') + remainder) + title
+            if not columnNumber:
+                break
         return title
 
 
 s = Solution()
 print(s.convertToTitle(701))
-print(s.convertToTitle(27))
 print(s.convertToTitle(1))
+print(s.convertToTitle(27))
 print(s.convertToTitle(28))
+print(s.convertToTitle(2147483647))
