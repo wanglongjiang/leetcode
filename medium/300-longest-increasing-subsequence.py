@@ -24,7 +24,9 @@ import bisect
 > 如果nums[i]不大于dp中所有元素，需要定位其在有序数组dp中应该所处的位置，替换原先的元素。
 这么做的目的是在保持最长子序列长度不变的情况下，减小以往保存的元素大小，以便新的元素加入时，能够出现上面的情况：大于dp中所有元素，可以扩展最长子序列
 
-类似题目：- 面试题 17.08.[马戏团人塔](interview/17.08.circus-tower-lcci.py)
+类似题目：
+- 673.[最长递增子序列的个数](medium/673-number-of-longest-increasing-subsequence.py)
+- 面试题 17.08.[马戏团人塔](interview/17.08.circus-tower-lcci.py)
 
 时间复杂度：O(nlogn)，需要遍历nums每个元素，在遍历的时候需要查找nums[i]在dp中的索引，所以是n*logn
 空间复杂度：O(n)
