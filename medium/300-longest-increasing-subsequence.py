@@ -15,32 +15,32 @@
 你能将算法的时间复杂度降低到 O(n log(n)) 吗?
 '''
 from typing import List
+import bisect
 '''
-思路：动态规划
-设二维数组dp[n][n]，dp[i][j]的含义为：i<j，以第i个元素开头的序列，遍历到第j个元素子序列的长度
-状态转移方程为：
-if nums[j]>nums[j-1]
-    dp[i][j]=max(dp[i][j-1]+1,dp[i-1][j-1]+1)
-else
-    dp[i][j] = max(dp[i][j-1],dp[i-1][j])
-时间复杂度：O(n^2)
-空间复杂度：O(n^2)
-TODO
+思路：二分查找
+设一个dp数组，其为有序数组，用于保存最长子序列。
+遍历nums每个元素，将其尝试加入dp数组：
+> 如果nums[i]大于dp数组中所有元素，说明最长子序列可以变长，需要扩大dp大小。
+> 如果nums[i]不大于dp中所有元素，需要定位其在有序数组dp中应该所处的位置，替换原先的元素。
+这么做的目的是在保持最长子序列长度不变的情况下，减小以往保存的元素大小，以便新的元素加入时，能够出现上面的情况：大于dp中所有元素，可以扩展最长子序列
+
+类似题目：- 面试题 17.08.[马戏团人塔](interview/17.08.circus-tower-lcci.py)
+
+时间复杂度：O(nlogn)，需要遍历nums每个元素，在遍历的时候需要查找nums[i]在dp中的索引，所以是n*logn
+空间复杂度：O(n)
 '''
 
 
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
-        n = len(nums)
-        dp = [[1] * (n + 1) for _ in range(n + 1)]  # 默认长度是1，为简化算法，下标0作为哨兵
-        for i in range(1, n + 1):
-            dp[i][i] = dp[i - 1][i]
-            for j in range(i + 1, n + 1):
-                if nums[j - 1] > nums[j - 2]:
-                    dp[i][j] = max(dp[i][j - 1] + 1, dp[i - 1][j - 1] + 1)
-                else:
-                    dp[i][j] = max(dp[i - 1][0], dp[i - 1][j])
-        return dp[n - 1][n]
+        dp = []
+        for num in nums:
+            i = bisect.bisect_left(dp, num)
+            if i == len(dp):
+                dp.append(num)
+            else:
+                dp[i] = num
+        return len(dp)
 
 
 s = Solution()
