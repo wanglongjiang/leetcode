@@ -8,87 +8,61 @@
 删除一个字符
 替换一个字符
 
+示例 1：
+
+输入：word1 = "horse", word2 = "ros"
+输出：3
+解释：
+horse -> rorse (将 'h' 替换为 'r')
+rorse -> rose (删除 'r')
+rose -> ros (删除 'e')
+示例 2：
+
+输入：word1 = "intention", word2 = "execution"
+输出：5
+解释：
+intention -> inention (删除 't')
+inention -> enention (将 'i' 替换为 'e')
+enention -> exention (将 'n' 替换为 'x')
+exention -> exection (将 'n' 替换为 'c')
+exection -> execution (插入 'u')
+ 
+
+提示：
+
+0 <= word1.length, word2.length <= 500
+word1 和 word2 由小写英文字母组成
 '''
 '''
-思路：双重动态规划。
-第1个动态规划求2个字符串的最长公共子序列（lcs）
-第2个动态规划求公共子序列的某个字符匹配与否的最小编辑距离。
-时间复杂度：O(m*n)，第1个动态规划需要O(mn)，第2个动态规划O(len(lcs))<O(min(m,n))
-空间复杂度：O(m*n)，第1个动态规划需要O(mn)，第2个动态规划O(len(lcs))
-TODO
+思路：动态规划
+设二维动态规划数组dp[m][n]，
+对于元素dp[i][j]的意思是截止word1的第i个字符和word2的第j字符，所用的最少编辑次数
+有3种编辑方式：替换、删除、插入，根据3种编辑方式写出状态转移方程
+如果word1[i]==word2[j]，dp[i][j] = dp[i-1][j-1]
+否则：dp[i][j] = min(dp[i-1][j-1]+1, dp[i-1][j]+1, dp[i][j-1]+1)
+在上面的min里面，3个最优子结构的意思是替换1个字符，删除1个字符，添加1个字符
+
+时间复杂度：O(mn)
+空间复杂度：O(mn)
 '''
 
 
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
-        n1, n2 = len(word1), len(word2)
+        m, n = len(word1), len(word2)
+        dp = [[0] * (n + 1) for _ in range(m + 1)]
+        for i in range(m + 1):  # 初始化边界初始值，j为0，如果要变换成word1，编辑次数就是字符串长度
+            dp[i][0] = i
+        for j in range(n + 1):  # 初始化边界初始值，i为0，如果要变换成word2，编辑次数就是字符串长度
+            dp[0][j] = j
+        for i in range(1, m + 1):
+            for j in range(1, n + 1):
+                if word1[i - 1] == word2[j - 1]:
+                    dp[i][j] = dp[i - 1][j - 1]
+                else:
+                    dp[i][j] = min(dp[i - 1][j - 1], dp[i - 1][j], dp[i][j - 1]) + 1
 
-        # 第1次动态规划求lcs
-        def getCount(cm, x, y):
-            if x < 0 or y < 0:
-                return 0
-            return cm[x][y]
-
-        # 创建lcs查询矩阵
-        def makeLcsCountMatrix():
-            cm = [[0] * n2 for i in range(n1)]
-            for i in range(n1):
-                for j in range(n2):
-                    if word1[i] == word2[j]:
-                        cm[i][j] = getCount(cm, i - 1, j - 1) + 1
-                    elif getCount(cm, i - 1, j) >= getCount(cm, i, j - 1):
-                        cm[i][j] = getCount(cm, i - 1, j)
-                    else:
-                        cm[i][j] = getCount(cm, i, j - 1)
-            return cm
-
-        cm = makeLcsCountMatrix()
-        # 下面2个数组存储2个单词的lcs坐标
-        lcsPosition1, lcsPosition2 = [], []
-        # 遍历矩阵，将lcs子串坐标找出来
-        i, j = n1 - 1, n2 - 1
-        while i >= 0 and j >= 0:
-            lcsLeftUp = getCount(cm, i - 1, j - 1)
-            lcsLeft = getCount(cm, i, j - 1)
-            lcsUp = getCount(cm, i - 1, j)
-            if cm[i][j] > lcsLeftUp and cm[i][j] > lcsLeft and cm[i][j] > lcsUp:
-                lcsPosition1.append(i)
-                lcsPosition2.append(j)
-                i -= 1
-                j -= 1
-            elif lcsUp >= lcsLeft:
-                i -= 1
-            else:
-                j -= 1
-        if len(lcsPosition1) == 0:  # 没有lcs，需要变动的字符数为2个字符串的较长长度
-            return max(n1, n2)
-        lcsPosition1.reverse()
-        lcsPosition2.reverse()
-        # 第2次动态规划，设置2个数组match,nomatch与lcs长度相同，里面存储当前坐标匹配、不匹配的长度。动态规划方程如下：
-        # 第i个坐标进行匹配，其编辑长度为 min(match[i-1],nomatch[i-1])+ max(lcsPosition1[i+1]-lcsPosition1[i],lcsPosition2[i+1]-lcsPosition2[i])-1
-        # 第i个坐标不匹配，其编辑长度为 min( min(match[i-1],nomatch[i-1])+ max(lcsPosition1[i+1]-lcsPosition1[i],lcsPosition2[i+1]-lcsPosition2[i]),
-        #   max(lcsPosition1[i+1], lcsPosition2[i+1]))
-        # 第0个坐标匹配，其编辑长度为 max(lcsPosition1[0],lcsPosition1[0])+max(lcsPosition1[i+1]-lcsPosition1[0],lcsPosition2[i+1]-lcsPosition2[i])-1
-        # 第0个坐标不匹配，其编辑长度为 max(lcsPosition1[i+1],lcsPosition2[i+1])
-        lcsLen = len(lcsPosition1)
-        match, nomatch = [0] * lcsLen, [0] * lcsLen
-        rightIndex1, rightIndex2 = 0, 0
-        if lcsLen == 1:
-            rightIndex1 = n1
-            rightIndex2 = n2
-        else:
-            rightIndex1 = lcsPosition1[1]
-            rightIndex2 = lcsPosition2[1]
-        match[0] = max(lcsPosition1[0], lcsPosition2[0]) + max(rightIndex1 - lcsPosition1[0], rightIndex2 - lcsPosition2[0]) - 1
-        nomatch[0] = max(rightIndex1, rightIndex2)
-        for i in range(1, lcsLen):
-            if i + 1 == lcsLen:
-                rightIndex1, rightIndex2 = n1, n2
-            else:
-                rightIndex1, rightIndex2 = lcsPosition1[i + 1], lcsPosition2[i + 1]
-            match[i] = min(match[i - 1], nomatch[i - 1]) + max(rightIndex1 - lcsPosition1[i], rightIndex2 - lcsPosition2[i]) - 1
-            nomatch[i] = min(match[i] + 1, max(rightIndex1, rightIndex2))
-        return min(match[-1], nomatch[-1])
+        return dp[m][n]
 
 
 s = Solution()

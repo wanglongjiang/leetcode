@@ -16,6 +16,19 @@
 - 剑指 Offer 09.[用两个栈实现队列](offer/09-yong-liang-ge-zhan-shi-xian-dui-lie-lcof.py)
 - 剑指 Offer 30.[包含 min 函数的栈](offer/30-bao-han-minhan-shu-de-zhan-lcof.py)
 
+## 单调栈
+
+- 42.[接雨水](hard/42-trapping-rain-water.py)
+- 84.[柱状图中最大的矩形](hard/84-largest-rectangle-in-histogram.py)
+- 85.[最大矩形](hard/85-maximal-rectangle.py)
+- 316.[去除重复字母](medium/316-remove-duplicate-letters.py)
+- 402.[移掉 K 位数字](medium/402-remove-k-digits.py)
+- 768.[最多能完成排序的块 II](hard/768-max-chunks-to-make-sorted-ii.py)
+- 769.[最多能完成排序的块](medium/769-max-chunks-to-make-sorted.py)
+- 962.[最大宽度坡](medium/962-maximum-width-ramp.py)
+- 1081.[不同字符的最小子序列](medium/1081-smallest-subsequence-of-distinct-characters.py)
+- 面试题 17.21.[直方图的水量](interview/17.21.volume-of-histogram-lcci.py)
+
 ## 堆
 
 - 347.[前 K 个高频元素](medium/347-top-k-frequent-elements.py)
@@ -25,6 +38,7 @@
 - 1353.[最多可以参加的会议数目](medium/1353-maximum-number-of-events-that-can-be-attended.py)
 - 1738.[找出第 K 大的异或坐标值](medium/1738-find-kth-largest-xor-coordinate-value.py)
 - 面试题 03.05.[栈排序](interview/03.05.sort-of-stacks-lcci.py)
+- 面试题 17.20.[连续中值](interview/17.20.continuous-median-lcci.py)
 
 ## 队列
 
@@ -58,6 +72,7 @@
 - 525.[连续数组](medium/525-contiguous-array.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
 - 560.[和为 K 的子数组](medium/560-subarray-sum-equals-k.py)
+- 594.[最长和谐子序列](easy/594-longest-harmonious-subsequence.py)
 - 609.[在系统中查找重复文件](medium/609-find-duplicate-file-in-system.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
 - 815.[公交路线](hard/815-bus-routes.py)
@@ -71,7 +86,13 @@
 - 1807.[替换字符串中的括号内容](medium/1807-evaluate-the-bracket-pairs-of-a-string.py)
 - 面试题 16.15.[珠玑妙算](interview/16.15.master-mind-lcci.py)
 - 面试题 16.14.[最佳直线](interview/16.14.best-line-lcci.py)
+- 面试题 16.21.[交换和](interview/16.21.sum-swap-lcci.py)
 - 面试题 16.24.[数对和](interview/16.24.pairs-with-sum-lcci.py)
+
+## 滚动哈希
+
+- 214.[最短回文串](hard/214-shortest-palindrome.py)
+- 1316.[不同的循环子字符串](hard/1316-distinct-echo-substrings.py)
 
 ## 链表
 
@@ -81,6 +102,7 @@
 - 160.[相交链表](easy/160-intersection-of-two-linked-lists.py)
 - 203.[移除链表元素](easy/203-remove-linked-list-elements.py)
 - 206.[反转链表](easy/206-reverse-linked-list.py)
+- 295.[数据流的中位数](hard/295-find-median-from-data-stream.py)
 - 725.[分隔链表](medium/725-split-linked-list-in-parts.py)
 - 817.[链表组件](medium/817-linked-list-components.py)
 - 1171.[从链表中删去总和值为零的连续节点](medium/1171-remove-zero-sum-consecutive-nodes-from-linked-list.py)
@@ -92,6 +114,7 @@
 - 剑指 Offer 18.[删除链表的节点](offer/18-shan-chu-lian-biao-de-jie-dian-lcof.py)
 - 剑指 Offer 24.[反转链表](offer/24-fan-zhuan-lian-biao-lcof.py)
 - 剑指 Offer 35.[复杂链表的复制](offer/35-fu-za-lian-biao-de-fu-zhi-lcof.py)
+- 剑指 Offer 41.[数据流中的中位数](offer/41-shu-ju-liu-zhong-de-zhong-wei-shu-lcof.py)
 
 ## 树
 
@@ -118,8 +141,10 @@
 - 剑指 Offer 68 - I.[二叉搜索树的最近公共祖先](offer/68-er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof.py)
 - 剑指 Offer 68 - II.[二叉树的最近公共祖先](offer/68-er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof.py)
 
-## Ordered Map
+## 有序集合
 
+- 352.[将数据流变为多个不相交区间](hard/352-data-stream-as-disjoint-intervals.py)
+- 699.[掉落的方块](hard/699-falling-squares.py)
 - 846.[一手顺子](medium/846-hand-of-straights.py)
 - 855.[考场就座](medium/855-exam-room.py)
 - 1026.[节点与其祖先之间的最大差值](medium/1026-maximum-difference-between-node-and-ancestor.py)
@@ -205,9 +230,10 @@
 - 814.[二叉树剪枝](medium/814-binary-tree-pruning.py)
 - 849.[到最近的人的最大距离](medium/849-maximize-distance-to-closest-person.py)
 - 870.[优势洗牌](medium/870-advantage-shuffle.py)
-- 984.[贪心算法](medium/984-string-without-aaa-or-bbb.py)
+- 984.[不含 AAA 或 BBB 的字符串](medium/984-string-without-aaa-or-bbb.py)
 - 1029.[两地调度](medium/1029-two-city-scheduling.py)
 - 1353.[最多可以参加的会议数目](medium/1353-maximum-number-of-events-that-can-be-attended.py)
+- 1833.[雪糕的最大数量](medium/1833-maximum-ice-cream-bars.py)
 - 面试题 05.03.[翻转数位](interview/05.03.reverse-bits-lcci.py)
 - 面试题 16.17.[连续数列](interview/16.17.contiguous-sequence-lcci.py)
 - 剑指 Offer 42.[连续子数组的最大和](offer/42-lian-xu-zi-shu-zu-de-zui-da-he-lcof.py)
@@ -234,6 +260,7 @@
 - 面试题 05.07.[配对交换](interview/05.07.exchange-lcci.py)
 - 面试题 05.08.[绘制直线](interview/05.08.draw-line-lcci.py)
 - 面试题 17.04.[消失的数字](interview/17.04.missing-number-lcci.py)
+- 面试题 17.19.[消失的两个数字](interview/17.19.missing-two-lcci.py)
 - 剑指 Offer 15.[二进制中 1 的个数](offer/15-er-jin-zhi-zhong-1de-ge-shu-lcof.py)
 - 剑指 Offer 65.[不用加减乘除做加法](offer/65-bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof.py)
 
@@ -330,6 +357,7 @@
 - 474.[一和零](medium/474-ones-and-zeroes.py)
 - 518.[零钱兑换 II](medium/518-coin-change-2.py)
 - 664.[奇怪的打印机](hard/664-strange-printer.py)
+- 673.[最长递增子序列的个数](medium/673-number-of-longest-increasing-subsequence.py)
 - 718.[最长重复子数组](medium/718-maximum-length-of-repeated-subarray.py)
 - 1035.[不相交的线](medium/1035-uncrossed-lines.py)
 - 1269.[停在原地的方案数](hard/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps.py)
@@ -390,6 +418,10 @@
 - 剑指 Offer 28.[对称的二叉树](offer/28-dui-cheng-de-er-cha-shu-lcof.py)
 - 剑指 Offer 33.[二叉搜索树的后序遍历序列](offer/33-er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof.py)
 - 剑指 Offer 64.[求 1+2+…+n](offer/64-qiu-12n-lcof.py)
+
+## 记忆化搜索
+
+- 509.[斐波那契数](easy/509-fibonacci-number.py)
 
 ## 分治
 
