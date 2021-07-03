@@ -11,39 +11,49 @@ t = t1 + t2 + ... + tm
 提示：a + b 意味着字符串 a 和 b 连接。
 '''
 '''
-思路：
-第1反应是遍历s3的字符，交替与s1、s2进行对比，如果能走到最后，就能证明是交错字符串
-能不能找到一个交替字符串，不满足上面的算法呢？
-可以找到：s1=aaab, s2=abc, s3=aabcaab，如果从s1开始对比，会无法走到最后
+思路：动态规划
+分析一下，s3为s1、s2交错构成，寻找动态规划最优子结构一般是自底向上能构成解。
+设二维数组dp[m][n]，m为s1长度,n为s2长度。
+那么dp[i][j]的含义是，s3的子串s3[0..i+j]是否由s1[i]和s[j]交替构成
+状态转移方程为：
+dp[i][j]= True, 如果s3[i+j]==s1[i]，且dp[i-1][j]==True
+或者
+dp[i][j]= True, 如果s3[i+j]==s2[j]，且dp[i][j-1]==True
+如果不满足上面2条，则dp[i][j]=false
 
-经过一番思考，尝试用回溯解决问题
-对于s3的当前字符，与s1、s2的当前位置字符进行对比，（3个字符串初始都从0开始）
-    如果s3[i]==s1[j] or s3[i]==s2[k] 需要先后尝试与s1、s2匹配，进入下一个字符
-    如果都不相同，不能匹配。
+初始化：
+dp[0][0]=true
+dp[1..m][0]=s1[i]==s3[i]且dp[i-1][0]==true
+dp[0][1..n]=s2[j]==s3[j]且dp[0][j-1]==true
+
+
+时间复杂度：O(mn)
+空间复杂度：O(mn)
 '''
 
 
 class Solution:
     def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
-        len3, len1, len2 = len(s3), len(s1), len(s2)
-        if len3 != len2 + len1:
+        m, n = len(s1), len(s2)
+        if m + n != len(s3):
             return False
-
-        def backtrack(i, j, k):
-            if i == len3:  # s3的当前位置已经匹配完成
-                return True
-            if j < len1 and s3[i] == s1[j]:
-                if backtrack(i + 1, j + 1, k):
-                    return True
-            if k < len2 and s3[i] == s2[k]:
-                if backtrack(i + 1, j, k + 1):
-                    return True
-            return False
-
-        return backtrack(0, 0, 0)
+        dp = [[False] * (n + 1) for _ in range(m + 1)]
+        # 初始化
+        dp[0][0] = True
+        for i in range(1, m + 1):
+            dp[i][0] = (s1[i - 1] == s3[i - 1]) and dp[i - 1][0]
+        for j in range(1, n + 1):
+            dp[0][j] = (s2[j - 1] == s3[j - 1]) and dp[0][j - 1]
+        # 动态规划
+        for i in range(1, m + 1):
+            for j in range(1, n + 1):
+                dp[i][j] = (s3[i + j - 1] == s1[i - 1] and dp[i - 1][j]) or (s3[i + j - 1] == s2[j - 1] and dp[i][j - 1])
+        return dp[m][n]
 
 
 s = Solution()
+print(s.isInterleave("db", 'b', 'cbb'))
+print(s.isInterleave("a", "", "a"))
 print(s.isInterleave(s1="aabcc", s2="dbbca", s3="aadbbcbcac"))
 print(s.isInterleave(s1="aabcc", s2="dbbca", s3="aadbbbaccc"))
 print(s.isInterleave(s1="", s2="", s3=""))

@@ -13,36 +13,32 @@ class TreeNode:
 
 
 '''
-思路：迭代，回溯算法会导致部分左子树丢失。
-二叉搜索树的性质：根节点为root，所有的左子树节点小于root，所有的右子树节点大于root，其左右子树节点也满足这一性质。
-根据这一特性，对于二叉搜索树nums[1..n]，如果第i个数为根节点，则nums[1..i-1]为左子树，nums[i+1..n]为右子树，再递归求左右子树
-另外设置2个数组left[1..n]和right[1..n]，分别代表节点1..n的左右子树用于输出
+思路：分治
+以整数区间a..b中每一个元组作为子树的根节点，另外的元素作为左右子树，
+递归生成左右子树的后，根节点与左右子树进行组合
+
 时间复杂度：x， O(2^n)< x <O(n!)
-空间复杂度：O(n)，最大递归深度n，还需要3个大小为n的辅助空间
+空间复杂度：O(n)，最大递归深度n
 '''
 
 
 class Solution:
     def generateTrees(self, n: int) -> List[TreeNode]:
-        nodes = [None] * (n + 1)
-        trees = []
-        # 创建所有节点，并连结成第1个树。第0个节点为哨兵
-        for i in range(n + 1):
-            nodes[i] = TreeNode(i + 1)
-        for i in range(n):
-            nodes[i].right = nodes[i + 1]
-        # 尝试旋转所有子树
+        def makeTree(start, end):
+            ans = []
+            for i in range(start, end):
+                leftTrees, rightTrees = [None], [None]
+                if i > start:
+                    leftTrees = makeTree(start, i)
+                if i < end - 1:
+                    rightTrees = makeTree(i + 1, end)
+                for leftTree in leftTrees:
+                    for rightTree in rightTrees:
+                        node = TreeNode(i, leftTree, rightTree)
+                        ans.append(node)
+            return ans
 
-        def clone():  # 克隆并复制树
-            newnodes = [TreeNode(val=i) for i in range(n + 1)]
-            for i in range(1, n + 1):
-                if nodes[i].left:
-                    newnodes[i].left = newnodes[nodes[i].left.val]
-                if nodes[i].right:
-                    newnodes[i].right = nodes[nodes[i].right.val]
-            trees.append(newnodes[0].right)
-
-        return trees
+        return makeTree(1, n + 1)
 
 
 def toList(node: TreeNode):
