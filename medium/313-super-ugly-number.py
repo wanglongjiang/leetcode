@@ -18,11 +18,26 @@
 '''
 from typing import List
 '''
-思路：
-TODO
+思路：动态规划
+使用与264.[丑数 II](medium/264-ugly-number-ii.py)类似的思路
+
+时间复杂度：O(mn)，m=len(primes)
+空间复杂度：O(m+n)
 '''
 
 
 class Solution:
     def nthSuperUglyNumber(self, n: int, primes: List[int]) -> int:
-        pass
+        dp = [0] * n
+        p = [0] * len(primes)  # 保存prime[i]指向dp的指针
+        dp[0] = 1
+        for i in range(1, n):
+            dp[i] = min(prime * dp[index] for prime, index in zip(primes, p))
+            for j in range(len(primes)):
+                if dp[i] == primes[j] * dp[p[j]]:
+                    p[j] += 1
+        return dp[n - 1]
+
+
+s = Solution()
+print(s.nthSuperUglyNumber(n=12, primes=[2, 7, 13, 19]))
