@@ -83,6 +83,7 @@
 - 1074.[元素和为目标值的子矩阵数量](hard/1074-number-of-submatrices-that-sum-to-target.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1630.[等差子数组](medium/1630-arithmetic-subarrays.py)
+- 1766.[互质树](hard/1766-tree-of-coprimes.py)
 - 1807.[替换字符串中的括号内容](medium/1807-evaluate-the-bracket-pairs-of-a-string.py)
 - 面试题 16.15.[珠玑妙算](interview/16.15.master-mind-lcci.py)
 - 面试题 16.14.[最佳直线](interview/16.14.best-line-lcci.py)
@@ -93,6 +94,7 @@
 
 - 214.[最短回文串](hard/214-shortest-palindrome.py)
 - 1316.[不同的循环子字符串](hard/1316-distinct-echo-substrings.py)
+- 1392.[最长快乐前缀](hard/1392-longest-happy-prefix.py)
 
 ## 链表
 
@@ -172,6 +174,12 @@
 - 剑指 Offer 12.[矩阵中的路径](offer/12-ju-zhen-zhong-de-lu-jing-lcof.py)
 - 面试题 04.01.[节点间通路](interview/04.01.route-between-nodes-lcci.py)
 - 剑指 Offer 53 - I.[在排序数组中查找数字 I](offer/53-que-shi-de-shu-zi-lcof.py)
+
+## 模拟
+
+- 1094.[拼车](medium/1094-car-pooling.py)
+- 1706.[球会落何处](medium/1706-where-will-the-ball-fall.py)
+- 1860.[增长的内存泄露](medium/1860-incremental-memory-leak.py)
 
 ## 二分查找
 
@@ -285,6 +293,7 @@
 - 1123.[最深叶节点的最近公共祖先](medium/1123-lowest-common-ancestor-of-deepest-leaves.py)
 - 1315.[祖父节点值为偶数的节点和](medium/1315-sum-of-nodes-with-even-valued-grandparent.py)
 - 1339.[分裂二叉树的最大乘积](medium/1339-maximum-product-of-splitted-binary-tree.py)
+- 1766.[互质树](hard/1766-tree-of-coprimes.py)
 - 1857.[有向图中最大颜色值](hard/1857-largest-color-value-in-a-directed-graph.py)
 - 面试题 04.08.[首个共同祖先](interview/04.08-first-common-ancestor-lcci.py)
 - 剑指 Offer 34.[二叉树中和为某一值的路径](offer/34-er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof.py)
@@ -343,17 +352,29 @@
 - 剑指 Offer 48.[最长不含重复字符的子字符串](offer/48-zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof.py)
 - 剑指 Offer 57 - II.[和为 s 的连续正数序列](offer/57-he-wei-sde-liang-ge-shu-zi-lcof.py)
 
+## 记忆化搜索
+
+- 139.[单词拆分](medium/139-word-break.py)
+- 140.[单词拆分 II](hard/140-word-break-ii.py)
+- 509.[斐波那契数](easy/509-fibonacci-number.py)
+
 ## 动态规划 DP
 
 - 91.[解码方法](medium/91-decode-ways.py)
+- 95.[不同的二叉搜索树 II](medium/95-unique-binary-search-trees-ii.py)
+- 96.[不同的二叉搜索树](medium/96-unique-binary-search-trees.py)
+- 97.[交错字符串](medium/97-interleaving-string.py)
 - 198.[打家劫舍](medium/198-house-robber.py)
 - 213.[打家劫舍 II](medium/213-house-robber-ii.py)
 - 264.[丑数 II](medium/264-ugly-number-ii.py)
 - 309.[最佳买卖股票时机含冷冻期](medium/309-best-time-to-buy-and-sell-stock-with-cooldown.py)
 - 312.[戳气球](hard/312-burst-balloons.py)
+- 313.[超级丑数](medium/313-super-ugly-number.py)
 - 337.[打家劫舍 III](medium/337-house-robber-iii.py)
 - 343.[整数拆分](medium/343-integer-break.py)
+- 357.[计算各个位数不同的数字个数](medium/357-count-numbers-with-unique-digits.py)
 - 376.[摆动序列](medium/376-wiggle-subsequence.py)
+- 396.[旋转函数](medium/396-rotate-function.py)
 - 474.[一和零](medium/474-ones-and-zeroes.py)
 - 518.[零钱兑换 II](medium/518-coin-change-2.py)
 - 664.[奇怪的打印机](hard/664-strange-printer.py)
@@ -375,6 +396,7 @@
 
 ## 背包问题
 
+- 322.[零钱兑换](medium/322-coin-change.py)
 - 518.[零钱兑换 II](medium/518-coin-change-2.py)
 - 879.[盈利计划](hard/879-profitable-schemes.py)
 - 1049.[最后一块石头的重量 II](medium/1049-last-stone-weight-ii.py)
@@ -385,6 +407,8 @@
 
 - 51.[N 皇后](hard/51-n-queens.py)
 - 52.[N 皇后 II](hard/52-n-queens-ii.py)
+- 139.[单词拆分](medium/139-word-break.py)
+- 140.[单词拆分 II](hard/140-word-break-ii.py)
 - 306.[累加数](medium/306-additive-number.py)
 - 491.[递增子序列](medium/491-increasing-subsequences.py)
 - 494.[目标和](medium/494-target-sum.py)
@@ -401,6 +425,7 @@
 - 437.[路径总和 III](medium/437-path-sum-iii.py)
 - 538.[把二叉搜索树转换为累加树](medium/538-convert-bst-to-greater-tree.py)
 - 654.[最大二叉树](medium/654-maximum-binary-tree.py)
+- 726.[原子的数量](hard/726-number-of-atoms.py)
 - 889.[根据前序和后序遍历构造二叉树](medium/889-construct-binary-tree-from-preorder-and-postorder-traversal.py)
 - 951.[翻转等价二叉树](medium/951-flip-equivalent-binary-trees.py)
 - 998.[最大二叉树 II](medium/998-maximum-binary-tree-ii.py)
@@ -419,14 +444,11 @@
 - 剑指 Offer 33.[二叉搜索树的后序遍历序列](offer/33-er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof.py)
 - 剑指 Offer 64.[求 1+2+…+n](offer/64-qiu-12n-lcof.py)
 
-## 记忆化搜索
-
-- 509.[斐波那契数](easy/509-fibonacci-number.py)
-
 ## 分治
 
 - 215.[数组中的第 K 个最大元素](medium/215-kth-largest-element-in-an-array.py)
 - 241.[为运算表达式设计优先级](medium/241-different-ways-to-add-parentheses.py)
+- 427.[建立四叉树](medium/427-construct-quad-tree.py)
 - 973.[最接近原点的 K 个点](medium/973-k-closest-points-to-origin.py)
 - 面试题 04.02.[最小高度树](interview/04.02.minimum-height-tree-lcci.py)
 - 面试题 17.14. [最小 K 个数](interview/17.14.smallest-k-lcci.py)
@@ -454,6 +476,7 @@
 - 168.[Excel 表列名称](easy/168-excel-sheet-column-title.py)
 - 233.[数字 1 的个数](hard/233-number-of-digit-one.py)
 - 326.[3 的幂](easy/326-power-of-three.py)
+- 372.[超级次方](medium/372-super-pow.py)
 - 400.[第 N 位数字](medium/400-nth-digit.py)
 - 483.[最小好进制](hard/483-smallest-good-base.py)
 - 537.[复数乘法](medium/537-complex-number-multiplication.py)
@@ -521,6 +544,10 @@
 - 1697.[检查边长度限制的路径是否存在](hard/1697-checking-existence-of-edge-length-limited-paths.py)
 - 1722.[执行交换操作后的最小汉明距离](medium/1722-minimize-hamming-distance-after-swap-operations.py)
 - 面试题 17.07.[婴儿名字](interview/17.07.baby-names-lcci.py)
+
+## 最小生成树
+
+- 1584.[连接所有点的最小费用](medium/1584-min-cost-to-connect-all-points.py)
 
 ## 树状数组
 
