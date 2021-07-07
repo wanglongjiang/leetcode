@@ -47,8 +47,13 @@
 - 621.[设计循环队列](medium/621.design-circular-queue.py)
 - 641.[设计循环双端队列](medium/641-design-circular-deque.py)
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
+- 1670.[设计前中后队列](medium/1670-design-front-middle-back-queue.py)
 - 1673.[找出最具竞争力的子序列](medium/1673-find-the-most-competitive-subsequence.py)
 - 剑指 Offer 59 - II.[队列的最大值](offer/59-dui-lie-de-zui-da-zhi-lcof.py)
+
+## 单调队列
+
+- 239.[滑动窗口最大值](hard/239-sliding-window-maximum.py)
 
 ## 数组
 
@@ -58,16 +63,18 @@
 - 525.[连续数组](medium/525-contiguous-array.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1310.[子数组异或查询](medium/1310-xor-queries-of-a-subarray.py)
+- 1472.[设计浏览器历史记录](medium/1472-design-browser-history.py)
 - 1744.[你能在你最喜欢的那天吃到你最喜欢的糖果吗？](medium/1744-can-you-eat-your-favorite-candy-on-your-favorite-day.py)
 - 面试题 05.08.[绘制直线](interview/05.08.draw-line-lcci.py)
 - 面试题 10.01.[合并排序的数组](interview/10.01.sorted-merge-lcci.py)
 - 面试题 16.20.[T9 键盘](interview/16.20.t9-lcci.py)
 - 剑指 Offer 66.[构建乘积数组](offer/66-gou-jian-cheng-ji-shu-zu-lcof.py)
 
-## 哈希
+## 哈希 hash
 
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
 - 355.[设计推特](medium/355-design-twitter.py)
+- 432.[全 O(1) 的数据结构](hard/432-all-oone-data-structure.py)
 - 523.[连续的子数组和](medium/523-continuous-subarray-sum.py)
 - 525.[连续数组](medium/525-contiguous-array.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
@@ -83,6 +90,7 @@
 - 1074.[元素和为目标值的子矩阵数量](hard/1074-number-of-submatrices-that-sum-to-target.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1630.[等差子数组](medium/1630-arithmetic-subarrays.py)
+- 1711.[大餐计数](medium/1711-count-good-meals.py)
 - 1766.[互质树](hard/1766-tree-of-coprimes.py)
 - 1807.[替换字符串中的括号内容](medium/1807-evaluate-the-bracket-pairs-of-a-string.py)
 - 面试题 16.15.[珠玑妙算](interview/16.15.master-mind-lcci.py)
@@ -118,6 +126,10 @@
 - 剑指 Offer 35.[复杂链表的复制](offer/35-fu-za-lian-biao-de-fu-zhi-lcof.py)
 - 剑指 Offer 41.[数据流中的中位数](offer/41-shu-ju-liu-zhong-de-zhong-wei-shu-lcof.py)
 
+## 双向链表
+
+- 432.[全 O(1) 的数据结构](hard/432-all-oone-data-structure.py)
+
 ## 树
 
 - 100.[相同的树](easy/100-same-tree.py)
@@ -145,6 +157,7 @@
 
 ## 有序集合
 
+- 239.[滑动窗口最大值](hard/239-sliding-window-maximum.py)
 - 352.[将数据流变为多个不相交区间](hard/352-data-stream-as-disjoint-intervals.py)
 - 699.[掉落的方块](hard/699-falling-squares.py)
 - 846.[一手顺子](medium/846-hand-of-straights.py)
@@ -177,6 +190,7 @@
 
 ## 模拟
 
+- 289.[生命游戏](medium/289-game-of-life.py)
 - 1094.[拼车](medium/1094-car-pooling.py)
 - 1706.[球会落何处](medium/1706-where-will-the-ball-fall.py)
 - 1860.[增长的内存泄露](medium/1860-incremental-memory-leak.py)
@@ -484,6 +498,7 @@
 - 932.[漂亮数组](medium/932-beautiful-array.py)
 - 970.[强整数](medium/970-powerful-integers.py)
 - 974.[和可被 K 整除的子数组](medium/974-subarray-sums-divisible-by-k.py)
+- 1711.[大餐计数](medium/1711-count-good-meals.py)
 - 面试题 05.02.[二进制数转字符串](interview/05.02.bianry-number-to-string-lcci.py)
 - 面试题 16.11.[跳水板](interview/16.11.diving-board-lcci.py)
 - 剑指 Offer 44.[数字序列中某一位的数字](offer/44-shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof.py)
@@ -506,7 +521,7 @@
 - 剑指 Offer 05.[替换空格](offer/05-ti-huan-kong-ge-lcof.py)
 - 剑指 Offer 58 - II.[左旋转字符串](offer/58-zuo-xuan-zhuan-zi-fu-chuan-lcof.py)
 
-## 字典树
+## 字典树 trie
 
 - 139.[单词拆分](medium/139-word-break.py)
 - 140.[单词拆分 II](hard/140-word-break-ii.py)
@@ -516,6 +531,7 @@
 - 648.[单词替换](medium/648-replace-words.py)
 - 677.[键值映射](medium/677-map-sum-pairs.py)
 - 745.[前缀和后缀搜索](hard/745-prefix-and-suffix-search.py)
+- 1032.[字符流](hard/1032-stream-of-characters.py)
 - 1233.[删除子文件夹](medium/1233-remove-sub-folders-from-the-filesystem.py)
 - 1410.[HTML 实体解析器](medium/1410-html-entity-parser.py)
 - 1487.[保证文件名唯一](medium/1487-making-file-names-unique.py)
