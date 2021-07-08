@@ -70,10 +70,16 @@
 - 面试题 16.20.[T9 键盘](interview/16.20.t9-lcci.py)
 - 剑指 Offer 66.[构建乘积数组](offer/66-gou-jian-cheng-ji-shu-zu-lcof.py)
 
+## 前缀数组
+
+- 523.[连续的子数组和](medium/523-continuous-subarray-sum.py)
+- 930.[和相同的二元子数组](medium/930-binary-subarrays-with-sum.py)
+
 ## 哈希 hash
 
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
 - 355.[设计推特](medium/355-design-twitter.py)
+- 380.[O(1) 时间插入、删除和获取随机元素](medium/380-insert-delete-getrandom-o1.py)
 - 432.[全 O(1) 的数据结构](hard/432-all-oone-data-structure.py)
 - 523.[连续的子数组和](medium/523-continuous-subarray-sum.py)
 - 525.[连续数组](medium/525-contiguous-array.py)
@@ -83,13 +89,16 @@
 - 609.[在系统中查找重复文件](medium/609-find-duplicate-file-in-system.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
 - 815.[公交路线](hard/815-bus-routes.py)
+- 930.[和相同的二元子数组](medium/930-binary-subarrays-with-sum.py)
 - 939.[哈希](medium/939-minimum-area-rectangle.py)
 - 954.[二倍数对数组](medium/954-array-of-doubled-pairs.py)
 - 966.[元音拼写检查器](medium/966-vowel-spellchecker.py)
 - 1001.[网格照明](hard/1001-grid-illumination.py)
 - 1074.[元素和为目标值的子矩阵数量](hard/1074-number-of-submatrices-that-sum-to-target.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
+- 1452.[收藏清单](medium/1452-people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list.py)
 - 1630.[等差子数组](medium/1630-arithmetic-subarrays.py)
+- 1657.[确定两个字符串是否接近](medium/1657-determine-if-two-strings-are-close.py)
 - 1711.[大餐计数](medium/1711-count-good-meals.py)
 - 1766.[互质树](hard/1766-tree-of-coprimes.py)
 - 1807.[替换字符串中的括号内容](medium/1807-evaluate-the-bracket-pairs-of-a-string.py)
@@ -191,6 +200,7 @@
 ## 模拟
 
 - 289.[生命游戏](medium/289-game-of-life.py)
+- 640.[求解方程](medium/640-solve-the-equation.py)
 - 1094.[拼车](medium/1094-car-pooling.py)
 - 1706.[球会落何处](medium/1706-where-will-the-ball-fall.py)
 - 1860.[增长的内存泄露](medium/1860-incremental-memory-leak.py)
@@ -242,7 +252,7 @@
 ## 贪心算法
 
 - 12.[整数转罗马数字](medium/12-integer-to-roman.py)
-- 53.[最大子序和](easy/53-maximum-subarray2.py)
+- 53.[最大子序和](easy/53-maximum-subarray.py)
 - 55.[跳跃游戏](medium/55-jump-game.py)
 - 121.[买卖股票的最佳时机](easy/121-best-time-to-buy-and-sell-stock.py)
 - 231.[2 的幂](easy/231-power-of-two.py)
@@ -267,6 +277,7 @@
 - 191.[位 1 的个数](easy/191-number-of-1-bits.py)
 - 231.[2 的幂](easy/231-power-of-two.py)
 - 318.[最大单词长度乘积](medium/318-maximum-product-of-word-lengths.py)
+- 371.[两整数之和](medium/371-sum-of-two-integers.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 - 461.[汉明距离](easy/461-hamming-distance.py)
@@ -507,6 +518,7 @@
 
 ## 随机
 
+- 380.[O(1) 时间插入、删除和获取随机元素](medium/380-insert-delete-getrandom-o1.py)
 - 528.[按权重随机选择](medium/528-random-pick-with-weight.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
 - 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
