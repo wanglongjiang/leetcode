@@ -9,7 +9,11 @@
 '''
 from typing import List
 '''
-思路：一次遍历数组，求出prices[i]-prices[i-1]>0时的差之和
+思路：贪心算法
+累计所有正收益，也就是一次遍历数组，求出prices[i]-prices[i-1]>0时的差之和
+
+时间复杂度：O(n)
+空间复杂度：O(1)
 '''
 
 
