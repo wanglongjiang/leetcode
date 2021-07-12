@@ -34,7 +34,7 @@
 from typing import List
 from sortedcontainers import SortedDict
 '''
-思路：Ordered Map
+思路：有序集合
 使用treemap(python中的treemap是sortedcontainers.sorteddict)对所有元素进行计数
 然后从小到大，groupSize一组从treempa中删除，如果能出尽则返回true
 
