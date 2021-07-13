@@ -9,14 +9,16 @@
 你可以假设字典中没有重复的单词。
 '''
 from typing import List
+from functools import lru_cache
 '''
-思路：回溯+字典树查找。
+思路：回溯+字典树查找+记忆化搜索
 与139题思路类似。
 1、先把wordDict构造成字典树
 2、从头开始匹配s，以贪婪模式尽可能长的匹配，把成功匹配的结果以list形式返回，下一次匹配的开头从list其中一个下标开始，
     如果匹配失败，回溯到上一个下标继续匹配。
 3、重复过程2，直至s的所有字符都被匹配。
-时间复杂度：O(m*n)，最坏情况下是O(m*n)，实际应该远远小于
+
+时间复杂度：O(m*2^n)，最坏情况下是O(m*2^n)，实际因为使用了记忆化搜索应该远远小于
 空间复杂度：O(m+n)，回溯的栈最坏情况下深度为m，字典树空间为n
 '''
 
@@ -63,21 +65,20 @@ class Solution:
             return matchIndexs
 
         # 回溯所有匹配点，能匹配s的所有字符
-        ans = []
-        comb = []
-
+        @lru_cache
         def backtrack(index):
             indexs = searchAll(index)
+            ans = []
             for i in range(len(indexs) - 1, -1, -1):
-                comb.append(s[index:indexs[i]])
                 if indexs[i] == end:  # 能匹配至终点
-                    ans.append(' '.join(comb))
-                backtrack(indexs[i])
-                comb.pop()
-            return False
+                    ans.append(s[index:end])  # 直接返回当前字符串
+                else:
+                    subs = backtrack(indexs[i])
+                    for sub in subs:
+                        ans.append(s[index:indexs[i]] + ' ' + sub)  # 下级匹配成功，返回当前子串与下级子串的组合
+            return ans
 
-        backtrack(0)
-        return ans
+        return backtrack(0)
 
 
 s = Solution()
