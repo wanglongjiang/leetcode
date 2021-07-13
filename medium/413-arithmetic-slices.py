@@ -23,12 +23,10 @@
 '''
 from typing import List
 '''
-思路：等差数列+数学
-首先计算出数组的等差数组，然后统计连续相同的数字个数m
-对于m>=3,需要计算其子数组个数
-m=3，count=1
-m=4,count=(m-3)+1 + m-4+1
-m=5,count=(m-3)+1 + (m-4)+1 + (m-5)+1
+思路：动态规划
+当nums[i]-nums[i-1]==nums[i-1]-nums[i-2]时为等差序列
+dp[i]=1+dp[i-1]
+
 时间复杂度：O(n)
 空间复杂度：O(n)
 '''
@@ -37,31 +35,14 @@ m=5,count=(m-3)+1 + (m-4)+1 + (m-5)+1
 class Solution:
     def numberOfArithmeticSlices(self, nums: List[int]) -> int:
         n = len(nums)
-        diff = [0] * n
-        for i in range(1, n):  # 计算等差数组
-            diff[i] = nums[i] - nums[i - 1]
-        diff[0] = float('-inf')
-        diffLens = []
-        pre = float('inf')
-        dcount = 0
-        for d in diff:  # 分析等差数组，将等差数组的长度保存到diffLens
-            if d == pre:
-                dcount += 1
-            else:
-                pre = d
-                if dcount >= 2:
-                    diffLens.append(dcount + 1)
-                dcount = 1
-        if dcount >= 3:
-            diffLens.append(dcount + 1)
-        # 对于每个等差数组，计算其子数组的数量
-        count = 0
-        for m in diffLens:
-            for k in range(3, m + 1):
-                count += m - k + 1
-        return count
+        dp = [0] * n
+        for i in range(2, n):
+            if nums[i] - nums[i - 1] == nums[i - 1] - nums[i - 2]:
+                dp[i] = 1 + dp[i - 1]
+        return sum(dp)
 
 
 s = Solution()
 print(s.numberOfArithmeticSlices([1, 2, 3, 4, 6, 8, 10]))
 print(s.numberOfArithmeticSlices([1, 2, 3, 4]))
+print(s.numberOfArithmeticSlices([1, 2, 3]))

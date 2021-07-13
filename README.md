@@ -108,6 +108,10 @@
 - 面试题 16.21.[交换和](interview/16.21.sum-swap-lcci.py)
 - 面试题 16.24.[数对和](interview/16.24.pairs-with-sum-lcci.py)
 
+## 计数
+
+- 274.[H 指数](medium/274-h-index.py)
+
 ## 滚动哈希
 
 - 214.[最短回文串](hard/214-shortest-palindrome.py)
@@ -405,11 +409,13 @@
 - 357.[计算各个位数不同的数字个数](medium/357-count-numbers-with-unique-digits.py)
 - 376.[摆动序列](medium/376-wiggle-subsequence.py)
 - 396.[旋转函数](medium/396-rotate-function.py)
+- 413.[等差数列划分](medium/413-arithmetic-slices.py)
 - 474.[一和零](medium/474-ones-and-zeroes.py)
 - 518.[零钱兑换 II](medium/518-coin-change-2.py)
 - 664.[奇怪的打印机](hard/664-strange-printer.py)
 - 673.[最长递增子序列的个数](medium/673-number-of-longest-increasing-subsequence.py)
 - 718.[最长重复子数组](medium/718-maximum-length-of-repeated-subarray.py)
+- 894.[所有可能的满二叉树](medium/894-all-possible-full-binary-trees.py)
 - 1014.[最佳观光组合](medium/1014-best-sightseeing-pair.py)
 - 1035.[不相交的线](medium/1035-uncrossed-lines.py)
 - 1269.[停在原地的方案数](hard/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps.py)
@@ -443,6 +449,8 @@
 - 306.[累加数](medium/306-additive-number.py)
 - 491.[递增子序列](medium/491-increasing-subsequences.py)
 - 494.[目标和](medium/494-target-sum.py)
+- 869.[重新排序得到 2 的幂](medium/869-reordered-power-of-2.py)
+- 949.[给定数字能组成的最大时间](medium/949-largest-time-for-given-digits.py)
 - 967.[连续差相同的数字](medium/967-numbers-with-same-consecutive-differences.py)
 - 面试题 08.04.[幂集](interview/08.04.power-set-lcci.py)
 - 面试题 08.07.[无重复字符串的排列组合](interview/08.07.permutation-i-lcci.py)
@@ -479,6 +487,7 @@
 
 - 215.[数组中的第 K 个最大元素](medium/215-kth-largest-element-in-an-array.py)
 - 241.[为运算表达式设计优先级](medium/241-different-ways-to-add-parentheses.py)
+- 324.[摆动排序 II](medium/324-wiggle-sort-ii.py)
 - 427.[建立四叉树](medium/427-construct-quad-tree.py)
 - 973.[最接近原点的 K 个点](medium/973-k-closest-points-to-origin.py)
 - 面试题 04.02.[最小高度树](interview/04.02.minimum-height-tree-lcci.py)
@@ -511,6 +520,7 @@
 - 400.[第 N 位数字](medium/400-nth-digit.py)
 - 483.[最小好进制](hard/483-smallest-good-base.py)
 - 537.[复数乘法](medium/537-complex-number-multiplication.py)
+- 829.[连续整数求和](hard/829-consecutive-numbers-sum.py)
 - 877.[石子游戏](medium/877-stone-game.py)
 - 932.[漂亮数组](medium/932-beautiful-array.py)
 - 970.[强整数](medium/970-powerful-integers.py)
@@ -595,6 +605,10 @@
 ## 线段树
 
 - 493.[翻转对](hard/493-reverse-pairs.py)
+
+## 扫描线
+
+- 218.[天际线问题](hard/218-the-skyline-problem.py)
 
 ## 多线程
 
