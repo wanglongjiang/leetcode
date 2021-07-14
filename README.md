@@ -2,7 +2,7 @@
 
 从 2021 年 2 月 9 日开始刷题
 
-## 栈
+## 栈 stack
 
 - 155.[最小栈](easy/155-min-stack.py)
 - 385.[迷你语法分析器](medium/385-mini-parser.py)
@@ -29,7 +29,7 @@
 - 1081.[不同字符的最小子序列](medium/1081-smallest-subsequence-of-distinct-characters.py)
 - 面试题 17.21.[直方图的水量](interview/17.21.volume-of-histogram-lcci.py)
 
-## 堆
+## 堆 heap
 
 - 347.[前 K 个高频元素](medium/347-top-k-frequent-elements.py)
 - 355.[设计推特](medium/355-design-twitter.py)
@@ -37,6 +37,7 @@
 - 692.[前 K 个高频单词](medium/692-top-k-frequent-words.py)
 - 1353.[最多可以参加的会议数目](medium/1353-maximum-number-of-events-that-can-be-attended.py)
 - 1738.[找出第 K 大的异或坐标值](medium/1738-find-kth-largest-xor-coordinate-value.py)
+- 1845.[座位预约管理系统](medium/1845-seat-reservation-manager.py)
 - 面试题 03.05.[栈排序](interview/03.05.sort-of-stacks-lcci.py)
 - 面试题 17.20.[连续中值](interview/17.20.continuous-median-lcci.py)
 
@@ -73,6 +74,7 @@
 ## 前缀数组
 
 - 523.[连续的子数组和](medium/523-continuous-subarray-sum.py)
+- 900.[RLE 迭代器](medium/900-rle-iterator.py)
 - 930.[和相同的二元子数组](medium/930-binary-subarrays-with-sum.py)
 
 ## 哈希 hash
@@ -223,6 +225,7 @@
 - 528.[按权重随机选择](medium/528-random-pick-with-weight.py)
 - 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
 - 852.[山脉数组的峰顶索引](easy/852-peak-index-in-a-mountain-array.py)
+- 900.[RLE 迭代器](medium/900-rle-iterator.py)
 - 911.[在线选举](medium/911-online-election.py)
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
 - 981.[基于时间的键值存储](medium/981-time-based-key-value-store.py)
@@ -233,7 +236,7 @@
 - 面试题 16.16.[部分排序](interview/16.16.sub-sort-lcci.py)
 - 面试题 17.08.[马戏团人塔](interview/17.08.circus-tower-lcci.py)
 
-## 排序
+## 排序 sort
 
 - 179.[最大数](medium/179-largest-number.py)
 - 452.[用最少数量的箭引爆气球](medium/452-minimum-number-of-arrows-to-burst-balloons.py)
@@ -250,6 +253,7 @@
 - 1451.[重新排列句子中的单词](medium/1451-rearrange-words-in-a-sentence.py)
 - 1561.[你可以获得的最大硬币数目](medium/1561-maximum-number-of-coins-you-can-get.py)
 - 1637.[两点之间不包含任何点的最宽垂直面积](medium/1637-widest-vertical-area-between-two-points-containing-no-points.py)
+- 1846.[减小和重新排列数组后的最大元素](medium/1846-maximum-element-after-decreasing-and-rearranging.py)
 - 1877.[数组中最大数对和的最小值](medium/1877-minimize-maximum-pair-sum-in-array.py)
 - 面试题 16.06.[最小差](interview/16.06.smallest-difference-lcci.py)
 - 剑指 Offer 45.[把数组排成最小的数](offer/45-ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof.py)
