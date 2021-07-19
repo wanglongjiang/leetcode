@@ -78,6 +78,7 @@
 - 523.[连续的子数组和](medium/523-continuous-subarray-sum.py)
 - 900.[RLE 迭代器](medium/900-rle-iterator.py)
 - 930.[和相同的二元子数组](medium/930-binary-subarrays-with-sum.py)
+- 1314.[矩阵区域和](medium/1314-matrix-block-sum.py)
 
 ## 哈希 hash
 
@@ -181,6 +182,7 @@
 - 239.[滑动窗口最大值](hard/239-sliding-window-maximum.py)
 - 352.[将数据流变为多个不相交区间](hard/352-data-stream-as-disjoint-intervals.py)
 - 699.[掉落的方块](hard/699-falling-squares.py)
+- 729.[我的日程安排表 I](medium/729-my-calendar-i.py)
 - 846.[一手顺子](medium/846-hand-of-straights.py)
 - 855.[考场就座](medium/855-exam-room.py)
 - 1026.[节点与其祖先之间的最大差值](medium/1026-maximum-difference-between-node-and-ancestor.py)
@@ -338,6 +340,7 @@
 - 1123.[最深叶节点的最近公共祖先](medium/1123-lowest-common-ancestor-of-deepest-leaves.py)
 - 1315.[祖父节点值为偶数的节点和](medium/1315-sum-of-nodes-with-even-valued-grandparent.py)
 - 1339.[分裂二叉树的最大乘积](medium/1339-maximum-product-of-splitted-binary-tree.py)
+- 1482.[树节点的第 K 个祖先](hard/1483-kth-ancestor-of-a-tree-node.py)
 - 1766.[互质树](hard/1766-tree-of-coprimes.py)
 - 1857.[有向图中最大颜色值](hard/1857-largest-color-value-in-a-directed-graph.py)
 - 面试题 04.08.[首个共同祖先](interview/04.08-first-common-ancestor-lcci.py)
@@ -363,6 +366,7 @@
 - 1654.[到家的最少跳跃次数](medium/1654-minimum-jumps-to-reach-home.py)
 - 1824.[最少侧跳次数](medium/1824-minimum-sideway-jumps.py)
 - 1871.[跳跃游戏 VII](medium/1871-jump-game-vii.py)
+- 1926.[迷宫中离入口最近的出口](medium/1926-nearest-exit-from-entrance-in-maze.py)
 - 面试题 08.02.[迷路的机器人](interview/08.02.robot-in-a-grid-lcci.py)
 - 面试题 08.10.[颜色填充](interview/08.10.color-fill-lcci.py)
 - 剑指 Offer 13.[机器人的运动范围](offer/13-ji-qi-ren-de-yun-dong-fan-wei-lcof.py)
@@ -371,6 +375,7 @@
 
 - 11.[盛最多水的容器](medium/11-container-with-most-water2.py)
 - 152.[乘积最大子数组](medium/152-maximum-product-subarray.py)
+- 392.[判断子序列](easy/392-is-subsequence.py)
 - 845.[数组中的最长山脉](medium/845-longest-mountain-in-array.py)
 - 838.[推多米诺](medium/838-push-dominoes.py)
 - 881.[救生艇](medium/881-boats-to-save-people.py)
@@ -395,6 +400,7 @@
 - 1567.[乘积为正数的最长子数组长度](medium/1567-maximum-length-of-subarray-with-positive-product.py)
 - 1658.[将 x 减到 0 的最小操作数](medium/1658-minimum-operations-to-reduce-x-to-zero.py)
 - 1456.[定长子串中元音的最大数目](medium/1456-maximum-number-of-vowels-in-a-substring-of-given-length.py)
+- 1838.[最高频元素的频数](medium/1838-frequency-of-the-most-frequent-element.py)
 - 面试题 16.17.[连续数列](interview/16.17.contiguous-sequence-lcci.py)
 - 剑指 Offer 48.[最长不含重复字符的子字符串](offer/48-zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof.py)
 - 剑指 Offer 57 - II.[和为 s 的连续正数序列](offer/57-he-wei-sde-liang-ge-shu-zi-lcof.py)
@@ -413,7 +419,9 @@
 - 97.[交错字符串](medium/97-interleaving-string.py)
 - 198.[打家劫舍](medium/198-house-robber.py)
 - 213.[打家劫舍 II](medium/213-house-robber-ii.py)
+- 221.[最大正方形](medium/221-maximal-square.py)
 - 264.[丑数 II](medium/264-ugly-number-ii.py)
+- 304.[二维区域和检索 - 矩阵不可变](medium/304-range-sum-query-2d-immutable.py)
 - 309.[最佳买卖股票时机含冷冻期](medium/309-best-time-to-buy-and-sell-stock-with-cooldown.py)
 - 312.[戳气球](hard/312-burst-balloons.py)
 - 313.[超级丑数](medium/313-super-ugly-number.py)
@@ -424,6 +432,7 @@
 - 396.[旋转函数](medium/396-rotate-function.py)
 - 413.[等差数列划分](medium/413-arithmetic-slices.py)
 - 474.[一和零](medium/474-ones-and-zeroes.py)
+- 516.[最长回文子序列](medium/516-longest-palindromic-subsequence.py)
 - 518.[零钱兑换 II](medium/518-coin-change-2.py)
 - 664.[奇怪的打印机](hard/664-strange-printer.py)
 - 673.[最长递增子序列的个数](medium/673-number-of-longest-increasing-subsequence.py)
@@ -585,7 +594,7 @@
 
 - 210.[课程表 II](medium/210-course-schedule-ii.py)
 
-## 并查集
+## 并查集 unionFind
 
 - 547.[省份数量](medium/547-number-of-provinces.py)
 - 684.[冗余连接](medium/684-redundant-connection.py)
@@ -601,6 +610,7 @@
 - 1627.[带阈值的图连通性](hard/1627-graph-connectivity-with-threshold.py)
 - 1697.[检查边长度限制的路径是否存在](hard/1697-checking-existence-of-edge-length-limited-paths.py)
 - 1722.[执行交换操作后的最小汉明距离](medium/1722-minimize-hamming-distance-after-swap-operations.py)
+- 1905.[统计子岛屿](medium/1905-count-sub-islands.py)
 - 面试题 17.07.[婴儿名字](interview/17.07.baby-names-lcci.py)
 
 ## 最小生成树
