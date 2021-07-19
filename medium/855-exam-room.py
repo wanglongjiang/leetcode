@@ -33,7 +33,7 @@ seat() -> 5，学生最后坐在 5 号座位上。
 '''
 from sortedcontainers import SortedList
 '''
-思路：Ordered Map
+思路：有序集合
 将2个有人的座位之间的空座视为一个区间，将所有区间放入treemap排序
 1. 初始化
 > 将区间[0,n-1]加入treemap
@@ -118,3 +118,7 @@ print(s.seat())
 print(s.seat())
 s.leave(4)
 print(s.seat())
+'''
+输出：[null,0,7,3,null,null,0,7,5,1,2,4,6]
+预期：[null,0,7,3,null,null,7,0,5,1,2,4,6]
+'''

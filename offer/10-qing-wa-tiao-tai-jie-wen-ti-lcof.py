@@ -9,20 +9,20 @@
 0 <= n <= 100
 '''
 '''
-思路:递归
+解题思路：数学里面的组合
+n需要分解成x个1和y个2，x最大为n，最小为n%2，y最小为0，最大为n//2，每种组合都有(x+y)!/(x!*y!)个
 
 '''
 
 
 class Solution:
     def numWays(self, n: int) -> int:
-        if n == 0:
-            return 1
-        if n == 1:
-            return 1
-        if n == 2:
-            return 2
-        return (self.numWays(n - 1) + self.numWays(n - 2)) % 1000000007
+        import math
+        ans = 0
+        for twoNum in range(n // 2 + 1):
+            oneNum = n - (twoNum << 1)
+            ans += math.factorial(twoNum + oneNum) // (math.factorial(twoNum) * math.factorial(oneNum))
+        return ans % 1000000007
 
 
 s = Solution()

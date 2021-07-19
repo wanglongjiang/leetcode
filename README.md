@@ -51,6 +51,7 @@
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
 - 1670.[设计前中后队列](medium/1670-design-front-middle-back-queue.py)
 - 1673.[找出最具竞争力的子序列](medium/1673-find-the-most-competitive-subsequence.py)
+- 1823.[找出游戏的获胜者](medium/1823-find-the-winner-of-the-circular-game.py)
 - 剑指 Offer 59 - II.[队列的最大值](offer/59-dui-lie-de-zui-da-zhi-lcof.py)
 
 ## 单调队列
@@ -59,6 +60,7 @@
 
 ## 数组
 
+- 334.[递增的三元子序列](medium/334-increasing-triplet-subsequence.py)
 - 442.[数组中重复的数据](medium/442-find-all-duplicates-in-an-array.py)
 - 495.[提莫攻击](medium/495-teemo-attacking.py)
 - 517.[超级洗衣机](hard/517-super-washing-machines.py)
@@ -83,6 +85,7 @@
 ## 哈希 hash
 
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
+- 290.[单词规律](easy/290-word-pattern.py)
 - 355.[设计推特](medium/355-design-twitter.py)
 - 380.[O(1) 时间插入、删除和获取随机元素](medium/380-insert-delete-getrandom-o1.py)
 - 432.[全 O(1) 的数据结构](hard/432-all-oone-data-structure.py)
@@ -117,6 +120,7 @@
 ## 计数
 
 - 274.[H 指数](medium/274-h-index.py)
+- 409.[最长回文串](easy/409-longest-palindrome.py)
 
 ## 滚动哈希
 
@@ -207,6 +211,7 @@
 - 785.[判断二分图](medium/785-is-graph-bipartite.py)
 - 841.[钥匙和房间](medium/841-keys-and-rooms.py)
 - 886.[可能的二分法](medium/886-possible-bipartition.py)
+- 997.[找到小镇的法官](easy/997-find-the-town-judge.py)
 - 1048.[最长字符串链](medium/1048-longest-string-chain.py)
 - 1557.[可以到达所有点的最少点数目](medium/1557.minimum-number-of-vertices-to-reach-all-nodes.py)
 - 1615.[最大网络秩](medium/1615-maximal-network-rank.py)
@@ -222,6 +227,7 @@
 - 1094.[拼车](medium/1094-car-pooling.py)
 - 1706.[球会落何处](medium/1706-where-will-the-ball-fall.py)
 - 1860.[增长的内存泄露](medium/1860-incremental-memory-leak.py)
+- LCP 19.[秋叶收藏集](lcp/19-UlBDOe.py)
 
 ## 二分查找
 
@@ -264,6 +270,7 @@
 - 1451.[重新排列句子中的单词](medium/1451-rearrange-words-in-a-sentence.py)
 - 1561.[你可以获得的最大硬币数目](medium/1561-maximum-number-of-coins-you-can-get.py)
 - 1637.[两点之间不包含任何点的最宽垂直面积](medium/1637-widest-vertical-area-between-two-points-containing-no-points.py)
+- 1838.[最高频元素的频数](medium/1838-frequency-of-the-most-frequent-element.py)
 - 1846.[减小和重新排列数组后的最大元素](medium/1846-maximum-element-after-decreasing-and-rearranging.py)
 - 1877.[数组中最大数对和的最小值](medium/1877-minimize-maximum-pair-sum-in-array.py)
 - 面试题 16.06.[最小差](interview/16.06.smallest-difference-lcci.py)
