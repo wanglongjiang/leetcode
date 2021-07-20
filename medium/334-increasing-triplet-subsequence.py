@@ -56,6 +56,10 @@ class Solution:
                 return True
             elif num < min1:
                 min1 = num
-            elif num < min2:
+            elif min1 < num < min2:
                 min2 = num
         return False
+
+
+s = Solution()
+print(s.increasingTriplet([1, 1, -2, 6]))
