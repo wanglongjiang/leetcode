@@ -48,3 +48,8 @@ class Solution:
                 ans += 1
             stack.append(num)
         return ans
+
+
+s = Solution()
+print(s.maxChunksToSorted([4, 3, 2, 1, 0]))
+print(s.maxChunksToSorted([1, 0, 2, 3, 4]))
