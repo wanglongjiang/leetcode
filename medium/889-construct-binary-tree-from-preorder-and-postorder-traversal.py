@@ -36,7 +36,7 @@ class TreeNode:
 根据上面的性质，对于2个子数组pre[prestart,preend],post[pstart,pend]，
 pre[pstart]是子树的根节点，设pre[start+1]在post中的索引是i，则post[i]是子树的根节点，post[pstart,i]是左子树,post[i+1,pend]是右子树
 根据上面的性质，写出递归处理程序
-TODO
+
 时间复杂度：O(n^2)
 空间复杂度：O(n)
 '''
@@ -53,7 +53,7 @@ class Solution:
             parent.left = leftroot
             leftend = post.index(leftroot.val, postStart, postEnd + 1)  # 找到左子树末尾
             leftsize = leftend - postStart + 1  # 左子树大小
-            make(leftroot, preStart + 1, preStart + leftsize - 1, postStart, leftend)  # 处理左子树
+            make(leftroot, preStart + 1, preStart + leftsize - 1, postStart, leftend - 1)  # 处理左子树
             rightsize = postEnd - leftend
             if rightsize > 0:  # 处理右子树
                 rightroot = TreeNode(pre[preStart + leftsize])
@@ -96,4 +96,5 @@ def toList(node: TreeNode):
 
 
 s = Solution()
+print(toList(s.constructFromPrePost([2, 1], [1, 2])))
 print(toList(s.constructFromPrePost(pre=[1, 2, 4, 5, 3, 6, 7], post=[4, 5, 2, 6, 7, 3, 1])) == [1, 2, 3, 4, 5, 6, 7])
