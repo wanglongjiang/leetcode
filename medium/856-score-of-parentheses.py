@@ -53,8 +53,7 @@ class Solution:
             else:
                 val = 0
                 while stack[-1] != '(':
-                    val += stack[-1]
-                    stack.pop()
+                    val += stack.pop()
                 stack.pop()
                 stack.append(val * 2)
         return sum(stack)
