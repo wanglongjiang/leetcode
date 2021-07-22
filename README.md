@@ -6,9 +6,12 @@
 
 - 155.[最小栈](easy/155-min-stack.py)
 - 385.[迷你语法分析器](medium/385-mini-parser.py)
+- 388.[文件的最长绝对路径](medium/388-longest-absolute-file-path.py)
 - 394.[字符串解码](medium/394-decode-string.py)
 - 636.[函数的独占时间](medium/636-exclusive-time-of-functions.py)
+- 678.[有效的括号字符串](medium/678-valid-parenthesis-string.py)
 - 735.[行星碰撞](medium/735-asteroid-collision.py)
+- 736.[Lisp 语法解析](hard/736-parse-lisp-expression.py)
 - 面试题 03.01.[三合一](interview/03.01.three-in-one-lcci.py)
 - 面试题 03.02.[栈的最小值](interview/03.02.min-stack-lcci.py)
 - 面试题 03.03.[堆盘子](interview/03.03.stack-of-plates-lcci.py)
@@ -32,6 +35,7 @@
 ## 堆 heap
 
 - 347.[前 K 个高频元素](medium/347-top-k-frequent-elements.py)
+- 378.[有序矩阵中第 K 小的元素](medium/378-kth-smallest-element-in-a-sorted-matrix.py)
 - 355.[设计推特](medium/355-design-twitter.py)
 - 502.[IPO](hard/502-ipo.py)
 - 692.[前 K 个高频单词](medium/692-top-k-frequent-words.py)
@@ -103,6 +107,7 @@
 - 966.[元音拼写检查器](medium/966-vowel-spellchecker.py)
 - 1001.[网格照明](hard/1001-grid-illumination.py)
 - 1074.[元素和为目标值的子矩阵数量](hard/1074-number-of-submatrices-that-sum-to-target.py)
+- 1124.[表现良好的最长时间段](medium/1124-longest-well-performing-interval.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
 - 1396.[设计地铁系统](medium/1396-design-underground-system.py)
 - 1452.[收藏清单](medium/1452-people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list.py)
@@ -121,6 +126,8 @@
 
 - 274.[H 指数](medium/274-h-index.py)
 - 409.[最长回文串](easy/409-longest-palindrome.py)
+- 1111.[有效括号的嵌套深度](medium/1111-maximum-nesting-depth-of-two-valid-parentheses-strings.py)
+- 1234.[替换子串得到平衡字符串](medium/1234-replace-the-substring-for-balanced-string.py)
 
 ## 滚动哈希
 
@@ -255,7 +262,9 @@
 
 ## 排序 sort
 
+- 164.[最大间距](hard/164-maximum-gap.py)
 - 179.[最大数](medium/179-largest-number.py)
+- 435.[无重叠区间](medium/435-non-overlapping-intervals.py)
 - 452.[用最少数量的箭引爆气球](medium/452-minimum-number-of-arrows-to-burst-balloons.py)
 - 524.[通过删除字母匹配到字典里最长单词](medium/524-longest-word-in-dictionary-through-deleting.py)
 - 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
@@ -286,6 +295,7 @@
 - 231.[2 的幂](easy/231-power-of-two.py)
 - 342.[4 的幂](easy/342-power-of-four.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
+- 435.[无重叠区间](medium/435-non-overlapping-intervals.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
 - 814.[二叉树剪枝](medium/814-binary-tree-pruning.py)
 - 849.[到最近的人的最大距离](medium/849-maximize-distance-to-closest-person.py)
@@ -495,11 +505,13 @@
 - 538.[把二叉搜索树转换为累加树](medium/538-convert-bst-to-greater-tree.py)
 - 654.[最大二叉树](medium/654-maximum-binary-tree.py)
 - 726.[原子的数量](hard/726-number-of-atoms.py)
+- 736.[Lisp 语法解析](hard/736-parse-lisp-expression.py)
 - 889.[根据前序和后序遍历构造二叉树](medium/889-construct-binary-tree-from-preorder-and-postorder-traversal.py)
 - 951.[翻转等价二叉树](medium/951-flip-equivalent-binary-trees.py)
 - 998.[最大二叉树 II](medium/998-maximum-binary-tree-ii.py)
 - 1008.[递归](medium/1008-construct-binary-search-tree-from-preorder-traversal.py)
 - 1038.[把二叉搜索树转换为累加树](medium/1038-binary-search-tree-to-greater-sum-tree.py)
+- 1096.[花括号展开 II](hard/1096-brace-expansion-ii.py)
 - 1190.[反转每对括号间的子串](medium/1190-reverse-substrings-between-each-pair-of-parentheses.py)
 - 1302.[层数最深叶子节点的和](medium/1302-deepest-leaves-sum.py)
 - 1379.[找出克隆二叉树中的相同节点](medium/1379-find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree.py)
