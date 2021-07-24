@@ -30,7 +30,7 @@ class Solution:
         ans = [0] * max(m, n)
         carry = 0
         p, p1, p2 = len(ans) - 1, m - 1, n - 1
-        while p1 >= 0 or p2 >= 0 or carry:
+        while p1 >= 0 or p2 >= 0:
             ans[p] = carry
             if p1 >= 0:
                 ans[p] += int(num1[p1])
@@ -45,3 +45,7 @@ class Solution:
             p1 -= 1
             p2 -= 1
         return ('1' if carry else '') + ''.join(map(str, ans))
+
+
+s = Solution()
+print(s.addStrings('1', '9'))

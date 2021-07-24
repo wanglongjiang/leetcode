@@ -25,7 +25,7 @@
 from collections import defaultdict
 '''
 思路：计数
-构成回文串的字符，偶数个数的字符可以任意添加，奇数个数的字符，最多添加1种。
+构成回文串的字符，偶数个数的字符可以任意添加，奇数个数的字符，可以将超过1的加上。
 所以，可以对字符串种的所有字符进行奇数。
 最长回文串长度为所有的奇数字符+最多的偶数字符
 
@@ -42,7 +42,9 @@ class Solution:
         ans, maxOdd = 0, 0
         for c, count in counter.items():
             if count % 2:
-                maxOdd = max(maxOdd, count)
+                if count > 2:
+                    ans += count - 1
+                maxOdd = 1
             else:
                 ans += count
         return ans + maxOdd
