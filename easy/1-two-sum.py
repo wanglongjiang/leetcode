@@ -6,10 +6,34 @@
 你可以按任意顺序返回答案。
 '''
 from typing import List
+'''
+思路1，暴力循环
+时间复杂度：O(n^2)
+空间复杂度：O(1)
+
+思路2，哈希
+设哈希表ht用于保存nums中的元素。
+遍历nums中的元素，
+> 如果target-nums[i]在哈希表中，返回。
+> 如果不在哈希表中，将nums[i]加入哈希表
+
+时间复杂度：O(n)
+空间复杂度：O(1)
+'''
 
 
 class Solution:
+    # 思路2，哈希
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        ht = {}
+        for i in range(len(nums)):
+            if target - nums[i] in ht:
+                return [ht.get(target - nums[i]), i]
+            ht[nums[i]] = i
+        return []
+
+    # 思路1，暴力循环
+    def twoSum2(self, nums: List[int], target: int) -> List[int]:
         for i in range(1, len(nums)):
             for j in range(i):
                 if nums[i] + nums[j] == target:
