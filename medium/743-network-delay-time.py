@@ -34,19 +34,54 @@ ui != vi
 所有 (ui, vi) 对都 互不相同（即，不含重复边）
 '''
 from typing import List
+import heapq
 '''
-思路：DFS遍历有向图
+思路1、DFS遍历有向图
 首先将边转化为邻接表
 然后从k节点出发遍历节点，每遍历一个节点，将其到达时间进行更新。
 因图中节点可能有多条路径到达，或者有环路，只有到达时间比之前记录的时间小才重复遍历
 
-时间复杂度：O(m+n)
+时间复杂度：O(m+n^2)
+空间复杂度：O(m+n)
+
+思路2、Dijkstra算法
+1. 首先将边转化为邻接表
+2. 设arrivalTimes数组，arrivalTimes[i]的含义是从i节点出发到达k需要的时间
+3. 将k节点加入堆，从k节点出发遍历节点，每遍历一个节点，将其到达的其他节点加入最小堆（只有小于arrivalTimes中旧值的才加入）。
+
+时间复杂度：O(m+n^2)，时间复杂度应该比上面的DFS好一些
 空间复杂度：O(m+n)
 '''
 
 
 class Solution:
+    # 思路2，Dijkstra
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
+        # 输入转为邻接表
+        graph = [[] for _ in range(n + 1)]
+        for time in times:
+            graph[time[0]].append((time[1], time[2]))
+        # 用Dijkstra算法更新到达时间
+        arrivalTimes = [float('inf')] * (n + 1)  # 到达时间
+        arrivalTimes[k] = 0
+        heap = [(0, k)]
+        while heap:
+            time, node = heapq.heappop(heap)
+            for nextNode, nextTime in graph[node]:
+                if (d := time + nextTime) < arrivalTimes[nextNode]:  # 如果下一节点的到达时间>当前节点到达时间+当前到下一节点时间
+                    arrivalTimes[nextNode] = d  # 更新下一节点的到达时间
+                    heapq.heappush(heap, (d, nextNode))  # 下一节点连结的节点也可能会更新，加入最小堆
+        # 找到最大的到达时间
+        ans = float('-inf')
+        for time in arrivalTimes[1:]:
+            if time == float('inf'):
+                return -1
+            if ans < time:
+                ans = time
+        return ans
+
+    # 思路1，DFS
+    def networkDelayTime1(self, times: List[List[int]], n: int, k: int) -> int:
         # 输入转为邻接表
         graph = [[] for _ in range(n + 1)]
         for time in times:
