@@ -25,15 +25,15 @@ start..end即为应该排序的子数组
 class Solution:
     def findUnsortedSubarray(self, nums: List[int]) -> int:
         n = len(nums)
-        left = 1
-        while left < n and nums[left] >= nums[left - 1]:  # 跳过升序部分，直至找到1个降序的坐标
+        left = 0
+        while left + 1 < n and nums[left] <= nums[left + 1]:  # 跳过升序部分，直至找到1个降序的坐标
             left += 1
-        if left == n:  # 如果一直都是升序，没有无序子数组
+        if left == n - 1:  # 如果一直都是升序，没有无序子数组
             return 0
-        right = n - 2
-        while right > left and nums[right] <= nums[right + 1] and nums[right] >= nums[left - 1]:  # 跳过降序部分，同时需要确保right右边的所有元素要大于left左边的元素
+        right = n - 1
+        while right > left and nums[right - 1] <= nums[right] and nums[right] >= nums[left]:  # 跳过降序部分，同时需要确保right右边的所有元素要大于left左边的元素
             right -= 1
-        mi, mx = float('inf'), float('-inf')
+        mi, mx = min(nums[left], nums[right]), max(nums[left], nums[right])
         for i in range(left, right + 1):
             mi = min(mi, nums[i])
             mx = max(mx, nums[i])
@@ -47,6 +47,9 @@ class Solution:
 
 
 s = Solution()
+print(s.findUnsortedSubarray([1, 2, 4, 5, 3]))
+print(s.findUnsortedSubarray([1, 2, 3, 3, 3]))
+print(s.findUnsortedSubarray([2, 1]))
 print(s.findUnsortedSubarray([2, 6, 4, 8, 10, 9, 15]))
 print(s.findUnsortedSubarray([1, 2, 3, 4]))
 print(s.findUnsortedSubarray([1]))
