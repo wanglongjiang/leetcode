@@ -71,3 +71,10 @@ class Solution:
             if c1[1] != c2[1]:
                 return False
         return True
+
+
+s = Solution()
+print(s.closeStrings(word1="abc", word2="bca"))
+print(s.closeStrings(word1="a", word2="aa"))
+print(s.closeStrings(word1="cabbba", word2="abbccc"))
+print(s.closeStrings(word1="cabbba", word2="aabbss"))

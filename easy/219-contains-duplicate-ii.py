@@ -4,11 +4,26 @@
 '''
 from typing import List
 '''
-思路，滑动窗口。
-TODO
+思路，滑动窗口 哈希
+设left,right指针构成滑动窗口，滑动窗口最大为k，即right-left<k。
+滑动窗口内的元素加入哈希表hashset，如果在移动滑动窗口的过程中，hashset中出现重复元素，返回true
+
+时间复杂度：O(n)
+空间复杂度：O(k)
 '''
 
 
 class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        pass
+        left, right, n = 0, 0, len(nums)
+        hashset = set()
+        while right < n:
+            if len(hashset) < k:
+                if nums[right] in hashset:
+                    return True
+                hashset.add(nums[right])
+                right += 1
+            else:
+                hashset.remove(nums[left])
+                left -= 1
+        return False
