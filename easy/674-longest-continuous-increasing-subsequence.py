@@ -22,7 +22,7 @@
 
 提示：
 
-1 <= nums.length <= 104
+1 <= nums.length <= 10^4
 -109 <= nums[i] <= 109
 
 来源：力扣（LeetCode）

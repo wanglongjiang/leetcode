@@ -36,7 +36,7 @@
 
 提示：
 
-1 <= nums.length <= 104
+1 <= nums.length <= 10^4
 -1000 <= nums[i] <= 1000
  
 

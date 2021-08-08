@@ -21,7 +21,7 @@
 
 提示：
 
-2 <= values.length <= 5 * 104
+2 <= values.length <= 5 * 10^4
 1 <= values[i] <= 1000
 
 来源：力扣（LeetCode）

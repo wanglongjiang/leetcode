@@ -20,7 +20,7 @@
 
 提示：
 
-3 <= nums.length <= 104
+3 <= nums.length <= 10^4
 -1000 <= nums[i] <= 1000
 
 来源：力扣（LeetCode）

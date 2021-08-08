@@ -40,7 +40,7 @@
 
 提示：
 
-树中节点数目的范围在 [0, 104] 内
+树中节点数目的范围在 [0, 10^4] 内
 -1000 <= Node.val <= 1000
 
 来源：力扣（LeetCode）
@@ -76,6 +76,6 @@ class Solution:
             if node.right:
                 right, rtilt = dfs(node.right)
                 tilt += rtilt
-            return (left + right + node.val, tilt+abs(left-right))  # 返回左右子树之和
+            return (left + right + node.val, tilt + abs(left - right))  # 返回左右子树之和
 
         return dfs(root)[1]

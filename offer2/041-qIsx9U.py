@@ -28,7 +28,7 @@ movingAverage.next(5); // 返回 6.0 = (10 + 3 + 5) / 3
 
 1 <= size <= 1000
 -105 <= val <= 105
-最多调用 next 方法 104 次
+最多调用 next 方法 10^4 次
  
 
 注意：本题与主站 346 题相同： https://leetcode-cn.com/problems/moving-average-from-data-stream/

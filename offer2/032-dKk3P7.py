@@ -22,7 +22,7 @@
 
 提示:
 
-1 <= s.length, t.length <= 5 * 104
+1 <= s.length, t.length <= 5 * 10^4
 s and t 仅包含小写字母
  
 

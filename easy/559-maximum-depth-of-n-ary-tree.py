@@ -25,7 +25,7 @@ N 叉树输入按层序遍历序列化表示，每组子节点由空值分隔（
 提示：
 
 树的深度不会超过 1000 。
-树的节点数目位于 [0, 104] 之间。
+树的节点数目位于 [0, 10^4] 之间。
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/maximum-depth-of-n-ary-tree

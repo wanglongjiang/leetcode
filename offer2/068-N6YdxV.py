@@ -30,10 +30,10 @@
 
 提示:
 
-1 <= nums.length <= 104
--104 <= nums[i] <= 104
+1 <= nums.length <= 10^4
+-10^4 <= nums[i] <= 10^4
 nums 为无重复元素的升序排列数组
--104 <= target <= 104
+-10^4 <= target <= 10^4
  
 
 注意：本题与主站 35 题相同： https://leetcode-cn.com/problems/search-insert-position/

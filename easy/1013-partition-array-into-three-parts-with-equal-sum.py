@@ -25,8 +25,8 @@
 
 提示：
 
-3 <= arr.length <= 5 * 104
--104 <= arr[i] <= 104
+3 <= arr.length <= 5 * 10^4
+-10^4 <= arr[i] <= 10^4
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/partition-array-into-three-parts-with-equal-sum

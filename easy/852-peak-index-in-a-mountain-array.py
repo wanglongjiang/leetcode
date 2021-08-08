@@ -34,7 +34,7 @@ arr[i] > arr[i+1] > ... > arr[arr.length - 1]
 
 提示：
 
-3 <= arr.length <= 104
+3 <= arr.length <= 10^4
 0 <= arr[i] <= 106
 题目数据保证 arr 是一个山脉数组
  

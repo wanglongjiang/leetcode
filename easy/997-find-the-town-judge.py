@@ -38,7 +38,7 @@
 提示：
 
 1 <= n <= 1000
-0 <= trust.length <= 104
+0 <= trust.length <= 10^4
 trust[i].length == 2
 trust[i] 互不相同
 trust[i][0] != trust[i][1]

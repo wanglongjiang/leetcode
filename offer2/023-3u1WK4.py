@@ -45,7 +45,7 @@
 
 listA 中节点数目为 m
 listB 中节点数目为 n
-0 <= m, n <= 3 * 104
+0 <= m, n <= 3 * 10^4
 1 <= Node.val <= 105
 0 <= skipA <= m
 0 <= skipB <= n

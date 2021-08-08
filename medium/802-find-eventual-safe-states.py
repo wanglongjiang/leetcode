@@ -30,7 +30,7 @@ n == graph.length
 0 <= graph[i].length <= n
 graph[i] 按严格递增顺序排列。
 图中可能包含自环。
-图中边的数目在范围 [1, 4 * 104] 内。
+图中边的数目在范围 [1, 4 * 10^4] 内。
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/find-eventual-safe-states

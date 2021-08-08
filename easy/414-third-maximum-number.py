@@ -24,7 +24,7 @@
 
 提示：
 
-1 <= nums.length <= 104
+1 <= nums.length <= 10^4
 -2^31 <= nums[i] <= 2^31 - 1
 
 来源：力扣（LeetCode）

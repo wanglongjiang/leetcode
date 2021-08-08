@@ -25,7 +25,7 @@
 
 提示：
 
-2 <= numbers.length <= 3 * 104
+2 <= numbers.length <= 3 * 10^4
 -1000 <= numbers[i] <= 1000
 numbers 按 递增顺序 排列
 -1000 <= target <= 1000

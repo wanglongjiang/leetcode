@@ -12,7 +12,7 @@
 提示：
 
  1 <= nums.length, k <= 10^5
--104 <= nums[i] <= 10^4
+-10^4 <= nums[i] <= 10^4
 '''
 
 from typing import List

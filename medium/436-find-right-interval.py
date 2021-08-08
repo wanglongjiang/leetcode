@@ -30,7 +30,7 @@
 
 提示：
 
-1 <= intervals.length <= 2 * 104
+1 <= intervals.length <= 2 * 10^4
 intervals[i].length == 2
 -106 <= starti <= endi <= 106
 每个间隔的起点都 不相同

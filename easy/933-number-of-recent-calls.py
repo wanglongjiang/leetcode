@@ -32,7 +32,7 @@ recentCounter.ping(3002);  // requests = [1, 100, 3001, 3002]，范围是 [2,300
 
 1 <= t <= 10^9
 保证每次对 ping 调用所使用的 t 值都 严格递增
-至多调用 ping 方法 104 次
+至多调用 ping 方法 10^4 次
 '''
 from collections import deque
 import bisect
