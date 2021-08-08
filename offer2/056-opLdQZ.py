@@ -21,7 +21,7 @@
 二叉树的节点个数的范围是  [1, 10^4].
 -10^4 <= Node.val <= 10^4
 root 为二叉搜索树
--105 <= k <= 105
+-10^5 <= k <= 10^5
  
 
 注意：本题与主站 653 题相同： https://leetcode-cn.com/problems/two-sum-iv-input-is-a-bst/

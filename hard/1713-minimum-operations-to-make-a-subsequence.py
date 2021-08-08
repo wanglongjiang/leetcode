@@ -25,7 +25,7 @@
 
 提示：
 
-1 <= target.length, arr.length <= 105
+1 <= target.length, arr.length <= 10^5
 1 <= target[i], arr[i] <= 109
 target 不包含任何重复元素。
 

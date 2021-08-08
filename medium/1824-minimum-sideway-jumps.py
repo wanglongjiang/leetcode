@@ -41,7 +41,7 @@
 提示：
 
 obstacles.length == n + 1
-1 <= n <= 5 * 105
+1 <= n <= 5 * 10^5
 0 <= obstacles[i] <= 3
 obstacles[0] == obstacles[n] == 0
 '''

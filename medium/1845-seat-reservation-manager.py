@@ -31,11 +31,11 @@ seatManager.unreserve(5); // 将座位 5 变为可以预约，现在可预约的
 
 提示：
 
-1 <= n <= 105
+1 <= n <= 10^5
 1 <= seatNumber <= n
 每一次对 reserve 的调用，题目保证至少存在一个可以预约的座位。
 每一次对 unreserve 的调用，题目保证 seatNumber 在调用函数前都是被预约状态。
-对 reserve 和 unreserve 的调用 总共 不超过 105 次。
+对 reserve 和 unreserve 的调用 总共 不超过 10^5 次。
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/seat-reservation-manager

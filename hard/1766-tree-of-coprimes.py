@@ -38,7 +38,7 @@ edges[j] = [uj, vj] 表示节点 uj 和节点 vj 在树中有一条边。
 
 nums.length == n
 1 <= nums[i] <= 50
-1 <= n <= 105
+1 <= n <= 10^5
 edges.length == n - 1
 edges[j].length == 2
 0 <= uj, vj < n

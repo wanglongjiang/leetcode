@@ -30,7 +30,7 @@
 提示：
 
 树中的节点数在 2 到 5000 之间。
-0 <= Node.val <= 105
+0 <= Node.val <= 10^5
 '''
 from sortedcontainers import SortedList
 

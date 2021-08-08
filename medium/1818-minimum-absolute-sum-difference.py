@@ -39,8 +39,8 @@
 
 n == nums1.length
 n == nums2.length
-1 <= n <= 105
-1 <= nums1[i], nums2[i] <= 105
+1 <= n <= 10^5
+1 <= nums1[i], nums2[i] <= 10^5
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/minimum-absolute-sum-difference

@@ -39,7 +39,7 @@ arr 中最大元素为 3 。
 
 提示：
 
-1 <= arr.length <= 105
+1 <= arr.length <= 10^5
 1 <= arr[i] <= 109
 
 来源：力扣（LeetCode）

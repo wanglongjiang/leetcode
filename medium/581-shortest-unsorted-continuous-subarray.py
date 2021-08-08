@@ -6,7 +6,7 @@
 提示：
 
 1 <= nums.length <= 10^4
--105 <= nums[i] <= 10^5
+-10^5 <= nums[i] <= 10^5
 '''
 from typing import List
 '''

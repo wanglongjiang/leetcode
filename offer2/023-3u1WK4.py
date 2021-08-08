@@ -46,7 +46,7 @@
 listA 中节点数目为 m
 listB 中节点数目为 n
 0 <= m, n <= 3 * 10^4
-1 <= Node.val <= 105
+1 <= Node.val <= 10^5
 0 <= skipA <= m
 0 <= skipB <= n
 如果 listA 和 listB 没有交点，intersectVal 为 0
