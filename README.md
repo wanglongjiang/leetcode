@@ -47,6 +47,7 @@
 - 1845.[座位预约管理系统](medium/1845-seat-reservation-manager.py)
 - 面试题 03.05.[栈排序](interview/03.05.sort-of-stacks-lcci.py)
 - 面试题 17.20.[连续中值](interview/17.20.continuous-median-lcci.py)
+- 剑指 Offer II 059.[数据流的第 K 大数值](offer2/059-jBjn9C.py)
 
 ## 队列
 
@@ -59,6 +60,7 @@
 - 1673.[找出最具竞争力的子序列](medium/1673-find-the-most-competitive-subsequence.py)
 - 1823.[找出游戏的获胜者](medium/1823-find-the-winner-of-the-circular-game.py)
 - 剑指 Offer 59 - II.[队列的最大值](offer/59-dui-lie-de-zui-da-zhi-lcof.py)
+- 剑指 Offer II 042.[最近请求次数](offer2/042-H8086Q.py)
 
 ## 单调队列
 
@@ -145,9 +147,11 @@
 - 面试题 16.14.[最佳直线](interview/16.14.best-line-lcci.py)
 - 面试题 16.21.[交换和](interview/16.21.sum-swap-lcci.py)
 - 面试题 16.24.[数对和](interview/16.24.pairs-with-sum-lcci.py)
+- 剑指 Offer II 034.[外星语言是否排序](offer2/034-lwyVBB.py)
 
 ## 计数 count
 
+- 242.[有效的字母异位词](easy/242-valid-anagram.py)
 - 274.[H 指数](medium/274-h-index.py)
 - 350.[两个数组的交集 II](easy/350-intersection-of-two-arrays-ii.py)
 - 383.[赎金信](easy/383-ransom-note.py)
@@ -165,6 +169,8 @@
 - 1122.[数组的相对排序](easy/1122-relative-sort-array.py)
 - 1160.[拼写单词](easy/1160-find-words-that-can-be-formed-by-characters.py)
 - 1234.[替换子串得到平衡字符串](medium/1234-replace-the-substring-for-balanced-string.py)
+- 剑指 Offer II 032.[有效的变位词](offer2/032-dKk3P7.py)
+- 剑指 Offer II 075.[数组相对排序](offer2/075-0H97ZC.py)
 
 ## 滚动哈希
 
@@ -180,7 +186,9 @@
 - 160.[相交链表](easy/160-intersection-of-two-linked-lists.py)
 - 203.[移除链表元素](easy/203-remove-linked-list-elements.py)
 - 206.[反转链表](easy/206-reverse-linked-list.py)
+- 234.[回文链表](easy/234-palindrome-linked-list.py)
 - 295.[数据流的中位数](hard/295-find-median-from-data-stream.py)
+- 346.[滑动窗口的平均值](easy/346-moving-average-from-data-stream.py)
 - 641.[设计循环双端队列](medium/641-design-circular-deque.py)
 - 707.[设计链表](medium/707-design-linked-list.py)
 - 725.[分隔链表](medium/725-split-linked-list-in-parts.py)
@@ -195,12 +203,14 @@
 - 剑指 Offer 24.[反转链表](offer/24-fan-zhuan-lian-biao-lcof.py)
 - 剑指 Offer 35.[复杂链表的复制](offer/35-fu-za-lian-biao-de-fu-zhi-lcof.py)
 - 剑指 Offer 41.[数据流中的中位数](offer/41-shu-ju-liu-zhong-de-zhong-wei-shu-lcof.py)
+- 剑指 Offer II 027.[回文链表](offer2/027-aMhZSa.py)
+- 剑指 Offer II 041.[滑动窗口的平均值](offer2/041-qIsx9U.py)
 
 ## 双向链表
 
 - 432.[全 O(1) 的数据结构](hard/432-all-oone-data-structure.py)
 
-## 树
+## 树 tree
 
 - 100.[相同的树](easy/100-same-tree.py)
 - 110.[平衡二叉树](easy/110-balanced-binary-tree.py)
@@ -232,6 +242,8 @@
 - 剑指 Offer 55 - II.[平衡二叉树](offer/55-ping-heng-er-cha-shu-lcof.py)
 - 剑指 Offer 68 - I.[二叉搜索树的最近公共祖先](offer/68-er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof.py)
 - 剑指 Offer 68 - II.[二叉树的最近公共祖先](offer/68-er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof.py)
+- 剑指 Offer II 052.[展平二叉搜索树](offer2/052-NYBBNL.py)
+- 剑指 Offer II 056.[二叉搜索树中两个节点之和](offer2/056-opLdQZ.py)
 
 ## 有序集合
 
@@ -293,6 +305,7 @@
 ## 二分查找 binary search
 
 - 33.[搜索旋转排序数组](medium/33-search-in-rotated-sorted-array.py)
+- 35.[山脉数组的峰顶索引](easy/35-search-insert-position.py)
 - 74.[搜索二维矩阵](medium/74-search-a-2d-matrix.py)
 - 154.[寻找旋转排序数组中的最小值 II](hard/154-find-minimum-in-rotated-sorted-array-ii.py)
 - 240.[搜索二维矩阵 II](medium/240-search-a-2d-matrix-ii.py)
@@ -316,6 +329,7 @@
 - 面试题 16.06.[最小差](interview/16.06.smallest-difference-lcci.py)
 - 面试题 16.16.[部分排序](interview/16.16.sub-sort-lcci.py)
 - 面试题 17.08.[马戏团人塔](interview/17.08.circus-tower-lcci.py)
+- 剑指 Offer II 068.[查找插入位置](offer2/068-N6YdxV.py)
 
 ## 排序 sort
 
@@ -493,6 +507,8 @@
 - 剑指 Offer 22.[链表中倒数第 k 个节点](offer/22-lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof.py)
 - 剑指 Offer 52.[两个链表的第一个公共节点](offer/52-liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof.py)
 - 剑指 Offer 57.[和为 s 的两个数字](offer/57-he-wei-sde-liang-ge-shu-zi-lcof.py)
+- 剑指 Offer II 006.[排序数组中两个数字之和](offer2/006-kLl5u1.py)
+- 剑指 Offer II 019.[最多删除一个字符得到回文](offer2/019-RQku0D.py)
 
 ## 滑动窗口
 
@@ -560,6 +576,9 @@
 - 剑指 Offer 47.[礼物的最大价值](offer/47-li-wu-de-zui-da-jie-zhi-lcof.py)
 - 剑指 Offer 49.[丑数](offer/49-chou-shu-lcof.py)
 - 剑指 Offer 60.[n 个骰子的点数](offer/60-nge-tou-zi-de-dian-shu-lcof.py)
+- 剑指 Offer II 003.[前 n 个数字二进制中 1 的个数](offer2/003-w3tCBm.py)
+- 剑指 Offer II 088.[爬楼梯的最少成本](offer2/088-GzCJIP.py)
+- 剑指 Offer II 101.[分割等和子串](offer2/101-NUPfPr.py)
 
 ## 背包问题
 
@@ -645,6 +664,7 @@
 
 ## 数学
 
+- 69.[x 的平方根](easy/69-sqrtx.py)
 - 168.[Excel 表列名称](easy/168-excel-sheet-column-title.py)
 - 233.[数字 1 的个数](hard/233-number-of-digit-one.py)
 - 326.[3 的幂](easy/326-power-of-three.py)
@@ -670,6 +690,8 @@
 - 剑指 Offer 44.[数字序列中某一位的数字](offer/44-shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof.py)
 - 剑指 Offer 43.[1 ～ n 整数中 1 出现的次数](offer/43-1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof.py)
 - 剑指 Offer 53 - II.[0 ～ n-1 中缺失的数字](offer/53-que-shi-de-shu-zi-lcof.py)
+- 剑指 Offer II 001.[整数除法](offer2/001-xoh6Oh.py)
+- 剑指 Offer II 072.[求平方根](offer2/072-jJ0w9p.py)
 
 ## 博弈
 
