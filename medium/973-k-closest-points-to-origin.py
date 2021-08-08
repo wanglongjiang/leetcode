@@ -88,15 +88,17 @@ class Solution:
             lowSize = i - start
             if lowSize == k:
                 ans.extend(d[start:i])
-                return [points[i] for c, i in ans]
-            elif lowSize < k:  # 不够k个数，将lowSize个数加入结果，然后继续对高区进行分区
-                ans.extend(d[start:i])
-                k -= lowSize
-                start = i
-            else:  # 超过k个数，将
+                break
+            elif lowSize < k:  # 不够k个数，将lowSize+1个数（含等于pivot的数）加入结果，然后继续对高区进行分区
+                ans.extend(d[start:i + 1])
+                k -= lowSize + 1
+                start = i + 1
+            else:  # 超过k个数，继续对<pivot的部分进行分区
                 end = i - 1
+        return [points[i] for c, i in ans]
 
 
 s = Solution()
+print(s.kClosest([[0, 1], [1, 0]], 2))
 print(s.kClosest(points=[[1, 3], [-2, 2]], k=1))
 print(s.kClosest(points=[[3, 3], [5, -1], [-2, 4]], k=2))
