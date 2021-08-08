@@ -15,7 +15,12 @@ class ListNode:
 
 
 '''
-思路：递归归并
+思路：分治，归并
+如果list的大小为1或0，直接返回链表，
+如果list的大小>1，将list递归分成2部分，再分别针对这2部分进行递归的分治，然后将2个分治的子过程返回的链表进行归并
+
+时间复杂度：O(nlogn)
+空间复杂度：O(logn)
 '''
 
 
@@ -79,11 +84,6 @@ def toList(listNode: ListNode):
 
 
 s = Solution()
-print(
-    toList(
-        s.mergeKLists(
-            [fromList([1, 4, 5]),
-             fromList([1, 3, 4]),
-             fromList([2, 6])])))
+print(toList(s.mergeKLists([fromList([1, 4, 5]), fromList([1, 3, 4]), fromList([2, 6])])))
 print(toList(s.mergeKLists([])))
 print(toList(s.mergeKLists([None])))
