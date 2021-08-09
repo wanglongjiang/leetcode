@@ -39,7 +39,7 @@
 提示：
 
 1 <= points.length <= 1000
--106 <= xi, yi <= 106
+-10^6 <= xi, yi <= 10^6
 所有点 (xi, yi) 两两不同。
 
 来源：力扣（LeetCode）

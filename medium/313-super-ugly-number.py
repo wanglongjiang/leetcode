@@ -13,7 +13,7 @@
 
 1 是任何给定 primes 的超级丑数。
  给定 primes 中的数字以升序排列。
-0 < k ≤ 100, 0 < n ≤ 106, 0 < primes[i] < 1000 。
+0 < k ≤ 100, 0 < n ≤ 10^6, 0 < primes[i] < 1000 。
 第 n 个超级丑数确保在 32 位有符整数范围内。
 '''
 from typing import List

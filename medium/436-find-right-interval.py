@@ -32,7 +32,7 @@
 
 1 <= intervals.length <= 2 * 10^4
 intervals[i].length == 2
--106 <= starti <= endi <= 106
+-10^6 <= starti <= endi <= 10^6
 每个间隔的起点都 不相同
 '''
 from typing import List

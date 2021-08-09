@@ -35,7 +35,7 @@
 m == matrix.length
 n == matrix[i].length
 1 <= m, n <= 1000
-0 <= matrix[i][j] <= 106
+0 <= matrix[i][j] <= 10^6
 1 <= k <= m * n
 '''
 import heapq
