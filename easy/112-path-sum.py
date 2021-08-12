@@ -35,7 +35,7 @@ class Solution:
             return False
 
         if not root:
-            return targetSum == 0
+            return False
         return dfs(root, targetSum)
 
 
