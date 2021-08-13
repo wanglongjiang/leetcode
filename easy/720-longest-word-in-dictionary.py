@@ -53,9 +53,18 @@ class Solution:
         for word in words:
             if len(word) == 1:
                 hashset.add(word)
+                if len(word) > len(ans) or ans > word:
+                    ans = word
             else:
                 if word[:len(word) - 1] in hashset:
                     hashset.add(word)
                     if len(word) > len(ans) or ans > word:
                         ans = word
         return ans
+
+
+s = Solution()
+print(
+    s.longestWord([
+        "ts", "e", "x", "pbhj", "opto", "xhigy", "erikz", "pbh", "opt", "erikzb", "eri", "erik", "xlye", "xhig", "optoj", "optoje", "xly", "pb", "xhi", "x", "o"
+    ]))
