@@ -34,6 +34,7 @@ class Solution:
         for c in s:
             if c == 'A':
                 acnt += 1
+                lcnt = 0
                 if acnt > 1:
                     return False
             elif c == 'L':
@@ -43,3 +44,7 @@ class Solution:
             else:
                 lcnt = 0
         return True
+
+
+s = Solution()
+print(s.checkRecord("LALL"))
