@@ -50,8 +50,8 @@ s 只含有小写英文字母
 class Solution:
     def longestPrefix(self, s: str) -> str:
         n = len(s)
-        b = 100007
-        m = 2 ^ 64
+        b = 10**7 + 7
+        m = 2**64 - 1
         prefixHash = [0] * n
         prefixHash[0] = 0
         for i in range(1, n):
@@ -67,12 +67,3 @@ class Solution:
         if start:
             return s[start:]
         return ''
-
-
-s = Solution()
-print(s.longestPrefix('level'))
-print(s.longestPrefix('ababab'))
-print(s.longestPrefix('leetcodeleet'))
-print(s.longestPrefix('a'))
-print(s.longestPrefix('aa'))
-print(s.longestPrefix('aaa'))
