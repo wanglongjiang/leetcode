@@ -14,7 +14,7 @@
 class Solution:
     def reverseVowels(self, s: str) -> str:
         left, right = 0, len(s) - 1
-        vowel = set(['a', 'e', 'i', 'o', 'u'])
+        vowel = set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'])
         li = list(s)
         while left < right:
             while left < right and li[left] not in vowel:
@@ -29,5 +29,6 @@ class Solution:
 
 
 s = Solution()
+print(s.reverseVowels("aA"))
 print(s.reverseVowels("hello"))
 print(s.reverseVowels("leetcode"))
