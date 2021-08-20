@@ -41,7 +41,7 @@ class Solution:
     def distinctEchoSubstrings(self, text: str) -> int:
         n = len(text)
         b = 100000007  # 哈希的基数
-        m = 2**64  # 模
+        m = 2**64 - 1  # 模
         ans = 0
         for sublen in range(1, n // 2 + 1):
             firsthash, secondhash = 0, 0
