@@ -4,10 +4,12 @@
 
 ## 栈 stack
 
+- 145.[二叉树的后序遍历](easy/145-binary-tree-postorder-traversal.py)
 - 155.[最小栈](easy/155-min-stack.py)
 - 385.[迷你语法分析器](medium/385-mini-parser.py)
 - 388.[文件的最长绝对路径](medium/388-longest-absolute-file-path.py)
 - 394.[字符串解码](medium/394-decode-string.py)
+- 445.[两数相加 II](medium/445-add-two-numbers-ii.py)
 - 636.[函数的独占时间](medium/636-exclusive-time-of-functions.py)
 - 678.[有效的括号字符串](medium/678-valid-parenthesis-string.py)
 - 735.[行星碰撞](medium/735-asteroid-collision.py)
@@ -18,6 +20,8 @@
 - 面试题 03.04.[化栈为队](interview/03.04.implement-queue-using-stacks-lcci.py)
 - 剑指 Offer 09.[用两个栈实现队列](offer/09-yong-liang-ge-zhan-shi-xian-dui-lie-lcof.py)
 - 剑指 Offer 30.[包含 min 函数的栈](offer/30-bao-han-minhan-shu-de-zhan-lcof.py)
+- 剑指 Offer II 025.[链表中的两数相加](offer2/025-lMSNwu.py)
+- 剑指 Offer II 046.[二叉树的右侧视图](offer2/046-WNC0Lk.py)
 
 ## 单调栈
 
@@ -31,6 +35,8 @@
 - 962.[最大宽度坡](medium/962-maximum-width-ramp.py)
 - 1081.[不同字符的最小子序列](medium/1081-smallest-subsequence-of-distinct-characters.py)
 - 面试题 17.21.[直方图的水量](interview/17.21.volume-of-histogram-lcci.py)
+- 剑指 Offer II 039.[直方图最大矩形面积](offer2/039-0ynMMM.py)
+- 剑指 Offer II 040.[矩阵中最大的矩形](offer2/040-PLYXKQ.py)
 
 ## 堆 heap
 
@@ -48,6 +54,7 @@
 - 面试题 03.05.[栈排序](interview/03.05.sort-of-stacks-lcci.py)
 - 面试题 17.20.[连续中值](interview/17.20.continuous-median-lcci.py)
 - 剑指 Offer II 059.[数据流的第 K 大数值](offer2/059-jBjn9C.py)
+- 剑指 Offer II 060.[出现频率最高的 k 个数字](offer2/060-g5c51o.py)
 
 ## 队列
 
@@ -66,7 +73,7 @@
 
 - 239.[滑动窗口最大值](hard/239-sliding-window-maximum.py)
 
-## 数组
+## 数组 array
 
 - 334.[递增的三元子序列](medium/334-increasing-triplet-subsequence.py)
 - 442.[数组中重复的数据](medium/442-find-all-duplicates-in-an-array.py)
@@ -74,6 +81,7 @@
 - 517.[超级洗衣机](hard/517-super-washing-machines.py)
 - 525.[连续数组](medium/525-contiguous-array.py)
 - 598.[范围求和 II](easy/598-range-addition-ii.py)
+- 789.[逃脱阻碍者](medium/789-escape-the-ghosts.py)
 - 941.[有效的山脉数组](easy/941-valid-mountain-array.py)
 - 961.[重复 N 次的元素](easy/961-n-repeated-element-in-size-2n-array.py)
 - 985.[查询后的偶数和](easy/985-sum-of-even-numbers-after-queries.py)
@@ -91,15 +99,21 @@
 ## 前缀数组
 
 - 523.[连续的子数组和](medium/523-continuous-subarray-sum.py)
+- 525.[连续数组](medium/525-contiguous-array.py)
+- 560.[和为 K 的子数组](medium/560-subarray-sum-equals-k.py)
 - 724.[寻找数组的中心下标](easy/724-find-pivot-index.py)
 - 900.[RLE 迭代器](medium/900-rle-iterator.py)
 - 930.[和相同的二元子数组](medium/930-binary-subarrays-with-sum.py)
 - 1314.[矩阵区域和](medium/1314-matrix-block-sum.py)
+- 剑指 Offer II 010.[和为 k 的子数组](offer2/010-QTMn0o.py)
+- 剑指 Offer II 011.[0 和 1 个数相同的子数组](offer2/011-A1NYOS.py)
+- 剑指 Offer II 013.[二维子矩阵的和](offer2/013-O4NDxx.py)
 
 ## 矩阵
 
 - 661.[图片平滑器](easy/661-image-smoother.py)
 - 733.[图像渲染](easy/733-flood-fill.py)
+- 807.[保持城市天际线](medium/807-max-increase-to-keep-city-skyline.py)
 - 836.[矩形重叠](easy/836-rectangle-overlap.py)
 - 883.[三维形体投影面积](easy/883-projection-area-of-3d-shapes.py)
 - 892.[三维形体的表面积](easy/892-surface-area-of-3d-shapes.py)
@@ -107,6 +121,7 @@
 
 ## 哈希 hash
 
+- 128.[最长连续序列](hard/128-longest-consecutive-sequence.py)
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
 - 290.[单词规律](easy/290-word-pattern.py)
 - 355.[设计推特](medium/355-design-twitter.py)
@@ -121,6 +136,7 @@
 - 599.[两个列表的最小索引总和](easy/599-minimum-index-sum-of-two-lists.py)
 - 609.[在系统中查找重复文件](medium/609-find-duplicate-file-in-system.py)
 - 653.[两数之和 IV - 输入 BST](easy/653-two-sum-iv-input-is-a-bst.py)
+- 676.[实现一个魔法字典](medium/676-implement-magic-dictionary.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
 - 804.[唯一摩尔斯密码词](easy/804-unique-morse-code-words.py)
 - 815.[公交路线](hard/815-bus-routes.py)
@@ -148,6 +164,9 @@
 - 面试题 16.21.[交换和](interview/16.21.sum-swap-lcci.py)
 - 面试题 16.24.[数对和](interview/16.24.pairs-with-sum-lcci.py)
 - 剑指 Offer II 034.[外星语言是否排序](offer2/034-lwyVBB.py)
+- 剑指 Offer II 050.[向下的路径节点之和](offer2/050-6eUYwP.py)
+- 剑指 Offer II 064.[神奇的字典](offer2/064-US1pGT.py)
+- 剑指 Offer II 119.[最长连续序列](offer2/119-WhsWhI.py)
 
 ## 计数 count
 
@@ -159,6 +178,7 @@
 - 389.[找不同](easy/389-find-the-difference.py)
 - 405.[数字转换为十六进制数](easy/405-convert-a-number-to-hexadecimal.py)
 - 409.[最长回文串](easy/409-longest-palindrome.py)
+- 438.[找到字符串中所有字母异位词](medium/438-find-all-anagrams-in-a-string.py)
 - 657.[机器人能否返回原点](easy/657-robot-return-to-origin.py)
 - 748.[最短补全词](easy/748-shortest-completing-word.py)
 - 811.[子域名访问计数](easy/811-subdomain-visit-count.py)
@@ -169,6 +189,7 @@
 - 1122.[数组的相对排序](easy/1122-relative-sort-array.py)
 - 1160.[拼写单词](easy/1160-find-words-that-can-be-formed-by-characters.py)
 - 1234.[替换子串得到平衡字符串](medium/1234-replace-the-substring-for-balanced-string.py)
+- 剑指 Offer II 015.[字符串中的所有变位词](offer2/015-VabMRr.py)
 - 剑指 Offer II 032.[有效的变位词](offer2/032-dKk3P7.py)
 - 剑指 Offer II 075.[数组相对排序](offer2/075-0H97ZC.py)
 
@@ -183,14 +204,17 @@
 - 21.[合并两个有序链表](easy/21-merge-two-sorted-lists.py)
 - 138.[复制带随机指针的链表](medium/138-copy-list-with-random-pointer.py)
 - 141.[环形链表](easy/141-linked-list-cycle.py)
+- 143.[重排链表](medium/143-reorder-list.py)
 - 160.[相交链表](easy/160-intersection-of-two-linked-lists.py)
 - 203.[移除链表元素](easy/203-remove-linked-list-elements.py)
 - 206.[反转链表](easy/206-reverse-linked-list.py)
 - 234.[回文链表](easy/234-palindrome-linked-list.py)
 - 295.[数据流的中位数](hard/295-find-median-from-data-stream.py)
 - 346.[滑动窗口的平均值](easy/346-moving-average-from-data-stream.py)
+- 430.[扁平化多级双向链表](medium/430-flatten-a-multilevel-doubly-linked-list.py)
 - 641.[设计循环双端队列](medium/641-design-circular-deque.py)
 - 707.[设计链表](medium/707-design-linked-list.py)
+- 708.[循环有序列表的插入](medium/708-insert-into-a-sorted-circular-linked-list.py)
 - 725.[分隔链表](medium/725-split-linked-list-in-parts.py)
 - 817.[链表组件](medium/817-linked-list-components.py)
 - 1171.[从链表中删去总和值为零的连续节点](medium/1171-remove-zero-sum-consecutive-nodes-from-linked-list.py)
@@ -203,7 +227,10 @@
 - 剑指 Offer 24.[反转链表](offer/24-fan-zhuan-lian-biao-lcof.py)
 - 剑指 Offer 35.[复杂链表的复制](offer/35-fu-za-lian-biao-de-fu-zhi-lcof.py)
 - 剑指 Offer 41.[数据流中的中位数](offer/41-shu-ju-liu-zhong-de-zhong-wei-shu-lcof.py)
+- 剑指 Offer II 026.[重排链表](offer2/026-LGjMqU.py)
 - 剑指 Offer II 027.[回文链表](offer2/027-aMhZSa.py)
+- 剑指 Offer II 028.[展平多级双向链表](offer2/028-Qv1Da2.py)
+- 剑指 Offer II 029.[排序的循环链表](offer2/029-4ueAj6.py)
 - 剑指 Offer II 041.[滑动窗口的平均值](offer2/041-qIsx9U.py)
 
 ## 双向链表
@@ -214,6 +241,7 @@
 
 - 100.[相同的树](easy/100-same-tree.py)
 - 110.[平衡二叉树](easy/110-balanced-binary-tree.py)
+- 129.[求根节点到叶节点数字之和](medium/129-sum-root-to-leaf-numbers.py)
 - 230.[二叉搜索树中第 K 小的元素](medium/230-kth-smallest-element-in-a-bst.py)
 - 235.[二叉搜索树的最近公共祖先](easy/235-lowest-common-ancestor-of-a-binary-search-tree.py)
 - 236.[二叉树的最近公共祖先](medium/236-lowest-common-ancestor-of-a-binary-tree.py)
@@ -242,11 +270,14 @@
 - 剑指 Offer 55 - II.[平衡二叉树](offer/55-ping-heng-er-cha-shu-lcof.py)
 - 剑指 Offer 68 - I.[二叉搜索树的最近公共祖先](offer/68-er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof.py)
 - 剑指 Offer 68 - II.[二叉树的最近公共祖先](offer/68-er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof.py)
+- 剑指 Offer II 048.[序列化与反序列化二叉树](offer2/048-h54YBf.py)
+- 剑指 Offer II 049.[从根节点到叶节点的路径数字之和](offer2/049-3Etpl5.py)
 - 剑指 Offer II 052.[展平二叉搜索树](offer2/052-NYBBNL.py)
 - 剑指 Offer II 056.[二叉搜索树中两个节点之和](offer2/056-opLdQZ.py)
 
 ## 有序集合
 
+- 220.[存在重复元素 III](medium/220-contains-duplicate-iii.py)
 - 239.[滑动窗口最大值](hard/239-sliding-window-maximum.py)
 - 352.[将数据流变为多个不相交区间](hard/352-data-stream-as-disjoint-intervals.py)
 - 699.[掉落的方块](hard/699-falling-squares.py)
@@ -264,11 +295,14 @@
 - 1865.[找出和为指定值的下标对](medium/1865-finding-pairs-with-a-certain-sum.py)
 - 1912.[设计电影租借系统](hard/1912-design-movie-rental-system.py)
 - 剑指 Offer 51.[数组中的逆序对](offer/51-shu-zu-zhong-de-ni-xu-dui-lcof.py)
+- 剑指 Offer II 057.[值和下标之差都在给定的范围内](offer2/057-7WqeDu.py)
+- 剑指 Offer II 058.[日程表](offer2/058-fi9suh.py)
 
-## 图
+## 图 graph
 
 - 34.[在排序数组中查找元素的第一个和最后一个位置](medium/34-find-first-and-last-position-of-element-in-sorted-array.py)
 - 79.[单词搜索](medium/79-word-search.py)
+- 127.[单词接龙](hard/127-word-ladder.py)
 - 212.[单词搜索 II](hard/212-word-search-ii.py)
 - 743.[网络延迟时间](medium/743-network-delay-time.py)
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
@@ -282,13 +316,16 @@
 - 1791.[找出星型图的中心节点](medium/1791.find-center-of-star-graph.py)
 - 剑指 Offer 12.[矩阵中的路径](offer/12-ju-zhen-zhong-de-lu-jing-lcof.py)
 - 面试题 04.01.[节点间通路](interview/04.01.route-between-nodes-lcci.py)
+- 面试题 17.22.[单词转换](interview/17.22.word-transformer-lcci.py)
 - 剑指 Offer 53 - I.[在排序数组中查找数字 I](offer/53-que-shi-de-shu-zi-lcof.py)
+- 剑指 Offer II 108.[单词演变](offer2/108-om3reC.py)
 
 ## Dijkstra
 
 - 64.[最小路径和](medium/64-minimum-path-sum.py)
 - 743.[网络延迟时间](medium/743-network-delay-time.py)
 - 1631.[最小体力消耗路径](medium/1631-path-with-minimum-effort.py)
+- 剑指 Offer II 099.[最小路径之和](offer2/099-0i0mDW.py)
 
 ## 模拟
 
@@ -318,6 +355,7 @@
 - 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
 - 744.[寻找比目标字母大的最小字母](easy/744-find-smallest-letter-greater-than-target.py)
 - 852.[山脉数组的峰顶索引](easy/852-peak-index-in-a-mountain-array.py)
+- 875.[爱吃香蕉的珂珂](medium/875-koko-eating-bananas.py)
 - 900.[RLE 迭代器](medium/900-rle-iterator.py)
 - 911.[在线选举](medium/911-online-election.py)
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
@@ -330,6 +368,10 @@
 - 面试题 16.16.[部分排序](interview/16.16.sub-sort-lcci.py)
 - 面试题 17.08.[马戏团人塔](interview/17.08.circus-tower-lcci.py)
 - 剑指 Offer II 068.[查找插入位置](offer2/068-N6YdxV.py)
+- 剑指 Offer II 069.[山峰数组的顶部](offer2/069-B1IidL.py)
+- 剑指 Offer II 070.[排序数组中只出现一次的数字](offer2/070-skFtm2.py)
+- 剑指 Offer II 071.[按权重生成随机数](offer2/071-cuyjEf.py)
+- 剑指 Offer II 073.[狒狒吃香蕉](offer2/073-nZZqjQ.py)
 
 ## 排序 sort
 
@@ -361,6 +403,8 @@
 - 1877.[数组中最大数对和的最小值](medium/1877-minimize-maximum-pair-sum-in-array.py)
 - 面试题 16.06.[最小差](interview/16.06.smallest-difference-lcci.py)
 - 剑指 Offer 45.[把数组排成最小的数](offer/45-ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof.py)
+- 剑指 Offer II 074.[合并区间](offer2/074-SsGoHC.py)
+- 剑指 Offer II 077.[链表排序](offer2/077-7WHec2.py)
 
 ## 贪心算法
 
@@ -371,6 +415,7 @@
 - 122.[买卖股票的最佳时机 II](easy/122-best-time-to-buy-and-sell-stock-ii.py)
 - 231.[2 的幂](easy/231-power-of-two.py)
 - 342.[4 的幂](easy/342-power-of-four.py)
+- 373.[查找和最小的 K 对数字](medium/373-find-k-pairs-with-smallest-sums.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
 - 435.[无重叠区间](medium/435-non-overlapping-intervals.py)
 - 628.[三个数的最大乘积](easy/628-maximum-product-of-three-numbers.py)
@@ -379,6 +424,7 @@
 - 814.[二叉树剪枝](medium/814-binary-tree-pruning.py)
 - 849.[到最近的人的最大距离](medium/849-maximize-distance-to-closest-person.py)
 - 870.[优势洗牌](medium/870-advantage-shuffle.py)
+- 926.[将字符串翻转到单调递增](medium/926-flip-string-to-monotone-increasing.py)
 - 976.[三角形的最大周长](三角形的最大周长)
 - 984.[不含 AAA 或 BBB 的字符串](medium/984-string-without-aaa-or-bbb.py)
 - 1005.[K 次取反后最大化的数组和](easy/1005-maximize-sum-of-array-after-k-negations.py)
@@ -391,13 +437,15 @@
 - 面试题 16.17.[连续数列](interview/16.17.contiguous-sequence-lcci.py)
 - 剑指 Offer 42.[连续子数组的最大和](offer/42-lian-xu-zi-shu-zu-de-zui-da-he-lcof.py)
 - 剑指 Offer 63.[股票的最大利润](offer/63-gu-piao-de-zui-da-li-run-lcof.py)
+- 剑指 Offer II 061.[和最小的 k 个数对](offer2/061-qn8gGX.py)
+- 剑指 Offer II 067.[最大的异或](offer2/067-ms70jA.py)
+- 剑指 Offer II 092.[翻转字符](offer2/092-cyJERH.py)
 
 ## 位运算
 
 - 137.[只出现一次的数字 II](medium/137-single-number-ii.py)
 - 191.[位 1 的个数](easy/191-number-of-1-bits.py)
 - 231.[2 的幂](easy/231-power-of-two.py)
-- 318.[最大单词长度乘积](medium/318-maximum-product-of-word-lengths.py)
 - 371.[两整数之和](medium/371-sum-of-two-integers.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
@@ -422,6 +470,12 @@
 - 面试题 17.19.[消失的两个数字](interview/17.19.missing-two-lcci.py)
 - 剑指 Offer 15.[二进制中 1 的个数](offer/15-er-jin-zhi-zhong-1de-ge-shu-lcof.py)
 - 剑指 Offer 65.[不用加减乘除做加法](offer/65-bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof.py)
+- 剑指 Offer II 004.[只出现一次的数字](offer2/004-WGki4K.py)
+
+## 状态压缩
+
+- 318.[最大单词长度乘积](medium/318-maximum-product-of-word-lengths.py)
+- 剑指 Offer II 005.[单词长度的最大乘积](offer2/005-aseY1I.py)
 
 ## 深度优先搜索 DFS
 
@@ -433,8 +487,10 @@
 - 508.[出现次数最多的子树元素和](medium/508-most-frequent-subtree-sum.py)
 - 559.[N 叉树的最大深度](easy/559-maximum-depth-of-n-ary-tree.py)
 - 662.[二叉树最大宽度](medium/662-maximum-width-of-binary-tree.py)
+- 695.[岛屿的最大面积](medium/695-max-area-of-island.py)
 - 743.[网络延迟时间](medium/743-network-delay-time.py)
 - 773.[滑动谜题](hard/773-sliding-puzzle.py)
+- 797.[所有可能的路径](medium/797-all-paths-from-source-to-target.py)
 - 865.[具有所有最深节点的最小子树](medium/865-smallest-subtree-with-all-the-deepest-nodes.py)
 - 968.[监控二叉树](hard/968-binary-tree-cameras.py)
 - 971.[翻转二叉树以匹配先序遍历](medium/971-flip-binary-tree-to-match-preorder-traversal.py)
@@ -453,11 +509,18 @@
 - 面试题 04.08.[首个共同祖先](interview/04.08-first-common-ancestor-lcci.py)
 - 剑指 Offer 34.[二叉树中和为某一值的路径](offer/34-er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof.py)
 - 剑指 Offer 55 - I.[二叉树的深度](offer/55-er-cha-shu-de-shen-du-lcof.py)
+- 剑指 Offer II 047.[二叉树剪枝](offer2/047-pOCWxh.py)
+- 剑指 Offer II 050.[向下的路径节点之和](offer2/050-6eUYwP.py)
+- 剑指 Offer II 105.[岛屿的最大面积](offer2/105-ZL6zAn.py)
+- 剑指 Offer II 106.[二分图](offer2/106-vEAB3K.py)
+- 剑指 Offer II 110.[所有路径](offer2/110-bP4bmD.py)
 
 ## 广度优先搜索 BFS
 
+- 399.[除法求值](medium/399-evaluate-division.py)
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 - 515.[在每个树行中找最大值](medium/515-find-largest-value-in-each-tree-row.py)
+- 542.[01 矩阵](medium/542-01-matrix.py)
 - 623.[在二叉树中增加一行](medium/623-add-one-row-to-tree.py)
 - 637.[二叉树的层平均值](easy/637-average-of-levels-in-binary-tree.py)
 - 733.[图像渲染](easy/733-flood-fill.py)
@@ -480,6 +543,12 @@
 - 面试题 08.02.[迷路的机器人](interview/08.02.robot-in-a-grid-lcci.py)
 - 面试题 08.10.[颜色填充](interview/08.10.color-fill-lcci.py)
 - 剑指 Offer 13.[机器人的运动范围](offer/13-ji-qi-ren-de-yun-dong-fan-wei-lcof.py)
+- 剑指 Offer II 043.[往完全二叉树添加节点](offer2/043-NaqhDT.py)
+- 剑指 Offer II 044.[二叉树每层的最大值](offer2/044-hPov7L.py)
+- 剑指 Offer II 045.[二叉树最底层最左边的值](offer2/045-LwUNpT.py)
+- 剑指 Offer II 107.[矩阵中的距离](offer2/107-2bCMpM.py)
+- 剑指 Offer II 109.[开密码锁](offer2/109-zlDJc7.py)
+- 剑指 Offer II 111.[计算除法](offer2/111-vlzXQL.py)
 
 ## 双指针 double point
 
@@ -509,11 +578,15 @@
 - 剑指 Offer 57.[和为 s 的两个数字](offer/57-he-wei-sde-liang-ge-shu-zi-lcof.py)
 - 剑指 Offer II 006.[排序数组中两个数字之和](offer2/006-kLl5u1.py)
 - 剑指 Offer II 019.[最多删除一个字符得到回文](offer2/019-RQku0D.py)
+- 剑指 Offer II 021.[删除链表的倒数第 n 个结点](offer2/021-SLwz0R.py)
+- 剑指 Offer II 007.[数组中和为 0 的三个数](offer2/007-1fGaJU.py)
+- 剑指 Offer II 087.[复原 IP](offer2/087-0on3uN.py)
 
-## 滑动窗口
+## 滑动窗口 sliding window
 
 - 76.[最小覆盖子串](hard/76-minimum-window-substring.py)
 - 424.[替换后的最长重复字符](medium/424-longest-repeating-character-replacement.py)
+- 567.[字符串的排列](medium/567-permutation-in-string.py)
 - 643.[子数组最大平均数 I](easy/643-maximum-average-subarray-i.py)
 - 696.[计数二进制子串](easy/696-count-binary-substrings.py)
 - 830.[较大分组的位置](easy/830-positions-of-large-groups.py)
@@ -527,12 +600,22 @@
 - 面试题 16.17.[连续数列](interview/16.17.contiguous-sequence-lcci.py)
 - 剑指 Offer 48.[最长不含重复字符的子字符串](offer/48-zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof.py)
 - 剑指 Offer 57 - II.[和为 s 的连续正数序列](offer/57-he-wei-sde-liang-ge-shu-zi-lcof.py)
+- 剑指 Offer II 008.[和大于等于 target 的最短子数组](offer2/008-2VG8Kg.py)
+- 剑指 Offer II 009.[乘积小于 K 的子数组](offer2/009-ZVAVXX.py)
+- 剑指 Offer II 014.[字符串中的变位词](offer2/014-MPnaiL.py)
+- 剑指 Offer II 016.[不含重复字符的最长子字符串](offer2/016-wtcaE1.py)
 
 ## 记忆化搜索
 
+- 115.[不同的子序列](hard/115-distinct-subsequences.py)
+- 131.[分割回文串](medium/131-palindrome-partitioning.py)
 - 139.[单词拆分](medium/139-word-break.py)
 - 140.[单词拆分 II](hard/140-word-break-ii.py)
+- 329.[矩阵中的最长递增路径](hard/329-longest-increasing-path-in-a-matrix.py)
 - 509.[斐波那契数](easy/509-fibonacci-number.py)
+- 剑指 Offer II 097.[子序列的数目](offer2/097-21dk04.py)
+- 剑指 Offer II 112.[最长递增路径](offer2/112-fpTFWP.py)
+- 剑指 Offer II 086.[分割回文子字符串](offer2/086-M99OJA.py)
 
 ## 动态规划 DP
 
@@ -540,6 +623,9 @@
 - 95.[不同的二叉搜索树 II](medium/95-unique-binary-search-trees-ii.py)
 - 96.[不同的二叉搜索树](medium/96-unique-binary-search-trees.py)
 - 97.[交错字符串](medium/97-interleaving-string.py)
+- 120.[三角形最小路径和](medium/120-triangle.py)
+- 124.[二叉树中的最大路径和](hard/124-binary-tree-maximum-path-sum.py)
+- 132.[分割回文串 II](hard/132-palindrome-partitioning-ii.py)
 - 198.[打家劫舍](medium/198-house-robber.py)
 - 213.[打家劫舍 II](medium/213-house-robber-ii.py)
 - 221.[最大正方形](medium/221-maximal-square.py)
@@ -557,6 +643,7 @@
 - 474.[一和零](medium/474-ones-and-zeroes.py)
 - 516.[最长回文子序列](medium/516-longest-palindromic-subsequence.py)
 - 518.[零钱兑换 II](medium/518-coin-change-2.py)
+- 647.[回文子串](medium/647-palindromic-substrings.py)
 - 664.[奇怪的打印机](hard/664-strange-printer.py)
 - 673.[最长递增子序列的个数](medium/673-number-of-longest-increasing-subsequence.py)
 - 718.[最长重复子数组](medium/718-maximum-length-of-repeated-subarray.py)
@@ -577,7 +664,17 @@
 - 剑指 Offer 49.[丑数](offer/49-chou-shu-lcof.py)
 - 剑指 Offer 60.[n 个骰子的点数](offer/60-nge-tou-zi-de-dian-shu-lcof.py)
 - 剑指 Offer II 003.[前 n 个数字二进制中 1 的个数](offer2/003-w3tCBm.py)
+- 剑指 Offer II 020.[回文子字符串的个数](offer2/020-a7VOhD.py)
+- 剑指 Offer II 051.[节点之和最大的路径](offer2/051-jC7MId.py)
+- 剑指 Offer II 085.[生成匹配的括号](offer2/085-IDBivT.py)
 - 剑指 Offer II 088.[爬楼梯的最少成本](offer2/088-GzCJIP.py)
+- 剑指 Offer II 089.[房屋偷盗](offer2/089-Gu0c2T.py)
+- 剑指 Offer II 090.[环形房屋偷盗](offer2/090-PzWKhm.py)
+- 剑指 Offer II 091.[粉刷房子](offer2/091-JEj789.py)
+- 剑指 Offer II 093.[长斐波那契数列](offer2/093-Q91FMA.py)
+- 剑指 Offer II 094.[最少回文分割](offer2/094-omKAoA.py)
+- 剑指 Offer II 096.[字符串交织](offer2/096-IY6buf.py)
+- 剑指 Offer II 100.[三角形中最小路径之和](offer2/100-IlPe0q.py)
 - 剑指 Offer II 101.[分割等和子串](offer2/101-NUPfPr.py)
 
 ## 背包问题
@@ -588,14 +685,22 @@
 - 1049.[最后一块石头的重量 II](medium/1049-last-stone-weight-ii.py)
 - 1449.[数位成本和为目标值的最大数字](hard/1449-form-largest-integer-with-digits-that-add-up-to-target.py)
 - 面试题 08.11.[硬币](interview/08.11.coin-lcci.py)
+- 剑指 Offer II 103.[最少的硬币数目](offer2/103-gaM7Ch.py)
 
 ## 回溯
 
+- 39.[组合总和](medium/39-combination-sum2.py)
+- 40.[组合总和 II](medium/40-combination-sum-ii.py)
+- 46.[全排列](medium/46-permutations.py)
+- 47.[全排列 II](medium/47-permutations-ii.py)
 - 51.[N 皇后](hard/51-n-queens.py)
 - 52.[N 皇后 II](hard/52-n-queens-ii.py)
+- 77.[组合](medium/77-combinations.py)
+- 78.[子集](medium/78-subsets.py)
 - 139.[单词拆分](medium/139-word-break.py)
 - 140.[单词拆分 II](hard/140-word-break-ii.py)
 - 306.[累加数](medium/306-additive-number.py)
+- 377.[组合总和 Ⅳ](medium/377-combination-sum-iv.py)
 - 491.[递增子序列](medium/491-increasing-subsequences.py)
 - 494.[目标和](medium/494-target-sum.py)
 - 869.[重新排序得到 2 的幂](medium/869-reordered-power-of-2.py)
@@ -605,11 +710,20 @@
 - 面试题 08.07.[无重复字符串的排列组合](interview/08.07.permutation-i-lcci.py)
 - 面试题 08.09.[括号](interview/08.09.bracket-lcci.py)
 - 面试题 08.12.[八皇后](interview/08.12.eight-queens-lcci.py)
+- 剑指 Offer II 079.[所有子集](offer2/079-TVdhkn.py)
+- 剑指 Offer II 080.[含有 k 个元素的组合](offer2/080-uUsW3B.py)
+- 剑指 Offer II 081.[允许重复选择元素的组合](offer2/081-Ygoe9J.py)
+- 剑指 Offer II 082.[含有重复元素集合的组合](offer2/082-4sjJUc.py)
+- 剑指 Offer II 083.[没有重复元素集合的全排列](offer2/083-VvJkup.py)
+- 剑指 Offer II 084.[含有重复元素集合的全排列](offer2/084-7p8L0Z.py)
+- 剑指 Offer II 102.[加减的目标值](offer2/102-YaVDxD.py)
+- 剑指 Offer II 104.[排列的数目](offer2/104-D0F0SV.py)
 
 ## 递归
 
 - 101.[对称二叉树](easy/101-symmetric-tree.py)
 - 226.[翻转二叉树](easy/226-invert-binary-tree.py)
+- 257.[二叉树的所有路径](easy/257-binary-tree-paths.py)
 - 437.[路径总和 III](medium/437-path-sum-iii.py)
 - 538.[把二叉搜索树转换为累加树](medium/538-convert-bst-to-greater-tree.py)
 - 654.[最大二叉树](medium/654-maximum-binary-tree.py)
@@ -633,9 +747,13 @@
 - 剑指 Offer 28.[对称的二叉树](offer/28-dui-cheng-de-er-cha-shu-lcof.py)
 - 剑指 Offer 33.[二叉搜索树的后序遍历序列](offer/33-er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof.py)
 - 剑指 Offer 64.[求 1+2+…+n](offer/64-qiu-12n-lcof.py)
+- 剑指 Offer II 053.[二叉搜索树中的中序后继](offer2/053-P5rCT8.py)
+- 剑指 Offer II 054.[所有大于等于节点的值之和](offer2/054-w6cpku.py)
+- 剑指 Offer II 055.[二叉搜索树迭代器](offer2/055-kTOapQ.py)
 
 ## 分治
 
+- 23.[合并 K 个升序链表](medium/23-merge-k-sorted-lists.py)
 - 215.[数组中的第 K 个最大元素](medium/215-kth-largest-element-in-an-array.py)
 - 241.[为运算表达式设计优先级](medium/241-different-ways-to-add-parentheses.py)
 - 324.[摆动排序 II](medium/324-wiggle-sort-ii.py)
@@ -645,6 +763,9 @@
 - 面试题 17.14. [最小 K 个数](interview/17.14.smallest-k-lcci.py)
 - 剑指 Offer 36. [二叉搜索树与双向链表](offer/36.er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof.py)
 - 剑指 Offer 40.[最小的 k 个数](offer/40-zui-xiao-de-kge-shu-lcof.py)
+- 剑指 Offer II 004.[只出现一次的数字](offer2/004-WGki4K.py)
+- 剑指 Offer II 076.[数组中的第 k 大的数字](offer2/076-xx4gT2.py)
+- 剑指 Offer II 078.[合并排序链表](offer2/078-vvXgSW.py)
 
 ## 状态机
 
@@ -653,20 +774,32 @@
 - 剑指 Offer 19.[正则表达式匹配](offer/19-zheng-ze-biao-da-shi-pi-pei-lcof.py)
 - 剑指 Offer 20.[表示数值的字符串](offer/20-biao-shi-shu-zhi-de-zi-fu-chuan-lcof.py)
 
-## 设计
+## 设计 design
 
+- 146.[LRU 缓存机制](medium/146-lru-cache.py)
 - 155.[最小栈](easy/155-min-stack.py)
+- 173.[二叉搜索树迭代器](medium/173-binary-search-tree-iterator.py)
+- 208.[实现 Trie (前缀树)](medium/208-implement-trie-prefix-tree.py)
 - 621.[设计循环队列](medium/621.design-circular-queue.py)
 - 641.[设计循环双端队列](medium/641-design-circular-deque.py)
+- 677.[键值映射](medium/677-map-sum-pairs.py)
 - 911.[在线选举](medium/911-online-election.py)
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
 - 981.[基于时间的键值存储](medium/981-time-based-key-value-store.py)
+- 剑指 Offer II 030.[插入、删除和随机访问都是 O(1) 的容器](offer2/030-FortPu.py)
+- 剑指 Offer II 031.[最近最少使用缓存](offer2/031-OrIXps.py)
+- 剑指 Offer II 055.[二叉搜索树迭代器](offer2/055-kTOapQ.py)
+- 剑指 Offer II 062.[实现前缀树](offer2/062-QC3q1f.py)
+- 剑指 Offer II 066.[单词之和](offer2/066-z1R5dt.py)
 
 ## 数学
 
+- 62.[不同路径](medium/62-unique-paths.py)
 - 69.[x 的平方根](easy/69-sqrtx.py)
 - 168.[Excel 表列名称](easy/168-excel-sheet-column-title.py)
+- 172.[阶乘后的零](easy/172-factorial-trailing-zeroes.py)
 - 233.[数字 1 的个数](hard/233-number-of-digit-one.py)
+- 258.[各位相加](easy/258-add-digits.py)
 - 326.[3 的幂](easy/326-power-of-three.py)
 - 372.[超级次方](medium/372-super-pow.py)
 - 400.[第 N 位数字](medium/400-nth-digit.py)
@@ -692,6 +825,7 @@
 - 剑指 Offer 53 - II.[0 ～ n-1 中缺失的数字](offer/53-que-shi-de-shu-zi-lcof.py)
 - 剑指 Offer II 001.[整数除法](offer2/001-xoh6Oh.py)
 - 剑指 Offer II 072.[求平方根](offer2/072-jJ0w9p.py)
+- 剑指 Offer II 098.[路径的数目](offer2/098-2AoeFn.py)
 
 ## 博弈
 
@@ -708,11 +842,13 @@
 - 528.[按权重随机选择](medium/528-random-pick-with-weight.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
 - 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
+- 剑指 Offer II 071.[按权重生成随机数](offer2/071-cuyjEf.py)
 
-## 字符串
+## 字符串 string
 
 - 336.[回文对](hard/336-palindrome-pairs.py)
 - 524.[通过删除字母匹配到字典里最长单词](medium/524-longest-word-in-dictionary-through-deleting.py)
+- 551.[学生出勤记录 I](easy/551-student-attendance-record-i.py)
 - 796.[旋转字符串](easy/796-rotate-string.py)
 - 1078.[Bigram 分词](easy/1078-occurrences-after-bigram.py)
 - 1123.[驼峰式匹配](medium/1023-camelcase-matching.py)
@@ -725,12 +861,14 @@
 
 - 139.[单词拆分](medium/139-word-break.py)
 - 140.[单词拆分 II](hard/140-word-break-ii.py)
+- 208.[实现 Trie (前缀树)](medium/208-implement-trie-prefix-tree.py)
 - 211.[添加与搜索单词](medium/211-design-add-and-search-words-data-structure.py)
 - 336.[回文对](hard/336-palindrome-pairs.py)
 - 472.[连接词](hard/472-concatenated-words.py)
 - 648.[单词替换](medium/648-replace-words.py)
 - 677.[键值映射](medium/677-map-sum-pairs.py)
 - 745.[前缀和后缀搜索](hard/745-prefix-and-suffix-search.py)
+- 820.[单词的压缩编码](medium/820-short-encoding-of-words.py)
 - 1032.[字符流](hard/1032-stream-of-characters.py)
 - 1233.[删除子文件夹](medium/1233-remove-sub-folders-from-the-filesystem.py)
 - 1410.[HTML 实体解析器](medium/1410-html-entity-parser.py)
@@ -738,10 +876,16 @@
 - 1707.[与数组中元素的最大异或值](hard/1707-maximum-xor-with-an-element-from-array.py)
 - 面试题 17.15.[最长单词](interview/17.15.longest-word-lcci.py)
 - 面试题 17.17.[多次搜索](interview/17.17.multi-search-lcci.py)
+- 剑指 Offer II 063.[替换单词](offer2/063-UhWRSj.py)
+- 剑指 Offer II 065.[最短的单词编码](offer2/065-iSwD2y.py)
+- 剑指 Offer II 066.[单词之和](offer2/066-z1R5dt.py)
 
 ## 拓扑排序
 
 - 210.[课程表 II](medium/210-course-schedule-ii.py)
+- 269.[火星词典](hard/269-alien-dictionary.py)
+- 剑指 Offer II 113.[课程顺序](offer2/113-QA2IGt.py)
+- 剑指 Offer II 114.[外星文字典](offer2/114-Jf1JuT.py)
 
 ## 并查集 unionFind
 
@@ -762,6 +906,8 @@
 - 1905.[统计子岛屿](medium/1905-count-sub-islands.py)
 - 面试题 17.07.[婴儿名字](interview/17.07.baby-names-lcci.py)
 - 剑指 Offer II 116.[朋友圈](offer2/116-bLyHh0.py)
+- 剑指 Offer II 117.[相似的字符串](offer2/117-H6lPxb.py)
+- 剑指 Offer II 118.[多余的边](offer2/118-7LpjUW.py)
 
 ## 最小生成树
 
