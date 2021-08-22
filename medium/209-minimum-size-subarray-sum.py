@@ -17,7 +17,7 @@ class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         left, right, n = 0, 0, len(nums)
         s = 0
-        minLen = n
+        minLen = float('inf')
         while left < n and right <= n:
             while right < n and s < target:  # 向右移动right指针，直至满足窗口内整数之和s>=target
                 s += nums[right]
@@ -28,7 +28,7 @@ class Solution:
                     return minLen  # 如果最小长度为1，不需要向后搜索了，1就是最小值
             s -= nums[left]  # 向右移动left指针
             left += 1
-        return minLen if minLen != n else 0  # 如果minLen ==n，未找到满足条件的窗口，要返回0
+        return minLen if minLen <= n else 0
 
 
 s = Solution()
