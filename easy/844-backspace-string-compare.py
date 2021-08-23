@@ -64,7 +64,7 @@ S 和 T 只含有小写字母以及字符 '#'。
 class Solution:
     def backspaceCompare(self, s: str, t: str) -> bool:
         ps, pt = len(s) - 1, len(t) - 1
-        while ps >= 0 and pt >= 0:
+        while ps >= 0 or pt >= 0:
             delCount = 0
             while ps >= 0 and (s[ps] == '#' or delCount > 0):  # 向左移动ps指针，直至遇到可以输出的字符
                 if s[ps] == '#':
@@ -87,4 +87,9 @@ class Solution:
                 return False
             ps -= 1  # 当前字符相同，移动指针
             pt -= 1  # 当前字符相同，移动指针
-        return True
+        return ps == -1 and pt == -1
+
+
+s = Solution()
+print(s.backspaceCompare("nzp#o#g", "b#nzp#o#g"))
+print(s.backspaceCompare("bbbextm", "bbb#extm"))
