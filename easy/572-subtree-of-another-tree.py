@@ -29,6 +29,7 @@ subRoot 树上的节点数量范围是 [1, 1000]
 链接：https://leetcode-cn.com/problems/subtree-of-another-tree
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 '''
+from typing import List
 
 
 # Definition for a binary tree node.
@@ -42,6 +43,7 @@ class TreeNode:
 '''
 思路：递归
 遍历父树的每个子树，查看是否与subRoot相同
+与100题类似
 
 时间复杂度：O(mn)，m为父树节点数，n为子树节点数
 空间复杂度：O(h)
@@ -50,20 +52,51 @@ class TreeNode:
 
 class Solution:
     def isSubtree(self, root: TreeNode, subRoot: TreeNode) -> bool:
-        def dfs(node, subnode):
-            if not node and not subnode:
+        def isSame(p, q):
+            if not p and not q:
                 return True
-            if not node or not subnode:
+            if not p or not q:
                 return False
-            if node.val == subnode.val:
-                if dfs(node.left, subnode.left) and dfs(node.right, subnode.right):
-                    return True
-            if node.left:
-                if dfs(node.left, subnode):
-                    return True
-            if node.right:
-                if dfs(node.right, subnode):
-                    return True
-            return False
+            if p.val != q.val:
+                return False
+            return isSame(p.left, q.left) and isSame(p.right, q.right)
 
-        return dfs(root, subRoot)
+        if root is None:
+            return False
+        if subRoot is None:
+            return True
+        if isSame(root, subRoot):
+            return True
+        return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)
+
+
+s = Solution()
+null = None
+
+
+# list数据按照bfs遍历得到
+def fromList(li: List[int]):
+    if len(li) == 0:
+        return None
+    root = TreeNode(val=li[0])
+    queue = [root]
+    i = 1
+    while i < len(li):
+        node = queue[0]
+        del queue[0]
+        if li[i] is not None:
+            node.left = TreeNode(val=li[i])
+            queue.append(node.left)
+        i += 1
+        if i < len(li):
+            if li[i]:
+                node.right = TreeNode(val=li[i])
+                queue.append(node.right)
+            i += 1
+    return root
+
+
+print(
+    s.isSubtree(fromList([1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, 2]),
+                fromList([1, null, 1, null, 1, null, 1, null, 1, null, 1, 2])))
+print(s.isSubtree(fromList([3, 4, 5, 1, null, 2]), fromList([3, 1, 2])))
