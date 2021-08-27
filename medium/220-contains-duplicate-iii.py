@@ -5,9 +5,9 @@
 如果存在则返回 true，不存在返回 false。
 
 0 <= nums.length <= 2 * 10^4
--231 <= nums[i] <= 231 - 1
+-2^31 <= nums[i] <= 23^1 - 1
 0 <= k <= 10^4
-0 <= t <= 231 - 1
+0 <= t <= 23^1 - 1
 '''
 from typing import List
 '''
