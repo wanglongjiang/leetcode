@@ -29,8 +29,8 @@
 
 提示:
 
-1 <= nums1.length, nums2.length <= 104
--109 <= nums1[i], nums2[i] <= 109
+1 <= nums1.length, nums2.length <= 10^4
+-10^9 <= nums1[i], nums2[i] <= 10^9
 nums1, nums2 均为升序排列
 1 <= k <= 1000
 

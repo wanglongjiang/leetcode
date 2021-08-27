@@ -37,7 +37,7 @@
 
 0 <= points.length <= 10^4
 points[i].length == 2
--231 <= xstart < xend <= 231 - 1
+-2^31 <= xstart < xend <= 23^1 - 1
 '''
 from typing import List
 '''

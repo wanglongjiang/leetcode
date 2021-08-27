@@ -33,7 +33,7 @@
 提示：
 
 1 <= nums.length <= 2 * 10^4
-0 <= nums[i] <= 231 - 1
+0 <= nums[i] <= 23^1 - 1
 '''
 from typing import List
 '''
