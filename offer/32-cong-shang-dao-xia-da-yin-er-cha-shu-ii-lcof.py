@@ -28,9 +28,9 @@ class TreeNode:
 
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
-        ans = [[]]
         if not root:
-            return ans
+            return []
+        ans = [[]]
         from collections import deque
         q = deque()
         q.append(root)
