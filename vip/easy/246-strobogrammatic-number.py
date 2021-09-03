@@ -24,7 +24,7 @@
 '''
 '''
 思路：双指针
-类似于回文串，不同的是6和9对称，8和8对称，1和1对称
+类似于回文串，不同的是6和9对称，8和8对称，1和1对称,0和0对称
 
 时间复杂度：O(n)
 空间复杂度：O(1)
@@ -34,7 +34,7 @@
 class Solution:
     def isStrobogrammatic(self, num: str) -> bool:
         left, right = 0, len(num) - 1
-        numMap = {'1': '1', '8': '8', '6': '9', '9': '6'}
+        numMap = {'1': '1', '8': '8', '6': '9', '9': '6', '0': '0'}
         while left < right:
             if num[left] in numMap and num[right] != numMap[num[left]]:
                 return False
