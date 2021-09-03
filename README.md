@@ -112,8 +112,10 @@
 - 剑指 Offer II 011.[0 和 1 个数相同的子数组](offer2/011-A1NYOS.py)
 - 剑指 Offer II 013.[二维子矩阵的和](offer2/013-O4NDxx.py)
 
-## 矩阵
+## 矩阵 matrix
 
+- 498.[对角线遍历](medium/498-diagonal-traverse.py)
+- 529.[扫雷游戏](medium/529-minesweeper.py)
 - 661.[图片平滑器](easy/661-image-smoother.py)
 - 733.[图像渲染](easy/733-flood-fill.py)
 - 807.[保持城市天际线](medium/807-max-increase-to-keep-city-skyline.py)
@@ -127,6 +129,7 @@
 - 128.[最长连续序列](hard/128-longest-consecutive-sequence.py)
 - 170.[两数之和 III - 数据结构设计](vip/easy/170-two-sum-iii-data-structure-design.py)
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
+- 244.[最短单词距离 II](vip/medium/244-shortest-word-distance-ii.py)
 - 290.[单词规律](easy/290-word-pattern.py)
 - 355.[设计推特](medium/355-design-twitter.py)
 - 359.[日志速率限制器](vip/easy/359-logger-rate-limiter.py)
@@ -134,6 +137,7 @@
 - 432.[全 O(1) 的数据结构](hard/432-all-oone-data-structure.py)
 - 523.[连续的子数组和](medium/523-continuous-subarray-sum.py)
 - 525.[连续数组](medium/525-contiguous-array.py)
+- 532.[数组中的 k-diff 数对](medium/532-k-diff-pairs-in-an-array.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
 - 560.[和为 K 的子数组](medium/560-subarray-sum-equals-k.py)
 - 575.[分糖果](easy/575-distribute-candies.py)
@@ -180,6 +184,7 @@
 - 242.[有效的字母异位词](easy/242-valid-anagram.py)
 - 266.[回文排列](vip/easy/266-palindrome-permutation.py)
 - 274.[H 指数](medium/274-h-index.py)
+- 299.[猜数字游戏](medium/299-bulls-and-cows.py)
 - 350.[两个数组的交集 II](easy/350-intersection-of-two-arrays-ii.py)
 - 383.[赎金信](easy/383-ransom-note.py)
 - 387.[字符串中的第一个唯一字符](easy/387-first-unique-character-in-a-string.py)
@@ -247,6 +252,7 @@
 
 ## 树 tree
 
+- 99.[恢复二叉搜索树](medium/99-recover-binary-search-tree.py)
 - 100.[相同的树](easy/100-same-tree.py)
 - 110.[平衡二叉树](easy/110-balanced-binary-tree.py)
 - 129.[求根节点到叶节点数字之和](medium/129-sum-root-to-leaf-numbers.py)
@@ -263,6 +269,7 @@
 - 589.[N 叉树的前序遍历](easy/589-n-ary-tree-preorder-traversal.py)
 - 590.[N 叉树的后序遍历](easy/590-n-ary-tree-postorder-traversal.py)
 - 606.[根据二叉树创建字符串](easy/606-construct-string-from-binary-tree.py)
+- 652.[寻找重复的子树](medium/652-find-duplicate-subtrees.py)
 - 671.[二叉树中第二小的节点](easy/671-second-minimum-node-in-a-binary-tree.py)
 - 700.[二叉搜索树中的搜索](easy/700-search-in-a-binary-search-tree.py)
 - 701.[二叉搜索树中的插入操作](medium/701-insert-into-a-binary-search-tree.py)
@@ -338,7 +345,10 @@
 
 ## 模拟
 
+- 161.[相隔为 1 的编辑距离](vip/medium/161-one-edit-distance.py)
 - 289.[生命游戏](medium/289-game-of-life.py)
+- 498.[对角线遍历](medium/498-diagonal-traverse.py)
+- 529.[扫雷游戏](medium/529-minesweeper.py)
 - 640.[求解方程](medium/640-solve-the-equation.py)
 - 728.[自除数](easy/728-self-dividing-numbers.py)
 - 874.[模拟行走机器人](easy/874-walking-robot-simulation.py)
@@ -354,12 +364,15 @@
 - 35.[山脉数组的峰顶索引](easy/35-search-insert-position.py)
 - 74.[搜索二维矩阵](medium/74-search-a-2d-matrix.py)
 - 154.[寻找旋转排序数组中的最小值 II](hard/154-find-minimum-in-rotated-sorted-array-ii.py)
+- 222.[完全二叉树的节点个数](medium/222-count-complete-tree-nodes.py)
 - 240.[搜索二维矩阵 II](medium/240-search-a-2d-matrix-ii.py)
+- 244.[最短单词距离 II](vip/medium/244-shortest-word-distance-ii.py)
 - 300.[最长递增子序列](medium/300-longest-increasing-subsequence.py)
 - 436.[寻找右区间](medium/436-find-right-interval.py)
 - 454.[四数相加 II](medium/454-4sum-ii.py)
 - 475.[供暖器](medium/475-heaters.py)
 - 528.[按权重随机选择](medium/528-random-pick-with-weight.py)
+- 658.[找到 K 个最接近的元素](medium/658-find-k-closest-elements.py)
 - 704.[二分查找](easy/704-binary-search.py)
 - 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
 - 744.[寻找比目标字母大的最小字母](easy/744-find-smallest-letter-greater-than-target.py)
@@ -370,6 +383,7 @@
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
 - 981.[基于时间的键值存储](medium/981-time-based-key-value-store.py)
 - 1713.[得到子序列的最少操作次数](hard/1713-minimum-operations-to-make-a-subsequence.py)
+- 1901.[找出顶峰元素 II](medium/1901-find-a-peak-element-ii.py)
 - 剑指 Offer 04.[二维数组中的查找](offer/04-er-wei-shu-zu-zhong-de-cha-zhao-lcof.py)
 - 剑指 Offer 11.[旋转数组的最小数字](offer/11-xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof.py)
 - 面试题 10.09. [排序矩阵查找](interview/10.19.sorted-matrix-search-lcci.py)
@@ -393,6 +407,7 @@
 - 524.[通过删除字母匹配到字典里最长单词](medium/524-longest-word-in-dictionary-through-deleting.py)
 - 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
 - 720.[词典中最长的单词](easy/720-longest-word-in-dictionary.py)
+- 722.[删除注释](medium/722-remove-comments.py)
 - 767.[重构字符串](medium/767-reorganize-string.py)
 - 881.[救生艇](medium/881-boats-to-save-people.py)
 - 937.[重新排列日志文件](easy/937-reorder-data-in-log-files.py)
@@ -430,6 +445,8 @@
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
 - 435.[无重叠区间](medium/435-non-overlapping-intervals.py)
 - 628.[三个数的最大乘积](easy/628-maximum-product-of-three-numbers.py)
+- 665.[非递减数列](medium/665-non-decreasing-array.py)
+- 670.[最大交换](medium/670-maximum-swap.py)
 - 674.[最长连续递增序列](easy/674-longest-continuous-increasing-subsequence.py)
 - 763.[划分字母区间](medium/763-partition-labels.py)
 - 814.[二叉树剪枝](medium/814-binary-tree-pruning.py)
@@ -456,10 +473,12 @@
 
 ## 位运算 bit
 
+- 89.[格雷编码](medium/89-gray-code.py)
 - 137.[只出现一次的数字 II](medium/137-single-number-ii.py)
 - 191.[位 1 的个数](easy/191-number-of-1-bits.py)
 - 231.[2 的幂](easy/231-power-of-two.py)
 - 371.[两整数之和](medium/371-sum-of-two-integers.py)
+- 393.[UTF-8 编码验证](medium/393-utf-8-validation.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 - 461.[汉明距离](easy/461-hamming-distance.py)
@@ -499,6 +518,7 @@
 - 472.[连接词](hard/472-concatenated-words.py)
 - 508.[出现次数最多的子树元素和](medium/508-most-frequent-subtree-sum.py)
 - 559.[N 叉树的最大深度](easy/559-maximum-depth-of-n-ary-tree.py)
+- 565.[数组嵌套](medium/565-array-nesting.py)
 - 662.[二叉树最大宽度](medium/662-maximum-width-of-binary-tree.py)
 - 695.[岛屿的最大面积](medium/695-max-area-of-island.py)
 - 743.[网络延迟时间](medium/743-network-delay-time.py)
@@ -571,6 +591,7 @@
 - 167.[两数之和 II - 输入有序数组](easy/167-two-sum-ii-input-array-is-sorted.py)
 - 246.[中心对称数](vip/easy/246-strobogrammatic-number.py)
 - 392.[判断子序列](easy/392-is-subsequence.py)
+- 658.[找到 K 个最接近的元素](medium/658-find-k-closest-elements.py)
 - 680.[验证回文字符串 Ⅱ](easy/680-valid-palindrome-ii.py)
 - 845.[数组中的最长山脉](medium/845-longest-mountain-in-array.py)
 - 838.[推多米诺](medium/838-push-dominoes.py)
@@ -600,6 +621,7 @@
 ## 滑动窗口 sliding window
 
 - 76.[最小覆盖子串](hard/76-minimum-window-substring.py)
+- 159.[至多包含两个不同字符的最长子串](vip/medium/159-longest-substring-with-at-most-two-distinct-characters.py)
 - 424.[替换后的最长重复字符](medium/424-longest-repeating-character-replacement.py)
 - 567.[字符串的排列](medium/567-permutation-in-string.py)
 - 643.[子数组最大平均数 I](easy/643-maximum-average-subarray-i.py)
@@ -658,6 +680,7 @@
 - 474.[一和零](medium/474-ones-and-zeroes.py)
 - 516.[最长回文子序列](medium/516-longest-palindromic-subsequence.py)
 - 518.[零钱兑换 II](medium/518-coin-change-2.py)
+- 583.[两个字符串的删除操作](medium/583-delete-operation-for-two-strings.py)
 - 647.[回文子串](medium/647-palindromic-substrings.py)
 - 664.[奇怪的打印机](hard/664-strange-printer.py)
 - 673.[最长递增子序列的个数](medium/673-number-of-longest-increasing-subsequence.py)
@@ -714,8 +737,10 @@
 - 78.[子集](medium/78-subsets.py)
 - 139.[单词拆分](medium/139-word-break.py)
 - 140.[单词拆分 II](hard/140-word-break-ii.py)
+- 247.[中心对称数 II](vip/medium/247-strobogrammatic-number-ii.py)
 - 306.[累加数](medium/306-additive-number.py)
 - 377.[组合总和 Ⅳ](medium/377-combination-sum-iv.py)
+- 473.[火柴拼正方形](medium/473-matchsticks-to-square.py)
 - 491.[递增子序列](medium/491-increasing-subsequences.py)
 - 494.[目标和](medium/494-target-sum.py)
 - 869.[重新排序得到 2 的幂](medium/869-reordered-power-of-2.py)
@@ -742,6 +767,7 @@
 - 437.[路径总和 III](medium/437-path-sum-iii.py)
 - 538.[把二叉搜索树转换为累加树](medium/538-convert-bst-to-greater-tree.py)
 - 654.[最大二叉树](medium/654-maximum-binary-tree.py)
+- 655.[输出二叉树](medium/655-print-binary-tree.py)
 - 726.[原子的数量](hard/726-number-of-atoms.py)
 - 736.[Lisp 语法解析](hard/736-parse-lisp-expression.py)
 - 889.[根据前序和后序遍历构造二叉树](medium/889-construct-binary-tree-from-preorder-and-postorder-traversal.py)
@@ -811,10 +837,11 @@
 
 - 157.[用 Read4 读取 N 个字符](vip/easy/157-read-n-characters-given-read4.py)
 
-## 数学
+## 数学 math
 
 - 62.[不同路径](medium/62-unique-paths.py)
 - 69.[x 的平方根](easy/69-sqrtx.py)
+- 166.[分数到小数](medium/166-fraction-to-recurring-decimal.py)
 - 168.[Excel 表列名称](easy/168-excel-sheet-column-title.py)
 - 172.[阶乘后的零](easy/172-factorial-trailing-zeroes.py)
 - 233.[数字 1 的个数](hard/233-number-of-digit-one.py)
@@ -822,9 +849,11 @@
 - 326.[3 的幂](easy/326-power-of-three.py)
 - 372.[超级次方](medium/372-super-pow.py)
 - 400.[第 N 位数字](medium/400-nth-digit.py)
+- 453.[最小操作次数使数组元素相等](easy/453-minimum-moves-to-equal-array-elements.py)
 - 483.[最小好进制](hard/483-smallest-good-base.py)
 - 492.[构造矩形](easy/492-construct-the-rectangle.py)
 - 537.[复数乘法](medium/537-complex-number-multiplication.py)
+- 556.[下一个更大元素 III](medium/556-next-greater-element-iii.py)
 - 829.[连续整数求和](hard/829-consecutive-numbers-sum.py)
 - 877.[石子游戏](medium/877-stone-game.py)
 - 914.[卡牌分组](easy/914-x-of-a-kind-in-a-deck-of-cards.py)
@@ -852,12 +881,17 @@
 
 ## 几何
 
+- 447.[回旋镖的数量](medium/447-number-of-boomerangs.py)
+- 593.[有效的正方形](medium/593-valid-square.py)
 - 812.[最大三角形面积](easy/812-largest-triangle-area.py)
 - 1037.[有效的回旋镖](easy/1037-valid-boomerang.py)
 
-## 随机
+## 随机 random
 
 - 380.[O(1) 时间插入、删除和获取随机元素](medium/380-insert-delete-getrandom-o1.py)
+- 398.[随机数索引](medium/398-random-pick-index.py)
+- 478.[在圆内随机生成点](medium/478-generate-random-point-in-a-circle.py)
+- 519.[随机翻转矩阵](medium/519-random-flip-matrix.py)
 - 528.[按权重随机选择](medium/528-random-pick-with-weight.py)
 - 535.[TinyURL 的加密与解密](medium/535-encode-and-decode-tinyurl.py)
 - 710.[黑名单中的随机数](hard/710-random-pick-with-blacklist.py)
