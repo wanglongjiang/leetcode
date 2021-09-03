@@ -21,6 +21,7 @@
 0 <= arr[i] <= 10000
 '''
 from typing import List
+import heapq
 '''
 思路：快速选择+堆
 1. 使用快排里面的分区，随机选择一个pivot，将数组分成>=pivot和<pivot2部分
@@ -36,10 +37,11 @@ from typing import List
 
 
 class Solution:
-    def getLeastNumbers(self, arr: List[int], k: int) -> List[int]:
+    def smallestK(self, arr: List[int], k: int) -> List[int]:
         import random
         start, end = 0, len(arr) - 1
         ans = []
+        paritionErrorCount = 0
         while k > 0:
             pIndex = random.randint(start, end)
             arr[pIndex], arr[start] = arr[start], arr[pIndex]
@@ -54,15 +56,22 @@ class Solution:
                 arr[j] = arr[i]
             arr[i] = pivot
             lowSize = i - start
-            if lowSize == k:
+            if lowSize == 0:
+                paritionErrorCount += 1
+                if paritionErrorCount > 3:  # 超过3次无法分区，调用堆
+                    ans.extend(heapq.nsmallest(k, arr[start:end + 1]))
+                    return ans
+            elif lowSize == k:
                 ans.extend(arr[start:i])
                 return ans
             elif lowSize < k:  # 不够k个数，将lowSize个数加入结果，然后继续对高区进行分区
                 ans.extend(arr[start:i])
                 k -= lowSize
                 start = i
+                paritionErrorCount = 0
             else:  # 超过k个数，将
                 end = i - 1
+                paritionErrorCount = 0
         return ans
 
 
