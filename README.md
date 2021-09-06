@@ -440,6 +440,7 @@
 - 121.[买卖股票的最佳时机](easy/121-best-time-to-buy-and-sell-stock.py)
 - 122.[买卖股票的最佳时机 II](easy/122-best-time-to-buy-and-sell-stock-ii.py)
 - 231.[2 的幂](easy/231-power-of-two.py)
+- 245.[最短单词距离 III](vip/medium/245-shortest-word-distance-iii.py)
 - 342.[4 的幂](easy/342-power-of-four.py)
 - 373.[查找和最小的 K 对数字](medium/373-find-k-pairs-with-smallest-sums.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
@@ -993,3 +994,13 @@
 - 1116.[打印零与奇偶数](medium/1116-print-zero-even-odd.py)
 - 1195.[交替打印字符串](medium/1195-fizz-buzz-multithreaded.py)
 - 1226.[哲学家进餐](medium/1226-the-dining-philosophers.py)
+
+## 脑筋急转弯
+
+- 186.[翻转字符串里的单词 II](vip/medium/186-reverse-words-in-a-string-ii.py)
+- 453.[最小操作次数使数组元素相等](easy/453-minimum-moves-to-equal-array-elements.py)
+- 517.[超级洗衣机](hard/517-super-washing-machines.py)
+- 810.[黑板异或游戏](hard/810-chalkboard-xor-game.py)
+- 1033.[移动石子直到连续](easy/1033-moving-stones-until-consecutive.py)
+- 面试题 02.03.[删除中间节点](interview/02.03.delete-middle-node-lcci.py)
+- 319.[灯泡开关](medium/319-bulb-switcher.py)
