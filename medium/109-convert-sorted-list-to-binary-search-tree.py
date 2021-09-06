@@ -23,10 +23,32 @@ class TreeNode:
 
 
 '''
-思路：
+思路：分治
+将链表转为list，然后用分治法递归下降分解list
+
+时间复杂度：O(n)
+空间复杂度：O(n)
 '''
 
 
 class Solution:
     def sortedListToBST(self, head: ListNode) -> TreeNode:
-        pass
+        if not head:
+            return None
+        li = []
+        while head:
+            li.append(head.val)
+            head = head.next
+
+        def dc(start, end):
+            if start == end:
+                return TreeNode(li[start])
+            mid = (start + end) // 2
+            node = TreeNode(li[mid])
+            if mid > start:
+                node.left = dc(start, mid - 1)
+            if end > mid:
+                node.right = dc(mid + 1, end)
+            return node
+
+        return dc(0, len(li) - 1)
