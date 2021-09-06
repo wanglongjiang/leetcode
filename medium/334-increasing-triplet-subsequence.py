@@ -26,7 +26,7 @@
 提示：
 
 1 <= nums.length <= 10^5
--231 <= nums[i] <= 231 - 1
+-2^31 <= nums[i] <= 23^1 - 1
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/increasing-triplet-subsequence

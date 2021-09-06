@@ -23,7 +23,7 @@
 提示：
 
 1 <= nums.length <= 10^4
--109 <= nums[i] <= 109
+-10^9 <= nums[i] <= 10^9
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence

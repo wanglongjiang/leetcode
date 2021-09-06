@@ -49,8 +49,8 @@ minimumi 是开始第 i 个任务前需要达到的最低能量。
 
 提示：
 
-1 <= tasks.length <= 105
-1 <= actual​i <= minimumi <= 104
+1 <= tasks.length <= 10^5
+1 <= actual​i <= minimumi <= 10^4
 '''
 from typing import List
 '''

@@ -41,7 +41,7 @@ q.popFront();     // 返回 -1 -> [] （队列为空）
 
 提示：
 
-1 <= val <= 109
+1 <= val <= 10^9
 最多调用 1000 次 pushFront， pushMiddle， pushBack， popFront， popMiddle 和 popBack 。
 
 来源：力扣（LeetCode）

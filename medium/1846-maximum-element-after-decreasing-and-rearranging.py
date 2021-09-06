@@ -40,7 +40,7 @@ arr 中最大元素为 3 。
 提示：
 
 1 <= arr.length <= 10^5
-1 <= arr[i] <= 109
+1 <= arr[i] <= 10^9
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/maximum-element-after-decreasing-and-rearranging

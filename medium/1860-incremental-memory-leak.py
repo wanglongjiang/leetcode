@@ -33,7 +33,7 @@ memory1crash 和 memory2crash 分别是两个内存条最后剩余内存的位
 
 提示：
 
-0 <= memory1, memory2 <= 231 - 1
+0 <= memory1, memory2 <= 23^1 - 1
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/incremental-memory-leak

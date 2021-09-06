@@ -31,7 +31,7 @@
 m == matrix.length
 n == matrix[i].length
 1 <= m, n <= 200
-0 <= matrix[i][j] <= 231 - 1
+0 <= matrix[i][j] <= 23^1 - 1
  
 
 注意：本题与主站 329 题相同： https://leetcode-cn.com/problems/longest-increasing-path-in-a-matrix/

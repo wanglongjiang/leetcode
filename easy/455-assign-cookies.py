@@ -28,7 +28,7 @@
 
 1 <= g.length <= 3 * 10^4
 0 <= s.length <= 3 * 10^4
-1 <= g[i], s[j] <= 231 - 1
+1 <= g[i], s[j] <= 23^1 - 1
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/assign-cookies

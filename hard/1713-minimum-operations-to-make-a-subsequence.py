@@ -26,7 +26,7 @@
 提示：
 
 1 <= target.length, arr.length <= 10^5
-1 <= target[i], arr[i] <= 109
+1 <= target[i], arr[i] <= 10^9
 target 不包含任何重复元素。
 
 来源：力扣（LeetCode）

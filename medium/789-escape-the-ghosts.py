@@ -41,10 +41,10 @@
 
 1 <= ghosts.length <= 100
 ghosts[i].length == 2
--104 <= xi, yi <= 104
+-10^4 <= xi, yi <= 10^4
 同一位置可能有 多个阻碍者 。
 target.length == 2
--104 <= xtarget, ytarget <= 104
+-10^4 <= xtarget, ytarget <= 10^4
 '''
 from typing import List
 '''

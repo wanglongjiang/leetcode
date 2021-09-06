@@ -34,9 +34,9 @@
 
 0 <= firstList.length, secondList.length <= 1000
 firstList.length + secondList.length >= 1
-0 <= starti < endi <= 109
+0 <= starti < endi <= 10^9
 endi < starti+1
-0 <= startj < endj <= 109
+0 <= startj < endj <= 10^9
 endj < startj+1
 '''
 from typing import List

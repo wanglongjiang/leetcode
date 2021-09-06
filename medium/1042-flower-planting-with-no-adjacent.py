@@ -31,7 +31,7 @@
 
 提示：
 
-1 <= n <= 104
+1 <= n <= 10^4
 0 <= paths.length <= 2 * 104
 paths[i].length == 2
 1 <= xi, yi <= n
