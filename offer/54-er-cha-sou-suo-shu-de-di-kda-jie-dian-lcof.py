@@ -44,12 +44,14 @@ class TreeNode:
 '''
 思路：DFS
 先右子树，
-> 如果k>右子树，则k-=右子树
-> 如果k<=右子树，已经找到了，不需要继续遍历，返回
+> 如果k>右子树节点数，则k-=右子树
+> 如果k<=右子树节点数，已经找到了，不需要继续遍历，返回
+
 然后本节点
-> 如果k>1，k-=1
-> 如果k==1, 当前节点即为结果，返回
-然后遍历左子树
+> k-=1
+> 如果k==0, 当前节点即为结果，返回
+
+最后遍历左子树，返回当前节点为根的树的节点数
 
 时间复杂度：O(k)
 空间复杂度：O(h)
@@ -65,21 +67,15 @@ class Solution:
             rightSize, leftSize = 0, 0
             if node.right:
                 rightSize = dfs(node.right, k)
-                if k <= rightSize:
+                k -= rightSize  # 减去右子树
+                if k <= 0:
                     return rightSize
-                else:
-                    k -= rightSize
-            if k > 1:
-                k -= 1
-            else:
+            k -= 1  # 减去当前节点
+            if k == 0:  # 如果k变成0，当前节点就是第k大的节点
                 ans = node.val
                 return rightSize + 1
             if node.left:
                 leftSize = dfs(node.left, k)
-                if k <= leftSize:
-                    return leftSize
-                else:
-                    k -= leftSize
             return rightSize + 1 + leftSize
 
         dfs(root, k)
@@ -110,4 +106,12 @@ def fromList(li: List[int]):
 
 null = None
 s = Solution()
+print(
+    s.kthLargest(
+        fromList([
+            41, 37, 44, 24, 39, 42, 48, 1, 35, 38, 40, null, 43, 46, 49, 0, 2, 30, 36, null, null, null, null, null, null, 45, 47, null, null, null, null, null,
+            4, 29, 32, null, null, null, null, null, null, 3, 9, 26, null, 31, 34, null, null, 7, 11, 25, 27, null, null, 33, null, 6, 8, 10, 16, null, null,
+            null, 28, null, null, 5, null, null, null, null, null, 15, 19, null, null, null, null, 12, null, 18, 20, null, 13, 17, null, null, 22, null, 14,
+            null, null, 21, 23
+        ]), 25))
 print(s.kthLargest(fromList([5, 3, 6, 2, 4, null, null, 1]), 3))

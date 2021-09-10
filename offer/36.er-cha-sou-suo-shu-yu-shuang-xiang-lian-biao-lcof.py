@@ -46,6 +46,8 @@ class Node:
 
 class Solution:
     def treeToDoublyList(self, root: 'Node') -> 'Node':
+        if not root:
+            return root
         if not root.left and not root.right:  # 没有子节点，将前后驱指向自身，返回
             root.left = root
             root.right = root
