@@ -29,8 +29,6 @@ class Solution:
                 if s1 > s2:
                     strs[j], strs[j - 1] = strs[j - 1], strs[j]
         ans = ''.join(strs)
-        if len(ans) > 1 and ans[0] == '0':
-            ans = '0'
         return ans
 
 
