@@ -11,27 +11,26 @@
 '''
 from typing import List
 '''
-思路：能重塑的前提是原矩阵元素数>=新矩阵的元素数，满足条件后，依次输出每行
+思路：能重塑的前提是原矩阵元素数==新矩阵的元素数，满足条件后，依次输出每行
 '''
 
 
 class Solution:
-    def matrixReshape(self, nums: List[List[int]], r: int,
-                      c: int) -> List[List[int]]:
+    def matrixReshape(self, nums: List[List[int]], r: int, c: int) -> List[List[int]]:
         oldRow = len(nums)
         oldCol = len(nums[0])
-        if r * c > oldRow * oldCol:
+        if r * c != oldRow * oldCol:
             return nums
         ansMatrix = []
         for i in range(r):
             ansMatrix.append([])
             for j in range(c):
                 totoalIndex = i * c + j
-                ansMatrix[i].append(nums[totoalIndex // oldCol][totoalIndex %
-                                                                oldCol])
+                ansMatrix[i].append(nums[totoalIndex // oldCol][totoalIndex % oldCol])
         return ansMatrix
 
 
 s = Solution()
+print(s.matrixReshape([[1, 2]], 1, 1))
 print(s.matrixReshape([[1, 2], [3, 4]], 2, 4))
 print(s.matrixReshape([[1, 2], [3, 4]], 1, 4))
