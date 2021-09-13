@@ -18,7 +18,7 @@ class TreeNode:
 
 
 '''
-思路：递归遍历所有的分支，记录最低高度、最高高度。二者之差如果大于1则返回False
+思路：DFS递归遍历所有的分支，计算左右子树的高度。二者之差如果大于1则返回False
 时间复杂度：O(n)
 空间复杂度：O(logn)
 '''
@@ -26,32 +26,23 @@ class TreeNode:
 
 class Solution:
     def isBalanced(self, root: TreeNode) -> bool:
-        minHeight, maxHeight = float('inf'), float('-inf')
+        ans = True
 
         def dfs(node, h):
-            nonlocal minHeight
-            nonlocal maxHeight
+            nonlocal ans
+            leftH, rightH = h, h
             if node.left:
-                if not dfs(node.left, h + 1):
-                    return False
-            else:
-                minHeight = min(h, minHeight)
-                maxHeight = max(h, maxHeight)
-                if maxHeight - minHeight > 1:
-                    return False
+                leftH = dfs(node.left, h + 1)
             if node.right:
-                if not dfs(node.right, h + 1):
-                    return False
-            else:
-                minHeight = min(h, minHeight)
-                maxHeight = max(h, maxHeight)
-                if maxHeight - minHeight > 1:
-                    return False
-            return True
+                rightH = dfs(node.right, h + 1)
+            if abs(leftH - rightH) > 1:
+                ans = False
+            return max(leftH, rightH)
 
         if not root:
             return True
-        return dfs(root, 1)
+        dfs(root, 1)
+        return ans
 
 
 # list数据按照bfs遍历得到
