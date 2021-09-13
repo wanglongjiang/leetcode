@@ -25,6 +25,8 @@ class TreeNode:
 
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
+        if not root:
+            return 0
         self.maxDep = 0
 
         def recursion(node: TreeNode, depth: int):
