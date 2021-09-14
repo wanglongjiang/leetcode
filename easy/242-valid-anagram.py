@@ -22,4 +22,4 @@ class Solution:
             counter[i] -= 1
             if counter[i] < 0:
                 return False
-        return True
+        return sum(counter) == 0
