@@ -45,6 +45,8 @@ class Solution:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, newColor: int) -> List[List[int]]:
         m, n = len(image), len(image[0])
         oldColor = image[sr][sc]
+        if newColor == oldColor:  # 新旧颜色相同，不需要渲染
+            return image
         image[sr][sc] = newColor
         q, nextq = [], []
         q.append((sr, sc))
@@ -57,3 +59,7 @@ class Solution:
             if not q:
                 q, nextq = nextq, q
         return image
+
+
+s = Solution()
+print(s.floodFill([[0, 0, 0], [0, 1, 1]], 1, 1, 1))
