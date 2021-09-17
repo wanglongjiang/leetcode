@@ -29,6 +29,8 @@ from typing import List
 
 class Solution:
     def constructArr(self, a: List[int]) -> List[int]:
+        if not a:
+            return []
         n = len(a)
         prefix, postfix, ans = [0] * n, [0] * n, [0] * n
         prefix[0] = a[0]
