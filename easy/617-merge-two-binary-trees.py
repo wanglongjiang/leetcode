@@ -26,6 +26,10 @@ class TreeNode:
 
 class Solution:
     def mergeTrees(self, root1: TreeNode, root2: TreeNode) -> TreeNode:
+        if not root1:
+            return root2
+        if not root2:
+            return root1
         root1.val += root2.val  # 直接修改root1返回
         if root1.left and root2.left:
             root1.left = self.mergeTrees(root1.left, root2.left)
