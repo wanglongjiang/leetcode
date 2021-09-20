@@ -44,6 +44,8 @@ class Solution:
         self.step = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        if not matrix:
+            return []
         direction = 0  # 初始方向为向左
         beginPoint = 0, 0  # 开始点
         endPoint = len(matrix) - 1, len(matrix[0]) - 1  # 最大坐标
