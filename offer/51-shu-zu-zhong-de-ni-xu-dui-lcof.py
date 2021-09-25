@@ -18,10 +18,10 @@
 from typing import List
 from sortedcontainers import SortedList
 '''
-思路：红黑树
-设一个sortedList（红黑树），从右至左遍历数组，对于当前元素nums[i]
+思路：有序集合
+设一个sortedList（有序集合），从右至左遍历数组，对于当前元素nums[i]
 > 查询sortedList中<nums[i]的元素个数，所有这些元素可以与nums[i]构成逆序对，个数累计到结果中
-> 让后将nums[i]插入sortedList（红黑树）中
+> 让后将nums[i]插入sortedList（有序集合）中
 
 时间复杂度：O(nlogn)
 空间复杂度：O(n)
