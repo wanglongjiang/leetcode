@@ -38,9 +38,10 @@ class Solution:
         for i in range(1, n + 1):
             for j in range(1, i):
                 dp[i] = max(dp[i], dp[j] * (i - j), j * (i - j))
-        return dp[n]
+        return dp[n] % 1000000007
 
 
 s = Solution()
+print(s.cuttingRope(120))
 print(s.cuttingRope(2))
 print(s.cuttingRope(10))
