@@ -1,7 +1,7 @@
 '''
-实现一个魔法字典
-设计一个使用单词列表进行初始化的数据结构，单词列表中的单词 互不相同 。 如果给出一个单词，
-请判定能否只将这个单词中一个字母换成另一个字母，使得所形成的新单词存在于你构建的字典中。
+剑指 Offer II 064. 神奇的字典
+设计一个使用单词列表进行初始化的数据结构，单词列表中的单词 互不相同 。
+如果给出一个单词，请判定能否只将这个单词中一个字母换成另一个字母，使得所形成的新单词存在于已构建的神奇字典中。
 
 实现 MagicDictionary 类：
 
@@ -14,8 +14,8 @@ bool search(String searchWord) 给定一个字符串 searchWord ，判定能否�
 示例：
 
 输入
-["MagicDictionary", "buildDict", "search", "search", "search", "search"]
-[[], [["hello", "leetcode"]], ["hello"], ["hhllo"], ["hell"], ["leetcoded"]]
+inputs = ["MagicDictionary", "buildDict", "search", "search", "search", "search"]
+inputs = [[], [["hello", "leetcode"]], ["hello"], ["hhllo"], ["hell"], ["leetcoded"]]
 输出
 [null, null, false, true, false, false]
 
@@ -38,6 +38,13 @@ dictionary 中的所有字符串 互不相同
 searchWord 仅由小写英文字母组成
 buildDict 仅在 search 之前调用一次
 最多调用 100 次 search
+ 
+
+注意：本题与主站 676 题相同： https://leetcode-cn.com/problems/implement-magic-dictionary/
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/US1pGT
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 '''
 from typing import List
 from collections import defaultdict
@@ -69,3 +76,11 @@ class MagicDictionary:
                 if searchWord not in self.orig or self.dicts[i][wd] > 1:  # searchWord在原始单词中不存在，或者有多个原始单词能映射
                     return True
         return False
+
+
+s = MagicDictionary()
+s.buildDict(["hello", "hallo", "leetcode"])
+print(s.search("hello"))
+print(s.search("hhllo"))
+print(s.search("hell"))
+print(s.search("leetcoded"))
