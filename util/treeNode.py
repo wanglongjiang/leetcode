@@ -23,7 +23,7 @@ def fromList(li: List[int]):
             queue.append(node.left)
         i += 1
         if i < len(li):
-            if li[i]:
+            if li[i] is not None:
                 node.right = TreeNode(val=li[i])
                 queue.append(node.right)
             i += 1
