@@ -53,5 +53,7 @@ class Solution:
                 count += 1
                 if count % k == 0 and i > 0:
                     arr.append('-')
+        if arr[-1] == '-':
+            del arr[-1]
         arr.reverse()
         return ''.join(arr)
