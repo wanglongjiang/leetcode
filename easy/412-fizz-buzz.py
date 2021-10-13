@@ -39,6 +39,7 @@ from typing import List
 '''
 思路：数学
 遍历从1到n的数值，按照题目要求输出字符串
+被15整除、被5整除、被3整除按照题目输出字符串
 
 时间复杂度：O(n)
 '''
@@ -53,7 +54,7 @@ class Solution:
             elif i % 3 == 0:
                 ans[i - 1] = "Fizz"
             elif i % 5 == 0:
-                ans[i - 1] = "FizzBuzz"
+                ans[i - 1] = "Buzz"
             else:
                 ans[i - 1] = str(i)
         return ans
