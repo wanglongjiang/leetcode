@@ -74,5 +74,11 @@ class MovingAverage:
         if self.count > self.size:
             self.left = self.left.next
             self.total -= self.left.val
-            self.count -= self.left.val
+            self.count -= 1
         return self.total / self.count
+
+
+s = MovingAverage(2)
+print(s.next(-50))
+print(s.next(100))
+print(s.next(50))
