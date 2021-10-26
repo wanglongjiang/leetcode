@@ -27,7 +27,7 @@ class TreeNode:
 1、层遍历所有节点，加入二维数组。
 2、从最下面一层节点开始计算其最大路径和，放入哈希表中。
     如果是叶子节点，pathSum[node] = node.val
-    如果不是叶子节点，pathSum[node] = node.val+min(0,pathSum[node.left])+min(0,pathSum[node.right])
+    如果不是叶子节点，pathSum[node] = max(leftsum, rightsum) + node.val
 所有的节点的最大路径和中的最大值即为返回值
 时间复杂度：O(n)，需要遍历2次节点
 空间复杂度：O(n)，遍历和动态规划哈希表都需要O(n)空间
@@ -55,18 +55,17 @@ class Solution:
                 queue.append(node.right)
         # 从最下面一层开始，依次计算所有节点的最大路径和
         pathSums = {}
-        maxSum = 0
+        maxSum = float('-inf')
         while nodes:
             layer = nodes.pop()
             for node in layer:
-                pathSum = 0
+                leftsum, rightsum = 0, 0
                 if node.left and pathSums[id(node.left)] > 0:  # 只有大于0才合计
-                    pathSum += pathSums[id(node.left)]
+                    leftsum = pathSums[id(node.left)]
                 if node.right and pathSums[id(node.right)] > 0:
-                    pathSum += pathSums[id(node.right)]
-                pathSum += node.val
-                pathSums[id(node)] = pathSum
-                maxSum = max(maxSum, pathSum)
+                    rightsum = pathSums[id(node.right)]
+                pathSums[id(node)] = max(leftsum, rightsum) + node.val
+                maxSum = max(maxSum, leftsum + rightsum + node.val)
         return maxSum
 
 
@@ -95,3 +94,5 @@ s = Solution()
 null = None
 print(s.maxPathSum(fromList([1, 2, 3])))
 print(s.maxPathSum(fromList([-10, 9, 20, null, null, 15, 7])))
+print(s.maxPathSum(TreeNode(-3)))
+print(s.maxPathSum(fromList([5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1])))
