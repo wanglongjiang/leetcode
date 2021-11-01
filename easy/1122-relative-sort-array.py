@@ -47,7 +47,7 @@ class Solution:
             for i in range(counter[num]):
                 ans.append(num)
             del counter[num]
-        for num, count in counter.items():
+        for num, count in sorted(counter.items()):
             for i in range(count):
                 ans.append(num)
         return ans
