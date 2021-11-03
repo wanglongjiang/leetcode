@@ -97,9 +97,13 @@ class MyCircularDeque:
         return True
 
     def getFront(self) -> int:
+        if self.isEmpty():
+            return -1
         return self.data[self.front]
 
     def getRear(self) -> int:
+        if self.isEmpty():
+            return -1
         return self.data[self.last - 1]  # last指向下一个空位，所以上一个为队尾元素
 
     def isEmpty(self) -> bool:
@@ -107,3 +111,16 @@ class MyCircularDeque:
 
     def isFull(self) -> bool:
         return self.size == self.limit
+
+
+s = MyCircularDeque(4)
+s.insertFront(9)
+s.deleteLast()
+print(s.getRear())
+print(s.getFront())
+'''
+["MyCircularDeque","insertFront","deleteLast","getRear","getFront","getFront","deleteFront","insertFront","insertLast","insertFront","getFront","insertFront"]
+[[4],[9],[],[],[],[],[],[6],[5],[9],[],[6]]
+
+[null,true,true,-1,-1,-1,false,true,true,true,9,true] # TODO
+'''
