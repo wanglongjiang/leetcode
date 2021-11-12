@@ -22,10 +22,7 @@ n = 10, 我选择了8.
 给定 n ≥ 1，计算你至少需要拥有多少现金才能确保你能赢得这个游戏。
 '''
 '''
-思路：二分查找
-对方采用二分查找策略，我方可以确保最大收益是每次都落在二分查找的高区，直至无法隐藏
-
-TODO 二分查找不行啊
+思路：动态规划
 
 时间复杂度：O(logn)
 空间复杂度：O(1)
@@ -34,17 +31,14 @@ TODO 二分查找不行啊
 
 class Solution:
     def getMoneyAmount(self, n: int) -> int:
-        hi, lo = n, 1
-        amount = 0
-        while lo < hi:
-            if hi - lo == 1:
-                return amount + lo
-            if hi - lo == 2:
-                return amount + (hi + lo) // 2
-            mid = (hi + lo) // 2
-            amount += mid
-            lo = mid
-        return amount
+        dp = [[0] * (n + 1) for _ in range(n + 1)]
+        for j in range(2, n + 1):
+            for i in range(j - 1, -1, -1):
+                global_min = float('inf')
+                for k in range(i + 1, j):
+                    global_min = min(global_min, k + max(dp[i][k - 1], dp[k + 1][j]))
+                dp[i][j] = i if i + 1 == j else global_min  # 当i == j - 1时，dp[i][j]即为i j中的较小者i
+        return dp[1][n]
 
 
 s = Solution()
