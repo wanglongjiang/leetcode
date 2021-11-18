@@ -68,6 +68,9 @@ class TreeNode:
 
 class Solution:
     def findTilt(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+
         def dfs(node):
             left, right, tilt = 0, 0, 0
             if node.left:
