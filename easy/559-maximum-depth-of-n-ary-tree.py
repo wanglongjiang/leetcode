@@ -51,6 +51,8 @@ DFS遍历树，中间记录树的高度并更新最大高度
 
 class Solution:
     def maxDepth(self, root: 'Node') -> int:
+        if not root:
+            return 0
         self.ans = 0
 
         def dfs(node, depth):
