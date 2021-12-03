@@ -57,9 +57,19 @@ class Solution:
                     k -= 1
                 else:
                     if k % 2:
-                        if i > 0 and nums[i] < nums[i - 1]:
+                        if i > 0 and nums[i] > nums[i - 1]:
                             nums[i - 1] = -nums[i - 1]
                         else:
                             nums[i] = -nums[i]
                     break
+            else:
+                break
+        else:  # 取反次数没有用尽，在数组中找到最小的值进行取反。只有数组全部为负才会没有用尽，最后一个元素的绝对值最小，将其处理即可。
+            if k % 2:
+                nums[-1] = -nums[-1]
         return sum(nums)
+
+
+s = Solution()
+print(s.largestSumAfterKNegations([-2, 5, 0, 2, -2], 3))
+print(s.largestSumAfterKNegations([-4, -2, -3], 4))
