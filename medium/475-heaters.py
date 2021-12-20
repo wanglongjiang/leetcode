@@ -34,8 +34,9 @@
 from typing import List
 import bisect
 '''
-思路：二分查找
-遍历所有热水器，将任意2个热水器之间的距离除以2即为这2个热水器的最小半径，
+思路：排序 二分查找
+首先，对所有房屋、热水器按照位置排序。
+然后，遍历所有热水器，将任意2个热水器之间的距离除以2即为这2个热水器的最大半径，
 然后在半径范围内查找最接近边界的房屋，边界处房屋距离热水器的距离即为该热水器的最小半径。
 更详细的算法说明见代码注释
 
@@ -46,6 +47,8 @@ import bisect
 
 class Solution:
     def findRadius(self, houses: List[int], heaters: List[int]) -> int:
+        heaters.sort()
+        houses.sort()
         m, n = len(heaters), len(houses)
         if m == 1:
             return max(abs(heaters[0] - houses[0]), abs(heaters[0] - houses[-1]))
@@ -68,6 +71,9 @@ class Solution:
 
 
 s = Solution()
+print(
+    s.findRadius([282475249, 622650073, 984943658, 144108930, 470211272, 101027544, 457850878, 458777923],
+                 [823564440, 115438165, 784484492, 74243042, 114807987, 137522503, 441282327, 16531729, 823378840, 143542612]) == 161834419)
 print(s.findRadius(houses=[1, 2, 3], heaters=[2]))
 print(s.findRadius(houses=[1, 2, 3, 4], heaters=[1, 4]))
 print(s.findRadius(houses=[1, 5], heaters=[2]))
