@@ -6,5 +6,5 @@
         "{column_limit: 160}"
     ],
     "python.linting.flake8Args": ["--max-line-length=160"],
-    "python.linting.pylintEnabled": false
+    "python.linting.enabled": true
 }
