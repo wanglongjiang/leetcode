@@ -617,6 +617,7 @@
 - 934.[最短的桥](medium/934-shortest-bridge.py)
 - 958.[二叉树的完全性检验](medium/958-check-completeness-of-a-binary-tree.py)
 - 1030.[距离顺序排列矩阵单元格](easy/1030-matrix-cells-in-distance-order.py)
+- 1034.[边界着色](medium/1034-coloring-a-border.py)
 - 1091.[二进制矩阵中的最短路径](medium/1091-shortest-path-in-binary-matrix.py)
 - 1129.[颜色交替的最短路径](medium/1129-shortest-path-with-alternating-colors.py)
 - 1161.[最大层内元素和](medium/1161-maximum-level-sum-of-a-binary-tree.py)
