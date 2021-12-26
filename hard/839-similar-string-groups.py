@@ -75,7 +75,7 @@ class Solution:
                     cnt += 1
                     if cnt > 2:
                         return False
-            return cnt == 2
+            return cnt == 2 or cnt == 0
 
         # 判断任意2个字符串是否相似，相似的字符串进入并查集
         for i in range(n):
