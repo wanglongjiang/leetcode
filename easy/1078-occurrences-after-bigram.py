@@ -44,7 +44,9 @@ class Solution:
         ans = []
         while start < n:
             index = text.find(substr, start)
-            if index >= 0 and index < n:
+            if index > 0 and text[index - 1] != ' ':  # first是某个单词的后缀，这种情况找到的不是合法
+                start += 1
+            elif index >= 0 and index < n:
                 j = index + len(substr)
                 while j < n and text[j] != ' ':
                     j += 1
@@ -57,4 +59,5 @@ class Solution:
 
 
 s = Solution()
+print(s.findOcurrences("alice is aa good girl she is a good student", "a", "good"))
 print(s.findOcurrences(text="alice is a good girl she is a good student", first="a", second="good"))
