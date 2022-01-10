@@ -45,11 +45,13 @@ class Solution:
                 return False
             return backtrack(i + len(t), target, b + target)
 
-        for i in range(2, n // 3 * 2):  # 开始的2个数字长度最多占到2/3
-            if num[i] == '0':  # 剪枝，数字不能以0开头
+        for i in range(2, n // 3 * 2 + 1):  # 开始的2个数字长度最多占到2/3
+            if num[i] == '0' and i != 2:  # 剪枝，数字不能以0开头
                 continue
             for j in range(1, i):  # 遍历长度为i的子串中所有分割点
-                if num[j] == '0':  # 剪枝，数字不能以0开头
+                if num[j] == '0' and i - j > 1:  # 剪枝，数字不能以0开头
+                    continue
+                if num[0] == '0' and j > 1:  # 剪枝，数字不能以0开头
                     continue
                 a, b = num[:j], num[j:i]
                 b = int(b)
@@ -59,5 +61,9 @@ class Solution:
 
 
 s = Solution()
+print(s.isAdditiveNumber("0235813"))
+print(s.isAdditiveNumber("000"))
+print(s.isAdditiveNumber("101"))
+print(s.isAdditiveNumber("123"))
 print(s.isAdditiveNumber("112358"))
 print(s.isAdditiveNumber("199100199"))
