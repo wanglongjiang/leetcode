@@ -47,13 +47,17 @@ class Solution:
     def dominantIndex(self, nums: List[int]) -> int:
         if len(nums) == 1:
             return 0
-        maxIdx1, maxIdx2 = 0, 0
-        for i, num in enumerate(nums):
-            if num > nums[maxIdx1]:
+        maxIdx1, maxIdx2 = (0, 1) if nums[0] >= nums[1] else (1, 0)
+        for i in range(2, len(nums)):
+            if nums[i] > nums[maxIdx1]:
                 maxIdx2 = maxIdx1
                 maxIdx1 = i
-            elif num > nums[maxIdx2]:
+            elif nums[i] > nums[maxIdx2]:
                 maxIdx2 = i
         if nums[maxIdx2] * 2 <= nums[maxIdx1]:
             return maxIdx1
         return -1
+
+
+s = Solution()
+print(s.dominantIndex([1, 0]))
