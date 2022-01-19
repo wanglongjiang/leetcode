@@ -18,12 +18,22 @@ class Solution:
         left, right, n = 0, 0, len(nums)
         hashset = set()
         while right < n:
-            if len(hashset) < k:
+            if len(hashset) <= k:
                 if nums[right] in hashset:
                     return True
                 hashset.add(nums[right])
                 right += 1
             else:
                 hashset.remove(nums[left])
-                left -= 1
+                left += 1
+                if nums[right] in hashset:
+                    return True
+                hashset.add(nums[right])
+                right += 1
         return False
+
+
+s = Solution()
+print(s.containsNearbyDuplicate(nums=[1, 2, 3, 1], k=3))
+print(s.containsNearbyDuplicate(nums=[1, 0, 1, 1], k=1))
+print(s.containsNearbyDuplicate(nums=[1, 2, 3, 1, 2, 3], k=2))
