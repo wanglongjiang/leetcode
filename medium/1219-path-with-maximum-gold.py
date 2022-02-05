@@ -43,43 +43,38 @@
 '''
 from typing import List
 '''
-思路：DFS
-从任意节点出发，遍历所有路径，找到最大的2个路径和（因为不能重复走，所以只能选择最大的2个路径和）
+思路：官方回溯
+
 时间复杂度：O(m*n*m*n)
 空间复杂度：O(m*n)
-TODO
 '''
 
 
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         m, n = len(grid), len(grid[0])
-        directs = [(-1, 0), (0, -1), (1, 0), (0, 1)]
-        maxGold = 0
+        ans = 0
 
-        def dfs(i, j, visited):
-            nonlocal maxGold
-            visited[i][j] = True
-            path1 = 0
-            path2 = 0
-            for a, b in directs:
-                x, y = a + i, b + j
-                if 0 <= x < m and 0 <= y < n and grid[x][y] > 0 and not visited[x][y]:
-                    g = dfs(x, y, visited)
-                    if g > path1:
-                        path2 = path1
-                        path1 = g
-                    elif g > path2:
-                        path2 = g
-            maxGold = max(maxGold, grid[i][j] + path1 + path2)
-            return grid[i][j] + path1
+        def dfs(x: int, y: int, gold: int) -> None:
+            gold += grid[x][y]
+            nonlocal ans
+            ans = max(ans, gold)
+
+            rec = grid[x][y]
+            grid[x][y] = 0
+
+            for nx, ny in ((x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)):
+                if 0 <= nx < m and 0 <= ny < n and grid[nx][ny] > 0:
+                    dfs(nx, ny, gold)
+
+            grid[x][y] = rec
 
         for i in range(m):
             for j in range(n):
-                visited = [[False] * n for _ in range(m)]
-                if grid[i][j]:
-                    dfs(i, j, visited)
-        return maxGold
+                if grid[i][j] != 0:
+                    dfs(i, j, 0)
+
+        return ans
 
 
 s = Solution()
