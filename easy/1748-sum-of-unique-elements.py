@@ -6,8 +6,11 @@
 请你返回 nums 中唯一元素的 和 。
 '''
 from typing import List
+from collections import Counter
 '''
-思路：用哈希表存储所有元素
+思路：哈希
+用哈希表对元素进行计数，然后累计只出现一次的元素
+
 时间复杂度：O(n)
 空间复杂度：O(n)
 '''
@@ -15,10 +18,8 @@ from typing import List
 
 class Solution:
     def sumOfUnique(self, nums: List[int]) -> int:
-        allItem = set()
         total = 0
-        for num in nums:
-            if num not in allItem:
-                allItem.add(num)
+        for num, count in Counter(nums).items():
+            if count == 1:
                 total += num
-        return num
+        return total
