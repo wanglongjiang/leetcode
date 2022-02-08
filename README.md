@@ -399,6 +399,7 @@
 - 1496.[判断路径是否相交](easy/1496-path-crossing.py)
 - 1706.[球会落何处](medium/1706-where-will-the-ball-fall.py)
 - 1725.[可以形成最大正方形的矩形数目](easy/1725-number-of-rectangles-that-can-form-the-largest-square.py)
+- 1779.[找到最近的有相同 X 或 Y 坐标的点](easy/1779-find-nearest-point-that-has-the-same-x-or-y-coordinate.py)
 - 1860.[增长的内存泄露](medium/1860-incremental-memory-leak.py)
 - 2120.[执行所有后缀指令](medium/2120-execution-of-all-suffix-instructions-staying-in-a-grid.py)
 - LCP 19.[秋叶收藏集](lcp/19-UlBDOe.py)
