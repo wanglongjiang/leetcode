@@ -53,6 +53,8 @@ class Node:
 
 class Solution:
     def preorder(self, root: 'Node') -> List[int]:
+        if not root:
+            return []
         ans = []
 
         def dfs(node):
@@ -60,4 +62,5 @@ class Solution:
             for c in node.children:
                 dfs(c)
 
+        dfs(root)
         return ans
