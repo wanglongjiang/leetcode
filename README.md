@@ -135,6 +135,7 @@
 - 883.[三维形体投影面积](easy/883-projection-area-of-3d-shapes.py)
 - 892.[三维形体的表面积](easy/892-surface-area-of-3d-shapes.py)
 - 944.[删列造序](easy/944-delete-columns-to-make-sorted.py)
+- 1672.[最富有客户的资产总量](easy/1672-richest-customer-wealth.py)
 
 ## 哈希 hash
 
@@ -716,6 +717,7 @@
 - 1763.[最长的美好子字符串](easy/1763-longest-nice-substring.py)
 - 1838.[最高频元素的频数](medium/1838-frequency-of-the-most-frequent-element.py)
 - 1852.[每个子数组的数字种类数](vip/medium/1852-distinct-numbers-in-each-subarray.py)
+- 1984.[学生分数的最小差值](easy/1984-minimum-difference-between-highest-and-lowest-of-k-scores.py)
 - 2134.[最少交换次数来组合所有的 1 II](medium/2134-minimum-swaps-to-group-all-1s-together-ii.py)
 - 面试题 16.17.[连续数列](interview/16.17.contiguous-sequence-lcci.py)
 - 剑指 Offer 48.[最长不含重复字符的子字符串](offer/48-zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof.py)
