@@ -135,6 +135,7 @@
 - 883.[三维形体投影面积](easy/883-projection-area-of-3d-shapes.py)
 - 892.[三维形体的表面积](easy/892-surface-area-of-3d-shapes.py)
 - 944.[删列造序](easy/944-delete-columns-to-make-sorted.py)
+- 1380.[矩阵中的幸运数](easy/1380-lucky-numbers-in-a-matrix.py)
 - 1672.[最富有客户的资产总量](easy/1672-richest-customer-wealth.py)
 
 ## 哈希 hash
@@ -404,6 +405,7 @@
 - 1491.[去掉最低工资和最高工资后的工资平均值](easy/1491-average-salary-excluding-the-minimum-and-maximum-salary.py)
 - 1496.[判断路径是否相交](easy/1496-path-crossing.py)
 - 1706.[球会落何处](medium/1706-where-will-the-ball-fall.py)
+- 1719.[重构一棵树的方案数](hard/1719-number-of-ways-to-reconstruct-a-tree.py)
 - 1725.[可以形成最大正方形的矩形数目](easy/1725-number-of-rectangles-that-can-form-the-largest-square.py)
 - 1779.[找到最近的有相同 X 或 Y 坐标的点](easy/1779-find-nearest-point-that-has-the-same-x-or-y-coordinate.py)
 - 1860.[增长的内存泄露](medium/1860-incremental-memory-leak.py)
@@ -559,6 +561,8 @@
 - 810.[黑板异或游戏](hard/810-chalkboard-xor-game.py)
 - 835.[图像重叠](medium/835-image-overlap.py)
 - 868.[二进制间距](easy/868-binary-gap.py)
+- 1290.[二进制链表转整数](easy/1290-convert-binary-number-in-a-linked-list-to-integer.py)
+- 1356.[根据数字二进制下 1 的数目排序](easy/1356-sort-integers-by-the-number-of-1-bits.py)
 - 1386.[安排电影院座位](medium/1386-cinema-seat-allocation.py)
 - 1442.[形成两个异或相等数组的三元组数目](medium/1442-count-triplets-that-can-form-two-arrays-of-equal-xor.py)
 - 1457.[二叉树中的伪回文路径](medium/1457-pseudo-palindromic-paths-in-a-binary-tree.py)
@@ -775,6 +779,7 @@
 - 650.[只有两个键的键盘](medium/650-2-keys-keyboard.py)
 - 664.[奇怪的打印机](hard/664-strange-printer.py)
 - 673.[最长递增子序列的个数](medium/673-number-of-longest-increasing-subsequence.py)
+- 688.[骑士在棋盘上的概率](medium/688-knight-probability-in-chessboard.py)
 - 718.[最长重复子数组](medium/718-maximum-length-of-repeated-subarray.py)
 - 823.[带因子的二叉树](medium/823-binary-trees-with-factors.py)
 - 894.[所有可能的满二叉树](medium/894-all-possible-full-binary-trees.py)
