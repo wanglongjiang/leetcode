@@ -21,7 +21,7 @@
 
 '''
 '''
-思路：数学
+思路：模拟
 按照复数相乘的数学公式计数出结果
 (rn1+in1)*(rn2+in2) = rn1*rn2+(rn1*in2+rn2*in1)i+in1*in2*i^2= rn1*rn2-in1*in2 + (rn1*in2+rn2*in1)i
 
