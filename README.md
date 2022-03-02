@@ -105,6 +105,7 @@
 - 1744.[你能在你最喜欢的那天吃到你最喜欢的糖果吗？](medium/1744-can-you-eat-your-favorite-candy-on-your-favorite-day.py)
 - 1822.[数组元素积的符号](easy/1882-sign-of-the-product-of-an-array.py)
 - 2109.[向字符串添加空格](medium/2109-adding-spaces-to-a-string.py)
+- 2161.[根据给定数字划分数组](medium/2161-partition-array-according-to-given-pivot.py)
 - 面试题 05.08.[绘制直线](interview/05.08.draw-line-lcci.py)
 - 面试题 10.01.[合并排序的数组](interview/10.01.sorted-merge-lcci.py)
 - 面试题 16.20.[T9 键盘](interview/16.20.t9-lcci.py)
@@ -366,6 +367,7 @@
 - 130.[被围绕的区域](medium/130-surrounded-regions.py)
 - 212.[单词搜索 II](hard/212-word-search-ii.py)
 - 743.[网络延迟时间](medium/743-network-delay-time.py)
+- 417.[太平洋大西洋水流问题](medium/417-pacific-atlantic-water-flow.py)
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 - 785.[判断二分图](medium/785-is-graph-bipartite.py)
 - 841.[钥匙和房间](medium/841-keys-and-rooms.py)
@@ -411,6 +413,7 @@
 - 1779.[找到最近的有相同 X 或 Y 坐标的点](easy/1779-find-nearest-point-that-has-the-same-x-or-y-coordinate.py)
 - 1860.[增长的内存泄露](medium/1860-incremental-memory-leak.py)
 - 2120.[执行所有后缀指令](medium/2120-execution-of-all-suffix-instructions-staying-in-a-grid.py)
+- 2181.[合并零之间的节点](medium/2181-merge-nodes-in-between-zeros.py)
 - LCP 19.[秋叶收藏集](lcp/19-UlBDOe.py)
 
 ## 二分查找 binary search
@@ -505,6 +508,7 @@
 - 373.[查找和最小的 K 对数字](medium/373-find-k-pairs-with-smallest-sums.py)
 - 421.[数组中两个数的最大异或值](medium/421-maximum-xor-of-two-numbers-in-an-array.py)
 - 435.[无重叠区间](medium/435-non-overlapping-intervals.py)
+- 564.[寻找最近的回文数](hard/564-find-the-closest-palindrome.py)
 - 628.[三个数的最大乘积](easy/628-maximum-product-of-three-numbers.py)
 - 649.[Dota2 参议院](medium/649-dota2-senate.py)
 - 665.[非递减数列](medium/665-non-decreasing-array.py)
@@ -532,6 +536,7 @@
 - 1874.[两个数组的最小乘积和](vip/medium/1874-minimize-product-sum-of-two-arrays.py)
 - 1953.[你可以工作的最大周数](medium/1953-maximum-number-of-weeks-for-which-you-can-work.py)
 - 1996.[游戏中弱角色的数量](medium/1996-the-number-of-weak-characters-in-the-game.py)
+- 2016.[增量元素之间的最大差值](easy/2016-maximum-difference-between-increasing-elements.py)
 - 2057.[值相等的最小索引](easy/2057-smallest-index-with-equal-value.py)
 - 2079.[给植物浇水](medium/2079-watering-plants.py)
 - 2091.[从数组中移除最大值和最小值](medium/2091-removing-minimum-and-maximum-from-array.py)
@@ -974,6 +979,7 @@
 - 483.[最小好进制](hard/483-smallest-good-base.py)
 - 492.[构造矩形](easy/492-construct-the-rectangle.py)
 - 537.[复数乘法](medium/537-complex-number-multiplication.py)
+- 553.[最优除法](medium/553-optimal-division.py)
 - 556.[下一个更大元素 III](medium/556-next-greater-element-iii.py)
 - 775.[全局倒置与局部倒置](medium/775-global-and-local-inversions.py)
 - 816.[模糊坐标](medium/816-ambiguous-coordinates.py)
@@ -994,6 +1000,7 @@
 - 1551.[使数组中所有元素相等的最小操作数](medium/1551-minimum-operations-to-make-array-equal.py)
 - 1711.[大餐计数](medium/1711-count-good-meals.py)
 - 2119.[反转两次的数字](easy/2119-a-number-after-a-double-reversal.py)
+- 2177.[找到和为给定整数的三个连续整数](medium/2177-find-three-consecutive-integers-that-sum-to-a-given-number.py)
 - 面试题 05.02.[二进制数转字符串](interview/05.02.bianry-number-to-string-lcci.py)
 - 面试题 16.11.[跳水板](interview/16.11.diving-board-lcci.py)
 - 剑指 Offer 44.[数字序列中某一位的数字](offer/44-shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof.py)
@@ -1114,6 +1121,10 @@
 ## 最小生成树
 
 - 1584.[连接所有点的最小费用](medium/1584-min-cost-to-connect-all-points.py)
+
+## 枚举
+
+- 1601.[最多可达成的换楼请求数目](hard/1601-maximum-number-of-achievable-transfer-requests.py)
 
 ## 树状数组
 
