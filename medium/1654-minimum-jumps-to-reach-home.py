@@ -41,12 +41,13 @@ forbidden 中所有位置互不相同。
 位置 x 不在 forbidden 中。
 '''
 from typing import List
+import math
 '''
 思路：BFS
 当前位置如果是向前跳到的，下一个位置有2个：一个向前跳a步，另外一个是向后跳b步,下一个位置不能在forbidden里面
 当前位置如果是向后跳到的，下一个位置有1个：向前跳a步，下一个位置不能在forbidden里面
 根据上面的跳跃方法，写出BFS算法
-TODO 第1个case失败
+
 时间复杂度：O(n)
 空间复杂度：O(n)
 '''
@@ -57,25 +58,27 @@ class Solution:
         if x == 0:
             return 0
         black = set(forbidden)
-        n = x + b  # 最大跳到x+b处，再往前跳无法退回
+        n = x + (a * b // math.gcd(a, b))  # 最大跳到x+（a与b的最小公倍数）处，再往前跳无法退回
         q, nextq = [], []
-        visited = [False] * (n + 1)
+        forwarded = [False] * (n + 1)  # 记录向前跳过的位置，避免下次再次从已经向前跳过的位置向前跳
+        backwarded = [False] * (n + 1)  # 同上
         q.append((0, False))
-        visited[0] = True
+        forwarded[0] = True
+        backwarded[0] = True
         ans = 0
         while q:
             i, allowBackward = q.pop()
             nexti = i + a
-            if nexti <= n and nexti not in black and not visited[nexti]:  # 将向前能跳到的位置加入队列
+            if nexti <= n and nexti not in black and not forwarded[nexti]:  # 将向前能跳到的位置加入队列
                 nextq.append((nexti, True))
-                visited[nexti] = True
+                forwarded[nexti] = True
                 if nexti == x:
                     return ans + 1
             if allowBackward:
                 nexti = i - b
-                if nexti > 0 and nexti not in black and not visited[nexti]:  # 将向后能跳到的位置加入队列
+                if nexti > 0 and nexti not in black and not backwarded[nexti]:  # 将向后能跳到的位置加入队列
                     nextq.append((nexti, False))
-                    visited[nexti] = True
+                    backwarded[nexti] = True
                     if nexti == x:
                         return ans + 1
             if not q:
