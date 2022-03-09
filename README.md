@@ -36,6 +36,7 @@
 - 769.[最多能完成排序的块](medium/769-max-chunks-to-make-sorted.py)
 - 962.[最大宽度坡](medium/962-maximum-width-ramp.py)
 - 1081.[不同字符的最小子序列](medium/1081-smallest-subsequence-of-distinct-characters.py)
+- 2104.[子数组范围和](medium/2104-sum-of-subarray-ranges.py)
 - 面试题 17.21.[直方图的水量](interview/17.21.volume-of-histogram-lcci.py)
 - 剑指 Offer II 039.[直方图最大矩形面积](offer2/039-0ynMMM.py)
 - 剑指 Offer II 040.[矩阵中最大的矩形](offer2/040-PLYXKQ.py)
@@ -111,6 +112,10 @@
 - 面试题 16.20.[T9 键盘](interview/16.20.t9-lcci.py)
 - 剑指 Offer 66.[构建乘积数组](offer/66-gou-jian-cheng-ji-shu-zu-lcof.py)
 
+## 差分数组
+
+- 798.[得分最高的最小轮调](hard/798-smallest-rotation-with-highest-score.py)
+
 ## 前缀数组
 
 - 523.[连续的子数组和](medium/523-continuous-subarray-sum.py)
@@ -120,6 +125,7 @@
 - 900.[RLE 迭代器](medium/900-rle-iterator.py)
 - 930.[和相同的二元子数组](medium/930-binary-subarrays-with-sum.py)
 - 1314.[矩阵区域和](medium/1314-matrix-block-sum.py)
+- 2055.[蜡烛之间的盘子](medium/2055-plates-between-candles.py)
 - 剑指 Offer II 010.[和为 k 的子数组](offer2/010-QTMn0o.py)
 - 剑指 Offer II 011.[0 和 1 个数相同的子数组](offer2/011-A1NYOS.py)
 - 剑指 Offer II 013.[二维子矩阵的和](offer2/013-O4NDxx.py)
@@ -620,6 +626,7 @@
 - 1022.[从根到叶的二进制数之和](easy/1022-sum-of-root-to-leaf-binary-numbers.py)
 - 1028.[从先序遍历还原二叉树](hard/1028-recover-a-tree-from-preorder-traversal.py)
 - 1123.[最深叶节点的最近公共祖先](medium/1123-lowest-common-ancestor-of-deepest-leaves.py)
+- 1254.[统计封闭岛屿的数目](medium/1254-number-of-closed-islands.py)
 - 1315.[祖父节点值为偶数的节点和](medium/1315-sum-of-nodes-with-even-valued-grandparent.py)
 - 1339.[分裂二叉树的最大乘积](medium/1339-maximum-product-of-splitted-binary-tree.py)
 - 1482.[树节点的第 K 个祖先](hard/1483-kth-ancestor-of-a-tree-node.py)
@@ -639,6 +646,7 @@
 
 - 117.[填充每个节点的下一个右侧节点指针 II](medium/117-populating-next-right-pointers-in-each-node-ii.py)
 - 314.[二叉树的垂直遍历](vip/medium/314-binary-tree-vertical-order-traversal.py)
+- 365.[水壶问题](medium/365-water-and-jug-problem.py)
 - 399.[除法求值](medium/399-evaluate-division.py)
 - 433.[最小基因变化](medium/433-minimum-genetic-mutation.py)
 - 515.[在每个树行中找最大值](medium/515-find-largest-value-in-each-tree-row.py)
@@ -658,7 +666,9 @@
 - 1091.[二进制矩阵中的最短路径](medium/1091-shortest-path-in-binary-matrix.py)
 - 1129.[颜色交替的最短路径](medium/1129-shortest-path-with-alternating-colors.py)
 - 1161.[最大层内元素和](medium/1161-maximum-level-sum-of-a-binary-tree.py)
+- 1306.[跳跃游戏 III](medium/1306-jump-game-iii.py)
 - 1311.[获取你好友已观看的视频](medium/1311-get-watched-videos-by-your-friends.py)
+- 1466.[重新规划路线](medium/1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero.py)
 - 1609.[奇偶树](medium/1609-even-odd-tree.py)
 - 1654.[到家的最少跳跃次数](medium/1654-minimum-jumps-to-reach-home.py)
 - 1730.[获取食物的最短路径](vip/medium/1730-shortest-path-to-get-food.py)
@@ -701,6 +711,7 @@
 - 1750.[删除字符串两端相同字符后的最短长度](medium/1750-minimum-length-of-string-after-deleting-similar-ends.py)
 - 1855.[下标对中的最大距离](medium/1855-maximum-distance-between-a-pair-of-values.py)
 - 1861.[旋转盒子](medium/1861-rotating-the-box.py)
+- 2100.[适合打劫银行的日子](medium/2100-find-good-days-to-rob-the-bank.py)
 - 面试题 02.07.[链表相交](interview/02.07.intersection-of-two-linked-lists-lcci.py)
 - 面试题 16.16.[部分排序](interview/16.16.sub-sort-lcci.py)
 - 剑指 Offer 21.[调整数组顺序使奇数位于偶数前面](offer/21-diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof.py)
@@ -750,6 +761,7 @@
 - 140.[单词拆分 II](hard/140-word-break-ii.py)
 - 329.[矩阵中的最长递增路径](hard/329-longest-increasing-path-in-a-matrix.py)
 - 509.[斐波那契数](easy/509-fibonacci-number.py)
+- 1376.[通知所有员工所需的时间](medium/1376-time-needed-to-inform-all-employees.py)
 - 剑指 Offer II 097.[子序列的数目](offer2/097-21dk04.py)
 - 剑指 Offer II 112.[最长递增路径](offer2/112-fpTFWP.py)
 - 剑指 Offer II 086.[分割回文子字符串](offer2/086-M99OJA.py)
@@ -978,6 +990,7 @@
 - 458.[可怜的小猪](hard/458-poor-pigs.py)
 - 483.[最小好进制](hard/483-smallest-good-base.py)
 - 492.[构造矩形](easy/492-construct-the-rectangle.py)
+- 504.[七进制数](easy/504-base-7.py)
 - 537.[复数乘法](medium/537-complex-number-multiplication.py)
 - 553.[最优除法](medium/553-optimal-division.py)
 - 556.[下一个更大元素 III](medium/556-next-greater-element-iii.py)
@@ -1158,6 +1171,7 @@
 - 319.[灯泡开关](medium/319-bulb-switcher.py)
 - 453.[最小操作次数使数组元素相等](easy/453-minimum-moves-to-equal-array-elements.py)
 - 517.[超级洗衣机](hard/517-super-washing-machines.py)
+- 521.[最长特殊序列 Ⅰ](easy/521-longest-uncommon-subsequence-i.py)
 - 810.[黑板异或游戏](hard/810-chalkboard-xor-game.py)
 - 1033.[移动石子直到连续](easy/1033-moving-stones-until-consecutive.py)
 - 1332.[删除回文子序列](easy/1332-remove-palindromic-subsequences.py)
