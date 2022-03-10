@@ -44,8 +44,9 @@ ai != bi
 from typing import List
 '''
 思路：图
-把图用邻接表表示，然后遍历图的每个节点，求出每个节点的直接相连的边的数量，找到最大的2个：max1,max2
-如果这2个节点直接有直接相连的边，结果为max1+max2-1，如果没有直接相连，结果为max1+max2
+把图用邻接表表示，然后遍历图的任意2个节点的组合
+如果2个节点没有直接相连，则2个节点构成的序为这2个节点的边的数量之和
+如果2个节点直接相连，则2个节点构成的序为这2个节点的边的数量之和-1
 
 时间复杂度：O(n)
 空间复杂度：O(n)
@@ -58,24 +59,17 @@ class Solution:
         for road in roads:
             g[road[0]].add(road[1])
             g[road[1]].add(road[0])
-        # 找到最大的2个节点
-        max1, max2 = 0, 0
-        max1Id, max2Id = 0, 0
-        for nodeid in range(n):
-            if len(g[nodeid]) > max1:
-                max2Id = max1Id
-                max2 = max1
-                max1Id = nodeid
-                max1 = len(g[nodeid])
-            elif len(g[nodeid]) > max2:
-                max2Id = nodeid
-                max2 = len(g[nodeid])
-        if max1 not in g[max2Id]:
-            return max1 + max2
-        return max1 + max2 - 1
+        # 找到序最大的2个节点组合
+        ans = 0
+        for node1 in range(n):
+            for node2 in range(node1):
+                ans = max(ans, len(g[node1]) + len(g[node2]) + (0 if node1 not in g[node2] else -1))
+        return ans
 
 
 s = Solution()
 print(s.maximalNetworkRank(n=4, roads=[[0, 1], [0, 3], [1, 2], [1, 3]]))
 print(s.maximalNetworkRank(n=5, roads=[[0, 1], [0, 3], [1, 2], [1, 3], [2, 3], [2, 4]]))
 print(s.maximalNetworkRank(n=8, roads=[[0, 1], [1, 2], [2, 3], [2, 4], [5, 6], [5, 7]]))
+print(s.maximalNetworkRank(5, [[2, 3], [0, 3], [0, 4], [4, 1]]))
+print(s.maximalNetworkRank(2, [[1, 0]]))
