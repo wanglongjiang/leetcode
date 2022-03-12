@@ -56,11 +56,14 @@ class Node:
 
 class Solution:
     def postorder(self, root: 'Node') -> List[int]:
+        if not root:
+            return []
         ans = []
 
         def dfs(node):
             for c in node.children:
                 dfs(c)
             ans.append(node.val)
+
         dfs(root)
         return ans
