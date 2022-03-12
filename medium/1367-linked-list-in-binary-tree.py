@@ -34,23 +34,6 @@
 链表包含的节点数目在 1 到 100 之间。
 二叉树包含的节点数目在 1 到 2500 之间。
 '''
-
-
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-
-# Definition for a binary tree node.
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
-
-
 '''
 思路：树 暴力搜索
 从树的每一个节点出发，向下搜索有没有与链表相同的路径
@@ -61,6 +44,21 @@ class TreeNode:
 时间复杂度：O(mn)
 空间复杂度：O(h)
 '''
+
+from typing import List
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
 
 class Solution:
@@ -80,9 +78,8 @@ class Solution:
 
         # 遍历树
         def dfs(treeNode):
-            if treeNode.val == head.val:
-                if hasMatch(treeNode, head):
-                    return True
+            if treeNode.val == head.val and hasMatch(treeNode, head):
+                return True
             else:
                 if treeNode.left:
                     if dfs(treeNode.left):
@@ -93,3 +90,42 @@ class Solution:
             return False
 
         return dfs(root)
+
+
+def fromList1(li: List[int]):
+    head = None
+    tail = head
+    for item in li:
+        if head is None:
+            head = ListNode(item)
+            tail = head
+        else:
+            tail.next = ListNode(item)
+            tail = tail.next
+    return head
+
+
+# list数据按照bfs遍历得到
+def fromList(li: List[int]):
+    if len(li) == 0:
+        return None
+    root = TreeNode(val=li[0])
+    queue = [root]
+    i = 1
+    while i < len(li):
+        node = queue[0]
+        del queue[0]
+        if li[i] is not None:
+            node.left = TreeNode(val=li[i])
+            queue.append(node.left)
+        i += 1
+        if i < len(li):
+            if li[i] is not None:
+                node.right = TreeNode(val=li[i])
+                queue.append(node.right)
+            i += 1
+    return root
+
+
+s = Solution()
+print(s.isSubPath(fromList1([1, 10]), fromList([1, None, 1, 10, 1, 9])))
