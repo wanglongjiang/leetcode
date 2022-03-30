@@ -54,6 +54,7 @@
 - 895.[最大频率栈](hard/895-maximum-frequency-stack.py)
 - 1046.[最后一块石头的重量](easy/1046-last-stone-weight.py)
 - 1353.[最多可以参加的会议数目](medium/1353-maximum-number-of-events-that-can-be-attended.py)
+- 1606.[找到处理最多请求的服务器](hard/1606-find-servers-that-handled-most-number-of-requests.py)
 - 1738.[找出第 K 大的异或坐标值](medium/1738-find-kth-largest-xor-coordinate-value.py)
 - 1845.[座位预约管理系统](medium/1845-seat-reservation-manager.py)
 - 1985.[找出数组中的第 K 大整数](medium/1985-find-the-kth-largest-integer-in-the-array.py)
@@ -146,6 +147,7 @@
 - 1380.[矩阵中的幸运数](easy/1380-lucky-numbers-in-a-matrix.py)
 - 1672.[最富有客户的资产总量](easy/1672-richest-customer-wealth.py)
 - 1886.[判断矩阵经轮转后是否一致](easy/1886-determine-whether-matrix-can-be-obtained-by-rotation.py)
+
 ## 哈希 hash
 
 - 128.[最长连续序列](hard/128-longest-consecutive-sequence.py)
@@ -531,6 +533,7 @@
 - 826.[安排工作以达到最大收益](medium/826-most-profit-assigning-work.py)
 - 849.[到最近的人的最大距离](medium/849-maximize-distance-to-closest-person.py)
 - 870.[优势洗牌](medium/870-advantage-shuffle.py)
+- 910.[最小差值 II](medium/910-smallest-range-ii.py)
 - 926.[将字符串翻转到单调递增](medium/926-flip-string-to-monotone-increasing.py)
 - 976.[三角形的最大周长](三角形的最大周长)
 - 984.[不含 AAA 或 BBB 的字符串](medium/984-string-without-aaa-or-bbb.py)
@@ -752,6 +755,7 @@
 - 1838.[最高频元素的频数](medium/1838-frequency-of-the-most-frequent-element.py)
 - 1852.[每个子数组的数字种类数](vip/medium/1852-distinct-numbers-in-each-subarray.py)
 - 1984.[学生分数的最小差值](easy/1984-minimum-difference-between-highest-and-lowest-of-k-scores.py)
+- 2024.[考试的最大困扰度](medium/2024-maximize-the-confusion-of-an-exam.py)
 - 2134.[最少交换次数来组合所有的 1 II](medium/2134-minimum-swaps-to-group-all-1s-together-ii.py)
 - 面试题 16.17.[连续数列](interview/16.17.contiguous-sequence-lcci.py)
 - 剑指 Offer 48.[最长不含重复字符的子字符串](offer/48-zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof.py)
@@ -1086,6 +1090,7 @@
 - 208.[实现 Trie (前缀树)](medium/208-implement-trie-prefix-tree.py)
 - 211.[添加与搜索单词](medium/211-design-add-and-search-words-data-structure.py)
 - 336.[回文对](hard/336-palindrome-pairs.py)
+- 440.[字典序的第K小数字](hard/440-k-th-smallest-in-lexicographical-order.py)
 - 472.[连接词](hard/472-concatenated-words.py)
 - 648.[单词替换](medium/648-replace-words.py)
 - 677.[键值映射](medium/677-map-sum-pairs.py)
@@ -1109,6 +1114,7 @@
 - 210.[课程表 II](medium/210-course-schedule-ii.py)
 - 269.[火星词典](hard/269-alien-dictionary.py)
 - 444.[序列重建](vip/medium/444-sequence-reconstruction.py)
+- 1494.[并行课程 II](hard/1494-parallel-courses-ii.py)
 - 2192.[有向无环图中一个节点的所有祖先](medium/2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph.py)
 - 剑指 Offer II 113.[课程顺序](offer2/113-QA2IGt.py)
 - 剑指 Offer II 114.[外星文字典](offer2/114-Jf1JuT.py)
