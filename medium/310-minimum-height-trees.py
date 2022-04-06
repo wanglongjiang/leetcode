@@ -41,62 +41,49 @@ ai != bi
 给定的输入 保证 是一棵树，并且 不会有重复的边
 '''
 from typing import List
+from collections import deque
 '''
-思路：树的遍历
-一个节点的最小高度为max(到所有子节点的高度，根节点到本节点的高度)
-可以用深度优先遍历树，将上级节点的高度作为参数传给遍历函数，再遍历所有子节点的高度，得到该节点的最小高度
-然后将最大的子节点高度返回给上级函数
-算法如下：
-> 1. 遍历edges建立邻接表形式的树
-> 2. 深度优先遍历树，求出每个子节点的最小高度，如果某个子节点高于所有子节点和根节点高度，需要将该高度再修正其他较小的子节点
-> 3. 遍历所有节点的最小高度，找出最小的那些输出
+思路：BFS
 
 时间复杂度：O(n)
 空间复杂度：O(n)
-TODO
 '''
 
 
 class Solution:
     def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:
-        # 1. 建立邻接表
-        tree = [[] for _ in range(n)]
-        for edge in edges:
-            tree[edge[0]].append(edge[1])
-            tree[edge[1]].append(edge[0])
-        # 2. 深度优先遍历树，求出每个节点的最小高度
-        minHeights = [0] * n
+        if n == 1:
+            return [0]
 
-        visted = [False] * n
+        g = [[] for _ in range(n)]
+        for x, y in edges:
+            g[x].append(y)
+            g[y].append(x)
+        parents = [0] * n
 
-        def dfs(i, rootHeight):
-            visted[i] = True
-            rootHeight += 1
-            height = 0
-            for j in tree[i]:
-                if not visted[j]:
-                    height = max(height, dfs(j, rootHeight))
-            minHeights[i] = max(height, rootHeight)
-            return height
+        def bfs(start: int):
+            vis = [False] * n
+            vis[start] = True
+            q = deque([start])
+            while q:
+                x = q.popleft()
+                for y in g[x]:
+                    if not vis[y]:
+                        vis[y] = True
+                        parents[y] = x
+                        q.append(y)
+            return x
 
-        dfs(0, 0)
+        x = bfs(0)  # 找到与节点 0 最远的节点 x
+        y = bfs(x)  # 找到与节点 x 最远的节点 y
 
-        visted = [False] * n
-
-        def fixHeight(i, rootHeight):
-            visted[i] = True
-            rootHeight += 1
-            height = 0
-            for j in tree[i]:
-                if not visted[j]:
-                    height = max(height, dfs(j, minHeights[i]))
-            minHeights[i] = max(height, rootHeight)
-            return height
-
-        fixHeight(0, 0)
-        # 3. 遍历所有节点的最小高度，找出最小的那些输出
-        minHeight = min(minHeights)
-        return list(filter(lambda x: x == minHeight, minHeights))
+        path = []
+        parents[x] = -1
+        while y != -1:
+            path.append(y)
+            y = parents[y]
+        m = len(path)
+        return [path[m // 2]] if m % 2 else [path[m // 2 - 1], path[m // 2]]
 
 
 s = Solution()
