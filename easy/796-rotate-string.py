@@ -54,7 +54,7 @@ class Solution:
     # 思路3
     def rotateString(self, s: str, goal: str) -> bool:
         s = s + s
-        return s.find(goal) != -1
+        return len(s) == 2 * len(goal) and s.find(goal) != -1
 
     # 思路4
     def rotateString4(self, s: str, goal: str) -> bool:
