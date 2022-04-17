@@ -193,6 +193,7 @@
 - 1124.[表现良好的最长时间段](medium/1124-longest-well-performing-interval.py)
 - 1128.[等价多米诺骨牌对的数量](easy/1128-number-of-equivalent-domino-pairs.py)
 - 1267.[统计参与通信的服务器](medium/1267-count-servers-that-communicate.py)
+- 1346.[检查整数及其两倍数是否存在](easy/1346-check-if-n-and-its-double-exist.py)
 - 1396.[设计地铁系统](medium/1396-design-underground-system.py)
 - 1452.[收藏清单](medium/1452-people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list.py)
 - 1496.[判断路径是否相交](easy/1496-path-crossing.py)
@@ -405,6 +406,7 @@
 
 - 161.[相隔为 1 的编辑距离](vip/medium/161-one-edit-distance.py)
 - 289.[生命游戏](medium/289-game-of-life.py)
+- 420.[强密码检验器](hard/420-strong-password-checker.py)
 - 498.[对角线遍历](medium/498-diagonal-traverse.py)
 - 529.[扫雷游戏](medium/529-minesweeper.py)
 - 640.[求解方程](medium/640-solve-the-equation.py)
@@ -453,6 +455,7 @@
 - 911.[在线选举](medium/911-online-election.py)
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
 - 981.[基于时间的键值存储](medium/981-time-based-key-value-store.py)
+- 1539.[第 k 个缺失的正整数](easy/1539-kth-missing-positive-number.py)
 - 1572.[矩阵对角线元素的和](easy/1572-matrix-diagonal-sum.py)
 - 1713.[得到子序列的最少操作次数](hard/1713-minimum-operations-to-make-a-subsequence.py)
 - 1901.[找出顶峰元素 II](medium/1901-find-a-peak-element-ii.py)
@@ -498,6 +501,7 @@
 - 1402.[做菜顺序](hard/1402-reducing-dishes.py)
 - 1451.[重新排列句子中的单词](medium/1451-rearrange-words-in-a-sentence.py)
 - 1561.[你可以获得的最大硬币数目](medium/1561-maximum-number-of-coins-you-can-get.py)
+- 1608.[特殊数组的特征值](easy/1608-special-array-with-x-elements-greater-than-or-equal-x.py)
 - 1637.[两点之间不包含任何点的最宽垂直面积](medium/1637-widest-vertical-area-between-two-points-containing-no-points.py)
 - 1838.[最高频元素的频数](medium/1838-frequency-of-the-most-frequent-element.py)
 - 1846.[减小和重新排列数组后的最大元素](medium/1846-maximum-element-after-decreasing-and-rearranging.py)
@@ -1007,6 +1011,7 @@
 - 553.[最优除法](medium/553-optimal-division.py)
 - 556.[下一个更大元素 III](medium/556-next-greater-element-iii.py)
 - 775.[全局倒置与局部倒置](medium/775-global-and-local-inversions.py)
+- 780.[到达终点](hard/780-reaching-points.py)
 - 816.[模糊坐标](medium/816-ambiguous-coordinates.py)
 - 829.[连续整数求和](hard/829-consecutive-numbers-sum.py)
 - 877.[石子游戏](medium/877-stone-game.py)
@@ -1153,6 +1158,7 @@
 
 ## 枚举
 
+- 479.[最大回文数乘积](hard/479-largest-palindrome-product.py)
 - 1601.[最多可达成的换楼请求数目](hard/1601-maximum-number-of-achievable-transfer-requests.py)
 
 ## 树状数组
