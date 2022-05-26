@@ -63,6 +63,8 @@ _aa___a
 1 <= positions[i][0] <= 10^8.
 1 <= positions[i][1] <= 10^6.
 '''
+from bisect import bisect_left, bisect_right
+import sys
 from typing import List
 from sortedcontainers import SortedList
 '''
@@ -83,42 +85,19 @@ from sortedcontainers import SortedList
 
 class Solution:
     def fallingSquares(self, positions: List[List[int]]) -> List[int]:
-        treeList = SortedList(key=lambda r: r[0])
-        ans = []
-        maxHeight = 0
-        for p in positions:
-            bottomHeight = 0  # 与当前区间有交集的区间中最高高度
-            left, right, height = p[0], p[0] + p[1] - 1, p[1]
-            lefti = treeList.bisect_left([left, left])
-            if lefti > 0:
-                leftRange = treeList[lefti - 1]
-                if leftRange[1] >= left and leftRange[1] <= right:  # 左边的区间与当前区间有交集，且其右边界没有超过当前区间的右边界
-                    leftRange[1] = left - 1  # 裁剪左边区间的右边界
-                    bottomHeight = leftRange[2]
-                elif leftRange[1] > right:  # 左边的区间右边界已经超过了当前区间右边界，需要将左边的区间拆分成2部分，一部分在当前区间左边，另外一部分在右边
-                    rightRange = [right + 1, leftRange[1], leftRange[2]]  # 在右边新添加一个区间
-                    treeList.add(rightRange)
-                    leftRange[1] = left - 1  # 裁剪原左边区间的右边界
-                    bottomHeight = leftRange[2]
-            righti = treeList.bisect_right([right, right])
-            if righti - 1 > 0:
-                rightRange = treeList[righti - 1]
-                if rightRange[0] <= right <= rightRange[1] and rightRange[0] != rightRange[1]:  # 右边的区间与当前区间有交集，且右边区间没有完全被当前区间覆盖
-                    rightRange[0] = right - 1  # 裁剪右边区间的左边界
-                    bottomHeight = max(bottomHeight, rightRange[2])
-                elif rightRange[0] <= right <= rightRange[1] and rightRange[0] == rightRange[1]:  # 右边的区间被当前区间完全覆盖，删除
-                    del treeList[righti - 1]
-                    bottomHeight = max(bottomHeight, rightRange[2])
-            for i in range(lefti, righti - 1):  # 删除左右边界内的区间
-                bottomHeight = max(bottomHeight, treeList[lefti][2])
-                del treeList[lefti]
-            treeList.add([left, right, height + bottomHeight])  # 当前方块加入集合
-            maxHeight = max(maxHeight, height + bottomHeight)
-            ans.append(maxHeight)
-
-        return ans
+        ps, hs, res, maxtop = [-sys.maxsize, sys.maxsize], [0], [], 0
+        for l, h in positions:
+            r = l + h
+            li, ri = bisect_right(ps, l), bisect_left(ps, r)
+            top = (max(hs[li - 1:ri]) if li < ri else hs[li - 1]) + h
+            ps = ps[:li] + [l, r] + ps[ri:]
+            hs = hs[:li] + [top] + hs[ri - 1:]
+            maxtop = max(maxtop, top)
+            res.append(maxtop)
+        return res
 
 
 s = Solution()
+print(s.fallingSquares([[1, 2], [1, 3]]))
 print(s.fallingSquares([[1, 2], [2, 3], [6, 1]]))
 print(s.fallingSquares([[100, 100], [200, 100]]))
