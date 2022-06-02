@@ -129,6 +129,8 @@
 - 930.[和相同的二元子数组](medium/930-binary-subarrays-with-sum.py)
 - 1314.[矩阵区域和](medium/1314-matrix-block-sum.py)
 - 2055.[蜡烛之间的盘子](medium/2055-plates-between-candles.py)
+- 2222.[选择建筑的方案数](medium/2222-number-of-ways-to-select-buildings.py)
+- 2270.[分割数组的方案数](medium/2270-number-of-ways-to-split-array.py)
 - 剑指 Offer II 010.[和为 k 的子数组](offer2/010-QTMn0o.py)
 - 剑指 Offer II 011.[0 和 1 个数相同的子数组](offer2/011-A1NYOS.py)
 - 剑指 Offer II 013.[二维子矩阵的和](offer2/013-O4NDxx.py)
@@ -151,6 +153,7 @@
 
 ## 哈希 hash
 
+- 1.[两数之和](easy/1-two-sum.py)
 - 128.[最长连续序列](hard/128-longest-consecutive-sequence.py)
 - 170.[两数之和 III - 数据结构设计](vip/easy/170-two-sum-iii-data-structure-design.py)
 - 217.[存在重复元素](easy/217-contains-duplicate.py)
@@ -254,6 +257,8 @@
 - 2155.[分组得分最高的所有下标](medium/2155-all-divisions-with-the-highest-score-of-a-binary-array.py)
 - 2186.[使两字符串互为字母异位词的最少步骤数](medium/2186-minimum-number-of-steps-to-make-two-strings-anagram-ii.py)
 - 2244.[完成所有任务需要的最少轮数](medium/2244-minimum-rounds-to-complete-all-tasks.py)
+- 2284.[最多单词数的发件人](medium/2284-sender-with-largest-word-count.py)
+- 2287.[重排字符形成目标字符串](easy/2287-rearrange-characters-to-make-target-string.py)
 - 剑指 Offer II 015.[字符串中的所有变位词](offer2/015-VabMRr.py)
 - 剑指 Offer II 032.[有效的变位词](offer2/032-dKk3P7.py)
 - 剑指 Offer II 075.[数组相对排序](offer2/075-0H97ZC.py)
@@ -264,8 +269,9 @@
 - 1316.[不同的循环子字符串](hard/1316-distinct-echo-substrings.py)
 - 1392.[最长快乐前缀](hard/1392-longest-happy-prefix.py)
 
-## 链表
+## 链表 linkList
 
+- 2.[两数相加](medium/2-add-two-numbers.py)
 - 21.[合并两个有序链表](easy/21-merge-two-sorted-lists.py)
 - 138.[复制带随机指针的链表](medium/138-copy-list-with-random-pointer.py)
 - 141.[环形链表](easy/141-linked-list-cycle.py)
@@ -369,6 +375,7 @@
 - 1865.[找出和为指定值的下标对](medium/1865-finding-pairs-with-a-certain-sum.py)
 - 1912.[设计电影租借系统](hard/1912-design-movie-rental-system.py)
 - 2034.[股票价格波动](medium/2034-stock-price-fluctuation.py)
+- 2276.[统计区间中的整数数目](hard/2276-count-integers-in-intervals.py)
 - 剑指 Offer 51.[数组中的逆序对](offer/51-shu-zu-zhong-de-ni-xu-dui-lcof.py)
 - 剑指 Offer II 057.[值和下标之差都在给定的范围内](offer2/057-7WqeDu.py)
 - 剑指 Offer II 058.[日程表](offer2/058-fi9suh.py)
@@ -406,6 +413,8 @@
 
 ## 模拟
 
+- 6.[Z 字形变换](medium/6-zigzag-conversion.py)
+- 7.[整数反转](easy/7-reverse-integer.py)
 - 161.[相隔为 1 的编辑距离](vip/medium/161-one-edit-distance.py)
 - 289.[生命游戏](medium/289-game-of-life.py)
 - 420.[强密码检验器](hard/420-strong-password-checker.py)
@@ -422,6 +431,7 @@
 - 1281.[整数的各位积和之差](easy/1281-subtract-the-product-and-sum-of-digits-of-an-integer.py)
 - 1491.[去掉最低工资和最高工资后的工资平均值](easy/1491-average-salary-excluding-the-minimum-and-maximum-salary.py)
 - 1496.[判断路径是否相交](easy/1496-path-crossing.py)
+- 1562.[查找大小为 M 的最新分组](medium/1562-find-latest-group-of-size-m.py)
 - 1706.[球会落何处](medium/1706-where-will-the-ball-fall.py)
 - 1719.[重构一棵树的方案数](hard/1719-number-of-ways-to-reconstruct-a-tree.py)
 - 1725.[可以形成最大正方形的矩形数目](easy/1725-number-of-rectangles-that-can-form-the-largest-square.py)
@@ -429,7 +439,10 @@
 - 1860.[增长的内存泄露](medium/1860-incremental-memory-leak.py)
 - 2120.[执行所有后缀指令](medium/2120-execution-of-all-suffix-instructions-staying-in-a-grid.py)
 - 2181.[合并零之间的节点](medium/2181-merge-nodes-in-between-zeros.py)
+- 2221.[数组的三角和](medium/2221-find-triangular-sum-of-an-array.py)
+- 2288.[价格减免](medium/2288-apply-discount-to-prices.py)
 - LCP 19.[秋叶收藏集](lcp/19-UlBDOe.py)
+- 面试题 17.11.[单词距离](interview/17.11.find-closest-lcci.py)
 
 ## 二分查找 binary search
 
@@ -459,19 +472,24 @@
 - 911.[在线选举](medium/911-online-election.py)
 - 933.[最近的请求次数](easy/933-number-of-recent-calls.py)
 - 981.[基于时间的键值存储](medium/981-time-based-key-value-store.py)
+- 1201.[丑数 III](medium/1201-ugly-number-iii.py)
 - 1283.[使结果不超过阈值的最小除数](medium/1283-find-the-smallest-divisor-given-a-threshold.py)
 - 1292.[元素和小于等于阈值的正方形的最大边长](medium/1292-maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold.py)
+- 1300.[转变数组后最接近目标值的数组和](medium/1300-sum-of-mutated-array-closest-to-target.py)
 - 1539.[第 k 个缺失的正整数](easy/1539-kth-missing-positive-number.py)
 - 1552.[两球之间的磁力](medium/1552-magnetic-force-between-two-balls.py)
 - 1572.[矩阵对角线元素的和](easy/1572-matrix-diagonal-sum.py)
 - 1574.[删除最短的子数组使剩余数组有序](medium/1574-shortest-subarray-to-be-removed-to-make-array-sorted.py)
+- 1648.[销售价值减少的颜色球](medium/1648-sell-diminishing-valued-colored-balls.py)
 - 1712.[将数组分成三个子数组的方案数](medium/1712-ways-to-split-array-into-three-subarrays.py)
 - 1713.[得到子序列的最少操作次数](hard/1713-minimum-operations-to-make-a-subsequence.py)
 - 1760.[袋子里最少数目的球](medium/1760-minimum-limit-of-balls-in-a-bag.py)
+- 1802.[有界数组中指定下标处的最大值](medium/1802-maximum-value-at-a-given-index-in-a-bounded-array.py)
 - 1870.[准时到达的列车最小时速](medium/1870-minimum-speed-to-arrive-on-time.py)
 - 1898.[可移除字符的最大数目](medium/1898-maximum-number-of-removable-characters.py)
 - 1901.[找出顶峰元素 II](medium/1901-find-a-peak-element-ii.py)
 - 2187.[完成旅途的最少时间](medium/2187-minimum-time-to-complete-trips.py)
+- 2271.[毯子覆盖的最多白色砖块数](medium/2271-maximum-white-tiles-covered-by-a-carpet.py)
 - 剑指 Offer 04.[二维数组中的查找](offer/04-er-wei-shu-zu-zhong-de-cha-zhao-lcof.py)
 - 剑指 Offer 11.[旋转数组的最小数字](offer/11-xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof.py)
 - 面试题 10.09. [排序矩阵查找](interview/10.19.sorted-matrix-search-lcci.py)
@@ -520,6 +538,7 @@
 - 1846.[减小和重新排列数组后的最大元素](medium/1846-maximum-element-after-decreasing-and-rearranging.py)
 - 1877.[数组中最大数对和的最小值](medium/1877-minimize-maximum-pair-sum-in-array.py)
 - 2191.[将杂乱无章的数字排序](medium/2191-sort-the-jumbled-numbers.py)
+- 2274.[不含特殊楼层的最大连续楼层数](medium/2274-maximum-consecutive-floors-without-special-floors.py)
 - 面试题 16.06.[最小差](interview/16.06.smallest-difference-lcci.py)
 - 剑指 Offer 45.[把数组排成最小的数](offer/45-ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof.py)
 - 剑指 Offer II 074.[合并区间](offer2/074-SsGoHC.py)
@@ -573,9 +592,12 @@
 - 2079.[给植物浇水](medium/2079-watering-plants.py)
 - 2091.[从数组中移除最大值和最小值](medium/2091-removing-minimum-and-maximum-from-array.py)
 - 2126.[摧毁小行星](medium/2126-destroying-asteroids.py)
+- 2136.[全部开花的最早一天](hard/2136-earliest-possible-day-of-full-bloom.py)
 - 2165.[重排数字的最小值](medium/2165-smallest-value-of-the-rearranged-number.py)
 - 2182.[构造限制重复的字符串](medium/2182-construct-string-with-repeat-limit.py)
 - 2195.[向数组中追加 K 个整数](medium/2195-append-k-integers-with-minimal-sum.py)
+- 2279.[装满石头的背包的最大数量](medium/2279-maximum-bags-with-full-capacity-of-rocks.py)
+- 2285.[道路的最大总重要性](medium/2285-maximum-total-importance-of-roads.py)
 - 面试题 05.03.[翻转数位](interview/05.03.reverse-bits-lcci.py)
 - 面试题 16.17.[连续数列](interview/16.17.contiguous-sequence-lcci.py)
 - 剑指 Offer 42.[连续子数组的最大和](offer/42-lian-xu-zi-shu-zu-de-zui-da-he-lcof.py)
@@ -612,6 +634,7 @@
 - 1738.[找出第 K 大的异或坐标值](medium/1738-find-kth-largest-xor-coordinate-value.py)
 - 2044.[统计按位或能得到最大值的子集数目](medium/2044-count-number-of-maximum-bitwise-or-subsets.py)
 - 2135.[统计追加字母可以获得的单词数](medium/2135-count-words-obtained-after-adding-a-letter.py)
+- 2275.[按位与结果大于零的最长组合](medium/2275-largest-combination-with-bitwise-and-greater-than-zero.py)
 - 面试题 05.01.[插入](interview/05.01.insert-into-bits-lcci.py)
 - 面试题 05.03.[翻转数位](interview/05.03.reverse-bits-lcci.py)
 - 面试题 05.06.[整数转换](interview/05.06.convert-integer-lcci.py)
@@ -707,6 +730,7 @@
 - 1926.[迷宫中离入口最近的出口](medium/1926-nearest-exit-from-entrance-in-maze.py)
 - 2039.[网络空闲的时刻](medium/2039-the-time-when-the-network-becomes-idle.py)
 - 2045.[到达目的地的第二短时间](hard/2045-second-minimum-time-to-reach-destination.py)
+- 2290.[到达角落需要移除障碍物的最小数目](hard/2290-minimum-obstacle-removal-to-reach-corner.py)
 - 面试题 08.02.[迷路的机器人](interview/08.02.robot-in-a-grid-lcci.py)
 - 面试题 08.10.[颜色填充](interview/08.10.color-fill-lcci.py)
 - 剑指 Offer 13.[机器人的运动范围](offer/13-ji-qi-ren-de-yun-dong-fan-wei-lcof.py)
@@ -757,6 +781,7 @@
 
 ## 滑动窗口 sliding window
 
+- 3.[无重复字符的最长子串](medium/3-longest-substring-without-repeating-characters2.py)
 - 76.[最小覆盖子串](hard/76-minimum-window-substring.py)
 - 159.[至多包含两个不同字符的最长子串](vip/medium/159-longest-substring-with-at-most-two-distinct-characters.py)
 - 340.[至多包含 K 个不同字符的最长子串](vip/medium/340-longest-substring-with-at-most-k-distinct-characters.py)
@@ -800,6 +825,7 @@
 
 ## 动态规划 DP
 
+- 5.[最长回文子串](medium/5-longest-palindromic-substring.py)
 - 91.[解码方法](medium/91-decode-ways.py)
 - 95.[不同的二叉搜索树 II](medium/95-unique-binary-search-trees-ii.py)
 - 96.[不同的二叉搜索树](medium/96-unique-binary-search-trees.py)
@@ -821,6 +847,7 @@
 - 376.[摆动序列](medium/376-wiggle-subsequence.py)
 - 396.[旋转函数](medium/396-rotate-function.py)
 - 413.[等差数列划分](medium/413-arithmetic-slices.py)
+- 467.[环绕字符串中唯一的子字符串](medium/467-unique-substrings-in-wraparound-string.py)
 - 474.[一和零](medium/474-ones-and-zeroes.py)
 - 516.[最长回文子序列](medium/516-longest-palindromic-subsequence.py)
 - 518.[零钱兑换 II](medium/518-coin-change-2.py)
@@ -847,6 +874,7 @@
 - 1449.[数位成本和为目标值的最大数字](hard/1449-form-largest-integer-with-digits-that-add-up-to-target.py)
 - 1787.[使所有区间的异或结果为零](hard/1787-make-the-xor-of-all-segments-equal-to-zero.py)
 - 1994.[好子集的数目](hard/1994-the-number-of-good-subsets.py)
+- 2262.[字符串的总引力](hard/2262-total-appeal-of-a-string.py)
 - 面试题 08.01.[三步问题](interview/08.01.three-steps-problem-lcci.py)
 - 面试题 08.13.[堆箱子](interview/08.13.pile-box-lcci.py)
 - 面试题 17.16.[按摩师](interview/17.16.the-masseuse-lcci.py)
@@ -952,6 +980,7 @@
 
 ## 分治
 
+- 4.[寻找两个正序数组的中位数](hard/4-median-of-two-sorted-arrays2.py)
 - 23.[合并 K 个升序链表](medium/23-merge-k-sorted-lists.py)
 - 215.[数组中的第 K 个最大元素](medium/215-kth-largest-element-in-an-array.py)
 - 241.[为运算表达式设计优先级](medium/241-different-ways-to-add-parentheses.py)
@@ -995,6 +1024,7 @@
 - 2043.[简易银行系统](medium/2043-simple-bank-system.py)
 - 2080.[区间内查询数字的频率](medium/2080-range-frequency-queries.py)
 - 2166.[设计位集](medium/2166-design-bitset.py)
+- 2241.[设计一个 ATM 机器](medium/2241-design-an-atm-machine.py)
 - 剑指 Offer II 030.[插入、删除和随机访问都是 O(1) 的容器](offer2/030-FortPu.py)
 - 剑指 Offer II 031.[最近最少使用缓存](offer2/031-OrIXps.py)
 - 剑指 Offer II 055.[二叉搜索树迭代器](offer2/055-kTOapQ.py)
@@ -1047,6 +1077,7 @@
 - 1711.[大餐计数](medium/1711-count-good-meals.py)
 - 2119.[反转两次的数字](easy/2119-a-number-after-a-double-reversal.py)
 - 2177.[找到和为给定整数的三个连续整数](medium/2177-find-three-consecutive-integers-that-sum-to-a-given-number.py)
+- 2281.[巫师的总力量和](hard/2281-sum-of-total-strength-of-wizards.py)
 - 面试题 05.02.[二进制数转字符串](interview/05.02.bianry-number-to-string-lcci.py)
 - 面试题 16.11.[跳水板](interview/16.11.diving-board-lcci.py)
 - 剑指 Offer 44.[数字序列中某一位的数字](offer/44-shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof.py)
@@ -1066,6 +1097,7 @@
 - 593.[有效的正方形](medium/593-valid-square.py)
 - 812.[最大三角形面积](easy/812-largest-triangle-area.py)
 - 1037.[有效的回旋镖](easy/1037-valid-boomerang.py)
+- 2280.[表示一个折线图的最少线段数](medium/2280-minimum-lines-to-represent-a-line-chart.py)
 
 ## 随机 random
 
@@ -1080,6 +1112,8 @@
 
 ## 字符串 string
 
+- 8.[字符串转换整数 (atoi)](medium/8-string-to-integer-atoi.py)
+- 9.[回文数](easy/9-palindrome-number.py)
 - 271.[字符串的编码与解码](vip/medium/271-encode-and-decode-strings.py)
 - 336.[回文对](hard/336-palindrome-pairs.py)
 - 408.[有效单词缩写](vip/easy/408-valid-word-abbreviation.py)
