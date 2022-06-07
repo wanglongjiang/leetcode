@@ -256,6 +256,7 @@
 - 2114.[句子中的最多单词数](easy/2114-maximum-number-of-words-found-in-sentences.py)
 - 2155.[分组得分最高的所有下标](medium/2155-all-divisions-with-the-highest-score-of-a-binary-array.py)
 - 2186.[使两字符串互为字母异位词的最少步骤数](medium/2186-minimum-number-of-steps-to-make-two-strings-anagram-ii.py)
+- 2225.[找出输掉零场或一场比赛的玩家](medium/2225-find-players-with-zero-or-one-losses.py)
 - 2244.[完成所有任务需要的最少轮数](medium/2244-minimum-rounds-to-complete-all-tasks.py)
 - 2284.[最多单词数的发件人](medium/2284-sender-with-largest-word-count.py)
 - 2287.[重排字符形成目标字符串](easy/2287-rearrange-characters-to-make-target-string.py)
@@ -489,6 +490,7 @@
 - 1898.[可移除字符的最大数目](medium/1898-maximum-number-of-removable-characters.py)
 - 1901.[找出顶峰元素 II](medium/1901-find-a-peak-element-ii.py)
 - 2187.[完成旅途的最少时间](medium/2187-minimum-time-to-complete-trips.py)
+- 2226.[每个小孩最多能分到多少糖果](medium/2226-maximum-candies-allocated-to-k-children.py)
 - 2271.[毯子覆盖的最多白色砖块数](medium/2271-maximum-white-tiles-covered-by-a-carpet.py)
 - 剑指 Offer 04.[二维数组中的查找](offer/04-er-wei-shu-zu-zhong-de-cha-zhao-lcof.py)
 - 剑指 Offer 11.[旋转数组的最小数字](offer/11-xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof.py)
@@ -1158,6 +1160,7 @@
 - 1487.[保证文件名唯一](medium/1487-making-file-names-unique.py)
 - 1707.[与数组中元素的最大异或值](hard/1707-maximum-xor-with-an-element-from-array.py)
 - 1858.[包含所有前缀的最长单词](vip/medium/1858-longest-word-with-all-prefixes.py)
+- 2227.[加密解密字符串](hard/2227-encrypt-and-decrypt-strings.py)
 - 面试题 17.15.[最长单词](interview/17.15.longest-word-lcci.py)
 - 面试题 17.17.[多次搜索](interview/17.17.multi-search-lcci.py)
 - 剑指 Offer II 063.[替换单词](offer2/063-UhWRSj.py)
@@ -1223,6 +1226,8 @@
 ## 线段树
 
 - 493.[翻转对](hard/493-reverse-pairs.py)
+- 732.[我的日程安排表 III](hard/732-my-calendar-iii.py)
+- 2251.[花期内花的数目](hard/2251-number-of-flowers-in-full-bloom.py)
 
 ## 扫描线
 
