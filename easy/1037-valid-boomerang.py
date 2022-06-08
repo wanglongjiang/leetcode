@@ -39,6 +39,8 @@ from typing import List
 
 class Solution:
     def isBoomerang(self, points: List[List[int]]) -> bool:
+        if points[0] == points[1] or points[1] == points[2] or points[0] == points[2]:
+            return False
         a1, b1 = points[0][0] - points[1][0], points[0][1] - points[1][1]
         a2, b2 = points[0][0] - points[2][0], points[0][1] - points[2][1]
         if b1 == 0 and b2 == 0:
@@ -46,3 +48,7 @@ class Solution:
         if b1 == 0 or b2 == 0:
             return True
         return a1 / b1 != a2 / b2
+
+
+s = Solution()
+print(s.isBoomerang([[0, 1], [1, 0], [0, 1]]))
