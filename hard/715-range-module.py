@@ -25,7 +25,7 @@ queryRange(16, 17): true （尽管执行了删除操作，区间 [16, 17) 中的
 在单个测试用例中，对  queryRange 的调用总数不超过 5000 次。
 在单个测试用例中，对 removeRange 的调用总数不超过 1000 次。
 '''
-from sortedcontainers import SortedList
+from sortedcontainers import SortedDict
 '''
 思路：有序集合
 设有序集合treeList
@@ -33,7 +33,6 @@ addRange，首先查询有没有重叠的区间，如果有进行合并。有可
 queryRange，查询当前是否完全在某个区间范围内
 removeRange，首先查询有没有重叠的区间，如果有进行裁剪。有可能不裁剪，裁剪左边、右边，或者裁剪2边。
 
-TODO 还没写完
 
 时间复杂度：3个函数平均都是O(logn)，最坏情况下是O(n)：当addRange和removeRange的范围特别大，覆盖很多区间时。
 '''
@@ -41,36 +40,57 @@ TODO 还没写完
 
 class RangeModule:
     def __init__(self):
-        self.treelist = SortedList(key=lambda r: r[0])
+        self.intervals = SortedDict()
 
     def addRange(self, left: int, right: int) -> None:
-        lefti = self.treelist.bisect_left([left, left])
-        leftRange, rightRange = None, None
-        added = False
-        if lefti > 0:
-            leftRange = self.treelist[lefti - 1]
-            if leftRange[1] >= left:  # 左边区间与当前区间有重叠，2个区间进行合并
-                leftRange[1] = max(right, leftRange[1])
-                added = True
-        righti = self.treelist.bisect_right([right, right])
-        if righti - 1 > 0:
-            rightRange = self.treelist[righti - 1]
-            if rightRange[0] <= right <= rightRange[1]:
-                rightRange[0] = min(rightRange[0], left)
-                rightRange[1] = max(rightRange[1], right)
-                added = True
-        for i in range(lefti, righti - 1):  # 删除左右边界内的区间
-            del self.treelist[lefti]
-        if not added:
-            self.treelist.add([left, right])
+        itvs_ = self.intervals
+
+        x = itvs_.bisect_right(left)
+        if x != 0:
+            start = x - 1
+            if itvs_.values()[start] >= right:
+                return
+            if itvs_.values()[start] >= left:
+                left = itvs_.keys()[start]
+                itvs_.popitem(start)
+                x -= 1
+
+        while x < len(itvs_) and itvs_.keys()[x] <= right:
+            right = max(right, itvs_.values()[x])
+            itvs_.popitem(x)
+
+        itvs_[left] = right
 
     def queryRange(self, left: int, right: int) -> bool:
-        index = self.treelist.bisect_left([left, right])
-        if index < len(self.treelist):
-            leftRange = self.treelist[index]
-            if leftRange[0] <= left and leftRange[1] >= right:
-                return True
-        return False
+        itvs_ = self.intervals
+
+        x = itvs_.bisect_right(left)
+        if x == 0:
+            return False
+
+        return right <= itvs_.values()[x - 1]
 
     def removeRange(self, left: int, right: int) -> None:
-        pass
+        itvs_ = self.intervals
+
+        x = itvs_.bisect_right(left)
+        if x != 0:
+            start = x - 1
+            if (ri := itvs_.values()[start]) >= right:
+                if (li := itvs_.keys()[start]) == left:
+                    itvs_.popitem(start)
+                else:
+                    itvs_[li] = left
+                if right != ri:
+                    itvs_[right] = ri
+                return
+            elif ri > left:
+                itvs_[itvs_.keys()[start]] = left
+
+        while x < len(itvs_) and itvs_.keys()[x] < right:
+            if itvs_.values()[x] <= right:
+                itvs_.popitem(x)
+            else:
+                itvs_[right] = itvs_.values()[x]
+                itvs_.popitem(x)
+                break
