@@ -20,8 +20,10 @@
 输出：9 -> 1 -> 2，即912
 '''
 
-
 # Definition for singly-linked list.
+from typing import List
+
+
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -39,7 +41,7 @@ class ListNode:
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-        ans = ListNode()  # 头部节点为哨兵
+        ans = ListNode(0)  # 头部节点为哨兵
         l3 = ans
         carry = 0
         while l1 or l2 or carry:  # l1，l2及进位全部处理完才算完成
@@ -54,6 +56,36 @@ class Solution:
                 val -= 10
             l3.next = ListNode(val)  # 创建节点
             l3 = l3.next  # 3个链表都指向下一个节点
-            l1 = l1.next
-            l2 = l2.next
+            if l1:
+                l1 = l1.next
+            if l2:
+                l2 = l2.next
         return ans.next
+
+
+def fromList(li: List[int]):
+    head = None
+    tail = head
+    for item in li:
+        if head is None:
+            head = ListNode(item)
+            tail = head
+        else:
+            tail.next = ListNode(item)
+            tail = tail.next
+    return head
+
+
+def toList(listNode: ListNode):
+    if listNode is None:
+        return []
+    else:
+        li = []
+        while listNode is not None:
+            li.append(listNode.val)
+            listNode = listNode.next
+        return li
+
+
+s = Solution()
+print(s.addTwoNumbers(fromList([5]), fromList([5])))
