@@ -64,9 +64,12 @@ class Solution:
             sums[i] = sums[i - 1] + nums[i]
         if sums[n - 1] - nums[0] == 0:  # 判断以0作为中心下标
             return 0
-        if sums[n - 2] == 0:  # 判断以最后一个下标作为中心下标
-            return n - 1
-        for i in range(1, n - 1):
+        for i in range(1, n):
             if sums[i - 1] == sums[n - 1] - sums[i]:
                 return i
         return -1
+
+
+s = Solution()
+print(s.pivotIndex([-1, -1, 0, 1, 1, 0]))
+print(s.pivotIndex([-1, -1, 1, 1, 0, 0]))
