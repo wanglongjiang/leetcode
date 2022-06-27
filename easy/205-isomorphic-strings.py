@@ -16,18 +16,22 @@
 
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        mp = {}
+        mp, mp2 = {}, {}
         for i in range(len(s)):
             sc = s[i]
             if sc in mp:
                 if mp[sc] != t[i]:
                     return False
             else:
+                if t[i] in mp2:
+                    return False
                 mp[sc] = t[i]
+                mp2[t[i]] = sc
         return True
 
 
 s = Solution()
+print(s.isIsomorphic("badc", "baba"))
 print(s.isIsomorphic(s="egg", t="add"))
 print(s.isIsomorphic(s="foo", t="bar"))
 print(s.isIsomorphic(s="paper", t="title"))
