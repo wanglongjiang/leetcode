@@ -7,50 +7,51 @@
 1 <= k <= len(nums) <= 16
 0 < nums[i] < 10000
 '''
+from functools import cache
 from typing import List
 '''
-思路：回溯
+思路：回溯+记忆化搜索
 首先判断数组之和total/k能被整除，如果不能整除，则没有解
 然后商d为每个子数组之和，nums中最大元素如果大于d，则没有解
-如果通过了上面的检查，每次从数组中选取一个<=d的数nums[i]，d-=nums[i]，
-如果d==0，则找到1个分组，继续查找下一个分组，直至所有分组都能找完
+如果通过了上面的检查，每次从数组中选取x个数组成子集，如果子集的等于d，进入下一层，如果找不到等于d的子集，返回false
+
 时间复杂度：O(2^n*n)，组合有2^n种，再加上每层查找的过程
 空间复杂度：O(n)
-TODO
 '''
 
 
 class Solution:
     def canPartitionKSubsets(self, nums: List[int], k: int) -> bool:
+        @cache
+        def dfs(state, summ):
+
+            if state == (1 << n) - 1:  # 所有整数均已划分，结束递归，并返回True
+                return True
+
+            for j in range(n):
+                if summ + nums[j] > target:  # nums已升序排列，当前数字不行，后续肯定也不行
+                    break
+                if state & (1 << j) == 0:  # nums[i]暂未被划分
+                    next_state = state + (1 << j)  # 划分nums[i]
+                    if dfs(next_state, (summ + nums[j]) % target):  # 划分nums[i]能形成有效方案
+                        return True
+            return False
+
         total = sum(nums)
-        d, r = divmod(total, k)
-        if r != 0:  # 数组之和不能被k整除，没有解
+        if total % k != 0:
             return False
-        if max(nums) > d:  # 最大值大于d，没有解
+        n = len(nums)
+        target = total // k  # 目标非空子集的和
+        nums.sort()  # 升序排列
+        if nums[-1] > target:  # 最大值超过目标子集和，无法划分
             return False
-
-        def backtrack(sets, target):
-            if sets > len(nums):
-                return False
-            for i in range(len(nums)):
-                num = nums[i]
-                if num <= target:  # 只有<=target的数才拿出来尝试组合
-                    nums[i] = nums[-1]  # 进入组合的元素要删除
-                    nums.pop()
-                    if target == num:  # 找到了一个子集
-                        if sets == 1:  # 如果是最后一个子集，则返回true
-                            return True
-                        else:
-                            if backtrack(sets - 1, d):  # 不是最后一个子集，递归查找
-                                return True
-                    else:  # 子集的数据不够，递归
-                        if backtrack(sets, target - num):
-                            return True
-                    nums.append(num)
-            return False
-
-        return backtrack(k, d)
+        return dfs(0, 0)
 
 
 s = Solution()
+print(s.canPartitionKSubsets([2, 2, 2, 2, 3, 4, 5], 4))
+print(s.canPartitionKSubsets([3, 9, 4, 5, 8, 8, 7, 9, 3, 6, 2, 10, 10, 4, 10, 2], 10))
+print(s.canPartitionKSubsets([129, 17, 74, 57, 1421, 99, 92, 285, 1276, 218, 1588, 215, 369, 117, 153, 22], 3))
+print(s.canPartitionKSubsets([10, 12, 1, 2, 10, 7, 5, 19, 13, 1], 4))
 print(s.canPartitionKSubsets(nums=[4, 3, 2, 3, 5, 2, 1], k=4))
+print(s.canPartitionKSubsets([1739, 5391, 8247, 236, 5581, 11, 938, 58, 1884, 823, 686, 1760, 6498, 6513, 6316, 2867], 6))
