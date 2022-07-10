@@ -50,7 +50,7 @@ class Solution:
         while len(stones) > 1:
             a = heapq.heappop(stones) - heapq.heappop(stones)
             if a:
-                heapq.heappush(a)
+                heapq.heappush(stones, a)
         if stones:
             return -stones[0]
         return 0
