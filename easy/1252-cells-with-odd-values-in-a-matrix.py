@@ -39,6 +39,9 @@ ci 列上的所有单元格，加 1 。
 '''
 
 from typing import List
+'''
+思路：计数
+'''
 
 
 class Solution:
