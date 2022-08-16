@@ -53,6 +53,11 @@ class ProductOfNumbers:
 
 
 productOfNumbers = ProductOfNumbers()
+'''
+["ProductOfNumbers","add","getProduct","getProduct","add","add","getProduct","add","getProduct","add","getProduct","add","getProduct","getProduct","add","getProduct"]
+[[],[7],[1],[1],[4],[5],[3],[4],[4],[3],[4],[8],[1],[6],[2],[3]]
+[null,null,7,7,null,null,140,null,560,null,240,null,8,13440,null,48]
+'''
 productOfNumbers.add(3)
 productOfNumbers.add(0)
 productOfNumbers.add(2)
