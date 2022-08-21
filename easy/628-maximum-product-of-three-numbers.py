@@ -56,9 +56,10 @@ class Solution:
                 max2 = num
             elif max3 < num:
                 max3 = num
-        return max1 * max(max2 * max3, min1 * min2)
+        return max1 * max(max2 * max3, min1 * min2) if max1 >= 0 else max1 * min(max2 * max3, min1 * min2)
 
 
 s = Solution()
+print(s.maximumProduct([-1, -2, -3, -4]))
 print(s.maximumProduct([1, 2, 3, -4, -5]))
 print(s.maximumProduct([1, 2, 3, 4, -5]))
