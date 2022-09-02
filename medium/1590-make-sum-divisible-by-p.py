@@ -51,8 +51,6 @@ from typing import List
 1. 遍历每个元素nums[i]，求出当前位置的前缀和prefixSum,和当前位置的余数remainder[i]，并将remainder存入哈希表中
 2. 从后往前遍历查找满足remainder[j]-remainder[n]在哈希表中存在，
 
-TODO
-
 时间复杂度：O(n)
 空间复杂度；O(n)
 '''
@@ -60,28 +58,23 @@ TODO
 
 class Solution:
     def minSubarray(self, nums: List[int], p: int) -> int:
-        n = len(nums)
-        hashmap = {}
-        sums = [0] * n
-        prefixSum = 0
-        for i in range(n):
-            prefixSum = prefixSum + nums[i]
-            sums[i] = prefixSum
-            hashmap[sums[i] % p] = i
-        allsum = sums[-1]
-        ans = float('inf')
-        for j in range(n - 1, -1, -1):
-            r = (allsum - sums[j]) % p
-            diff = p - r
-            if diff in hashmap:
-                i = hashmap[diff]
-                if j >= i:
-                    ans = min(ans, j - i)
-            if r in hashmap:
-                i = hashmap[r]
-                if j >= i:
-                    ans = min(ans, j - i)
-        return ans if ans != float('inf') else -1
+        res = n = len(nums)
+        mod = sum(nums) % p
+        if mod == 0:
+            return 0
+        hashmap = {0: -1}
+        sub_mod = 0
+        for i, num in enumerate(nums):
+            sub_mod = (sub_mod + num) % p
+            target = (sub_mod - mod + p) % p
+            if target in hashmap:
+                res = min(res, i - hashmap[target])
+                if res == 1 and res != n:
+                    return res
+            hashmap[sub_mod] = i
+        if res == n:
+            res = -1
+        return res
 
 
 s = Solution()
