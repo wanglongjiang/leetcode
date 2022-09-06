@@ -35,16 +35,63 @@
 0 <= s.length <= 10^4
 s 只包含大写英文字符
 '''
+import collections
 '''
-思路1，暴力统计
-用2重循环，统计任意下标对i:j，其中i<j，形成的子字符串s[i:j]中唯一的字符数
-时间复杂度：O(n^2)
-空间复杂度：O(1)
-
-TODO
+对于下标为 ii 的字符 c_ic 
+i
+​
+ ，当它在某个子字符串中仅出现一次时，它会对这个子字符串统计唯一字符时有贡献。只需对每个字符，计算有多少子字符串仅包含该字符一次即可。对于 c_ic 
+i
+​
+ ， 记同字符上一次出现的位置为 c_jc 
+j
+​
+ ，下一次出现的位置为 c_kc 
+k
+​
+ ，那么这样的子字符串就一共有 (c_i - c_j) \times (c_k - c_i)(c 
+i
+​
+ −c 
+j
+​
+ )×(c 
+k
+​
+ −c 
+i
+​
+ ) 种，即子字符串的起始位置有 c_jc 
+j
+​
+ （不含）到 c_ic 
+i
+​
+ （含）之间这 (c_i - c_j)(c 
+i
+​
+ −c 
+j
+​
+ ) 种可能，到结束位置有 (c_k - c_i)(c 
+k
+​
+ −c 
+i
+​
+ ) 种可能。可以预处理 ss，将相同字符的下标放入数组中，方便计算。最后对所有字符进行这种计算即可。
 '''
 
 
 class Solution:
     def uniqueLetterString(self, s: str) -> int:
-        pass
+        index = collections.defaultdict(list)
+        for i, c in enumerate(s):
+            index[c].append(i)
+
+        res = 0
+        for arr in index.values():
+            arr = [-1] + arr + [len(s)]
+            for i in range(1, len(arr) - 1):
+                res += (arr[i] - arr[i - 1]) * (arr[i + 1] - arr[i])
+        return res
