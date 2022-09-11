@@ -63,11 +63,11 @@ class Solution:
             preSum ^= num & 1  # 偶数+偶数，奇数+奇数为偶数；偶+奇 or 奇+偶 为奇数
             if preSum:
                 oddCnt += 1
-                ans = (ans + evenCnt) % m  # 当前坐标前缀和为奇数，可以与前面所有的前缀和为偶数的坐标构成需要的子数组
+                ans += evenCnt  # 当前坐标前缀和为奇数，可以与前面所有的前缀和为偶数的坐标构成需要的子数组
             else:
                 evenCnt += 1
-                ans = (ans + oddCnt) % m  # 当前坐标前缀和为偶数，可以与前面所有的前缀和为奇数的坐标构成需要的子数组
-        return ans
+                ans += oddCnt  # 当前坐标前缀和为偶数，可以与前面所有的前缀和为奇数的坐标构成需要的子数组
+        return ans % m
 
 
 s = Solution()
