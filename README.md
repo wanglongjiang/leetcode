@@ -144,6 +144,7 @@
 - 930.[和相同的二元子数组](medium/930-binary-subarrays-with-sum.py)
 - 1177.[构建回文串检测](medium/1177-can-make-palindrome-from-substring.py)
 - 1314.[矩阵区域和](medium/1314-matrix-block-sum.py)
+- 1524.[和为奇数的子数组数目](medium/1524-number-of-sub-arrays-with-odd-sum.py)
 - 2055.[蜡烛之间的盘子](medium/2055-plates-between-candles.py)
 - 2222.[选择建筑的方案数](medium/2222-number-of-ways-to-select-buildings.py)
 - 2270.[分割数组的方案数](medium/2270-number-of-ways-to-split-array.py)
