@@ -27,22 +27,19 @@
 
 class Solution:
     def maximumSwap(self, num: int) -> int:
-        nums = []
-        while num:
-            num, r = divmod(num, 10)
-            nums.append(r)
-        nums.reverse()
-        for i in range(len(nums)):
-            maxIdx = i
-            for j in range(i + 1, len(nums)):  # 在低位里面找比当前位大最多的数字
-                if nums[j] > nums[maxIdx]:
-                    maxIdx = j
-            if maxIdx != i:  # 如果找到了，交换到高位，中止循环
-                nums[i], nums[maxIdx] = nums[maxIdx], nums[i]
-                break
-        for i in range(len(nums)):
-            num = num * 10 + nums[i]
-        return num
+        s = list(str(num))
+        n = len(s)
+        maxIdx = n - 1
+        idx1 = idx2 = -1
+        for i in range(n - 1, -1, -1):
+            if s[i] > s[maxIdx]:
+                maxIdx = i
+            elif s[i] < s[maxIdx]:
+                idx1, idx2 = i, maxIdx
+        if idx1 < 0:
+            return num
+        s[idx1], s[idx2] = s[idx2], s[idx1]
+        return int(''.join(s))
 
 
 s = Solution()
