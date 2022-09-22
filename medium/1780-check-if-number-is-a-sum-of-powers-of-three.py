@@ -10,8 +10,24 @@
 '''
 '''
 思路：数学
-对于一个整数x，如果是3的幂的和，说明x=y*3 or x= y*3+1
-也就是x是3的整数倍或整数倍+1
-不对，是3个不同的幂之和如果是21，3^2+3^2+3^1
-TODO
+依次减去3的幂(从log(n,3)开始)，如果能减到0，则为true
+
+时间复杂度：O(log(n))
+空间复杂度：O(1)
 '''
+
+from math import log
+
+
+class Solution:
+    def checkPowersOfThree(self, n: int) -> bool:
+        for i in range(int(log(n, 3)), -1, -1):
+            if 3**i <= n:
+                n -= 3**i
+        return n == 0
+
+
+s = Solution()
+assert s.checkPowersOfThree(12)
+assert s.checkPowersOfThree(91)
+assert s.checkPowersOfThree(21) == False
