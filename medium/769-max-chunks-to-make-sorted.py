@@ -25,12 +25,10 @@ arr[i]是 [0, 1, ..., arr.length - 1]的一种排列。
 '''
 from typing import List
 '''
-思路：单调栈
-如果2块数组a、b能够连结成排序数组，那么a、b自身内部可以乱序，但是必须有max(a)<min(b)
-可以用一个单调栈stack辅助处理：
-遍历arr中所有元素，对于当前元素arr[i]:
-> 如果arr[i]大于栈顶元素，stack出栈，直至栈顶元素大于arr[i]或者栈为空。当栈为空的时候，说明之前遍历过的数组元素全部小于arr[i]，它们可以单独构成1个块。
-> 如果arr[i]小于栈顶元素，入栈。
+思路：滑动窗口
+一个能划分的最小数组需要满足如下要求：
+子数组arr[i..j]，中最小值为i，最大值为j，子数组大小为j-i+1。
+用2个指针遍历arr，找到所有满足上面的条件子数组
 
 时间复杂度：O(n)
 空间复杂度：O(n)
@@ -39,17 +37,23 @@ from typing import List
 
 class Solution:
     def maxChunksToSorted(self, arr: List[int]) -> int:
-        stack = []
+        left, right, n = 0, 0, len(arr)
         ans = 0
-        for num in arr:
-            while stack and stack[-1] < num:
-                stack.pop()
-            if not stack:
-                ans += 1
-            stack.append(num)
+        while right < n:
+            hasMin = False  # 是否已经找到当前需要的最小值
+            maxNum = float('-inf')  # 子数组最大值
+            while not hasMin or maxNum != right - 1:  # 扩大窗口大小，直至找到最小值，且最大值与右边界索引相同
+                if arr[right] == left:
+                    hasMin = True
+                maxNum = max(maxNum, arr[right])
+                right += 1
+            left = right
+            ans += 1
         return ans
 
 
 s = Solution()
 print(s.maxChunksToSorted([4, 3, 2, 1, 0]))
 print(s.maxChunksToSorted([1, 0, 2, 3, 4]))
+print(s.maxChunksToSorted([1, 2, 0, 3]))
+print(s.maxChunksToSorted([2, 0, 1]))

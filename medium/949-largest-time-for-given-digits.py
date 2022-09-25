@@ -42,7 +42,7 @@ from typing import List
 '''
 思路：回溯 枚举
 遍历所有数字的组合，然后在其中找到合法的最大时间。
-TODO
+
 时间复杂度：O(1)，最大排列数是4!
 空间复杂度：O(1)，所有排列时4!
 '''
@@ -54,11 +54,13 @@ class Solution:
 
         # 回溯生成所有时间的组合
         def backtrack(index):
+            coms.append(arr.copy())
             for i in range(index + 1, 4):
                 arr[index], arr[i] = arr[i], arr[index]
-                coms.append(arr.copy())
                 backtrack(index + 1)
                 arr[index], arr[i] = arr[i], arr[index]
+            if index + 1 < 4:
+                backtrack(index + 1)
 
         backtrack(0)
         ans = None
