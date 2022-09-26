@@ -35,7 +35,7 @@ n == nums.length
 from typing import List
 '''
 思路：前缀和
-首先进行预处理，用2个数组分别记录截止下标i非递增子数组的长度和非递减子数组的长度。
+首先进行预处理，用2个数组分别记录截止下标i，它前面的非递增子数组的长度和它后面非递减子数组的长度。
 然后从k开始，检查下标前面和后面的子数组的非递增和非递减长度是否满足要求。
 
 时间复杂度：O(n)
@@ -46,12 +46,14 @@ from typing import List
 class Solution:
     def goodIndices(self, nums: List[int], k: int) -> List[int]:
         n = len(nums)
-        noinc, nodec = [0] * n, [0] * n
-        for i in range(1, n):
-            if nums[i] <= nums[i - 1]:
+        noinc, nodec = [1] * n, [1] * n
+        noinc[0] = 0
+        nodec[-1] = 0
+        for i in range(2, n):
+            if nums[i - 1] <= nums[i - 2]:
                 noinc[i] = noinc[i - 1] + 1
-        for i in range(n - 2, -1, -1):
-            if nums[i] <= nums[i + 1]:
+        for i in range(n - 3, -1, -1):
+            if nums[i + 1] <= nums[i + 2]:
                 nodec[i] = nodec[i + 1] + 1
         ans = []
         for i in range(k, n - k):
@@ -62,4 +64,5 @@ class Solution:
 
 s = Solution()
 print(s.goodIndices(nums=[2, 1, 1, 1, 3, 4, 1], k=2))
+print(s.goodIndices([878724, 201541, 179099, 98437, 35765, 327555, 475851, 598885, 849470, 943442], 4))
 print(s.goodIndices(nums=[2, 1, 1, 2], k=2))
