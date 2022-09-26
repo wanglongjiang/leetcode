@@ -34,7 +34,7 @@ from functools import reduce
 思路3，数学 位运算
 整个数组进行异或，然后再与1..n进行异或，得到的结果就是缺少的2个数字的异或xor。
 再求整个数组的和total，然后1..n的和-total得到2个数字的和s。
-将s分解成2个整数，如果2个整数的异或与xor相同，则找到2个数字。
+将s分解成2个整数，如果2个整数的异或与xor相同，则找到2个数字的候选，为了排除有异或相同的一对数字，需要再判定一下数字是否在数组中存在。
 时间复杂度：O(n)
 空间复杂度：O(1)
 '''
@@ -47,7 +47,7 @@ class Solution:
         xor = reduce(lambda a, b: a ^ b, nums) ^ reduce(lambda a, b: a ^ b, range(1, n + 1))
         twoSum = sum(range(1, n + 1)) - sum(nums)
         for a in range(1, twoSum // 2 + 1):
-            if a ^ (twoSum - a) == xor:
+            if a ^ (twoSum - a) == xor and nums.count(a) == 0:
                 return [a, twoSum - a]
         return []
 
