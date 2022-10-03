@@ -1,10 +1,12 @@
 {
     "python.linting.flake8Enabled": true,
-    "python.formatting.provider": "yapf",
     "python.formatting.yapfArgs": [
         "--style",
         "{column_limit: 160}"
     ],
-    "python.linting.flake8Args": ["--max-line-length=160"],
+    "python.linting.flake8Args": [
+        "--max-line-length=160",
+        "--extend-ignore=W293,W291,E731"
+    ],
     "python.linting.enabled": true
 }
