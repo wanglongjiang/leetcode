@@ -527,6 +527,7 @@
 - 2347.[最好的扑克手牌](easy/2347-best-poker-hand.py)
 - 2352.[相等行列对](medium/2352-equal-row-and-column-pairs.py)
 - 2391.[收集垃圾的最少总时间](medium/2391-minimum-amount-of-time-to-collect-garbage.py)
+- 2428.[沙漏的最大总和](medium/2428-maximum-sum-of-an-hourglass.py)
 - LCP 19.[秋叶收藏集](lcp/19-UlBDOe.py)
 - 面试题 17.11.[单词距离](interview/17.11.find-closest-lcci.py)
 
@@ -753,6 +754,7 @@
 - 2354.[优质数对的数目](hard/2354-number-of-excellent-pairs.py)
 - 2401.[最长优雅子数组](medium/2401-longest-nice-subarray.py)
 - 2425.[所有数对的异或和](medium/2425-bitwise-xor-of-all-pairings.py)
+- 2429.[最小 XOR](medium/2429-minimize-xor.py)
 - 面试题 05.01.[插入](interview/05.01.insert-into-bits-lcci.py)
 - 面试题 05.03.[翻转数位](interview/05.03.reverse-bits-lcci.py)
 - 面试题 05.06.[整数转换](interview/05.06.convert-integer-lcci.py)
@@ -1240,6 +1242,7 @@
 - 877.[石子游戏](medium/877-stone-game.py)
 - 914.[卡牌分组](easy/914-x-of-a-kind-in-a-deck-of-cards.py)
 - 923.[三数之和的多种可能](medium/923-3sum-with-multiplicity.py)
+- 927.[三等分](hard/927-three-equal-parts.py)
 - 932.[漂亮数组](medium/932-beautiful-array.py)
 - 970.[强整数](medium/970-powerful-integers.py)
 - 974.[和可被 K 整除的子数组](medium/974-subarray-sums-divisible-by-k.py)
