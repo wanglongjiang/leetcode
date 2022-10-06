@@ -2,7 +2,7 @@
     "python.linting.flake8Enabled": true,
     "python.formatting.yapfArgs": [
         "--style",
-        "{column_limit: 160}"
+        "{column_limit: 160, BLANK_LINE_BEFORE_NESTED_CLASS_OR_DEF: false}"
     ],
     "python.linting.flake8Args": [
         "--max-line-length=160",
