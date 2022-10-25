@@ -25,52 +25,36 @@ tiles 由大写英文字母组成
 '''
 '''
 思路：回溯
-回溯字模的全排列，相同的字模需要排除，跳过相同组合
+回溯字模的全排列，相同的字模需要排除，用哈希集合排重
 时间复杂度：O(n!)
 空间复杂度：O(n)
-TODO
 '''
 
 
 class Solution:
     def numTilePossibilities(self, tiles: str) -> int:
         n = len(tiles)
+        hashset = set()
         chars = list(tiles)
-        chars.sort()
-        ans = 0
-
-        def bt():
-            nonlocal ans
-            for i in range(len(chars)):
-                if i > 0 and chars[i - 1] == chars[i]:
-                    continue
-                if i == len(chars) - 1:
-                    continue
-                chars[i], chars[-1] = chars[-1], chars[i]
-                item = chars.pop()
-                backtrack(0)
-                if chars:
-                    bt()
-                chars.append(item)
-                chars[i], chars[-1] = chars[-1], chars[i]
 
         def backtrack(i):
-            nonlocal ans
-            ans += 1
-            for j in range(i + 1, len(chars)):
+            if i == n:
+                return
+            hashset.add(''.join(chars[:i + 1]))
+            for j in range(i + 1, n):
                 if chars[i] != chars[j]:
                     chars[i], chars[j] = chars[j], chars[i]
-                    if j < n - 1:
-                        ans += 1
-                        backtrack(j)
+                    hashset.add(''.join(chars[:i + 1]))
+                    backtrack(i + 1)
                     chars[i], chars[j] = chars[j], chars[i]
+            backtrack(i + 1)
 
         backtrack(0)
-        bt()
-        return ans
+        return len(hashset)
 
 
 s = Solution()
-print(s.numTilePossibilities('AA'))
 print(s.numTilePossibilities('AAB'))
+print(s.numTilePossibilities('AA'))
 print(s.numTilePossibilities("AAABBC"))
+print(s.numTilePossibilities('v'))
