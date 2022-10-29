@@ -52,6 +52,6 @@ class Solution:
 
 
 s = Solution()
-print(s.minimumDeleteSum("ccaccjp", "fwosarcwge") == 1399)  # TODO
+print(s.minimumDeleteSum("ccaccjp", "fwosarcwge") == 1399)
 print(s.minimumDeleteSum(s1="sea", s2="eat"))
 print(s.minimumDeleteSum(s1="delete", s2="leet"))
