@@ -33,7 +33,7 @@ from typing import List
 首先将数组进行排序。
 然后设数组dp[n]，dp[i]的含义是以arr[i]为根节点的二叉树数量
 状态转移方程为：
-dp[i] = sum(dp[j]+dp[k])+1，arr[j]和arr[k]都是arr[i]的因子，最后+1是只有arr[i]自身的二叉树
+dp[i] = sum(dp[j]*dp[k])，arr[j]和arr[k]都是arr[i]的因子
 
 时间复杂度：O(n^2)
 空间复杂度：O(n)
@@ -51,16 +51,14 @@ class Solution:
         for i in range(len(arr)):
             for j in range(i):  # 遍历所有小于arr[i]的数，检查其是否为因子
                 d, r = divmod(arr[i], arr[j])
-                if arr[j] > d:
-                    break
-                if r == 0 and d in idxMap:  # 如果找到因子，二叉树数量需要加上2个因子的二叉树数量
-                    if d == arr[j] and dp[j] == 1:  # 两个因子相同，形成的二叉树只有1个
-                        dp[i] = (dp[i] + dp[j]) % m
-                    else:
-                        dp[i] = (dp[i] + dp[j] + dp[idxMap[d]]) % m
+                if r:  # 余数不是0，跳过
+                    continue
+                if d in idxMap:  # 如果找到因子，二叉树数量需要加上2个因子的二叉树数量
+                    dp[i] = (dp[i] + dp[j] * dp[idxMap[d]]) % m
         return sum(dp) % m
 
 
 s = Solution()
+print(s.numFactoredBinaryTrees([18, 3, 6, 2]) == 12)
 print(s.numFactoredBinaryTrees([2, 4, 5, 10]))
 print(s.numFactoredBinaryTrees([2, 4]))
