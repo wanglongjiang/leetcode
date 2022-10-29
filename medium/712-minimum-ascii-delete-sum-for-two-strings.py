@@ -25,9 +25,10 @@
 '''
 思路：动态规划
 该题目为最长公共子序列(LCS)的变形，不同的是LCS对于每个字符的权重是1，这里是ascii值。
+用动态规划，使2个字符串能够匹配的ascii值之和最大：
 设dp[i+1][j+1]为s1[i]与s2[j]进行匹配时的公共子序列ascii值之和，故状态转移方程改为：
-如果s1[i]==s2[j]，那么：dp[i + 1][j + 1] = max(dp[i][j] + ord(s1[i]), dp[i + 1][j], dp[i][j - 1])
-如果s1[i]!=s2[j]，那么：dp[i + 1][j + 1] = max(dp[i][j], dp[i + 1][j], dp[i][j - 1])
+如果s1[i]==s2[j]，那么：dp[i + 1][j + 1] = max(dp[i][j] + ord(s1[i]), dp[i + 1][j], dp[i][j + 1])
+如果s1[i]!=s2[j]，那么：dp[i + 1][j + 1] = max(dp[i][j], dp[i + 1][j], dp[i][j + 1])
 
 最终dp[m][n]为2个字符串的公共子序列ascii值最大和，
 结果为s1的ascii值之和+s2的ascii值之和-2*dp[m][n]
@@ -44,12 +45,13 @@ class Solution:
         for i in range(m):
             for j in range(n):
                 if s1[i] == s2[j]:
-                    dp[i + 1][j + 1] = max(dp[i][j] + ord(s1[i]), dp[i + 1][j], dp[i][j - 1])
+                    dp[i + 1][j + 1] = max(dp[i][j] + ord(s1[i]), dp[i + 1][j], dp[i][j + 1])
                 else:
-                    dp[i + 1][j + 1] = max(dp[i][j], dp[i + 1][j], dp[i][j - 1])
+                    dp[i + 1][j + 1] = max(dp[i][j], dp[i + 1][j], dp[i][j + 1])
         return sum(map(lambda char: ord(char), s1)) + sum(map(lambda char: ord(char), s2)) - 2 * dp[m][n]
 
 
 s = Solution()
+print(s.minimumDeleteSum("ccaccjp", "fwosarcwge") == 1399)  # TODO
 print(s.minimumDeleteSum(s1="sea", s2="eat"))
 print(s.minimumDeleteSum(s1="delete", s2="leet"))
