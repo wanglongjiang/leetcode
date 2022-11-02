@@ -23,7 +23,9 @@ word 仅由小写英文字母组成
 '''
 from typing import List
 '''
-思路：TODO
+思路：回溯
+
+
 '''
 
 

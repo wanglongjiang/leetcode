@@ -36,14 +36,30 @@ n == rooms[i].length
 1 <= m, n <= 250
 rooms[i][j] 是 -1、0 或 23^1 - 1
 '''
+from collections import deque
 from typing import List
 '''
-思路：TODO
+思路：BFS
+使用BFS，从所有的门出发，遍历周边所有的空房间
+
+时间复杂度：O(mn)
+空间复杂度：O(mn)
 '''
 
 
 class Solution:
     def wallsAndGates(self, rooms: List[List[int]]) -> None:
-        """
-        Do not return anything, modify rooms in-place instead.
-        """
+        m, n = len(rooms), len(rooms[0])
+        queue = deque()
+        dis = 1  # 距离
+        inf = 2147483647
+        queue.extend((i, j) for i in range(m) for j in range(n) if rooms[i][j] == 0)  # 所有的门加入队列
+        while queue:
+            size = len(queue)
+            for _ in range(size):
+                i, j = queue.popleft()
+                for nexti, nextj in [(i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)]:
+                    if 0 <= nexti < m and 0 <= nextj < n and rooms[nexti][nextj] == inf:
+                        rooms[nexti][nextj] = dis
+                        queue.append((nexti, nextj))
+            dis += 1
