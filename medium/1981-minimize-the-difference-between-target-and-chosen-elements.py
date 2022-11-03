@@ -69,13 +69,14 @@ class Solution:
     def minimizeTheDifference(self, mat: List[List[int]], target: int) -> int:
         vals = set(mat[0])
         for i in range(1, len(mat)):
-            vals = set(filter(lambda val: val <= 2 * target, map(sum, product(vals, mat[i]))))
+            vals = set(map(sum, product(vals, mat[i])))
         diff = inf
         diff = min(map(lambda val: abs(val - target), vals))
         return diff
 
 
 s = Solution()
+print(s.minimizeTheDifference(mat=[[15, 15], [5, 15], [2, 15]], target=29))
 assert s.minimizeTheDifference(mat=[[1, 2, 9, 8, 7]], target=6) == 1
 assert s.minimizeTheDifference(mat=[[1, 2, 3], [4, 5, 6], [7, 8, 9]], target=13) == 0
 assert s.minimizeTheDifference(mat=[[1], [2], [3]], target=100) == 94
