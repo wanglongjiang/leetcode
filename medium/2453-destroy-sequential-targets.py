@@ -35,11 +35,12 @@
 1 <= nums[i] <= 109
 1 <= space <= 109
 '''
+from collections import defaultdict
 from math import inf
 from typing import List
 '''
-思路：模拟
-遍历一次nums数组，根据公式计算以nums[i]作为输入时能够摧毁的目标数=(n-nums[i])//space+(1 if 有余数)，找到最小的数值
+思路：数学
+根据同余定理，将nums[i]%space进行计数，计数最多的nums[i]即为候选，从中挑选最小的
 
 时间复杂度：O(n)
 空间复杂度：O(1)
@@ -48,19 +49,19 @@ from typing import List
 
 class Solution:
     def destroyTargets(self, nums: List[int], space: int) -> int:
-        n, maxDestory, ans = len(nums), -inf, inf
+        dmap = defaultdict(int)
         for num in nums:
-            d, r = divmod(n - num, space)
-            d += 1 if r else 0
-            if d > maxDestory:
-                maxDestory = d
-                ans = num
-            elif d == maxDestory and num < ans:
-                ans = num
+            dmap[num % space] += 1
+        maxcount = max(dmap.values())
+        ans = inf
+        for num in nums:
+            if dmap[num % space] == maxcount:
+                ans = min(ans, num)
         return ans
 
 
 s = Solution()
+print(s.destroyTargets([1, 5, 3, 2, 2], 10000) == 2)
 print(s.destroyTargets(nums=[3, 7, 8, 1, 1, 5], space=2))
 print(s.destroyTargets(nums=[1, 3, 5, 2, 4, 6], space=2))
 print(s.destroyTargets(nums=[6, 2, 5], space=100))
