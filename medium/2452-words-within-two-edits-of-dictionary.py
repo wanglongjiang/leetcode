@@ -58,9 +58,12 @@ class Solution:
                             break
                 else:
                     ans.append(q)
+                    break
         return ans
 
 
 s = Solution()
+assert s.twoEditWords(["tsl", "sri", "yyy", "rbc", "dda", "qus", "hyb", "ilu", "ahd"],
+                      ["uyj", "bug", "dba", "xbe", "blu", "wuo", "tsf", "tga"]) == ["tsl", "yyy", "rbc", "dda", "qus", "hyb", "ilu"]
 print(s.twoEditWords(queries=["word", "note", "ants", "wood"], dictionary=["wood", "joke", "moat"]))
 print(s.twoEditWords(queries=["yes"], dictionary=["not"]))
