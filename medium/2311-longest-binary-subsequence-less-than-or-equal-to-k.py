@@ -47,6 +47,8 @@ class Solution:
     def longestSubsequence(self, s: str, k: int) -> int:
         strk = bin(k)[2:]
         m, n = len(strk), len(s)
+        if n < m:
+            return n
         ans = 0
 
         def kGtOrEq(start):
@@ -71,6 +73,7 @@ class Solution:
 
 
 s = Solution()
+assert s.longestSubsequence("0", 583196182) == 1
 print(s.longestSubsequence(s="1", k=1))
 print(s.longestSubsequence(s="01", k=1))
 print(s.longestSubsequence(s="00101001", k=1))
