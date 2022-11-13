@@ -67,6 +67,8 @@ class Solution:
                     if path[i] < minPath[i]:
                         minPath = path.copy()
                         break
+                    elif path[i] > minPath[i]:
+                        break
                 else:
                     if len(path) < len(minPath):
                         minPath = path.copy()
@@ -107,5 +109,6 @@ def fromList(li: List[int]):
 
 s = Solution()
 null = None
+assert s.smallestFromLeaf(fromList([4, 0, 1, 1])) == 'bae'
 print(s.smallestFromLeaf(fromList([2, 2, 1, null, 1, 0, null, 0])))
 print(s.smallestFromLeaf(fromList([0, 1, 2, 3, 4, 3, 4])))
