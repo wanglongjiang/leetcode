@@ -15,7 +15,7 @@ from typing import List
 
 class Solution:
     def largestAltitude(self, gain: List[int]) -> int:
-        highest = float('-inf')
+        highest = 0
         curg = 0
         for g in gain:
             curg += g
