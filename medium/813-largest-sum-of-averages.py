@@ -41,22 +41,17 @@ from typing import List
 
 
 class Solution:
-
     def largestSumOfAverages(self, nums: List[int], k: int) -> float:
         n = len(nums)
-        dp = [[0] * (n + 1) for _ in range(k)]
-        # 计算前缀和
-        prefixsum = [0]
-        prefixsum.extend((itertools.accumulate(nums)))
-        # 初始化
-        for j in range(1, n - k + 2):
-            dp[0][j] = prefixsum[j] / j
-        # 开始动态规划
-        for i in range(1, k):
-            for j in range(i, n - (k - i) + 2):
-                for x in range(i, j + 1):
-                    dp[i][j] = max(dp[i][j], dp[i - 1][x - 1] + (prefixsum[j] - prefixsum[x - 1]) / (j - x + 1))
-        return max(dp[-1])
+        prefix = list(itertools.accumulate(nums, initial=0))
+        dp = [[0.0] * (k + 1) for _ in range(n + 1)]
+        for i in range(1, n + 1):
+            dp[i][1] = prefix[i] / i
+        for j in range(2, k + 1):
+            for i in range(j, n + 1):
+                for x in range(j - 1, i):
+                    dp[i][j] = max(dp[i][j], dp[x][j - 1] + (prefix[i] - prefix[x]) / (i - x))
+        return dp[n][k]
 
 
 s = Solution()
