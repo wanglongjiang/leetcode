@@ -33,44 +33,68 @@ accounts的长度将在[1，1000]的范围内。
 accounts[i]的长度将在[1，10]的范围内。
 accounts[i][j]的长度将在[1，30]的范围内。
 '''
+from collections import defaultdict
 from typing import List
 '''
-思路：哈希
-遍历每个账号数据
-    1、遍历账号里面的邮件，尝试加入哈希表mail2index
-        a、如果邮件在哈希表中不存在，加入临时list
-        b、如果邮件在哈希表中存在，记录其rootid
-    如果是个重复的账号，将邮件映射的值设置为rootid，临时list里面的邮件地址加入已有账号的list
-    否则将临时list里的邮件地址+账号保存到index->list的哈希表中
+思路：并查集
+
 时间复杂度：O(n*m*k)
 空间复杂度：O(n*m*k)
 '''
 
 
+class UnionFind:
+    def __init__(self, n):
+        self.parent = list(range(n))
+
+    def union(self, index1: int, index2: int):
+        self.parent[self.find(index2)] = self.find(index1)
+
+    def find(self, index: int) -> int:
+        if self.parent[index] != index:
+            self.parent[index] = self.find(self.parent[index])
+        return self.parent[index]
+
+
 class Solution:
     def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
-        mail2idx = {}
-        idx2list = {}
-        for i in range(len(accounts)):
-            rootid = -1
-            mails = []
-            for j in range(1, len(accounts[i])):  # 遍历所有邮件地址
-                mail = accounts[i][j]
-                if mail not in mail2idx:
-                    mails.append(mail)
-                else:
-                    rootid = mail2idx[mail]
-            if rootid < 0:  # 原生账号
-                account = [accounts[i][0]]
-                rootid = i
-                idx2list[i] = account
-            idx2list[rootid].extend(mails)  # 扩展原生账号的邮件地址
-            for mail in mails:  # 邮件地址要设置成rootid
-                mail2idx[mail] = rootid
-        return list(idx2list.values())
+        emailToIndex = dict()
+        emailToName = dict()
+
+        for account in accounts:
+            name = account[0]
+            for email in account[1:]:
+                if email not in emailToIndex:
+                    emailToIndex[email] = len(emailToIndex)
+                    emailToName[email] = name
+
+        uf = UnionFind(len(emailToIndex))
+        for account in accounts:
+            firstIndex = emailToIndex[account[1]]
+            for email in account[2:]:
+                uf.union(firstIndex, emailToIndex[email])
+
+        indexToEmails = defaultdict(list)
+        for email, index in emailToIndex.items():
+            index = uf.find(index)
+            indexToEmails[index].append(email)
+
+        ans = list()
+        for emails in indexToEmails.values():
+            ans.append([emailToName[emails[0]]] + sorted(emails))
+        return ans
 
 
 s = Solution()
+print(
+    s.accountsMerge([["David", "David0@m.co", "David1@m.co"], ["David", "David3@m.co", "David4@m.co"], ["David", "David4@m.co", "David5@m.co"],
+                     ["David", "David2@m.co", "David3@m.co"], ["David", "David1@m.co", "David2@m.co"]]))
+assert s.accountsMerge([["Alex", "Alex5@m.co", "Alex4@m.co", "Alex0@m.co"], ["Ethan", "Ethan3@m.co", "Ethan3@m.co", "Ethan0@m.co"],
+                        ["Kevin", "Kevin4@m.co", "Kevin2@m.co", "Kevin2@m.co"], ["Gabe", "Gabe0@m.co", "Gabe3@m.co", "Gabe2@m.co"],
+                        ["Gabe", "Gabe3@m.co", "Gabe4@m.co", "Gabe2@m.co"]]) == [["Alex", "Alex0@m.co", "Alex4@m.co", "Alex5@m.co"],
+                                                                                 ["Ethan", "Ethan0@m.co", "Ethan3@m.co"],
+                                                                                 ["Gabe", "Gabe0@m.co", "Gabe2@m.co", "Gabe3@m.co", "Gabe4@m.co"],
+                                                                                 ["Kevin", "Kevin2@m.co", "Kevin4@m.co"]]
 print(
     s.accountsMerge([["John", "johnsmith@mail.com", "john00@mail.com"], ["John", "johnnybravo@mail.com"],
                      ["John", "johnsmith@mail.com", "john_newyork@mail.com"], ["Mary", "mary@mail.com"]]))

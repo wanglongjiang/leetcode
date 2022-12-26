@@ -35,18 +35,21 @@ num 不会包含任何前导零。
 
 class Solution:
     def removeKdigits(self, num: str, k: int) -> str:
-        stack = [0]  # 开头设置一个哨兵
+        stack = []
         for c in num:
-            n = int(c)
-            while stack[-1] > n and k > 0:  # 发生递减后，将栈中的数值出栈，出栈的数字即为要丢弃的数字
+            while stack and stack[-1] > c and k > 0:  # 发生递减后，将栈中的数值出栈，出栈的数字即为要丢弃的数字
                 stack.pop()
                 k -= 1
-            if n > 0:  # 不能以0开头，故0不入栈
-                stack.append(n)
-        while k > 0:  # 从大到小丢弃数字
+            stack.append(c)
+        while stack and k > 0:  # 从大到小丢弃数字
             stack.pop()
             k -= 1
-        return ''.join(map(str, stack[1:]))
+        i = 0
+        for i in range(len(stack)):
+            if stack[i] != '0':
+                break
+        ans = ''.join(stack[i:])
+        return ans if len(ans) > 0 else '0'
 
 
 s = Solution()

@@ -67,11 +67,14 @@ class Solution:
         for i in range(1, len(s)):  # 尝试添加小数点
             if int(s[i:]) == 0:  # 小数点后面是0的，不是合法数字
                 break
+            if s[-1] == '0':  # 最后面有0的，不可以
+                break
             ans.append(s[:i] + '.' + s[i:])
         return ans
 
 
 s = Solution()
+assert set(s.ambiguousCoordinates("(0110)")) == set(["(0, 110)", "(0.1, 10)", "(0.11, 0)"])
 print(s.ambiguousCoordinates('(123)'))
 print(s.ambiguousCoordinates('(00011)'))
 print(s.ambiguousCoordinates('(0123)'))

@@ -1,13 +1,10 @@
-from typing import List
-
-
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 
 
-def fromList(li: List[int]):
+def fromList(li: int):
     head = None
     tail = head
     for item in li:

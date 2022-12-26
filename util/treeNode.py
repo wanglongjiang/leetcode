@@ -1,6 +1,3 @@
-from typing import List
-
-
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -9,22 +6,22 @@ class TreeNode:
 
 
 # list数据按照bfs遍历得到
-def fromList(li: List[int]):
+def fromList(li):
     if len(li) == 0:
         return None
-    root = TreeNode(val=li[0])
+    root = TreeNode(li[0])
     queue = [root]
     i = 1
     while i < len(li):
         node = queue[0]
         del queue[0]
         if li[i] is not None:
-            node.left = TreeNode(val=li[i])
+            node.left = TreeNode(li[i])
             queue.append(node.left)
         i += 1
         if i < len(li):
             if li[i] is not None:
-                node.right = TreeNode(val=li[i])
+                node.right = TreeNode(li[i])
                 queue.append(node.right)
             i += 1
     return root

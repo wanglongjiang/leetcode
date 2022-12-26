@@ -9,12 +9,18 @@
 '''
 from typing import List
 '''
-思路：TODO
+思路：一次遍历
+遍历nums，
+如果i是偶数下标，需要使nums[i]<=nums[i+1]，如果不满足，交换2个元素。这种交换会不会破坏与nums[i-1]的关系呢，不会，因为nums[i+1]更小，交换后同样满足nums[i-1]>nums[i]。
+同理，如果i是奇数下标，需要时nums[i]>=nums[i+1]，如果不满足，交换2个元素。
+
+时间复杂度：O(n)
+空间复杂度：O(1)
 '''
 
 
 class Solution:
     def wiggleSort(self, nums: List[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
+        for i in range(len(nums) - 1):
+            if (i & 1 == 0 and nums[i] > nums[i + 1]) or (i & 1 and nums[i] < nums[i + 1]):
+                nums[i], nums[i + 1], nums[i + 1], nums[i]

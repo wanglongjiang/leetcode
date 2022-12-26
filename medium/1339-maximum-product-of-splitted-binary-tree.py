@@ -40,8 +40,8 @@
 
 # Definition for a binary tree node.
 class TreeNode:
-    def __init__(self, x):
-        self.val = x
+    def __init__(self, val):
+        self.val = val
         self.left = None
         self.right = None
 
@@ -58,6 +58,8 @@ class TreeNode:
 
 class Solution:
     def maxProduct(self, root: TreeNode) -> int:
+        m = 10**9 + 7
+
         def sumTotal(node):
             return node.val + (sumTotal(node.left) if node.left else 0) + (sumTotal(node.right) if node.right else 0)
 
@@ -71,4 +73,28 @@ class Solution:
             return subtotal
 
         product(root)
-        return ans
+        return ans % m
+
+
+null = None
+
+
+def fromList(li):
+    if len(li) == 0:
+        return None
+    root = TreeNode(li[0])
+    queue = [root]
+    i = 1
+    while i < len(li):
+        node = queue[0]
+        del queue[0]
+        if li[i] is not None:
+            node.left = TreeNode(li[i])
+            queue.append(node.left)
+        i += 1
+        if i < len(li):
+            if li[i] is not None:
+                node.right = TreeNode(li[i])
+                queue.append(node.right)
+            i += 1
+    return root

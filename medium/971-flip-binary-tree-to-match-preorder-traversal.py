@@ -42,7 +42,6 @@ n == voyage.length
 树中的所有值 互不相同
 voyage 中的所有值 互不相同
 '''
-from typing import List
 
 
 # Definition for a binary tree node.
@@ -63,37 +62,27 @@ class TreeNode:
 '''
 
 
-class Solution:
-    def flipMatchVoyage(self, root: TreeNode, voyage: List[int]) -> List[int]:
-        ans = []
+class Solution(object):
+    def flipMatchVoyage(self, root, voyage):
+        self.flipped = []
+        self.i = 0
 
-        # 从i开始，匹配当前节点和其子节点，匹配成功返回当前子树的节点个数，否则返回0
-        def match(node, i):
-            if node.val != voyage[i]:
-                return 0
-            leftSize, rightSize = 0, 0
-            if node.left:
-                leftSize = match(node.left, i + 1)
-                if not leftSize:  # 先匹配左子树失败
-                    rightSize = match(node.right, i + 1)
-                    if rightSize:  # 尝试匹配右子树匹配成功
-                        leftSize = match(node.left, i + 1 + rightSize)
-                        if leftSize:  # 左右子树都匹配成功，node需要进行交换
-                            ans.append(node.val)
-                            return leftSize + rightSize + 1
-                        else:  # 右子树匹配成功，左子树匹配失败
-                            return 0
-                    else:  # 左右子树均匹配失败
-                        return 0
-            if node.right:
-                rightSize = match(node.right, i + 1 + leftSize)  # 左子树匹配成功，继续匹配右子树
-                if rightSize:  # 右子树匹配成功
-                    return leftSize + 1 + rightSize
+        def dfs(node):
+            if node:
+                if node.val != voyage[self.i]:
+                    self.flipped = [-1]
+                    return
+                self.i += 1
+
+                if (self.i < len(voyage) and node.left and node.left.val != voyage[self.i]):
+                    self.flipped.append(node.val)
+                    dfs(node.right)
+                    dfs(node.left)
                 else:
-                    return 0  # 右子树匹配失败
-            return leftSize + rightSize + 1
+                    dfs(node.left)
+                    dfs(node.right)
 
-        if match(root, 0) == len(voyage):
-            return ans
-        else:
-            return [-1]
+        dfs(root)
+        if self.flipped and self.flipped[0] == -1:
+            self.flipped = [-1]
+        return self.flipped

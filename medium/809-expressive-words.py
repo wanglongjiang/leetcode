@@ -31,7 +31,7 @@ words = ["hello", "hi", "helo"]
 0 <= len(words[i]) <= 100。
 S 和所有在 words 中的单词都只由小写字母组成。
 '''
-from typing import List
+import itertools
 '''
 思路：双指针
 遍历words中的每个单词，检查它是否能扩展成s
@@ -42,31 +42,23 @@ from typing import List
 '''
 
 
-class Solution:
-    def expressiveWords(self, s: str, words: List[str]) -> int:
+class Solution(object):
+    def expressiveWords(self, S, words):
+        def RLE(S):
+            return zip(*[(k, len(list(grp))) for k, grp in itertools.groupby(S)])
+
+        R, count = RLE(S)
         ans = 0
         for word in words:
-            ps, pw = 0, 0  # 2个指针分别指向s和word
-            while ps < len(s) and pw < len(word):
-                if s[ps] == word[pw]:  # 两个字符相同，跳过
-                    ps += 1
-                    pw += 1
-                elif pw > 0 and word[pw - 1] == s[ps]:  # word的上一个字符等于s的当前字符，需要s跳过2个以上
-                    count = 0
-                    while ps < len(s) and s[ps] == word[pw - 1]:
-                        ps += 1
-                        count += 1
-                    if count < 2:  # 扩展了不到2次，不是合法的扩张单词
-                        break
-                else:  # 2个字符不同，word的上一个字符不等于s的当前字符，不是扩张单词
-                    break
-            if ps < len(s) and pw == len(word):  # word遍历完，s未遍历完，需要继续尝试扩展
-                while ps < len(s) and s[ps] == word[pw - 1]:
-                    ps += 1
-            if ps == len(s) and pw == len(word):
-                ans += 1
+            R2, count2 = RLE(word)
+            if R2 != R:
+                continue
+            ans += all(c1 >= max(c2, 3) or c1 == c2 for c1, c2 in zip(count, count2))
+
         return ans
 
 
 s = Solution()
+assert s.expressiveWords("dddiiiinnssssssoooo", ["ddiinnso", "ddinso", "ddiinnso", "ddiinnssoo", "ddiinso", "dinsoo", "ddiinsso", "dinssoo", "dinso"]) == 3
+assert s.expressiveWords("lee", ["le"]) == 0
 print(s.expressiveWords('heeellooo', ["hello", "hi", "helo"]))

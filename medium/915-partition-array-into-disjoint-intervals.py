@@ -29,7 +29,7 @@ left 的长度要尽可能小。
 '''
 from typing import List
 '''
-思路：单调数组
+思路：后缀数组
 题目是求left的最大值<=right的最小值。
 可以设辅助数组rightMin[n]
 rightMin[i]=min(nums[i]..nums[n-1])
@@ -49,7 +49,7 @@ class Solution:
         for i in range(1, len(nums)):
             if leftMax <= rightMin[i]:
                 return i
-            leftMax = max(leftMax, rightMin[i])
+            leftMax = max(leftMax, nums[i])
 
 
 s = Solution()

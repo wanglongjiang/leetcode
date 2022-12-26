@@ -15,12 +15,9 @@
 '''
 from typing import List
 '''
-思路：排序+回溯
-建立一个二维数组sortedItems，下标表示前面有几个人，值为list，具有相同k值的人在同一个list
-重建队列queue时，从sortedItems[0..len(queue)]中查找满足条件item.h>queue = item.k的元素，
-找到一个后，尝试加入队列，如果回溯成功，则返回，否则尝试下一个
+思路：排序+贪心
+首先按照身高从高到低排序，然后遍历数组将其插入ki所指的下标处
 
-TODO 超时
 时间复杂度：O(n^2)
 空间复杂度：O(n)
 '''
@@ -29,39 +26,16 @@ TODO 超时
 class Solution:
     def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:
         n = len(people)
-        sortedItems = [[] for _ in range(n)]
-        for item in people:
-            sortedItems[item[1]].append(item)
-        for items in sortedItems:
-            items.sort(key=lambda item: item[0], reverse=True)  # 按照身高逆序，便于pop()操作
-        queue = []
-
-        def backtrack():
-            maxK = len(queue)
-            for i in range(maxK + 1):
-                if sortedItems[i]:
-                    item = sortedItems[i][-1]  # 取出该队列中身高最低的人
-                    count = 0
-                    for other in queue:
-                        if other[0] >= item[0]:
-                            count += 1
-                            if count > i:  # 如果前面高于当前人的人数多于指定的，退出循环
-                                break
-                    if count == i:  # 如果身高人数匹配，加入队列
-                        queue.append(sortedItems[i].pop())
-                        if len(queue) == n:
-                            return True
-                        if backtrack():
-                            return True
-                        else:
-                            sortedItems[i].append(queue.pop())
-            return False
-
-        backtrack()
-        return queue
+        people.sort(key=lambda p: (-p[0], p[1]))
+        ans = []
+        for p in people:
+            ans.insert(p[1], p)
+        return ans
 
 
 s = Solution()
+s.reconstructQueue([[9, 0], [7, 0], [1, 9], [3, 0], [2, 7], [5, 3], [6, 0], [3, 4], [6, 2], [5, 2]]) == [[3, 0], [6, 0], [7, 0], [5, 2], [3, 4], [5, 3], [6, 2],
+                                                                                                         [2, 7], [9, 0], [1, 9]]
 print(
     s.reconstructQueue([[40, 11], [81, 12], [32, 60], [36, 39], [76, 19], [11, 37], [67, 13], [45, 39], [99, 0], [35, 20], [15, 3], [62, 13], [90, 2], [86, 0],
                         [26, 13], [68, 32], [91, 4], [23, 24], [73, 14], [86, 13], [62, 6], [36, 13], [67, 9], [39, 57], [15, 45], [37, 26], [12, 88], [30, 18],

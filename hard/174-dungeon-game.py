@@ -14,13 +14,37 @@
 
 编写一个函数来计算确保骑士能够拯救到公主所需的最低初始健康点数。
 '''
+from math import inf
 from typing import List
 '''
-思路：动态规划。有2种累积方法，1、每次都选累计值最大的路径。2、每次都选负值最小的路径。
-2种都可能造成错误。第1种如果开始负值较小，后面负值较小，会错选。第2种如果后面负值较大，
+[TOC]
+
+# 思路
+动态规划
+
+# 解题方法
+如果骑士出发去救公主，需要考虑骑士的最小血量不能小于1，同时需要尽量加血，比较麻烦。
+
+反过来，公主出发去找骑士，只需要考虑血量不小于1即可。
+
+设数组dp[m][n]，dp[i][j]的意思是截止第i,j个单元格，需要能满足的最小生命值
+> dp[i][j] = max(min(dp[i+1][j],dp[i][j+1])-dungeon[i][j],1)
+
+# 复杂度
+- 时间复杂度: 
+> $O(n)$ 
+
+- 空间复杂度: 
+> $O(n)$
 '''
 
 
 class Solution:
     def calculateMinimumHP(self, dungeon: List[List[int]]) -> int:
-        pass
+        m, n = len(dungeon), len(dungeon[0])
+        dp = [[inf] * (n + 1) for _ in range(m + 1)]
+        dp[m][n - 1] = dp[m - 1][n] = 1
+        for i in range(m - 1, -1, -1):
+            for j in range(n - 1, -1, -1):
+                dp[i][j] = max(min(dp[i + 1][j], dp[i][j + 1]) - dungeon[i][j], 1)
+        return dp[0][0]
