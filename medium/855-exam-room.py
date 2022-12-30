@@ -31,7 +31,7 @@ seat() -> 5，学生最后坐在 5 号座位上。
 在所有的测试样例中 ExamRoom.seat() 和 ExamRoom.leave() 最多被调用 10^4 次。
 保证在调用 ExamRoom.leave(p) 时有学生正坐在座位 p 上。
 '''
-from sortedcontainers import SortedList
+import bisect
 '''
 思路：有序集合
 将2个有人的座位之间的空座视为一个区间，将所有区间放入treemap排序
@@ -48,67 +48,42 @@ from sortedcontainers import SortedList
 '''
 
 
-class ExamRoom:
-    def __init__(self, n: int):
-        self.treemap1 = SortedList()  # 每个元素为(区间大小，start,end)，因为区间大小为偶数时与减少一时相同，所以要减少1
-        self.treemap2 = SortedList()  # 每个元素为(start,end)，主要目的是在leave时，定位p所在的区间
-        self.n = n
-        self.treemap1.add((self.distance(0, n - 1), 0, n - 1))
-        self.treemap2.add((0, n - 1))
+class ExamRoom(object):
+    def __init__(self, N):
+        self.N = N
+        self.students = []
 
-    def distance(self, start, end):
-        d = end - start + 1
-        if d % 2 == 0:
-            d -= 1
-        return d
+    def seat(self):
+        # Let's determine student, the position of the next
+        # student to sit down.
+        if not self.students:
+            student = 0
+        else:
+            # Tenatively, dist is the distance to the closest student,
+            # which is achieved by sitting in the position 'student'.
+            # We start by considering the left-most seat.
+            dist, student = self.students[0], 0
+            for i, s in enumerate(self.students):
+                if i:
+                    prev = self.students[i - 1]
+                    # For each pair of adjacent students in positions (prev, s),
+                    # d is the distance to the closest student;
+                    # achieved at position prev + d.
+                    d = (s - prev) // 2
+                    if d > dist:
+                        dist, student = d, prev + d
 
-    def seat(self) -> int:
-        r = self.treemap1.pop()  # 弹出最大的区间
-        size, start, end = r
-        start = -start
-        self.treemap2.remove((start, end))
-        if start == 0:  # 左边界
-            p = 0
-            if end >= 1:
-                rr = (self.distance(1, end), -1, end)
-                self.treemap1.add(rr)
-                self.treemap2.add((1, end))
-        elif end == self.n - 1:  # 右边界
-            p = self.n - 1
-            if p - 1 >= start:
-                lr = (self.distance(start, p - 1), -start, p - 1)
-                self.treemap1.add(lr)
-                self.treemap2.add((start, p - 1))
-        else:  # 选中了中间的区间，区间可以拆分成2个
-            p = (start + end) // 2
-            if p > start:
-                lr = (self.distance(start, p - 1), -start, p - 1)
-                self.treemap1.add(lr)
-                self.treemap2.add((start, p - 1))
-            if p < end:
-                rr = (self.distance(p + 1, end), -(p + 1), end)
-                self.treemap1.add(rr)
-                self.treemap2.add((p + 1, end))
-        return p
+            # Considering the right-most seat.
+            d = self.N - 1 - self.students[-1]
+            if d > dist:
+                student = self.N - 1
 
-    def leave(self, p: int) -> None:
-        midRange = (p, p)
-        idx = self.treemap2.bisect_left(midRange)
-        if idx > 0:
-            leftRange = self.treemap2[idx - 1]
-            if leftRange[1] == p - 1:  # 左侧区间与p相邻，进行合并
-                self.treemap2.remove(leftRange)
-                self.treemap1.remove((self.distance(leftRange[0], leftRange[1]), -leftRange[0], leftRange[1]))
-                midRange = (leftRange[0], p)
-                idx -= 1
-        if idx < len(self.treemap2):
-            rightRange = self.treemap2[idx]
-            if rightRange[0] == p + 1:  # 右侧区间与p相邻，进行合并
-                self.treemap2.remove(rightRange)
-                self.treemap1.remove((self.distance(rightRange[0], rightRange[1]), -rightRange[0], rightRange[1]))
-                midRange = (midRange[0], rightRange[1])
-        self.treemap2.add(midRange)
-        self.treemap1.add((self.distance(midRange[0], midRange[1]), -midRange[0], midRange[1]))
+        # Add the student to our sorted list of positions.
+        bisect.insort(self.students, student)
+        return student
+
+    def leave(self, p):
+        self.students.remove(p)
 
 
 s = ExamRoom(10)
