@@ -23,16 +23,16 @@ import datetime
 class Solution:
     # 思路2，筛法
     def countPrimes(self, n: int) -> int:
-        if n < 2:
+        if n <= 2:
             return 0
-        nums = [1] * (n + 1)
+        nums = [1] * n
         nums[0] = 0
         nums[1] = 0
         count = 0
-        for i in range(n + 1):
+        for i in range(n):
             if nums[i]:
                 count += 1
-                for j in range(2 * i, n + 1, i):  # 将素数的整数倍都清零
+                for j in range(2 * i, n, i):  # 将素数的整数倍都清零
                     nums[j] = 0
         return count
 
@@ -56,8 +56,10 @@ class Solution:
 
 
 s = Solution()
+print(s.countPrimes(3))
+print(s.countPrimes(2))
 starttime = datetime.datetime.now()
-print(s.countPrimes2(5000000))
+print(s.countPrimes(5000000))
 endtime = datetime.datetime.now()
 print('筛法时间：%d' % (endtime - starttime).seconds)
 starttime = datetime.datetime.now()
