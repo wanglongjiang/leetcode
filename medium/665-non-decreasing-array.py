@@ -43,7 +43,7 @@ from typing import List
 class Solution:
     def checkPossibility(self, nums: List[int]) -> bool:
         if len(nums) < 2:
-            return False
+            return True
         changed = False
         n = len(nums)
         for i in range(1, n):
