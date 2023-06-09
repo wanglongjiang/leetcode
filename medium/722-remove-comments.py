@@ -98,14 +98,18 @@ class Solution:
                         if blockIdx < lineIdx:  # 块注释生效，将注释开始前的加入结果
                             ans.append(line[:blockIdx])
                             inBlock = True
+                            line = line[blockIdx + 2:]
                         else:  # 行注释生效，将注释开始前的加入结果
-                            ans.append(line[:lineIdx])
+                            if lineIdx > 0:
+                                ans.append(line[:lineIdx])
                             line = None
                     elif blockIdx >= 0:  # 块注释生效，将注释开始前的加入结果
                         ans.append(line[:blockIdx])
                         inBlock = True
-                    elif lineIdx >= 0:  # 行注释生效，将注释开始前的加入结果
-                        ans.append(line[:lineIdx])
+                        line = line[blockIdx + 2:]
+                    elif lineIdx > 0:  # 行注释生效，将注释开始前的加入结果
+                        if lineIdx > 0:
+                            ans.append(line[:lineIdx])
                         line = None
                     else:  # 不在注释内，加入结果
                         ans.append(line)
@@ -115,6 +119,8 @@ class Solution:
 
 
 s = Solution()
+print(s.removeComments(["void func(int k) {", "// this function does nothing /*", "   k = k*2/4;", "   k = k/2;*/", "}"]))
+print(s.removeComments(["struct Node{", "    /*/ declare members;/**/", "    int size;", "    /**/int val;", "};"]))
 print(
     s.removeComments([
         "/*Test program */", "int main()", "{ ", "  // variable declaration ", "int a, b, c;", "/* This is a test", "   multiline  ", "   comment for ",
