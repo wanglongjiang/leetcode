@@ -38,8 +38,8 @@ S 仅由小写英文字母组成
 0 <= indexes[i] < S.length
 sources.length == indexes.length
 targets.length == indexes.length
-1 <= sources[i].length, targets[i].length <= 50
-sources[i] 和 targets[i] 仅由小写英文字母组成
+1 <= src.length, targets[i].length <= 50
+src 和 targets[i] 仅由小写英文字母组成
 '''
 from typing import List
 '''
@@ -56,15 +56,24 @@ class Solution:
         if not indices:
             return s
         n = len(indices)
-        ans = [s[0:indices[0]]]  # 将第0个索引前的子串加入结果
-        for i in range(n):
-            if s[indices[i]:indices[i] + len(sources[i])] == sources[i]:  # 替换字符串
-                ans.append(targets[i])
+        tups = list(sorted(zip(indices, sources, targets)))
+        ans = [s[0:tups[0][0]]]  # 将第0个索引前的子串加入结果
+        for idx in range(n):
+            i, src, target = tups[idx]
+            if s[i:i + len(src)] == src:  # 替换字符串
+                ans.append(target)
+                if idx + 1 < n:  # 将2个索引之间的字符串添加到结果
+                    ans.append(s[i + len(src):tups[idx + 1][0]])
+                else:  # 将最后一个索引后的字符串添加到结果
+                    ans.append(s[i + len(src):])
             else:
-                ans.append(s[indices[i]:indices[i] + len(sources[i])])  # 不能替换，将原字符串加入结果
-            if i + 1 < n:  # 将2个索引之间的字符串添加到结果
-                ans.append(s[indices[i] + len(sources[i]):indices[i + 1]])
-            else:  # 将最后一个索引后的字符串添加到结果
-                ans.append(s[indices[i] + len(sources[i]):])
+                if idx + 1 < n:
+                    ans.append(s[i:tups[idx + 1][0]])
+                else:
+                    ans.append(s[i:])
 
         return ''.join(ans)
+
+
+s = Solution()
+s.findReplaceString("vmokgggqzp", [3, 5, 1], ["kg", "ggq", "mo"], ["s", "so", "bfr"])
