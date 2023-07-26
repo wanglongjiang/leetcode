@@ -63,9 +63,10 @@ class Solution:
                         rightbottom = (p2[0], p1[1])
                         if rightbottom in hashset:
                             minArea = area
-        return minArea
+        return minArea if minArea != float('inf') else 0
 
 
 s = Solution()
 print(s.minAreaRect([[1, 1], [1, 3], [3, 1], [3, 3], [2, 2]]))
 print(s.minAreaRect([[1, 1], [1, 3], [3, 1], [3, 3], [4, 1], [4, 3]]))
+print(s.minAreaRect([[3, 2], [3, 1], [4, 4], [1, 1], [4, 3], [0, 3], [0, 2], [4, 0]]))
