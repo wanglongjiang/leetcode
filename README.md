@@ -580,6 +580,7 @@
 - 2465.[不同的平均值数目](easy/2465-number-of-distinct-averages.py)
 - 2469.[温度转换](easy/2469-convert-the-temperature.py)
 - 2507.[使用质因数之和替换后可以取到的最小值](medium/2507-smallest-value-after-replacing-with-sum-of-prime-factors.py)
+- 2961.[双模幂运算](medium/2961-double-modular-exponentiation.py)
 - LCP 19.[秋叶收藏集](lcp/19-UlBDOe.py)
 - 面试题 17.11.[单词距离](interview/17.11.find-closest-lcci.py)
 
